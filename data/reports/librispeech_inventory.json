@@ -1,0 +1,112 @@
+{
+  "dataset": "LibriSpeech",
+  "source": "https://www.openslr.org/12",
+  "license": "CC BY 4.0",
+  "prepared_at_utc": "2026-11-10T11:01:56+00:00",
+  "stage": "raw audio and utterance manifests; no model training, features, tokenizer or forced alignment",
+  "archive_verification": "MD5 compared against official md5sum.txt and reviewed checksums",
+  "audio_verification": "All FLAC STREAMINFO headers inspected; archive checksum protects full file payload. Not every waveform was decoded.",
+  "archives": [
+    {
+      "split": "dev-clean",
+      "archive_md5": "42e2234ba48799c1f50f24a7926300a1",
+      "archive_bytes": 337926286,
+      "archive_url": "https://www.openslr.org/resources/12/dev-clean.tar.gz"
+    },
+    {
+      "split": "dev-other",
+      "archive_md5": "c8d0bcc9cca99d4f8b62fcc847357931",
+      "archive_bytes": 314305928,
+      "archive_url": "https://www.openslr.org/resources/12/dev-other.tar.gz"
+    },
+    {
+      "split": "test-clean",
+      "archive_md5": "32fa31d27d2e1cad72775fee3f4849a9",
+      "archive_bytes": 346663984,
+      "archive_url": "https://www.openslr.org/resources/12/test-clean.tar.gz"
+    },
+    {
+      "split": "test-other",
+      "archive_md5": "fb5a50374b501bb3bac4815ee91d3135",
+      "archive_bytes": 328757843,
+      "archive_url": "https://www.openslr.org/resources/12/test-other.tar.gz"
+    },
+    {
+      "split": "train-clean-100",
+      "archive_md5": "2a93770f6d5c6c964bc36631d331a522",
+      "archive_bytes": 6387309499,
+      "archive_url": "https://www.openslr.org/resources/12/train-clean-100.tar.gz"
+    }
+  ],
+  "splits": [
+    {
+      "split": "train-clean-100",
+      "utterances": 28539,
+      "speakers": 251,
+      "duration_hours": 100.59088,
+      "words": 990101,
+      "max_utterance_seconds": 24.525,
+      "sample_rate": 16000,
+      "channels": 1,
+      "audio_transcript_pairs_verified": true
+    },
+    {
+      "split": "dev-clean",
+      "utterances": 2703,
+      "speakers": 40,
+      "duration_hours": 5.387811,
+      "words": 54402,
+      "max_utterance_seconds": 32.645,
+      "sample_rate": 16000,
+      "channels": 1,
+      "audio_transcript_pairs_verified": true
+    },
+    {
+      "split": "dev-other",
+      "utterances": 2864,
+      "speakers": 33,
+      "duration_hours": 5.121185,
+      "words": 50948,
+      "max_utterance_seconds": 35.155,
+      "sample_rate": 16000,
+      "channels": 1,
+      "audio_transcript_pairs_verified": true
+    },
+    {
+      "split": "test-clean",
+      "utterances": 2620,
+      "speakers": 40,
+      "duration_hours": 5.403467,
+      "words": 52576,
+      "max_utterance_seconds": 34.955,
+      "sample_rate": 16000,
+      "channels": 1,
+      "audio_transcript_pairs_verified": true
+    },
+    {
+      "split": "test-other",
+      "utterances": 2939,
+      "speakers": 33,
+      "duration_hours": 5.341547,
+      "words": 52343,
+      "max_utterance_seconds": 34.51,
+      "sample_rate": 16000,
+      "channels": 1,
+      "audio_transcript_pairs_verified": true
+    }
+  ],
+  "speaker_overlap_counts": {
+    "train-clean-100 / dev-clean": 0,
+    "train-clean-100 / dev-other": 0,
+    "train-clean-100 / test-clean": 0,
+    "train-clean-100 / test-other": 0,
+    "dev-clean / dev-other": 0,
+    "dev-clean / test-clean": 0,
+    "dev-clean / test-other": 0,
+    "dev-other / test-clean": 0,
+    "dev-other / test-other": 0,
+    "test-clean / test-other": 0
+  },
+  "total_utterances": 39665,
+  "total_duration_hours": 121.84489
+}

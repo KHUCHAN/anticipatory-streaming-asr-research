@@ -1,0 +1,52 @@
+{
+  "verified_at": "2026-11-10",
+  "selected_scope": "LibriSpeech train-clean-100 plus dev-clean, dev-other, test-clean, test-other; selected explicitly by the user",
+  "datasets": [
+    {
+      "id": "librispeech",
+      "source_url": "https://www.openslr.org/12",
+      "paper_id": "P31",
+      "language": "English",
+      "domain": "Read audiobooks",
+      "selected_splits": ["train-clean-100", "dev-clean", "dev-other", "test-clean", "test-other"],
+      "license": "CC BY 4.0",
+      "access": "Public HTTPS archives",
+      "local_preparation_report": "data/reports/librispeech_inventory.json",
+      "local_manifest_dir": "data/processed/manifests",
+      "word_timestamps": "Not supplied in the prepared utterance manifests; alignment remains a later decision",
+      "publication_policy": "Raw archives, audio, transcripts and per-utterance manifests excluded from Git; aggregate report and scripts tracked"
+    },
+    {
+      "id": "gigaspeech",
+      "source_url": "https://github.com/SpeechColab/GigaSpeech",
+      "paper_id": "P32",
+      "language": "English",
+      "domain": "Audiobooks, podcasts and YouTube",
+      "subset_hours": {"XS": 10, "S": 250, "M": 1000, "L": 2500, "XL": 10000},
+      "access": "Official repository asks applicants to fill a form and follow the reply; Hugging Face card returned HTTP 401 during this review",
+      "local_status": "Not requested or downloaded",
+      "license_status": "Dataset-specific access agreement must be read when obtaining access; no agreement accepted in this task"
+    },
+    {
+      "id": "common-voice",
+      "source_url": "https://discourse.mozilla.org/t/common-voice-scripted-speech-v27-0-and-spontaneous-speech-v5-0-released/149490",
+      "paper_id": "P33",
+      "release": "Scripted Speech v27.0, release announcement 2026-09-18",
+      "release_total_recorded_hours": 42593,
+      "release_language_count": 295,
+      "hours_interpretation": "All-language recorded scripted speech; not English-only or validated-only training hours",
+      "access": "Mozilla Data Collective; choose a language and inspect the selected package's conditions",
+      "local_status": "Release metadata reviewed; no account action, agreement or raw download"
+    },
+    {
+      "id": "ami",
+      "source_url": "https://groups.inf.ed.ac.uk/ami/corpus/overview.shtml",
+      "hours_approx": 100,
+      "language": "English",
+      "domain": "Meetings; close-talk and far-field recordings",
+      "annotation": "Speaker transcriptions and word timings; coverage differs by annotation type",
+      "license_status": "Official overview states Creative Commons Attribution; exact selected distribution/version to be checked before acquisition",
+      "local_status": "Official metadata reviewed; not part of the selected raw-data download scope"
+    }
+  ]
+}
