@@ -1,46 +1,46 @@
 # P27. Factor Graph Neural Networks
 
-| 항목 | 내용 |
+| Field | Value |
 |---|---|
-| 저자 | Zhen Zhang; Mohammed Haroon Dupty; Fan Wu; Javen Qinfeng Shi; Wee Sun Lee |
-| 확인한 원문 날짜 | 2023 |
-| 발표 정보 | JMLR 24(181):1–54, 2023 |
-| 분류 | FGN/FGNN 동명 아키텍처 구분 |
-| 읽기 우선순위 | 3 — 약어 혼동 방지 |
-| 원문 확인 범위 | 서지·초록·핵심 본문/실험 설정 확인 (전체 정독·재현 미수행) |
-| PDF | 54쪽; `papers/pdf/P27_factor-graph.pdf` |
-| 검증일 | 2026-11-10 |
+| Authors | Zhen Zhang; Mohammed Haroon Dupty; Fan Wu; Javen Qinfeng Shi; Wee Sun Lee |
+| Source date | 2023 |
+| Publication | JMLR 24(181):1–54, 2023 |
+| Category | Disambiguating FGN/FGNN architectures |
+| Reading priority | 3 — Avoid abbreviation confusion |
+| Review depth | Bibliography, abstract, core sections and experimental setup checked; no exhaustive close reading or reproduction. |
+| PDF | 54 pages; `papers/pdf/P27_factor-graph.pdf` |
+| Source verification date | 2026-11-10 |
 
-[원문](https://jmlr.org/papers/v24/21-0434.html) · [PDF](https://jmlr.org/papers/volume24/21-0434/21-0434.pdf)
+[Source](https://jmlr.org/papers/v24/21-0434.html) · [PDF](https://jmlr.org/papers/volume24/21-0434/21-0434.pdf)
 
-## 핵심과 방법
+## Main idea and method
 
-FGNN이 Factor Graph Neural Network를 뜻하는 고차 관계 학습 연구다.
+FGNN, which stands for Factor Graph Neural Network, is a high-order relational learning study.
 
-factor와 variable 사이의 message passing을 신경망화하여 sum-product 및 max-product 추론을 표현한다.
+Message passing between factors and variables is neurally networked to express sum-product and max-product inference.
 
-## 논문이 보고한 근거
+## Source-reported evidence
 
-합성 graphical model, LDPC decoding, graph matching 등을 평가한다.
+Evaluates synthetic graphical models, LDPC decoding and graph matching.
 
-확인 위치: JMLR abstract 및 Section 5 experiments.
+Evidence location: JMLR abstract and Section 5 experiments.
 
-## 연구 아이디어와의 연결 — 정리자의 해석
+## Connection to this project — interpretation
 
-사용자가 말한 Google FGN과 이름이 비슷하지만 별도 계열이라는 점을 기록한다.
+Records that this similarly named architecture differs from the user's Google FGN reference.
 
-## 적용할 때의 제한
+## Limitations when applying the result
 
-논문에서 ASR 학습 모델을 제시한 것으로 확인하지 않았다. 이 논문만으로 FGNN-ASR 공개 체크포인트의 존재를 주장할 수 없다.
+An ASR-trained model was not confirmed in this paper. It alone does not establish that a public FGNN-ASR checkpoint exists.
 
-## 코드와 모델
+## Code and models
 
 - [https://github.com/zzhang1987/Factor-Graph-Neural-Network](https://github.com/zzhang1987/Factor-Graph-Neural-Network)
 
-링크의 존재와 원문 연결을 확인했다. 설치·실행·가중치 다운로드·성능 재현은 수행하지 않았다.
+Implementation links and their source connection were checked; installation, execution, weight download and performance reproduction were not performed in that review.
 
-## 원문 버전
+## Source version
 
-PDF SHA-256: `6b198dfceb67a11bf2b807231c67f8c34f8f8f98a5bb5585d671dd077d330cae`. 링크의 원문 버전과 이 해시를 기준으로 수집했다. 학습 및 저자 실험의 재현은 수행하지 않았다.
+PDF SHA-256: `6b198dfceb67a11bf2b807231c67f8c34f8f8f98a5bb5585d671dd077d330cae`. The source version and this hash identify the collected PDF. Training and author experiments were not reproduced in the initial literature review.
 
-[전체 논문 목록](../../papers/INDEX.md) · [연구 지도](../../docs/literature_map.md)
+[Paper index](../../papers/INDEX.md) · [Literature map](../../docs/literature_map.md)

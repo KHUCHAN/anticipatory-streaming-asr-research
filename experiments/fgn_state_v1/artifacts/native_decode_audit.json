@@ -1,0 +1,7 @@
+{
+  "utterances": 256,
+  "future_native_tokens": 1937,
+  "exact_sequences": 256,
+  "mismatches": [],
+  "interpretation": "Oracle audit only, not a prediction score. Cache encoder states are FP16; native tokens were decoded from original FP32 states. Rare borderline argmax changes are possible."
+}

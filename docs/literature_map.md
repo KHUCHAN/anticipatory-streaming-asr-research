@@ -1,31 +1,48 @@
-# 논문 지도와 읽는 순서
+# Thesis guidance and reading order
 
-## 핵심 구분
+## key distinction
 
-| 문제 | 실제로 아직 도착하지 않은 음성을 예측하나? | 우선 논문 |
+| Problem | Do you predict speech that has not actually arrived yet? | Priority Paper |
 |---|---|---|
-| 미래 발화 텍스트 예측 | 예 | [P01 SSR](../notes/anticipatory/P01-ssr.md) |
-| 입력 대기 중 출력 사전 계산 | 다음 청크를 가정해 계산; full-duplex SLM | [P02 Speculative Listening](../notes/anticipatory/P02-speculative-listening.md) |
-| 주어진 음성의 decoder 가속 | 해당 사실만으로는 아님 | [P03 SpecASR](../notes/decoding/P03-specasr.md), [P04 ParaASR](../notes/decoding/P04-paraasr.md) |
-| 확률적 draft 검증 | 보통 고정 입력의 target 분포 보존 | [P05](../notes/decoding/P05-speculative-decoding.md), [P06](../notes/decoding/P06-speculative-sampling.md) |
-| 복수 후보 tree 검증 | 그 자체는 음성 예측이 아님 | [P07 SpecInfer](../notes/decoding/P07-specinfer.md), [P08 Blockwise](../notes/decoding/P08-blockwise-parallel.md) |
-| 제한 상태·문맥 인코딩 | 과거 처리의 효율 문제 | [P15 Emformer](../notes/streaming/P15-emformer.md), [P16 Mamba](../notes/state-space/P16-mamba.md), [P20 LC-BiMamba](../notes/state-space/P20-lc-bimamba.md) |
-| 함수적 확률 경로 생성 | 기상 상태의 확률 예측 | [P21 FGN](../notes/weather/P21-fgn.md) |
+| Predict future utterance text | Yes | [P01 SSR](../notes/anticipatory/P01-ssr.md) |
+| Precomputation during input waiting | Assume a next chunk; full-duplex SLM | [P02 Speculative Listening](../notes/anticipatory/P02-speculative-listening.md) |
+| Accelerating decoding of received audio | Not established by that fact alone | [P03 SpecASR](../notes/decoding/P03-specasr.md), [P04 ParaASR](../notes/decoding/P04-paraasr.md) |
+| Probabilistic draft verification | Usually preserves target distribution for fixed input | [P05](../notes/decoding/P05-speculative-decoding.md), [P06](../notes/decoding/P06-speculative-sampling.md) |
+| Multiple candidate tree verification | itself is not a negative prediction | [P07 SpecInfer](../notes/decoding/P07-specinfer.md), [P08 Blockwise](../notes/decoding/P08-blockwise-parallel.md) |
+| Bounded-state/context encoding | Efficiency of processing past input | [P15 Emformer](../notes/streaming/P15-emformer.md), [P16 Mamba](../notes/state-space/P16-mamba.md), [P20 LC-BiMamba](../notes/state-space/P20-lc-bimamba.md) |
+| Functional probabilistic paths | Probabilistic weather-state forecasting | [P21 FGN](../notes/weather/P21-fgn.md) |
 
-## 권장 읽기 순서
+## Recommended Reading Order
 
-1. **목표가 이미 어디까지 연구됐는지:** P01 → P02 → P03 → P04.
-2. **채택·거절·복구의 원리:** P05 → P06 → P07 → P08.
-3. **음성과 텍스트 정렬:** P10 CTC → P09 RNN-T → P11 TDT.
-4. **streaming과 메모리 제약:** P15 → P18 Speech Slytherin → P20 → P30 Zipformer.
-5. **FGN의 실제 역할:** P21 → P22 GraphCast → P23 GenCast → P29 WeatherNext Cyclones.
-6. **후보 graph 및 약어 혼동:** P25 → P24 → P26; P27·P28은 별도 동명 연구.
-7. **데이터 출처:** P31 LibriSpeech → P32 GigaSpeech → P33 Common Voice.
+1. **How ​​far the target has already been researched:** P01 → P02 → P03 → P04.
+2. **Principle of adoption, rejection and recovery:** P05 → P06 → P07 → P08.
+3. **Speech and text alignment:** P10 CTC → P09 RNN-T → P11 TDT.
+4. **Streaming and memory constraints:** P15 → P18 Speech Slytherin → P20 → P30 Zipformer.
+5. **Practical role of FGN:** P21 → P22 GraphCast → P23 GenCast → P29 WeatherNext Cyclones.
+6. **Candidate graph and abbreviation confusion:** P25 → P24 → P26; P27·P28 is a separate study of the same name.
+7. **Data source:** P31 LibriSpeech → P32 GigaSpeech → P33 Common Voice.
 
-## 방법을 비교할 때 질문할 것
+## Direct comparison data added after the experiment
 
-각 논문에서 입력 음성의 범위, 미래 문맥, 출력 단위, 채택 규칙, fallback, 실제 하드웨어, 모델 크기, 유휴 시간 활용 여부를 확인한다. “accuracy unchanged”가 target 모델 출력 보존인지, corpus WER의 실험적 유사성인지도 구분한다.
+Additional sources reviewed after the initial 33-paper catalog are linked below with their current comparison role; they are not counted as part of the initial catalog.
 
-논문끼리 속도 배수를 순위로 나열하면 비교 기준이 달라진다. 특히 기상 diffusion 대비 속도, LLM decoder 가속, streaming word commit 지연은 서로 다른 수치다.
+| Study | Compare Now |
+|---|---|
+| [Stateful Conformer with Cache-based Inference](https://arxiv.org/abs/2312.17279) | Strong cache-aware streaming backbone, learning/inference context matching, encoder delay definition |
+| [Less Is More](https://arxiv.org/abs/2012.06749) | Merge paths with predictors learned from scratch with short token context |
+| [RNN-Transducer with Stateless Prediction Network](https://research.google/pubs/rnn-transducer-with-stateless-prediction-network/) | Predictor and observation voice recognition using only the last token |
+| [Tied & Reduced RNN-T Decoder](https://arxiv.org/abs/2109.07513) | Short context, simple predictor, and weight sharing. Classification of experimental conditions including EMBR |
+| [On the Prediction Network Architecture in RNN-T](https://www.isca-archive.org/interspeech_2022/albesano22_interspeech.html) | Contrast of predictor structures on the same encoder, N-Concat |
+| [Multi-Task Learning for End-to-End ASR Word and Utterance Confidence with Deletion Prediction](https://www.isca-archive.org/interspeech_2021/qiu21b_interspeech.html) | confidence estimation and multi-objective learning; Distinguish between output match and actual correctness |
+| [Analyzing the Quality and Stability of a Streaming E2E On-Device Speech Recognizer](https://arxiv.org/abs/2006.01416) | Measuring the stability and correction cost of partial output |
+| [Partial Rewriting for Multi-Stage ASR](https://arxiv.org/abs/2312.09463) | Merge of fast output/slow correction and flicker. 2-pass Comparison to avoid claiming itself as a new contribution |
 
-[33편 전체 목록](../papers/INDEX.md) · [연구 목표와 방법론](goal_and_methodology.md)
+Distinguish original weather FGN, the current ASR variant, short-context rollout and display confidence. See [current conclusions](conclusion_and_next_steps.md) for supported findings/novelty gaps and [960h plan](librispeech960_benchmark_plan.md) for training comparisons.
+
+## Questions to ask when comparing methods
+
+Inspect observed audio, future context, output unit, acceptance/fallback rules, hardware, model size and idle-time use. Distinguish target-output preservation from empirical similarity in corpus WER when a paper says accuracy is unchanged.
+
+Do not rank unrelated speedup factors together: weather versus diffusion, LLM decoding acceleration and streaming word-commit latency have different denominators.
+
+[Full list of section 33](../papers/INDEX.md) · [Research objectives and methodology](goal_and_methodology.md)

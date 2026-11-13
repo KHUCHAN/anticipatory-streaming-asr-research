@@ -1,13 +1,40 @@
 # Anticipatory Streaming ASR Research
 
-미래 발화 후보를 미리 계산하고 실제 음성으로 검증해 재사용하는 streaming ASR의 **모델 설계·학습 전 준비 자료**.
+Research on predicting acoustic representations, correcting them with newly arrived speech, and reducing streaming ASR computation at controlled recognition error.
 
-논문 33편의 한국어 노트·원문 링크·BibTeX, LibriSpeech 학습 100시간과 dev/test를 합친 **39,665발화 / 121.845시간**의 준비 스크립트·검증 보고서, 연구 목표·방법론을 정리했다. 아키텍처는 미확정이며 모델 학습은 시작하지 않았다.
+**Current direction:** reuse the existing FGN-style state predictor and bounded-context AR work as a starting point for a lightweight audio-conditioned correction path. The residual corrector and encoder-skipping runtime are **proposed, not implemented**. A learned prior may help ambiguous speech, but must allow unexpected words to override the forecast.
 
-- **[전체 안내와 파일 구조 → READ.MD](READ.MD)**
-- [연구 목표와 방법론](docs/goal_and_methodology.md)
-- [33편 논문 전체 목록](papers/INDEX.md)
-- [데이터·Mac 준비 가이드](docs/datasets_and_mac.md)
-- [LibriSpeech 실측 검증 보고서](data/reports/librispeech_inventory.md)
+Start with the [predict–correct acceleration plan](docs/predict_correct_acceleration_plan_2026-11-12.md), [current conclusions](docs/conclusion_and_next_steps.md), and [repository map](READ.MD).
 
-검토 기준일: 2026-11-10. 원문 PDF와 음성은 로컬 전용이며 공개 저장소의 스크립트로 재수집할 수 있다.
+## Completed evidence
+
+| Study | Result | Interpretation |
+|---|---|---|
+| Public 66.11M Streaming Zipformer, full 5,559-utterance test | WER 3.058% clean / 7.820% other | Reproduction of a public 960h checkpoint; no new acoustic training |
+| Our 4.60M layer-band2 AR + gate, trained on 100h | Correct-word mean display gain 89.58ms / 70.28ms over eager native output | Provisional display, not irreversible commitment or compute acceleration |
+| Inexpensive native-probability gate | Display gain 59.27ms / 53.74ms | Our incremental gain is 30.32ms / 16.54ms; actual test error rates differ |
+| Actual AR + FGN hybrid, six variants | Small stochastic hybrid 88.46ms / 70.18ms; large 81.91ms / 65.08ms | Did not outperform existing band2; additional computation increased |
+| Native CPU component profile, 24 dev utterances | Encoder approximately 98.3% of neural time in two measurements | Encoder work is the primary acceleration target on this adapter |
+
+The median per-word display gain is zero. Final WER in the display experiments is unchanged by construction. The previous two-pass claim of P50 48ms / P95 209ms was withdrawn after screen-event replay corrections. These are not live-device or mobile benchmarks.
+
+## Read and reproduce
+
+- [Research goal and methodology](docs/goal_and_methodology.md)
+- [Complete experiment history](docs/research_plan_3stage.md)
+- [Our method on a strong backbone](docs/zipformer_ours_2026-11-12.md)
+- [FGN hybrid and scaling limitations](docs/band_fgn_hybrid_2026-11-12.md)
+- [Experiment directories and public artifacts](experiments/README.md)
+- [Initial 33-paper catalog](papers/INDEX.md), [literature map](docs/literature_map.md), and [BibTeX](references/references.bib)
+- [Dataset guide](data/README.md) and [inventory](data/reports/librispeech_inventory.md)
+
+LibriSpeech training and evaluation data has been prepared locally: 292,367 utterances / 982.308 hours in total, including a training-only union of 281,241 utterances / 961.054 hours. A new 960h acoustic model has not been trained. The approximately 114M model recipe remains a separate proposal.
+
+Public documentation, paper notes, catalog text and report generators are in English. Original PDFs, speech, transcripts, feature caches, downloaded weights and per-utterance run outputs are local-only; source code and aggregate experimental evidence are versioned.
+
+```bash
+python3 scripts/validate_catalog.py
+python3 scripts/check_public_repository.py
+```
+
+See [READ.MD](READ.MD) for preparation and execution commands. Snapshot date: 2026-11-12.

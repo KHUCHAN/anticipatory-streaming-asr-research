@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "training": {
+    "small_ar": {
+      "completed_epochs": 8,
+      "selected_epoch": 0,
+      "parameters": 4602868,
+      "sha256": "4703e7ce669c5d87fa42981a3df0d0206b32e2d0f864b070669bb4e09f5fa0d6"
+    },
+    "small_det": {
+      "completed_epochs": 8,
+      "selected_epoch": 8,
+      "parameters": 10926836,
+      "sha256": "085dd91f2ac25e5ba53db39322b9e7a01c2e328eec70453f70d6f3925eca03d2"
+    },
+    "small_fgn": {
+      "completed_epochs": 8,
+      "selected_epoch": 8,
+      "parameters": 10926836,
+      "sha256": "036e65353125e2071f2b6a7a98d2b576acf47c89c71b1d9d8e571fdcd60e989f"
+    },
+    "large_ar": {
+      "completed_epochs": 8,
+      "selected_epoch": 0,
+      "parameters": 13030388,
+      "sha256": "4d263b3363487a3bf6e7302a5a1b634ef178ae962ef7dd21014a234eb5f519c7"
+    },
+    "large_det": {
+      "completed_epochs": 8,
+      "selected_epoch": 8,
+      "parameters": 19354356,
+      "sha256": "aedab31cab2a4d860e64f14c1ea3047e02d23183c3af6620f7340896ac4100f9"
+    },
+    "large_fgn": {
+      "completed_epochs": 8,
+      "selected_epoch": 8,
+      "parameters": 19354356,
+      "sha256": "448c6c8c6caf7714d4fadc7dc2a6d47585cf0bd2d7cd8bd652e9c21d184f8af9"
+    }
+  },
+  "matched_initial_weights_det_vs_noise": true,
+  "test_utterances": 5559,
+  "native_output_differences": 0,
+  "old_control_points_exactly_reproduced": 12,
+  "all_source_model_dependency_hashes_match": true,
+  "completed_unix": 1794521893.860259,
+  "trained_large_full_prefix_vs_exact_context_crop_max_difference": 2.86102294921875e-06
+}

@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "token_loss_weight": 0.0,
+  "changed_future_contexts_and_targets": true,
+  "loss_exactly_invariant": true,
+  "gradient_exactly_invariant": true,
+  "loss": 1.1688357591629028,
+  "monitored_token_nll": [
+    5.478357791900635,
+    12.816179275512695
+  ],
+  "gradient_norm": 0.42093104124069214
+}

@@ -1,46 +1,46 @@
 # P07. SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification
 
-| 항목 | 내용 |
+| Field | Value |
 |---|---|
-| 저자 | Miao, Xupeng; Oliaro, Gabriele; Zhang, Zhihao; Cheng, Xinhao; Wang, Zeyu; Zhang, Zhengxin; Wong, Rae Ying Yee; Zhu, Alan; Yang, Lijie; Shi, Xiaoxiang; Shi, Chunan; Chen, Zhuoming; Arfeen, Daiyaan; Abhyankar, Reyna; Jia, Zhihao |
-| 확인한 원문 날짜 | 2023-05-16 |
-| 발표 정보 | arXiv 2023; SpecInfer 원문 버전 |
-| 분류 | 추측 디코딩과 경로 재사용 |
-| 읽기 우선순위 | 2 — 분기 구현 참고 |
-| 원문 확인 범위 | 서지·초록 확인; PDF 전문 수집·파싱 검증 (전체 정독·재현 미수행) |
-| PDF | 18쪽; `papers/pdf/P07_specinfer.pdf` |
-| 검증일 | 2026-11-10 |
+| Authors | Miao, Xupeng; Oliaro, Gabriele; Zhang, Zhihao; Cheng, Xinhao; Wang, Zeyu; Zhang, Zhengxin; Wong, Rae Ying Yee; Zhu, Alan; Yang, Lijie; Shi, Xiaoxiang; Shi, Chunan; Chen, Zhuoming; Arfeen, Daiyaan; Abhyankar, Reyna; Jia, Zhihao |
+| Source date | 2023-05-16 |
+| Publication | arXiv 2023; SpecInfer original version |
+| Category | Speculative decoding and path reuse |
+| Reading priority | 2 — Branch implementation notes |
+| Review depth | Bibliography/abstract checked; full PDF collected and parsed; no exhaustive close reading or reproduction. |
+| PDF | 18 pages; `papers/pdf/P07_specinfer.pdf` |
+| Source verification date | 2026-11-10 |
 
-[원문](https://arxiv.org/abs/2305.09781) · [PDF](https://arxiv.org/pdf/2305.09781v4)
+[Source](https://arxiv.org/abs/2305.09781) · [PDF](https://arxiv.org/pdf/2305.09781v4)
 
-## 핵심과 방법
+## Main idea and method
 
-여러 후보 토큰 경로를 tree로 묶고 target LLM이 한꺼번에 검증하는 시스템이다.
+Organizes candidate token paths as a tree for parallel target-LLM verification.
 
-token tree와 tree attention mask로 서로 다른 prefix의 검증을 병렬화한다.
+Verification of different prefixes is parallelized using token tree and tree attention mask.
 
-## 논문이 보고한 근거
+## Source-reported evidence
 
-분산 추론과 offloading 환경에서 기존 serving 시스템보다 낮은 지연을 보고한다.
+Reports lower latency than prior serving systems in distributed inference/offloading settings.
 
-확인 위치: token-tree verification 설계 및 serving evaluation.
+Evidence location: token-tree verification design and serving evaluation.
 
-## 연구 아이디어와의 연결 — 정리자의 해석
+## Connection to this project — interpretation
 
-사용자가 말한 “가능성 높은 다음 단어 경로로 이동”을 tree·분기·공통 prefix 재사용 문제로 구체화할 때 참고한다.
+Relevant to formalizing likely next-word paths through trees, branches and shared-prefix reuse.
 
-## 적용할 때의 제한
+## Limitations when applying the result
 
-LLM serving 결과이며 음향 검증이나 스트리밍 ASR의 효율을 직접 입증하지 않는다. 분기 수가 늘면 메모리와 검증 비용도 늘어난다.
+This is an LLM serving result and does not directly prove the efficiency of acoustic verification or streaming ASR. As the number of branches increases, memory and verification costs also increase.
 
-## 코드와 모델
+## Code and models
 
 - [https://github.com/flexflow/FlexFlow](https://github.com/flexflow/FlexFlow)
 
-원문 링크는 현재 flexflow/flexflow-train으로 redirect된다. 논문의 serving artifact가 현재 같은 저장소에 보존되는지와 실행 가능성은 확인하지 않았다.
+The source link now redirects to flexflow/flexflow-train. Preservation/executability of the paper's serving artifact there was not confirmed.
 
-## 원문 버전
+## Source version
 
-PDF SHA-256: `38764bfe741d39c9a309d1b715e8dc2cea6ea6c965337752b3562b1785afd9f1`. 링크의 원문 버전과 이 해시를 기준으로 수집했다. 학습 및 저자 실험의 재현은 수행하지 않았다.
+PDF SHA-256: `38764bfe741d39c9a309d1b715e8dc2cea6ea6c965337752b3562b1785afd9f1`. The source version and this hash identify the collected PDF. Training and author experiments were not reproduced in the initial literature review.
 
-[전체 논문 목록](../../papers/INDEX.md) · [연구 지도](../../docs/literature_map.md)
+[Paper index](../../papers/INDEX.md) · [Literature map](../../docs/literature_map.md)

@@ -1,0 +1,24 @@
+{
+  "complete": true,
+  "models": 6,
+  "epochs_per_model": 8,
+  "test_utterances": 5559,
+  "model_and_gate_changes_after_test": false,
+  "verification_passed": true,
+  "active_experiment_jobs": 0,
+  "first_training_log_created_unix": 1794513544.7244093,
+  "evaluation_verified_unix": 1794521893.860259,
+  "wall_hours_from_first_training_log": 2.3192044026984107,
+  "timing_scope": "Includes new continuation study and evaluation; excludes previous warm-start training and prior feature extraction.",
+  "documents_updated": [
+    "README.md",
+    "READ.MD",
+    "docs/band_fgn_hybrid_2026-11-12.md",
+    "docs/conclusion_and_next_steps.md",
+    "docs/research_plan_3stage.md",
+    "docs/architecture.md",
+    "data/README.md"
+  ],
+  "git_commit_or_push": false,
+  "owned_caffeinate_guard_stopped": true
+}

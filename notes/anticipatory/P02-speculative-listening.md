@@ -1,46 +1,46 @@
 # P02. Decode Before You Hear: Speculative Listening for Chunk-Interleaved Full-Duplex Speech Language Models
 
-| 항목 | 내용 |
+| Field | Value |
 |---|---|
-| 저자 | Bian, Yutong; Zhang, Yanglin; Wang, Yuxiang; Zhang, Luoyuan; He, Rongshen; Wang, Zihao; Qiu, Junwen; Li, Jiaqi; Wu, Zhizheng |
-| 확인한 원문 날짜 | 2026-11-04 |
-| 발표 정보 | arXiv preprint, 2026-11-04 |
-| 분류 | 음성 도착 전 예측 |
-| 읽기 우선순위 | 1 — 먼저 읽기 |
-| 원문 확인 범위 | 서지·초록·핵심 본문/실험 설정 확인 (전체 정독·재현 미수행) |
-| PDF | 13쪽; `papers/pdf/P02_speculative-listening.pdf` |
-| 검증일 | 2026-11-10 |
+| Authors | Bian, Yutong; Zhang, Yanglin; Wang, Yuxiang; Zhang, Luoyuan; He, Rongshen; Wang, Zihao; Qiu, Junwen; Li, Jiaqi; Wu, Zhizheng |
+| Source date | 2026-11-04 |
+| Publication | arXiv preprint, 2026-11-04 |
+| Category | Prediction before audio arrival |
+| Reading priority | 1 — read first |
+| Review depth | Bibliography, abstract, core sections and experimental setup checked; no exhaustive close reading or reproduction. |
+| PDF | 13 pages; `papers/pdf/P02_speculative-listening.pdf` |
+| Source verification date | 2026-11-10 |
 
-[원문](https://arxiv.org/abs/2611.06982) · [PDF](https://arxiv.org/pdf/2611.06982v1)
+[Source](https://arxiv.org/abs/2611.06982) · [PDF](https://arxiv.org/pdf/2611.06982v1)
 
-## 핵심과 방법
+## Main idea and method
 
-실제 다음 음성 청크가 도착하기 전에 유휴 연산으로 출력을 초안 생성하고, 음성 도착 후 검증하는 full-duplex 음성 언어 모델 연구다.
+Full-duplex speech-language-model research drafts during idle time before the next audio chunk and verifies after arrival.
 
-silence hypothesis, 첫 토큰의 차순위 분기, 청크 간 hypothesis pool을 이용한다. 새 음성 아래 target 모델이 확인한 prefix만 채택한다.
+It uses silence hypothesis, next-order branch of the first token, and hypothesis pool between chunks. Only the prefix confirmed by the target model under the new voice is adopted.
 
-## 논문이 보고한 근거
+## Source-reported evidence
 
-TickTock-Bench의 네 모델에서 speak chunk 2.6–2.8배 가속과 응답 시작 전 디코딩 지연 감소를 보고한다. 본문은 1초 청크와 저동시성 환경을 사용한다.
+Four models of TickTock-Bench report acceleration of speak chunks by 2.6–2.8 times and reduction of decoding delay before response starts. This text uses 1 second chunks and a low-concurrency environment.
 
-확인 위치: PDF 3–7쪽, Sections 3–5, Tables 1–2.
+Evidence location: PDF 3–7 Page, Sections 3–5, Tables 1–2.
 
-## 연구 아이디어와의 연결 — 정리자의 해석
+## Connection to this project — interpretation
 
-음성을 기다리는 시간을 사전 계산에 쓰는 스케줄링과, 틀린 분기의 재사용·수정 절차에 직접 참고할 수 있다.
+Directly relevant to scheduling precomputation during audio waiting and reusing/correcting wrong branches.
 
-## 적용할 때의 제한
+## Limitations when applying the result
 
-순수 ASR의 다음 단어 예측 실험이 아니다. silence 가정에서의 높은 출력 일치율을 미래 단어 예측 정확도로 해석하면 안 된다. lossless는 target 출력에 대한 보존이다.
+Not an experiment in predicting the next words of pure ASR. High output agreement under a silence hypothesis is not future-word accuracy. Lossless refers to preserving target output.
 
-## 코드와 모델
+## Code and models
 
-공식 구현 링크를 이번 검토에서 확정하지 않았다. 코드가 없다는 뜻은 아니다.
+An official implementation link was not confirmed in this review. This does not establish that no implementation exists.
 
-공개 checkpoint의 존재를 추정하지 않는다.
+Do not assume a public checkpoint exists.
 
-## 원문 버전
+## Source version
 
-PDF SHA-256: `31dbfc0ef28ccd92add078b8e04e230660e6a5ddb4330b3ef2b64a3c1d767f5c`. 링크의 원문 버전과 이 해시를 기준으로 수집했다. 학습 및 저자 실험의 재현은 수행하지 않았다.
+PDF SHA-256: `31dbfc0ef28ccd92add078b8e04e230660e6a5ddb4330b3ef2b64a3c1d767f5c`. The source version and this hash identify the collected PDF. Training and author experiments were not reproduced in the initial literature review.
 
-[전체 논문 목록](../../papers/INDEX.md) · [연구 지도](../../docs/literature_map.md)
+[Paper index](../../papers/INDEX.md) · [Literature map](../../docs/literature_map.md)

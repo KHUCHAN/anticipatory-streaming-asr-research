@@ -1,0 +1,288 @@
+{
+  "status": "pass",
+  "observed_seconds_equivalent": 600,
+  "results": {
+    "state": {
+      "snapshots": [
+        {
+          "chunk": 1,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 2,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 10,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 100,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 1000,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 1875,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        }
+      ],
+      "storage_peak_bytes": 33792
+    },
+    "state38": {
+      "snapshots": [
+        {
+          "chunk": 1,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 2,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 10,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 100,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 1000,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 1875,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        }
+      ],
+      "storage_peak_bytes": 33792
+    },
+    "ensemble": {
+      "snapshots": [
+        {
+          "chunk": 1,
+          "logical_bytes": 34816,
+          "unique_storage_bytes": 34816
+        },
+        {
+          "chunk": 2,
+          "logical_bytes": 34816,
+          "unique_storage_bytes": 34816
+        },
+        {
+          "chunk": 10,
+          "logical_bytes": 34816,
+          "unique_storage_bytes": 34816
+        },
+        {
+          "chunk": 100,
+          "logical_bytes": 34816,
+          "unique_storage_bytes": 34816
+        },
+        {
+          "chunk": 1000,
+          "logical_bytes": 34816,
+          "unique_storage_bytes": 34816
+        },
+        {
+          "chunk": 1875,
+          "logical_bytes": 34816,
+          "unique_storage_bytes": 34816
+        }
+      ],
+      "storage_peak_bytes": 34816
+    },
+    "reset": {
+      "snapshots": [
+        {
+          "chunk": 1,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 2,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 34816
+        },
+        {
+          "chunk": 10,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 34816
+        },
+        {
+          "chunk": 100,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 34816
+        },
+        {
+          "chunk": 1000,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 34816
+        },
+        {
+          "chunk": 1875,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 34816
+        }
+      ],
+      "storage_peak_bytes": 34816
+    },
+    "deterministic": {
+      "snapshots": [
+        {
+          "chunk": 1,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 2,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 10,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 100,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 1000,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 1875,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        }
+      ],
+      "storage_peak_bytes": 33792
+    },
+    "single_step": {
+      "snapshots": [
+        {
+          "chunk": 1,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 2,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 10,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 100,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 1000,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 1875,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        }
+      ],
+      "storage_peak_bytes": 33792
+    },
+    "crps_only": {
+      "snapshots": [
+        {
+          "chunk": 1,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 2,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 10,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 100,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 1000,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        },
+        {
+          "chunk": 1875,
+          "logical_bytes": 33792,
+          "unique_storage_bytes": 33792
+        }
+      ],
+      "storage_peak_bytes": 33792
+    },
+    "persistence": {
+      "snapshots": [
+        {
+          "chunk": 1,
+          "logical_bytes": 16384,
+          "unique_storage_bytes": 16384
+        },
+        {
+          "chunk": 2,
+          "logical_bytes": 16384,
+          "unique_storage_bytes": 16384
+        },
+        {
+          "chunk": 10,
+          "logical_bytes": 16384,
+          "unique_storage_bytes": 16384
+        },
+        {
+          "chunk": 100,
+          "logical_bytes": 16384,
+          "unique_storage_bytes": 16384
+        },
+        {
+          "chunk": 1000,
+          "logical_bytes": 16384,
+          "unique_storage_bytes": 16384
+        },
+        {
+          "chunk": 1875,
+          "logical_bytes": 16384,
+          "unique_storage_bytes": 16384
+        }
+      ],
+      "storage_peak_bytes": 16384
+    }
+  },
+  "seconds": 1.6220993995666504,
+  "scope": "Actual unique retained tensor storage buffers, including unused view storage, not process RSS, weights, allocator pools or temporary activations. Repeated observations test storage retention, not long-stream recognition quality."
+}

@@ -1,0 +1,4 @@
+# Our forecaster training/inference environment, macOS arm64 / Python 3.13.
+numpy==2.5.4
+sentencepiece==0.2.3
+torch==2.15.0

@@ -1,46 +1,46 @@
 # P20. Attention-Free Dual-Mode ASR with Latency-Controlled Selective State Spaces
 
-| 항목 | 내용 |
+| Field | Value |
 |---|---|
-| 저자 | Moriya, Takafumi; Mimura, Masato; Matsui, Kiyoaki; Sato, Hiroshi; Matsuura, Kohei |
-| 확인한 원문 날짜 | 2025 |
-| 발표 정보 | Interspeech 2025 |
-| 분류 | 상태공간 모델과 ConMamba |
-| 읽기 우선순위 | 1 — streaming 상태공간 근거 |
-| 원문 확인 범위 | 서지·초록·핵심 본문/실험 설정 확인 (전체 정독·재현 미수행) |
-| PDF | 5쪽; `papers/pdf/P20_lc-bimamba.pdf` |
-| 검증일 | 2026-11-10 |
+| Authors | Moriya, Takafumi; Mimura, Masato; Matsui, Kiyoaki; Sato, Hiroshi; Matsuura, Kohei |
+| Source date | 2025 |
+| Publication | Interspeech 2025 |
+| Category | State-space models and ConMamba |
+| Reading priority | 1 — streaming state space basis |
+| Review depth | Bibliography, abstract, core sections and experimental setup checked; no exhaustive close reading or reproduction. |
+| PDF | 5 pages; `papers/pdf/P20_lc-bimamba.pdf` |
+| Source verification date | 2026-11-10 |
 
-[원문](https://www.isca-archive.org/interspeech_2025/moriya25_interspeech.html) · [PDF](https://www.isca-archive.org/interspeech_2025/moriya25_interspeech.pdf)
+[Source](https://www.isca-archive.org/interspeech_2025/moriya25_interspeech.html) · [PDF](https://www.isca-archive.org/interspeech_2025/moriya25_interspeech.pdf)
 
-## 핵심과 방법
+## Main idea and method
 
-Mamba 기반 인코더를 streaming과 offline에 함께 사용하는 attention-free dual-mode ASR 연구다.
+This is an attention-free dual-mode ASR study using a Mamba-based encoder for streaming and offline.
 
-LC-BiMamba로 청크 안의 제한된 미래 문맥을 사용하고 AdaALSD로 transducer 탐색을 개선한다.
+We use limited future context within chunks with LC-BiMamba and improve transducer search with AdaALSD.
 
-## 논문이 보고한 근거
+## Source-reported evidence
 
-TLv2와 LibriSpeech에서 Conformer와 WER·RTF를 비교한다. LibriSpeech 표는 RTF 0.58 대 0.50/0.51 등 특정 설정 결과를 보여준다.
+Compare Conformer and WER·RTF in TLv2 and LibriSpeech. The LibriSpeech table shows the results of specific settings: RTF 0.58 vs. 0.50/0.51.
 
-확인 위치: PDF 1–4쪽, Table 5 및 latency 설정.
+Evidence location: PDF 1–4 page, Table 5 and latency settings.
 
-## 연구 아이디어와의 연결 — 정리자의 해석
+## Connection to this project — interpretation
 
-상태공간 모델을 실제 streaming 조건에서 비교할 때 필요한 청크·미래 문맥 통제의 직접 근거다.
+Direct support for controlling chunks and future context when comparing state-space models in actual streaming conditions.
 
-## 적용할 때의 제한
+## Limitations when applying the result
 
-latency-controlled는 미래 문맥이 0이라는 뜻이 아니다. constant-time이라는 표현을 전체 음성을 O(1) 시간에 처리한다는 뜻으로 읽으면 안 된다.
+latency-controlled does not mean that the future context is 0. The expression constant-time should not be read to mean that the entire voice is processed in O(1) time.
 
-## 코드와 모델
+## Code and models
 
-공식 구현 링크를 이번 검토에서 확정하지 않았다. 코드가 없다는 뜻은 아니다.
+An official implementation link was not confirmed in this review. This does not establish that no implementation exists.
 
-공개 checkpoint의 존재를 추정하지 않는다.
+Do not assume a public checkpoint exists.
 
-## 원문 버전
+## Source version
 
-PDF SHA-256: `de00b9bd79b0da7b7fb421e167df1deb6398628ae5fc2e7bf2f91b47cb3cf155`. 링크의 원문 버전과 이 해시를 기준으로 수집했다. 학습 및 저자 실험의 재현은 수행하지 않았다.
+PDF SHA-256: `de00b9bd79b0da7b7fb421e167df1deb6398628ae5fc2e7bf2f91b47cb3cf155`. The source version and this hash identify the collected PDF. Training and author experiments were not reproduced in the initial literature review.
 
-[전체 논문 목록](../../papers/INDEX.md) · [연구 지도](../../docs/literature_map.md)
+[Paper index](../../papers/INDEX.md) · [Literature map](../../docs/literature_map.md)

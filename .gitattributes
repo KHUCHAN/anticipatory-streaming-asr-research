@@ -1,0 +1,4 @@
+# Keep generated evidence byte-for-byte; CSV CRLF and SVG path whitespace are
+# produced by their exporters and are not hand-written source formatting.
+experiments/**/artifacts/*.csv -whitespace
+experiments/**/artifacts/*.svg -whitespace

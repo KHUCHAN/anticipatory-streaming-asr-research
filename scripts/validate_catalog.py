@@ -21,7 +21,7 @@ def main():
     if len(ids) != len(set(ids)):
         errors.append('Duplicate IDs')
     for p in papers:
-        for key in ['title','authors','source_date','publication','paper_url','pdf_url','summary_ko','method_ko','evidence_ko','evidence_location','relevance_ko','limitation_ko','note_path','pdf_sha256']:
+        for key in ['title','authors','source_date','publication','paper_url','pdf_url','summary_en','method_en','evidence_en','evidence_location','relevance_en','limitation_en','note_path','pdf_sha256']:
             if not p.get(key):
                 errors.append(f"{p['id']}: missing {key}")
         if not re.fullmatch(r'P\d{2}', p['id']):

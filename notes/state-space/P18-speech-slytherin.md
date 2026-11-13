@@ -1,46 +1,46 @@
 # P18. Speech Slytherin: Examining the Performance and Efficiency of Mamba for Speech Separation, Recognition, and Synthesis
 
-| 항목 | 내용 |
+| Field | Value |
 |---|---|
-| 저자 | Jiang, Xilin; Li, Yinghao Aaron; Florea, Adrian Nicolas; Han, Cong; Mesgarani, Nima |
-| 확인한 원문 날짜 | 2024-07-13 |
-| 발표 정보 | arXiv preprint, 2024 |
-| 분류 | 상태공간 모델과 ConMamba |
-| 읽기 우선순위 | 1 — 상태공간 적용 근거 |
-| 원문 확인 범위 | 서지·초록 확인; PDF 전문 수집·파싱 검증 (전체 정독·재현 미수행) |
-| PDF | 9쪽; `papers/pdf/P18_speech-slytherin.pdf` |
-| 검증일 | 2026-11-10 |
+| Authors | Jiang, Xilin; Li, Yinghao Aaron; Florea, Adrian Nicolas; Han, Cong; Mesgarani, Nima |
+| Source date | 2024-07-13 |
+| Publication | arXiv preprint, 2024 |
+| Category | State-space models and ConMamba |
+| Reading priority | 1 — Grounds for applying state space |
+| Review depth | Bibliography/abstract checked; full PDF collected and parsed; no exhaustive close reading or reproduction. |
+| PDF | 9 pages; `papers/pdf/P18_speech-slytherin.pdf` |
+| Source verification date | 2026-11-10 |
 
-[원문](https://arxiv.org/abs/2407.09732) · [PDF](https://arxiv.org/pdf/2407.09732v1)
+[Source](https://arxiv.org/abs/2407.09732) · [PDF](https://arxiv.org/pdf/2407.09732v1)
 
-## 핵심과 방법
+## Main idea and method
 
-Mamba를 음원 분리·음성인식·합성에 적용하며 ConMamba를 제시한 연구다.
+This study proposes ConMamba by applying Mamba to sound source separation, voice recognition, and synthesis.
 
-음성인식에는 Conformer의 attention을 Mamba 계열 모듈로 바꾼 구조를 평가한다.
+For ASR, evaluates replacing Conformer attention with Mamba-family modules.
 
-## 논문이 보고한 근거
+## Source-reported evidence
 
-Mamba의 효율상 이점은 입력 길이와 작업에 의존하며, 짧은 음성에서는 항상 유리하지 않다고 보고한다.
+They report that Mamba's efficiency advantage depends on input length and operation, and is not always advantageous for short speech.
 
-확인 위치: ConMamba 및 speed/memory evaluation.
+Evidence location: ConMamba and speed/memory evaluation.
 
-## 연구 아이디어와의 연결 — 정리자의 해석
+## Connection to this project — interpretation
 
-긴 상태를 줄이는 접근의 가능성과, 짧은 실시간 청크에서 이득이 사라질 위험을 함께 검토할 수 있다.
+Useful for assessing state reduction and the risk that gains disappear on short real-time chunks.
 
-## 적용할 때의 제한
+## Limitations when applying the result
 
-bidirectional 구성과 전체 발화 실험을 strict streaming 결과로 취급하지 않는다. 청크 경계의 상태 처리와 학습 예산을 따로 검증해야 한다.
+Bidirectional configurations and full speech experiments are not treated as strict streaming results. The state processing of chunk boundaries and the learning budget must be verified separately.
 
-## 코드와 모델
+## Code and models
 
 - [https://github.com/xi-j/Mamba-ASR](https://github.com/xi-j/Mamba-ASR)
 
-링크의 존재와 원문 연결을 확인했다. 설치·실행·가중치 다운로드·성능 재현은 수행하지 않았다.
+Implementation links and their source connection were checked; installation, execution, weight download and performance reproduction were not performed in that review.
 
-## 원문 버전
+## Source version
 
-PDF SHA-256: `5cc3c3aeebac17170e5880843ca760aad202424aa4a232101086bb1add8eaa76`. 링크의 원문 버전과 이 해시를 기준으로 수집했다. 학습 및 저자 실험의 재현은 수행하지 않았다.
+PDF SHA-256: `5cc3c3aeebac17170e5880843ca760aad202424aa4a232101086bb1add8eaa76`. The source version and this hash identify the collected PDF. Training and author experiments were not reproduced in the initial literature review.
 
-[전체 논문 목록](../../papers/INDEX.md) · [연구 지도](../../docs/literature_map.md)
+[Paper index](../../papers/INDEX.md) · [Literature map](../../docs/literature_map.md)

@@ -1,0 +1,85 @@
+{
+  "scope": "Existing FrozenZipformer, batch 1, CPUExecutionProvider, one intra/inter-op thread; no model or decoder changes. Not a live microphone/UI benchmark.",
+  "timing_denominator": "Neural component shares exclude file loading, fbank, bookkeeping and session initialization. Wall time includes per-utterance loading, fbank and bookkeeping; excludes session initialization and warmup.",
+  "seed": 37,
+  "warmup_utterances": 2,
+  "utterances": 24,
+  "chunks": 431,
+  "native_tokens": 723,
+  "audio_seconds": 129.2300625,
+  "wall_seconds": 4.147433917038143,
+  "neural_seconds": 3.9245183415478095,
+  "components": {
+    "encoder": {
+      "seconds": 3.858094411669299,
+      "calls": 431,
+      "percent_neural": 98.30746287575475,
+      "ms_per_chunk": 8.951495154685148
+    },
+    "decoder": {
+      "seconds": 0.032444578246213496,
+      "calls": 747,
+      "percent_neural": 0.826714909259859,
+      "ms_per_chunk": 0.07527744372671345
+    },
+    "joiner": {
+      "seconds": 0.03397935163229704,
+      "calls": 3448,
+      "percent_neural": 0.8658222149853875,
+      "ms_per_chunk": 0.07883840285915786
+    }
+  },
+  "native_neural_speedup_ceiling_if_decoder_and_joiner_free": 1.0172167714915432,
+  "utterance_ids": [
+    "7976-110523-0003",
+    "1988-148538-0013",
+    "8297-275154-0022",
+    "84-121123-0015",
+    "6319-64726-0002",
+    "1462-170145-0001",
+    "84-121123-0001",
+    "422-122949-0004",
+    "5895-34629-0001",
+    "6345-93302-0013",
+    "1993-147964-0003",
+    "6241-61946-0018",
+    "8288-274150-0005",
+    "7641-96684-0015",
+    "1650-157641-0007",
+    "7697-105815-0017",
+    "8254-84205-0014",
+    "7697-245712-0019",
+    "6599-38591-0002",
+    "1255-74899-0019",
+    "7697-245712-0005",
+    "4831-29134-0015",
+    "6123-59186-0024",
+    "6841-88291-0041"
+  ],
+  "manifest_sha256": {
+    "data/processed/manifests/dev-clean.jsonl": "e3cb43a548b30de9f90252f3cc71d1e84c1dabb316d8af49bbfbab067e5ba069",
+    "data/processed/manifests/dev-other.jsonl": "d64b9a18dbf060a774082a54aac3adeb1ab85da575827f188e59e277357c0809"
+  },
+  "source_sha256": {
+    "scripts/profile_zipformer_compute.py": "e43b0a2dda0d8c585881c5b0ab5f5ebd6ed0a06178a5fb822230bab51a72da13",
+    "scripts/zipformer_features.py": "9775998a1c25cc544db3e4ac7ade68ba9c25fbf1a2cb8052b9c1c562d0146bf1",
+    "configs/zipformer_baseline.json": "78dd5f8e817ea2d3baa537234743c26a97d2ac7da2ec1fabe21e9f8c7764d0f5"
+  },
+  "model_sha256": {
+    "encoder": "d1d74ba2fd9ce2186662cec93eab9f9c102d97a18e86dafdaf584776c961ab1d",
+    "decoder": "85914f840b71110487ece7a30ebd0bd4b8fb5c2623215bba3aa5ab4c138fc591",
+    "joiner": "5fe99bb91ea035ab82765f65955b6a9cd2f8b7ebd320761e432d16e432dcaad9"
+  },
+  "environment": {
+    "python": "3.13.2 (v3.13.2:4f8bb3947cf, Feb  4 2025, 11:51:10) [Clang 15.0.0 (clang-1500.3.9.4)]",
+    "platform": "macOS-26.7.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "dependencies": {
+      "onnxruntime": "1.31.1",
+      "kaldi-native-fbank": "1.23.0",
+      "sentencepiece": "0.2.3",
+      "soundfile": "0.14.0"
+    }
+  },
+  "created_at_utc": "2026-11-13T01:28:47Z"
+}

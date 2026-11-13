@@ -1,6 +1,7 @@
 {
   "verified_at": "2026-11-10",
-  "selected_scope": "LibriSpeech train-clean-100 plus dev-clean, dev-other, test-clean, test-other; selected explicitly by the user",
+  "benchmark_updated_at": "2026-11-11",
+  "selected_scope": "LibriSpeech 960h adopted as the main benchmark. All three training splits and four dev/test splits are downloaded, checksum-verified, extracted and inventoried; no expanded model training was started.",
   "datasets": [
     {
       "id": "librispeech",
@@ -8,13 +9,40 @@
       "paper_id": "P31",
       "language": "English",
       "domain": "Read audiobooks",
-      "selected_splits": ["train-clean-100", "dev-clean", "dev-other", "test-clean", "test-other"],
+      "selected_splits": [
+        "train-clean-100",
+        "train-clean-360",
+        "train-other-500",
+        "dev-clean",
+        "dev-other",
+        "test-clean",
+        "test-other"
+      ],
+      "prepared_splits": [
+        "train-clean-100",
+        "train-clean-360",
+        "train-other-500",
+        "dev-clean",
+        "dev-other",
+        "test-clean",
+        "test-other"
+      ],
+      "pending_splits": [],
+      "benchmark_plan": "docs/librispeech960_benchmark_plan.md",
+      "benchmark_config": "configs/librispeech960_benchmark.json",
+      "dev_protocol_report": "data/reports/librispeech960_protocol.json",
       "license": "CC BY 4.0",
       "access": "Public HTTPS archives",
       "local_preparation_report": "data/reports/librispeech_inventory.json",
       "local_manifest_dir": "data/processed/manifests",
       "word_timestamps": "Not supplied in the prepared utterance manifests; alignment remains a later decision",
-      "publication_policy": "Raw archives, audio, transcripts and per-utterance manifests excluded from Git; aggregate report and scripts tracked"
+      "publication_policy": "Raw archives, audio, transcripts and per-utterance manifests excluded from Git; aggregate report and scripts tracked",
+      "train_union_manifest": "data/processed/manifests/train-960.jsonl",
+      "train_utterances": 281241,
+      "train_duration_hours": 961.054398,
+      "organization_report": "data/reports/librispeech960_organization.json",
+      "nemo_manifest_dir": "data/processed/manifests/nemo",
+      "dev_role_manifest_dir": "data/processed/protocols/librispeech960_v1/manifests"
     },
     {
       "id": "gigaspeech",
@@ -22,7 +50,13 @@
       "paper_id": "P32",
       "language": "English",
       "domain": "Audiobooks, podcasts and YouTube",
-      "subset_hours": {"XS": 10, "S": 250, "M": 1000, "L": 2500, "XL": 10000},
+      "subset_hours": {
+        "XS": 10,
+        "S": 250,
+        "M": 1000,
+        "L": 2500,
+        "XL": 10000
+      },
       "access": "Official repository asks applicants to fill a form and follow the reply; Hugging Face card returned HTTP 401 during this review",
       "local_status": "Not requested or downloaded",
       "license_status": "Dataset-specific access agreement must be read when obtaining access; no agreement accepted in this task"
@@ -48,5 +82,6 @@
       "license_status": "Official overview states Creative Commons Attribution; exact selected distribution/version to be checked before acquisition",
       "local_status": "Official metadata reviewed; not part of the selected raw-data download scope"
     }
-  ]
+  ],
+  "librispeech_prepared_at_utc": "2026-11-11T22:11:16+00:00"
 }

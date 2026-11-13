@@ -1,46 +1,50 @@
 # P30. Zipformer: A faster and better encoder for automatic speech recognition
 
-| 항목 | 내용 |
+| Field | Value |
 |---|---|
-| 저자 | Yao, Zengwei; Guo, Liyong; Yang, Xiaoyu; Kang, Wei; Kuang, Fangjun; Yang, Yifan; Jin, Zengrui; Lin, Long; Povey, Daniel |
-| 확인한 원문 날짜 | 2023-10-17 |
-| 발표 정보 | Zipformer 원 논문, arXiv 2023 |
-| 분류 | ASR 정렬·인코더·스트리밍 기준선 |
-| 읽기 우선순위 | 1 — 외부 streaming 기준선 |
-| 원문 확인 범위 | 서지·초록 확인; PDF 전문 수집·파싱 검증 (전체 정독·재현 미수행) |
-| PDF | 16쪽; `papers/pdf/P30_zipformer.pdf` |
-| 검증일 | 2026-11-10 |
+| Authors | Yao, Zengwei; Guo, Liyong; Yang, Xiaoyu; Kang, Wei; Kuang, Fangjun; Yang, Yifan; Jin, Zengrui; Lin, Long; Povey, Daniel |
+| Source date | 2023-10-17 |
+| Publication | Zipformer original paper, arXiv 2023 |
+| Category | ASR alignment, encoders and streaming baselines |
+| Reading priority | 1 — External streaming baseline |
+| Review depth | Bibliography/abstract checked; full PDF collected and parsed; no exhaustive close reading or reproduction. |
+| PDF | 16 pages; `papers/pdf/P30_zipformer.pdf` |
+| Source verification date | 2026-11-10 |
 
-[원문](https://arxiv.org/abs/2310.11230) · [PDF](https://arxiv.org/pdf/2310.11230v4) · [추가 1차 출처 1](https://k2-fsa.github.io/sherpa/onnx/pretrained_models/online-transducer/zipformer-transducer-models.html)
+[Source](https://arxiv.org/abs/2310.11230) · [PDF](https://arxiv.org/pdf/2310.11230v4) · [Additional primary source 1](https://k2-fsa.github.io/sherpa/onnx/pretrained_models/online-transducer/zipformer-transducer-models.html)
 
-## 핵심과 방법
+## Main idea and method
 
-여러 시간 해상도의 인코더를 사용해 효율과 인식 성능을 높이는 Zipformer 논문이다.
+Zipformer combines encoder time resolutions to improve efficiency and recognition.
 
-U-Net 유사한 다중 frame rate 구조, attention weight 재사용, BiasNorm, Swoosh activation 및 ScaledAdam을 제안한다.
+We propose a U-Net-like multi-frame rate structure, attention weight reuse, BiasNorm, Swoosh activation, and ScaledAdam.
 
-## 논문이 보고한 근거
+## Source-reported evidence
 
-LibriSpeech, AISHELL-1, WenetSpeech에서 비교하고 icefall 구현을 공개한다.
+LibriSpeech, AISHELL-1, WenetSpeech compares and discloses icefall implementation.
 
-확인 위치: encoder design 및 ASR experiments.
+Evidence location: encoder design and ASR experiments.
 
-## 연구 아이디어와의 연결 — 정리자의 해석
+## Connection to this project — interpretation
 
-sherpa-onnx의 20M streaming 모델을 외부 참조로 사용할 때 구조와 학습 출처를 이해할 근거다.
+Provides the architecture/training context for an efficient streaming encoder and short prediction-network context. The locally evaluated backbone is the 66.11M LibriSpeech 960h model described below.
 
-## 적용할 때의 제한
+## Limitations when applying the result
 
-공개 20M 모델이 이 프로젝트의 100시간 학습과 동일한 조건인 것은 아니다. ONNX CPU와 PyTorch MPS의 속도 차이를 아키텍처 효과로 단정하지 않는다.
+Public 960h weights are not matched to this project's 100h acoustic training. ONNX CPU versus PyTorch MPS runtime differences do not isolate architecture effects.
 
-## 코드와 모델
+## Code and models
 
 - [https://github.com/k2-fsa/icefall](https://github.com/k2-fsa/icefall)
 
-링크의 존재와 원문 연결을 확인했다. 설치·실행·가중치 다운로드·성능 재현은 수행하지 않았다.
+Initially, links and source connections were checked only. On 2026-11-11, official 66.11M Streaming Zipformer FP32 ONNX weights were evaluated with streaming greedy decoding on all 5,559 test utterances. WER was 3.058/7.820%, near official 3.06/7.79%. This reproduces checkpoint evaluation, not all ICLR 2024 tables/training or our forecaster. [Baseline report](../../docs/baseline_zipformer_2026-11-11.md).
 
-## 원문 버전
+## Source version
 
-PDF SHA-256: `94deedaae51eb7ad2016845c84c8e27c070cc0c0538162851ca41e18778b269b`. 링크의 원문 버전과 이 해시를 기준으로 수집했다. 학습 및 저자 실험의 재현은 수행하지 않았다.
+PDF SHA-256: `94deedaae51eb7ad2016845c84c8e27c070cc0c0538162851ca41e18778b269b`. The PDF version/hash identifies the source. Original acoustic training and the paper's complete experiments were not reproduced; subsequent public-checkpoint evaluation is documented above.
 
-[전체 논문 목록](../../papers/INDEX.md) · [연구 지도](../../docs/literature_map.md)
+## Project follow-up
+
+On 2026-11-12, 4.60M full/band2 forecasters were trained with matched initialization for 100h × 15 epochs on the frozen 66.11M backbone and evaluated on the full test. Band2+gate mean display gain was 89.58/70.28ms over eager native output and 30.32/16.54ms over native probability+gate. Actual test risks differ; this does not establish matched-risk Pareto improvement, faster commitment or reproduction of the original paper's acoustic training. [Conditions and diagnostics](../../docs/zipformer_ours_2026-11-12.md).
+
+[Paper index](../../papers/INDEX.md) · [Literature map](../../docs/literature_map.md)

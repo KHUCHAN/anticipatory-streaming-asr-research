@@ -1,46 +1,46 @@
 # P31. LibriSpeech: An ASR Corpus Based on Public Domain Audio Books
 
-| 항목 | 내용 |
+| Field | Value |
 |---|---|
-| 저자 | Vassil Panayotov; Guoguo Chen; Daniel Povey; Sanjeev Khudanpur |
-| 확인한 원문 날짜 | 2015 |
-| 발표 정보 | ICASSP 2015 |
-| 분류 | 학습 데이터셋 원 논문 |
-| 읽기 우선순위 | 1 — 기본 데이터 이해 |
-| 원문 확인 범위 | 서지·초록·핵심 본문/실험 설정 확인 (전체 정독·재현 미수행) |
-| PDF | 5쪽; `papers/pdf/P31_librispeech.pdf` |
-| 검증일 | 2026-11-10 |
+| Authors | Vassil Panayotov; Guoguo Chen; Daniel Povey; Sanjeev Khudanpur |
+| Source date | 2015 |
+| Publication | ICASSP 2015 |
+| Category | Original dataset papers |
+| Reading priority | 1 — Understand basic data |
+| Review depth | Bibliography, abstract, core sections and experimental setup checked; no exhaustive close reading or reproduction. |
+| PDF | 5 pages; `papers/pdf/P31_librispeech.pdf` |
+| Source verification date | 2026-11-10 |
 
-[원문](https://www.openslr.org/resources/12/about.html) · [PDF](https://www.danielpovey.com/files/2015_icassp_librispeech.pdf) · [추가 1차 출처 1](https://www.openslr.org/12)
+[Source](https://www.openslr.org/resources/12/about.html) · [PDF](https://www.danielpovey.com/files/2015_icassp_librispeech.pdf) · [Additional primary source 1](https://www.openslr.org/12)
 
-## 핵심과 방법
+## Main idea and method
 
-LibriVox 공개 오디오북에서 수집한 16 kHz 영어 낭독 ASR corpus의 원 논문이다.
+This is the original paper of the 16 kHz English reading ASR corpus collected from LibriVox public audiobooks.
 
-전사 정제와 발화 분할, train/dev/test를 제공하고 언어 모델 자원을 별도로 배포한다.
+Provides cleaned transcripts, segmented utterances, train/dev/test and separately distributed language-model resources.
 
-## 논문이 보고한 근거
+## Source-reported evidence
 
-약 1,000시간 corpus 및 baseline ASR 결과를 제시한다. 이 프로젝트는 train-clean-100과 네 dev/test split만 준비한다.
+Presents an approximately 1,000-hour corpus and baseline ASR. Initial preparation in this project covers train-clean-100 and four dev/test splits.
 
-확인 위치: corpus construction 및 official OpenSLR split list.
+Evidence location: corpus construction and official OpenSLR split list.
 
-## 연구 아이디어와의 연결 — 정리자의 해석
+## Connection to this project — interpretation
 
-반복 가능한 작은 규모의 첫 비교와, 동일 utterance에서 여러 시간 prefix를 만드는 기반 데이터다.
+Provides a reproducible small-scale comparison and multiple temporal prefixes from identical utterances.
 
-## 적용할 때의 제한
+## Limitations when applying the result
 
-낭독 음성이고 정제·분할되어 있어 자연 대화나 연속 마이크 환경과 차이가 있다. 단어 종료 시각은 별도 alignment가 필요하다.
+Read, cleaned and segmented speech differs from conversation or continuous microphones. Word-end timing needs separate alignment.
 
-## 코드와 모델
+## Code and models
 
-공식 구현 링크를 이번 검토에서 확정하지 않았다. 코드가 없다는 뜻은 아니다.
+An official implementation link was not confirmed in this review. This does not establish that no implementation exists.
 
-공개 checkpoint의 존재를 추정하지 않는다.
+Do not assume a public checkpoint exists.
 
-## 원문 버전
+## Source version
 
-PDF SHA-256: `0e6ee6ace1a55631b54e8671c25203418f8af00dcec3273ca06b1945b7a8a953`. 링크의 원문 버전과 이 해시를 기준으로 수집했다. 학습 및 저자 실험의 재현은 수행하지 않았다.
+PDF SHA-256: `0e6ee6ace1a55631b54e8671c25203418f8af00dcec3273ca06b1945b7a8a953`. The source version and this hash identify the collected PDF. Training and author experiments were not reproduced in the initial literature review.
 
-[전체 논문 목록](../../papers/INDEX.md) · [연구 지도](../../docs/literature_map.md)
+[Paper index](../../papers/INDEX.md) · [Literature map](../../docs/literature_map.md)

@@ -1,0 +1,17 @@
+{
+  "python": "3.13.2 (v3.13.2:4f8bb3947cf, Feb  4 2025, 11:51:10) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "platform": "macOS-26.7.2-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "logical_cpu_count": 15,
+  "mps_available": true,
+  "packages": {
+    "torch": "2.15.0",
+    "numpy": "2.5.4",
+    "sentencepiece": "0.2.3",
+    "matplotlib": "3.10.8"
+  },
+  "evaluation_workers": 4,
+  "training_precision": "FP32",
+  "training_device": "MPS",
+  "inference_device": "CPU, one thread per worker"
+}

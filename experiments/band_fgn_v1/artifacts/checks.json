@@ -1,0 +1,17 @@
+{
+  "initial_large_identity_max_difference": 0.0,
+  "future_input_perturbation_max_difference": 0.0,
+  "future_input_gradient_max": 0.0,
+  "token_loss_gradient_into_fgn": 6400.969257995486,
+  "later_state_gradient_through_earlier_prediction": 1.5658403635025024,
+  "confirmed_audio_cache_speculation_isolated": true,
+  "band2_live_text_nodes_at_most": 3,
+  "passed": true,
+  "exact_receptive_field_crop_max_differences": {
+    "small_ar": 2.0265579223632812e-06,
+    "large_ar": 1.9073486328125e-06,
+    "small_fgn": 3.814697265625e-06,
+    "large_fgn": 3.337860107421875e-06
+  },
+  "full_prefix_test_length": 66
+}

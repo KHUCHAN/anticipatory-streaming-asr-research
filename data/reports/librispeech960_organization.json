@@ -1,0 +1,171 @@
+{
+  "prepared_at_utc": "2026-11-11T22:11:52+00:00",
+  "inventory": "data/reports/librispeech_inventory.json",
+  "dev_protocol": "data/reports/librispeech960_protocol.json",
+  "checks": {
+    "original_split_utterance_overlap": 0,
+    "dev_role_utterance_overlap": 0,
+    "dev_role_speaker_overlap": 0,
+    "dev_roles_cover_all_dev": true,
+    "train_union_exact_concatenation": true,
+    "all_manifest_audio_paths_exist": true
+  },
+  "transcript_policy": "Original uppercase text preserved; no text normalization, filtering, tokenizer or features generated.",
+  "nemo_format_source": "https://docs.nvidia.com/nemo/speech/latest/asr/datasets.html",
+  "nemo_portability": "Local NeMo JSONL uses absolute audio paths. Rerun this script on the destination machine; native manifests use repository-relative paths.",
+  "manifests": {
+    "train-clean-100": {
+      "manifest": "data/processed/manifests/train-clean-100.jsonl",
+      "nemo_manifest": "data/processed/manifests/nemo/train-clean-100.jsonl",
+      "utterances": 28539,
+      "speakers": 251,
+      "duration_hours": 100.59088,
+      "sha256": "f603b69cbea61a8fd928040d3d32c6d906fdfffeaf4245656b515bfdb6bb4e74",
+      "nemo_sha256": "fbb9deaeefcfd23408d10ecb5ac71112e3fc8ff9da0f5717d5d6ebafb2d3669e"
+    },
+    "train-clean-360": {
+      "manifest": "data/processed/manifests/train-clean-360.jsonl",
+      "nemo_manifest": "data/processed/manifests/nemo/train-clean-360.jsonl",
+      "utterances": 104014,
+      "speakers": 921,
+      "duration_hours": 363.605608,
+      "sha256": "d13233f98ebbf38ede2df75a2149072df4971b5ac9c352a469cdcba0db4cf175",
+      "nemo_sha256": "68264cd231e4c79cc55326cbf46b3e14112cf120ab3fea64589598fbc0a05945"
+    },
+    "train-other-500": {
+      "manifest": "data/processed/manifests/train-other-500.jsonl",
+      "nemo_manifest": "data/processed/manifests/nemo/train-other-500.jsonl",
+      "utterances": 148688,
+      "speakers": 1166,
+      "duration_hours": 496.85791,
+      "sha256": "045c0e1f49db5f29ffcb02299c6f637f72b0b6fa5129c3715b67dc2c856b89b4",
+      "nemo_sha256": "b7b57784d7563bc75cfabe482acc14b598bb38084c86d9f3bbf2ee3a03b09d34"
+    },
+    "dev-clean": {
+      "manifest": "data/processed/manifests/dev-clean.jsonl",
+      "nemo_manifest": "data/processed/manifests/nemo/dev-clean.jsonl",
+      "utterances": 2703,
+      "speakers": 40,
+      "duration_hours": 5.387811,
+      "sha256": "e3cb43a548b30de9f90252f3cc71d1e84c1dabb316d8af49bbfbab067e5ba069",
+      "nemo_sha256": "fc5a12c812737d75b983b0e3514366580b8d8ac99532d5ce923ba290b3c049f8"
+    },
+    "dev-other": {
+      "manifest": "data/processed/manifests/dev-other.jsonl",
+      "nemo_manifest": "data/processed/manifests/nemo/dev-other.jsonl",
+      "utterances": 2864,
+      "speakers": 33,
+      "duration_hours": 5.121185,
+      "sha256": "d64b9a18dbf060a774082a54aac3adeb1ab85da575827f188e59e277357c0809",
+      "nemo_sha256": "8cf54a84525c680977b16beb85b3b57004da6749ae0deef8aff69b5cca27cd95"
+    },
+    "test-clean": {
+      "manifest": "data/processed/manifests/test-clean.jsonl",
+      "nemo_manifest": "data/processed/manifests/nemo/test-clean.jsonl",
+      "utterances": 2620,
+      "speakers": 40,
+      "duration_hours": 5.403467,
+      "sha256": "c15d2d4a8aae9dd7951b63a967e73e914c7bc6adeb019d036a17479faddcea16",
+      "nemo_sha256": "4ec669e1c6615f975a9976187f0d97aef357c9e07d4ee91e6559aea0db7ed07d"
+    },
+    "test-other": {
+      "manifest": "data/processed/manifests/test-other.jsonl",
+      "nemo_manifest": "data/processed/manifests/nemo/test-other.jsonl",
+      "utterances": 2939,
+      "speakers": 33,
+      "duration_hours": 5.341547,
+      "sha256": "78e92e21ee21b6a090f9a67b55895fe2564dfd880a09d0b5d802cd77e18b4550",
+      "nemo_sha256": "f13bc3deba3b1c4c02e6c26e621b2f408d3d4817ad6f1de18457dcf12a287b17"
+    },
+    "train-960": {
+      "manifest": "data/processed/manifests/train-960.jsonl",
+      "nemo_manifest": "data/processed/manifests/nemo/train-960.jsonl",
+      "utterances": 281241,
+      "speakers": 2338,
+      "duration_hours": 961.054398,
+      "sha256": "9eef93ac217953680c8a4cf91ce85857332805525818adf81d60d39d43af4c4e",
+      "nemo_sha256": "45a77f53d80d73b88e3f1e3887256208fcd867aee50ec0011eab6ffd7bfdae00"
+    },
+    "dev-clean.model_selection": {
+      "manifest": "data/processed/protocols/librispeech960_v1/manifests/dev-clean.model_selection.jsonl",
+      "nemo_manifest": "data/processed/protocols/librispeech960_v1/nemo/dev-clean.model_selection.jsonl",
+      "utterances": 1368,
+      "speakers": 20,
+      "duration_hours": 2.689413,
+      "sha256": "d71dd2d6d80ae95dc65ee13eeac9fdbf9427b1e5c3eb7925955f366865f646b2",
+      "nemo_sha256": "7a45b25ddd4ebdaf17e57def2efd4dfd186a64700067ba74d050f9fe55143c09"
+    },
+    "dev-clean.gate_fit": {
+      "manifest": "data/processed/protocols/librispeech960_v1/manifests/dev-clean.gate_fit.jsonl",
+      "nemo_manifest": "data/processed/protocols/librispeech960_v1/nemo/dev-clean.gate_fit.jsonl",
+      "utterances": 653,
+      "speakers": 10,
+      "duration_hours": 1.349274,
+      "sha256": "36cbada9e652614703887ba3cf2672ac5dedf84bb6154a99a218ab2c87765f00",
+      "nemo_sha256": "9ce2c0af4f9bbd03b4008e576ebe23dbbaade107d81d6160a15a7e2335ff82f8"
+    },
+    "dev-clean.gate_calibration": {
+      "manifest": "data/processed/protocols/librispeech960_v1/manifests/dev-clean.gate_calibration.jsonl",
+      "nemo_manifest": "data/processed/protocols/librispeech960_v1/nemo/dev-clean.gate_calibration.jsonl",
+      "utterances": 682,
+      "speakers": 10,
+      "duration_hours": 1.349125,
+      "sha256": "5d63d878647f2404747e08fbc10efc638ab0c8f5def6198d2ce08b4d62ad575e",
+      "nemo_sha256": "53610f8219f15f4f5fac8ae4bd4765629f8bc106bd4c13ed6faf5d39a5598a8e"
+    },
+    "dev-other.model_selection": {
+      "manifest": "data/processed/protocols/librispeech960_v1/manifests/dev-other.model_selection.jsonl",
+      "nemo_manifest": "data/processed/protocols/librispeech960_v1/nemo/dev-other.model_selection.jsonl",
+      "utterances": 1488,
+      "speakers": 17,
+      "duration_hours": 2.626342,
+      "sha256": "7d999737515dd76fa9813f28e3d8a8cec91f975dfeffeb570e4f14831f8c7e67",
+      "nemo_sha256": "e1045deea94010d4befa39d1bfb704c54126d90217603e45afa9bee0e88d70ad"
+    },
+    "dev-other.gate_fit": {
+      "manifest": "data/processed/protocols/librispeech960_v1/manifests/dev-other.gate_fit.jsonl",
+      "nemo_manifest": "data/processed/protocols/librispeech960_v1/nemo/dev-other.gate_fit.jsonl",
+      "utterances": 644,
+      "speakers": 8,
+      "duration_hours": 1.254742,
+      "sha256": "ed8b52a9ec534f413a471eb3c6b3b3141505073451bd37bdda676b97e268d422",
+      "nemo_sha256": "b91a038567aa3a4d9ec01d39dab5a94a04997360d89abc342df559d7b6b7e4f9"
+    },
+    "dev-other.gate_calibration": {
+      "manifest": "data/processed/protocols/librispeech960_v1/manifests/dev-other.gate_calibration.jsonl",
+      "nemo_manifest": "data/processed/protocols/librispeech960_v1/nemo/dev-other.gate_calibration.jsonl",
+      "utterances": 732,
+      "speakers": 8,
+      "duration_hours": 1.240101,
+      "sha256": "bae8cffbb476946394a0bb47f5821dda031f20ac717af4fbfaebbfc5684b124d",
+      "nemo_sha256": "84a20ee99bdba1f30d975ac9fe69e18aab438a36bb022bceeb32191d225a6484"
+    },
+    "model_selection": {
+      "manifest": "data/processed/protocols/librispeech960_v1/manifests/model_selection.jsonl",
+      "nemo_manifest": "data/processed/protocols/librispeech960_v1/nemo/model_selection.jsonl",
+      "utterances": 2856,
+      "speakers": 37,
+      "duration_hours": 5.315754,
+      "sha256": "ca8fce8899d8315a1eb212ee4a5f97da4e315c5f6990b7e1cbf2b555b012e3ca",
+      "nemo_sha256": "786dead0bc83dad4abf476719a7b93c238b46d94cac6f3e687ab49e112c7b051"
+    },
+    "gate_fit": {
+      "manifest": "data/processed/protocols/librispeech960_v1/manifests/gate_fit.jsonl",
+      "nemo_manifest": "data/processed/protocols/librispeech960_v1/nemo/gate_fit.jsonl",
+      "utterances": 1297,
+      "speakers": 18,
+      "duration_hours": 2.604015,
+      "sha256": "f7ca7636b9930b287ceb7341f4db598000ab8dcd785195190240908df49969ec",
+      "nemo_sha256": "2cc13aec6a63c70f6bd5104251daa540dfb80050edd554509dcaec3de80a3c02"
+    },
+    "gate_calibration": {
+      "manifest": "data/processed/protocols/librispeech960_v1/manifests/gate_calibration.jsonl",
+      "nemo_manifest": "data/processed/protocols/librispeech960_v1/nemo/gate_calibration.jsonl",
+      "utterances": 1414,
+      "speakers": 18,
+      "duration_hours": 2.589226,
+      "sha256": "1dd34892796064c16b02f7a3b688d7c6e1bd56337a9e3fdf64fea71bbe13d8b5",
+      "nemo_sha256": "595378b04c7f673302e97eaa785861e7bc270d24a03e1ee63d8bf491f9c81121"
+    }
+  }
+}

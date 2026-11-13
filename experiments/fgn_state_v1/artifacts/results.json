@@ -1,0 +1,4012 @@
+{
+  "results": {
+    "test-clean/native/raw": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 0.9982588028907776,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 55.872471365079925,
+      "stable_mean_gain_ci95_ms": [
+        54.67291647213002,
+        57.04803071434904
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        53.28163538715522,
+        58.922334241895356
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 17.471116063573984,
+      "wrong_forecasts_per_100_native_tokens": 0.34681530179600784,
+      "retracted_per_100_native_tokens": 0.061931303892144254,
+      "accepted_reference_correct_per_100_native_tokens": 17.097803820685055,
+      "reference_correct_and_kept_precision": 97.90495935402913,
+      "screen_rewritten_suffix_per_100_final_words": 47.08888171266835,
+      "deleted_characters_per_100_final_characters": 0.04014223851594499,
+      "extra_forecaster_rtf": 0.0005554650518030552,
+      "extra_ms_per_chunk": 0.16936008084739113,
+      "confirmed_state_peak_bytes": 0,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 0,
+      "speculative_state_peak_bytes": 0,
+      "predicted_state_tensor_peak_bytes": 0,
+      "attempts": 18329,
+      "wrong": 364,
+      "accepted": 18264,
+      "correct_accepted": 17945,
+      "retractions": 65
+    },
+    "test-clean/native/gate": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 0.9466387328818316,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 59.26699363114921,
+      "stable_mean_gain_ci95_ms": [
+        58.12712319905054,
+        60.33059810813407
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        57.23908728574323,
+        61.80048160407792
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 18.540457060191972,
+      "wrong_forecasts_per_100_native_tokens": 0.3353818303082273,
+      "retracted_per_100_native_tokens": 0.03620599304463818,
+      "accepted_reference_correct_per_100_native_tokens": 17.16449907103044,
+      "reference_correct_and_kept_precision": 98.05148859739836,
+      "screen_rewritten_suffix_per_100_final_words": 46.10679482552286,
+      "deleted_characters_per_100_final_characters": 0.02238018607526137,
+      "extra_forecaster_rtf": 0.0005677645389496363,
+      "extra_ms_per_chunk": 0.17311016760940218,
+      "confirmed_state_peak_bytes": 0,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 0,
+      "speculative_state_peak_bytes": 0,
+      "predicted_state_tensor_peak_bytes": 0,
+      "attempts": 18373,
+      "wrong": 352,
+      "accepted": 18335,
+      "correct_accepted": 18015,
+      "retractions": 38
+    },
+    "test-clean/full/raw": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 0.9351507449150085,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 78.74770691338799,
+      "stable_mean_gain_ci95_ms": [
+        77.36650792311234,
+        79.93758285017132
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        75.57653429068736,
+        82.15042386567184
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 24.616347037319414,
+      "wrong_forecasts_per_100_native_tokens": 0.3782573483874041,
+      "retracted_per_100_native_tokens": 0.08384545757705683,
+      "accepted_reference_correct_per_100_native_tokens": 19.732266209327808,
+      "reference_correct_and_kept_precision": 97.97521052133598,
+      "screen_rewritten_suffix_per_100_final_words": 45.05252360237829,
+      "deleted_characters_per_100_final_characters": 0.06252242459120637,
+      "extra_forecaster_rtf": 0.00506350969078243,
+      "extra_ms_per_chunk": 1.5438530431731186,
+      "confirmed_state_peak_bytes": 2272816,
+      "audio_projection_cache_peak_bytes": 7217152,
+      "retained_forecaster_context_peak_bytes": 9293360,
+      "speculative_state_peak_bytes": 0,
+      "predicted_state_tensor_peak_bytes": 0,
+      "attempts": 21138,
+      "wrong": 397,
+      "accepted": 21050,
+      "correct_accepted": 20710,
+      "retractions": 88
+    },
+    "test-clean/full/gate": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 0.9599379648914521,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 94.31252038029024,
+      "stable_mean_gain_ci95_ms": [
+        92.89349459307212,
+        95.51501188351145
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        91.01702427040634,
+        97.93809892074242
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 29.501691005415125,
+      "wrong_forecasts_per_100_native_tokens": 0.39731313420037156,
+      "retracted_per_100_native_tokens": 0.11814587204039827,
+      "accepted_reference_correct_per_100_native_tokens": 22.55252250964699,
+      "reference_correct_and_kept_precision": 98.06927411335764,
+      "screen_rewritten_suffix_per_100_final_words": 45.85414964952605,
+      "deleted_characters_per_100_final_characters": 0.10017797576545565,
+      "extra_forecaster_rtf": 0.0050758091779290115,
+      "extra_ms_per_chunk": 1.5476031299351296,
+      "confirmed_state_peak_bytes": 2272816,
+      "audio_projection_cache_peak_bytes": 7217152,
+      "retained_forecaster_context_peak_bytes": 9293360,
+      "speculative_state_peak_bytes": 0,
+      "predicted_state_tensor_peak_bytes": 0,
+      "attempts": 24136,
+      "wrong": 417,
+      "accepted": 24012,
+      "correct_accepted": 23670,
+      "retractions": 124
+    },
+    "test-clean/band2/raw": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 0.9347050786018372,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 75.92203402114653,
+      "stable_mean_gain_ci95_ms": [
+        74.64183119110454,
+        77.28132210080834
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        72.53918479069524,
+        79.2717509140647
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 23.744452915762515,
+      "wrong_forecasts_per_100_native_tokens": 0.375398980515459,
+      "retracted_per_100_native_tokens": 0.09527892906483731,
+      "accepted_reference_correct_per_100_native_tokens": 19.3263779715116,
+      "reference_correct_and_kept_precision": 97.94302269435056,
+      "screen_rewritten_suffix_per_100_final_words": 45.056322777957185,
+      "deleted_characters_per_100_final_characters": 0.06820628137222512,
+      "extra_forecaster_rtf": 0.004666987665415999,
+      "extra_ms_per_chunk": 1.422954343865497,
+      "confirmed_state_peak_bytes": 30576,
+      "audio_projection_cache_peak_bytes": 7217152,
+      "retained_forecaster_context_peak_bytes": 7247728,
+      "speculative_state_peak_bytes": 0,
+      "predicted_state_tensor_peak_bytes": 0,
+      "attempts": 20710,
+      "wrong": 394,
+      "accepted": 20610,
+      "correct_accepted": 20284,
+      "retractions": 100
+    },
+    "test-clean/band2/gate": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 0.9608814796025323,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 89.5841074906027,
+      "stable_mean_gain_ci95_ms": [
+        88.18616048312617,
+        90.86234824168794
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        86.00075639581092,
+        93.16914725080235
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 28.029636580454714,
+      "wrong_forecasts_per_100_native_tokens": 0.375398980515459,
+      "retracted_per_100_native_tokens": 0.12195702920299176,
+      "accepted_reference_correct_per_100_native_tokens": 21.60449716545186,
+      "reference_correct_and_kept_precision": 98.08798719557036,
+      "screen_rewritten_suffix_per_100_final_words": 45.333662595216836,
+      "deleted_characters_per_100_final_characters": 0.09733604737494626,
+      "extra_forecaster_rtf": 0.0046792871525625805,
+      "extra_ms_per_chunk": 1.426704430627508,
+      "confirmed_state_peak_bytes": 30576,
+      "audio_projection_cache_peak_bytes": 7217152,
+      "retained_forecaster_context_peak_bytes": 7247728,
+      "speculative_state_peak_bytes": 0,
+      "predicted_state_tensor_peak_bytes": 0,
+      "attempts": 23117,
+      "wrong": 394,
+      "accepted": 22989,
+      "correct_accepted": 22675,
+      "retractions": 128
+    },
+    "test-clean/state/raw": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 1.000001,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 0.0,
+      "stable_mean_gain_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.0,
+      "wrong_forecasts_per_100_native_tokens": 0.0,
+      "retracted_per_100_native_tokens": 0.0,
+      "accepted_reference_correct_per_100_native_tokens": 0.0,
+      "reference_correct_and_kept_precision": 0.0,
+      "screen_rewritten_suffix_per_100_final_words": 29.882415515833063,
+      "deleted_characters_per_100_final_characters": 0.0,
+      "extra_forecaster_rtf": 0.023108313729688364,
+      "extra_ms_per_chunk": 7.045674374658063,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 0,
+      "wrong": 0,
+      "accepted": 0,
+      "correct_accepted": 0,
+      "retractions": 0
+    },
+    "test-clean/state/gate": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 0.9498875446047135,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 85.01865991728862,
+      "stable_mean_gain_ci95_ms": [
+        83.77371249960079,
+        86.29670742790383
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        82.37146136990445,
+        87.93676684807951
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 27.11277930913143,
+      "wrong_forecasts_per_100_native_tokens": 0.41636892001333903,
+      "retracted_per_100_native_tokens": 0.1133819255871564,
+      "accepted_reference_correct_per_100_native_tokens": 20.318231623076557,
+      "reference_correct_and_kept_precision": 97.90193737948765,
+      "screen_rewritten_suffix_per_100_final_words": 44.0666375396539,
+      "deleted_characters_per_100_final_characters": 0.07744254864138062,
+      "extra_forecaster_rtf": 0.023120613216834944,
+      "extra_ms_per_chunk": 7.049424461420074,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 21782,
+      "wrong": 437,
+      "accepted": 21663,
+      "correct_accepted": 21325,
+      "retractions": 119
+    },
+    "test-clean/state38/raw": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 1.000001,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 0.0,
+      "stable_mean_gain_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.0,
+      "wrong_forecasts_per_100_native_tokens": 0.0,
+      "retracted_per_100_native_tokens": 0.0,
+      "accepted_reference_correct_per_100_native_tokens": 0.0,
+      "reference_correct_and_kept_precision": 0.0,
+      "screen_rewritten_suffix_per_100_final_words": 29.882415515833063,
+      "deleted_characters_per_100_final_characters": 0.0,
+      "extra_forecaster_rtf": 0.023002305311650297,
+      "extra_ms_per_chunk": 7.013352639580125,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 0,
+      "wrong": 0,
+      "accepted": 0,
+      "correct_accepted": 0,
+      "retractions": 0
+    },
+    "test-clean/state38/gate": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 0.9483812307367514,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 87.00281136367869,
+      "stable_mean_gain_ci95_ms": [
+        85.7195374447364,
+        88.19892866230693
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        84.20762280750313,
+        90.19147652524087
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 27.738353566750728,
+      "wrong_forecasts_per_100_native_tokens": 0.41351055214139393,
+      "retracted_per_100_native_tokens": 0.09623171835548569,
+      "accepted_reference_correct_per_100_native_tokens": 20.91372492973179,
+      "reference_correct_and_kept_precision": 97.99107142857143,
+      "screen_rewritten_suffix_per_100_final_words": 44.59472294512091,
+      "deleted_characters_per_100_final_characters": 0.06785104032341145,
+      "extra_forecaster_rtf": 0.023014604798796877,
+      "extra_ms_per_chunk": 7.017102726342136,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 22400,
+      "wrong": 434,
+      "accepted": 22299,
+      "correct_accepted": 21950,
+      "retractions": 101
+    },
+    "test-clean/ensemble/raw": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 1.000001,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 0.0,
+      "stable_mean_gain_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.0,
+      "wrong_forecasts_per_100_native_tokens": 0.0,
+      "retracted_per_100_native_tokens": 0.0,
+      "accepted_reference_correct_per_100_native_tokens": 0.0,
+      "reference_correct_and_kept_precision": 0.0,
+      "screen_rewritten_suffix_per_100_final_words": 29.882415515833063,
+      "deleted_characters_per_100_final_characters": 0.0,
+      "extra_forecaster_rtf": 0.031160491449476736,
+      "extra_ms_per_chunk": 9.50076577094709,
+      "confirmed_state_peak_bytes": 34816,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 34816,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 0,
+      "wrong": 0,
+      "accepted": 0,
+      "correct_accepted": 0,
+      "retractions": 0
+    },
+    "test-clean/ensemble/gate": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 0.9506907812743143,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 84.25854125862313,
+      "stable_mean_gain_ci95_ms": [
+        82.988584904791,
+        85.48553287211585
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        81.53772736027794,
+        87.33326109115758
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 27.073680918030224,
+      "wrong_forecasts_per_100_native_tokens": 0.40112429136296507,
+      "retracted_per_100_native_tokens": 0.1029012433900243,
+      "accepted_reference_correct_per_100_native_tokens": 20.349673669667954,
+      "reference_correct_and_kept_precision": 97.96798312004036,
+      "screen_rewritten_suffix_per_100_final_words": 44.15591816575803,
+      "deleted_characters_per_100_final_characters": 0.07424537920205755,
+      "extra_forecaster_rtf": 0.031172790936623316,
+      "extra_ms_per_chunk": 9.504515857709102,
+      "confirmed_state_peak_bytes": 34816,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 34816,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 21801,
+      "wrong": 421,
+      "accepted": 21693,
+      "correct_accepted": 21358,
+      "retractions": 108
+    },
+    "test-clean/reset/raw": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 1.000001,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 0.0,
+      "stable_mean_gain_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.0,
+      "wrong_forecasts_per_100_native_tokens": 0.0,
+      "retracted_per_100_native_tokens": 0.0,
+      "accepted_reference_correct_per_100_native_tokens": 0.0,
+      "reference_correct_and_kept_precision": 0.0,
+      "screen_rewritten_suffix_per_100_final_words": 29.882415515833063,
+      "deleted_characters_per_100_final_characters": 0.0,
+      "extra_forecaster_rtf": 0.023930132555305957,
+      "extra_ms_per_chunk": 7.296245139275406,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 0,
+      "wrong": 0,
+      "accepted": 0,
+      "correct_accepted": 0,
+      "retractions": 0
+    },
+    "test-clean/reset/gate": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 0.9505077903963963,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 85.3388657646405,
+      "stable_mean_gain_ci95_ms": [
+        84.08308249543875,
+        86.56630129209415
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        82.6778015680356,
+        88.53495149491465
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 27.23202940199011,
+      "wrong_forecasts_per_100_native_tokens": 0.41636892001333903,
+      "retracted_per_100_native_tokens": 0.10194845409937592,
+      "accepted_reference_correct_per_100_native_tokens": 20.423991234338526,
+      "reference_correct_and_kept_precision": 97.94389107191812,
+      "screen_rewritten_suffix_per_100_final_words": 44.13882187565299,
+      "deleted_characters_per_100_final_characters": 0.06571959403052942,
+      "extra_forecaster_rtf": 0.02394243204245254,
+      "extra_ms_per_chunk": 7.299995226037417,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 21886,
+      "wrong": 437,
+      "accepted": 21779,
+      "correct_accepted": 21436,
+      "retractions": 107
+    },
+    "test-clean/deterministic/raw": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 1.000001,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 0.0,
+      "stable_mean_gain_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.0,
+      "wrong_forecasts_per_100_native_tokens": 0.0,
+      "retracted_per_100_native_tokens": 0.0,
+      "accepted_reference_correct_per_100_native_tokens": 0.0,
+      "reference_correct_and_kept_precision": 0.0,
+      "screen_rewritten_suffix_per_100_final_words": 29.882415515833063,
+      "deleted_characters_per_100_final_characters": 0.0,
+      "extra_forecaster_rtf": 0.009599705829630607,
+      "extra_ms_per_chunk": 2.9269293363101716,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 33792,
+      "predicted_state_tensor_peak_bytes": 32768,
+      "attempts": 0,
+      "wrong": 0,
+      "accepted": 0,
+      "correct_accepted": 0,
+      "retractions": 0
+    },
+    "test-clean/deterministic/gate": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 0.9492993820155065,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 84.96044158131483,
+      "stable_mean_gain_ci95_ms": [
+        83.77034321405469,
+        86.1937191233509
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        82.28221141777269,
+        88.03337602049821
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 26.756983950110452,
+      "wrong_forecasts_per_100_native_tokens": 0.43733028440760324,
+      "retracted_per_100_native_tokens": 0.10671240055261778,
+      "accepted_reference_correct_per_100_native_tokens": 20.55071220999476,
+      "reference_correct_and_kept_precision": 97.82746734397678,
+      "screen_rewritten_suffix_per_100_final_words": 44.877761525748916,
+      "deleted_characters_per_100_final_characters": 0.07424537920205755,
+      "extra_forecaster_rtf": 0.00961200531677719,
+      "extra_ms_per_chunk": 2.9306794230721827,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 33792,
+      "predicted_state_tensor_peak_bytes": 32768,
+      "attempts": 22048,
+      "wrong": 459,
+      "accepted": 21936,
+      "correct_accepted": 21569,
+      "retractions": 112
+    },
+    "test-clean/single_step/raw": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 1.000001,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 0.0,
+      "stable_mean_gain_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.0,
+      "wrong_forecasts_per_100_native_tokens": 0.0,
+      "retracted_per_100_native_tokens": 0.0,
+      "accepted_reference_correct_per_100_native_tokens": 0.0,
+      "reference_correct_and_kept_precision": 0.0,
+      "screen_rewritten_suffix_per_100_final_words": 29.882415515833063,
+      "deleted_characters_per_100_final_characters": 0.0,
+      "extra_forecaster_rtf": 0.023419567233541664,
+      "extra_ms_per_chunk": 7.140574888030628,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 0,
+      "wrong": 0,
+      "accepted": 0,
+      "correct_accepted": 0,
+      "retractions": 0
+    },
+    "test-clean/single_step/gate": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 0.951473487635527,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 85.51526479338182,
+      "stable_mean_gain_ci95_ms": [
+        84.32404006092925,
+        86.7347418460143
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        83.0944897006604,
+        88.37069745501722
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 27.259398275760955,
+      "wrong_forecasts_per_100_native_tokens": 0.41065218426944883,
+      "retracted_per_100_native_tokens": 0.11242913629650803,
+      "accepted_reference_correct_per_100_native_tokens": 20.59072936020199,
+      "reference_correct_and_kept_precision": 97.93800416931025,
+      "screen_rewritten_suffix_per_100_final_words": 44.43895674638603,
+      "deleted_characters_per_100_final_characters": 0.08703405695934976,
+      "extra_forecaster_rtf": 0.023431866720688244,
+      "extra_ms_per_chunk": 7.144324974792639,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 22066,
+      "wrong": 431,
+      "accepted": 21948,
+      "correct_accepted": 21611,
+      "retractions": 118
+    },
+    "test-clean/crps_only/raw": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 1.000001,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 0.0,
+      "stable_mean_gain_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.0,
+      "wrong_forecasts_per_100_native_tokens": 0.0,
+      "retracted_per_100_native_tokens": 0.0,
+      "accepted_reference_correct_per_100_native_tokens": 0.0,
+      "reference_correct_and_kept_precision": 0.0,
+      "screen_rewritten_suffix_per_100_final_words": 29.882415515833063,
+      "deleted_characters_per_100_final_characters": 0.0,
+      "extra_forecaster_rtf": 0.025559257630503245,
+      "extra_ms_per_chunk": 7.792961815779745,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 0,
+      "wrong": 0,
+      "accepted": 0,
+      "correct_accepted": 0,
+      "retractions": 0
+    },
+    "test-clean/crps_only/gate": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 0.9466115301822098,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 81.41134456906032,
+      "stable_mean_gain_ci95_ms": [
+        80.14015529595144,
+        82.63020957699676
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        78.27120477055361,
+        84.78746959388714
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 26.04343831251344,
+      "wrong_forecasts_per_100_native_tokens": 0.4678195417083512,
+      "retracted_per_100_native_tokens": 0.11909866133104664,
+      "accepted_reference_correct_per_100_native_tokens": 20.63836882473441,
+      "reference_correct_and_kept_precision": 97.69088531096378,
+      "screen_rewritten_suffix_per_100_final_words": 45.80286077921091,
+      "deleted_characters_per_100_final_characters": 0.08206068227595835,
+      "extra_forecaster_rtf": 0.025571557117649826,
+      "extra_ms_per_chunk": 7.796711902541756,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 22173,
+      "wrong": 491,
+      "accepted": 22048,
+      "correct_accepted": 21661,
+      "retractions": 125
+    },
+    "test-clean/persistence/raw": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 1.000001,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 0.0,
+      "stable_mean_gain_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.0,
+      "wrong_forecasts_per_100_native_tokens": 0.0,
+      "retracted_per_100_native_tokens": 0.0,
+      "accepted_reference_correct_per_100_native_tokens": 0.0,
+      "reference_correct_and_kept_precision": 0.0,
+      "screen_rewritten_suffix_per_100_final_words": 29.882415515833063,
+      "deleted_characters_per_100_final_characters": 0.0,
+      "extra_forecaster_rtf": 0.0015601453218915924,
+      "extra_ms_per_chunk": 0.4756849004119214,
+      "confirmed_state_peak_bytes": 16384,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 16384,
+      "speculative_state_peak_bytes": 0,
+      "predicted_state_tensor_peak_bytes": 32768,
+      "attempts": 0,
+      "wrong": 0,
+      "accepted": 0,
+      "correct_accepted": 0,
+      "retractions": 0
+    },
+    "test-clean/persistence/gate": {
+      "utterances": 2620,
+      "wer_percent": 3.058429701765064,
+      "threshold": 0.3630780401636904,
+      "correct_final_words": 51153,
+      "stable_mean_gain_ms": 1.0844104143048268,
+      "stable_mean_gain_ci95_ms": [
+        0.8354738158240684,
+        1.333567309120122
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.8664492670748972,
+        1.3071183711262362
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.5727914296326706,
+      "wrong_forecasts_per_100_native_tokens": 0.42018007717593253,
+      "retracted_per_100_native_tokens": 0.41065218426944883,
+      "accepted_reference_correct_per_100_native_tokens": 0.5221285312753084,
+      "reference_correct_and_kept_precision": 55.409504550050556,
+      "screen_rewritten_suffix_per_100_final_words": 31.42678038865566,
+      "deleted_characters_per_100_final_characters": 0.21278938823938984,
+      "extra_forecaster_rtf": 0.0015724448090381734,
+      "extra_ms_per_chunk": 0.47943498717393246,
+      "confirmed_state_peak_bytes": 16384,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 16384,
+      "speculative_state_peak_bytes": 0,
+      "predicted_state_tensor_peak_bytes": 32768,
+      "attempts": 989,
+      "wrong": 441,
+      "accepted": 558,
+      "correct_accepted": 548,
+      "retractions": 431
+    },
+    "test-other/native/raw": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 0.9982588028907776,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 47.66830201794286,
+      "stable_mean_gain_ci95_ms": [
+        46.523350402111035,
+        48.775963502853266
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        44.49975600592151,
+        50.62797292499416
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 14.920556617541264,
+      "wrong_forecasts_per_100_native_tokens": 0.5321814428030227,
+      "retracted_per_100_native_tokens": 0.07717132033113512,
+      "accepted_reference_correct_per_100_native_tokens": 13.80865521457636,
+      "reference_correct_and_kept_precision": 96.12781692597503,
+      "screen_rewritten_suffix_per_100_final_words": 38.383626043916145,
+      "deleted_characters_per_100_final_characters": 0.052201468258198755,
+      "extra_forecaster_rtf": 0.0002251516094139517,
+      "extra_ms_per_chunk": 0.06823161127718022,
+      "confirmed_state_peak_bytes": 0,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 0,
+      "speculative_state_peak_bytes": 0,
+      "predicted_state_tensor_peak_bytes": 0,
+      "attempts": 14333,
+      "wrong": 531,
+      "accepted": 14256,
+      "correct_accepted": 13778,
+      "retractions": 77
+    },
+    "test-other/native/gate": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 0.9466387328818316,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 53.74100178996389,
+      "stable_mean_gain_ci95_ms": [
+        52.556906969392,
+        54.82693703677396
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        50.788592825821176,
+        56.467062679598484
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 16.817742697991818,
+      "wrong_forecasts_per_100_native_tokens": 0.5071258193188879,
+      "retracted_per_100_native_tokens": 0.05812904648319269,
+      "accepted_reference_correct_per_100_native_tokens": 14.564332818857864,
+      "reference_correct_and_kept_precision": 96.5645557844375,
+      "screen_rewritten_suffix_per_100_final_words": 37.95554876067804,
+      "deleted_characters_per_100_final_characters": 0.039702525154122995,
+      "extra_forecaster_rtf": 0.0002375261972934428,
+      "extra_ms_per_chunk": 0.07198169803919127,
+      "confirmed_state_peak_bytes": 0,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 0,
+      "speculative_state_peak_bytes": 0,
+      "predicted_state_tensor_peak_bytes": 0,
+      "attempts": 15049,
+      "wrong": 506,
+      "accepted": 14991,
+      "correct_accepted": 14532,
+      "retractions": 58
+    },
+    "test-other/full/raw": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 0.9351507449150085,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 63.282005393673984,
+      "stable_mean_gain_ci95_ms": [
+        61.953220018512816,
+        64.42028219267209
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        59.873875887996114,
+        66.3385900400264
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 19.76321144478017,
+      "wrong_forecasts_per_100_native_tokens": 0.5692637655595422,
+      "retracted_per_100_native_tokens": 0.11826254284511616,
+      "accepted_reference_correct_per_100_native_tokens": 15.040389665056425,
+      "reference_correct_and_kept_precision": 96.15557121804319,
+      "screen_rewritten_suffix_per_100_final_words": 36.05595581630898,
+      "deleted_characters_per_100_final_characters": 0.08418405796568673,
+      "extra_forecaster_rtf": 0.0049361488669576094,
+      "extra_ms_per_chunk": 1.4958871116809127,
+      "confirmed_state_peak_bytes": 2303392,
+      "audio_projection_cache_peak_bytes": 7151616,
+      "retained_forecaster_context_peak_bytes": 9455008,
+      "speculative_state_peak_bytes": 0,
+      "predicted_state_tensor_peak_bytes": 0,
+      "attempts": 15607,
+      "wrong": 568,
+      "accepted": 15489,
+      "correct_accepted": 15007,
+      "retractions": 118
+    },
+    "test-other/full/gate": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 0.9599379648914521,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 75.31030473712583,
+      "stable_mean_gain_ci95_ms": [
+        73.92317545103353,
+        76.56537440162681
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        71.20981766400722,
+        78.82746669806501
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 23.53086267497071,
+      "wrong_forecasts_per_100_native_tokens": 0.5832949147106576,
+      "retracted_per_100_native_tokens": 0.17138046463148188,
+      "accepted_reference_correct_per_100_native_tokens": 17.110986389785324,
+      "reference_correct_and_kept_precision": 96.38683452831253,
+      "screen_rewritten_suffix_per_100_final_words": 36.48403309954708,
+      "deleted_characters_per_100_final_characters": 0.14520830959146838,
+      "extra_forecaster_rtf": 0.004948523454837101,
+      "extra_ms_per_chunk": 1.4996371984429238,
+      "confirmed_state_peak_bytes": 2303392,
+      "audio_projection_cache_peak_bytes": 7151616,
+      "retained_forecaster_context_peak_bytes": 9455008,
+      "speculative_state_peak_bytes": 0,
+      "predicted_state_tensor_peak_bytes": 0,
+      "attempts": 17713,
+      "wrong": 582,
+      "accepted": 17542,
+      "correct_accepted": 17073,
+      "retractions": 171
+    },
+    "test-other/band2/raw": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 0.9347050786018372,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 59.7623314718958,
+      "stable_mean_gain_ci95_ms": [
+        58.48954096518551,
+        60.89419353826411
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        56.41856254213553,
+        62.799264787687825
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 18.657376004604224,
+      "wrong_forecasts_per_100_native_tokens": 0.5702659904989076,
+      "retracted_per_100_native_tokens": 0.1142536430876546,
+      "accepted_reference_correct_per_100_native_tokens": 14.403976828559403,
+      "reference_correct_and_kept_precision": 95.97328881469114,
+      "screen_rewritten_suffix_per_100_final_words": 35.84573929329027,
+      "deleted_characters_per_100_final_characters": 0.08565452186028387,
+      "extra_forecaster_rtf": 0.004598743338995492,
+      "extra_ms_per_chunk": 1.393637241530722,
+      "confirmed_state_peak_bytes": 30576,
+      "audio_projection_cache_peak_bytes": 7151616,
+      "retained_forecaster_context_peak_bytes": 7182192,
+      "speculative_state_peak_bytes": 0,
+      "predicted_state_tensor_peak_bytes": 0,
+      "attempts": 14975,
+      "wrong": 569,
+      "accepted": 14861,
+      "correct_accepted": 14372,
+      "retractions": 114
+    },
+    "test-other/band2/gate": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 0.9608814796025323,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 70.28343992449904,
+      "stable_mean_gain_ci95_ms": [
+        68.8271888126452,
+        71.53844267191981
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        66.63315496799439,
+        73.429819598303
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 21.98104869375758,
+      "wrong_forecasts_per_100_native_tokens": 0.5371925674998497,
+      "retracted_per_100_native_tokens": 0.1593537653590972,
+      "accepted_reference_correct_per_100_native_tokens": 15.983483332999258,
+      "reference_correct_and_kept_precision": 96.39748549323018,
+      "screen_rewritten_suffix_per_100_final_words": 35.725342557379555,
+      "deleted_characters_per_100_final_characters": 0.13748837414483334,
+      "extra_forecaster_rtf": 0.004611117926874983,
+      "extra_ms_per_chunk": 1.3973873282927332,
+      "confirmed_state_peak_bytes": 30576,
+      "audio_projection_cache_peak_bytes": 7151616,
+      "retained_forecaster_context_peak_bytes": 7182192,
+      "speculative_state_peak_bytes": 0,
+      "predicted_state_tensor_peak_bytes": 0,
+      "attempts": 16544,
+      "wrong": 536,
+      "accepted": 16385,
+      "correct_accepted": 15948,
+      "retractions": 159
+    },
+    "test-other/state/raw": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 1.000001,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 0.0,
+      "stable_mean_gain_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.0,
+      "wrong_forecasts_per_100_native_tokens": 0.0,
+      "retracted_per_100_native_tokens": 0.0,
+      "accepted_reference_correct_per_100_native_tokens": 0.0,
+      "reference_correct_and_kept_precision": 0.0,
+      "screen_rewritten_suffix_per_100_final_words": 25.44575458176467,
+      "deleted_characters_per_100_final_characters": 0.0,
+      "extra_forecaster_rtf": 0.023383427420443564,
+      "extra_ms_per_chunk": 7.086287032248043,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 0,
+      "wrong": 0,
+      "accepted": 0,
+      "correct_accepted": 0,
+      "retractions": 0
+    },
+    "test-other/state/gate": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 0.9498875446047135,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 72.17233425222949,
+      "stable_mean_gain_ci95_ms": [
+        70.74302812871117,
+        73.4869339592383
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        68.49726150250274,
+        75.58694544425023
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 23.010832254218823,
+      "wrong_forecasts_per_100_native_tokens": 0.5782837900138307,
+      "retracted_per_100_native_tokens": 0.1242758924813085,
+      "accepted_reference_correct_per_100_native_tokens": 16.319228687686664,
+      "reference_correct_and_kept_precision": 96.44612924243322,
+      "screen_rewritten_suffix_per_100_final_words": 35.555258279664415,
+      "deleted_characters_per_100_final_characters": 0.10256485664815107,
+      "extra_forecaster_rtf": 0.023395802008323054,
+      "extra_ms_per_chunk": 7.090037119010054,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 16883,
+      "wrong": 577,
+      "accepted": 16759,
+      "correct_accepted": 16283,
+      "retractions": 124
+    },
+    "test-other/state38/raw": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 1.000001,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 0.0,
+      "stable_mean_gain_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.0,
+      "wrong_forecasts_per_100_native_tokens": 0.0,
+      "retracted_per_100_native_tokens": 0.0,
+      "accepted_reference_correct_per_100_native_tokens": 0.0,
+      "reference_correct_and_kept_precision": 0.0,
+      "screen_rewritten_suffix_per_100_final_words": 25.44575458176467,
+      "deleted_characters_per_100_final_characters": 0.0,
+      "extra_forecaster_rtf": 0.02328605218128668,
+      "extra_ms_per_chunk": 7.056777718575053,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 0,
+      "wrong": 0,
+      "accepted": 0,
+      "correct_accepted": 0,
+      "retractions": 0
+    },
+    "test-other/state38/gate": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 0.9483812307367514,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 73.53601811537976,
+      "stable_mean_gain_ci95_ms": [
+        72.17835518089493,
+        74.81823448892773
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        69.92475061271641,
+        76.96736287913052
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 23.428089864545438,
+      "wrong_forecasts_per_100_native_tokens": 0.6103549880735232,
+      "retracted_per_100_native_tokens": 0.12327366754194312,
+      "accepted_reference_correct_per_100_native_tokens": 16.72212311331155,
+      "reference_correct_and_kept_precision": 96.35040711439626,
+      "screen_rewritten_suffix_per_100_final_words": 35.95466967339996,
+      "deleted_characters_per_100_final_characters": 0.09852108093800892,
+      "extra_forecaster_rtf": 0.023298426769166172,
+      "extra_ms_per_chunk": 7.060527805337064,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 17317,
+      "wrong": 609,
+      "accepted": 17194,
+      "correct_accepted": 16685,
+      "retractions": 123
+    },
+    "test-other/ensemble/raw": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 1.000001,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 0.0,
+      "stable_mean_gain_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.0,
+      "wrong_forecasts_per_100_native_tokens": 0.0,
+      "retracted_per_100_native_tokens": 0.0,
+      "accepted_reference_correct_per_100_native_tokens": 0.0,
+      "reference_correct_and_kept_precision": 0.0,
+      "screen_rewritten_suffix_per_100_final_words": 25.44575458176467,
+      "deleted_characters_per_100_final_characters": 0.0,
+      "extra_forecaster_rtf": 0.031404637432355595,
+      "extra_ms_per_chunk": 9.517093922458502,
+      "confirmed_state_peak_bytes": 34816,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 34816,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 0,
+      "wrong": 0,
+      "accepted": 0,
+      "correct_accepted": 0,
+      "retractions": 0
+    },
+    "test-other/ensemble/gate": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 0.9506907812743143,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 71.363589101574,
+      "stable_mean_gain_ci95_ms": [
+        70.05020170814694,
+        72.60542582305237
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        67.749094453354,
+        74.70983598458186
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 22.93066946208711,
+      "wrong_forecasts_per_100_native_tokens": 0.566257090741446,
+      "retracted_per_100_native_tokens": 0.1032291687546353,
+      "accepted_reference_correct_per_100_native_tokens": 16.290164164445066,
+      "reference_correct_and_kept_precision": 96.54885654885655,
+      "screen_rewritten_suffix_per_100_final_words": 35.50939285646034,
+      "deleted_characters_per_100_final_characters": 0.07793458641364885,
+      "extra_forecaster_rtf": 0.031417012020235086,
+      "extra_ms_per_chunk": 9.520844009220513,
+      "confirmed_state_peak_bytes": 34816,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 34816,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 16835,
+      "wrong": 565,
+      "accepted": 16732,
+      "correct_accepted": 16254,
+      "retractions": 103
+    },
+    "test-other/reset/raw": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 1.000001,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 0.0,
+      "stable_mean_gain_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.0,
+      "wrong_forecasts_per_100_native_tokens": 0.0,
+      "retracted_per_100_native_tokens": 0.0,
+      "accepted_reference_correct_per_100_native_tokens": 0.0,
+      "reference_correct_and_kept_precision": 0.0,
+      "screen_rewritten_suffix_per_100_final_words": 25.44575458176467,
+      "deleted_characters_per_100_final_characters": 0.0,
+      "extra_forecaster_rtf": 0.024266114623745127,
+      "extra_ms_per_chunk": 7.353783099861236,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 0,
+      "wrong": 0,
+      "accepted": 0,
+      "correct_accepted": 0,
+      "retractions": 0
+    },
+    "test-other/reset/gate": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 0.9505077903963963,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 71.667791169251,
+      "stable_mean_gain_ci95_ms": [
+        70.3527389365227,
+        72.95954125123735
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        67.9089207757331,
+        75.22064844512191
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 22.86695031962344,
+      "wrong_forecasts_per_100_native_tokens": 0.5933171641043116,
+      "retracted_per_100_native_tokens": 0.11726031790575077,
+      "accepted_reference_correct_per_100_native_tokens": 16.253081841688548,
+      "reference_correct_and_kept_precision": 96.3806014501367,
+      "screen_rewritten_suffix_per_100_final_words": 35.59156840636765,
+      "deleted_characters_per_100_final_characters": 0.08638975380758245,
+      "extra_forecaster_rtf": 0.024278489211624617,
+      "extra_ms_per_chunk": 7.357533186623247,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 16826,
+      "wrong": 592,
+      "accepted": 16709,
+      "correct_accepted": 16217,
+      "retractions": 117
+    },
+    "test-other/deterministic/raw": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 1.000001,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 0.0,
+      "stable_mean_gain_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.0,
+      "wrong_forecasts_per_100_native_tokens": 0.0,
+      "retracted_per_100_native_tokens": 0.0,
+      "accepted_reference_correct_per_100_native_tokens": 0.0,
+      "reference_correct_and_kept_precision": 0.0,
+      "screen_rewritten_suffix_per_100_final_words": 25.44575458176467,
+      "deleted_characters_per_100_final_characters": 0.0,
+      "extra_forecaster_rtf": 0.009703775057705108,
+      "extra_ms_per_chunk": 2.9407038634186384,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 33792,
+      "predicted_state_tensor_peak_bytes": 32768,
+      "attempts": 0,
+      "wrong": 0,
+      "accepted": 0,
+      "correct_accepted": 0,
+      "retractions": 0
+    },
+    "test-other/deterministic/gate": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 0.9492993820155065,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 71.68471215317628,
+      "stable_mean_gain_ci95_ms": [
+        70.30364323547315,
+        72.9866214752097
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        68.04444581539354,
+        75.01996534709996
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 22.58124190664118,
+      "wrong_forecasts_per_100_native_tokens": 0.5852993645893885,
+      "retracted_per_100_native_tokens": 0.11826254284511616,
+      "accepted_reference_correct_per_100_native_tokens": 16.40742448235082,
+      "reference_correct_and_kept_precision": 96.43614514608859,
+      "screen_rewritten_suffix_per_100_final_words": 36.12857606971544,
+      "deleted_characters_per_100_final_characters": 0.09668300106976248,
+      "extra_forecaster_rtf": 0.009716149645584598,
+      "extra_ms_per_chunk": 2.9444539501806495,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 33792,
+      "predicted_state_tensor_peak_bytes": 32768,
+      "attempts": 16976,
+      "wrong": 584,
+      "accepted": 16858,
+      "correct_accepted": 16371,
+      "retractions": 118
+    },
+    "test-other/single_step/raw": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 1.000001,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 0.0,
+      "stable_mean_gain_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.0,
+      "wrong_forecasts_per_100_native_tokens": 0.0,
+      "retracted_per_100_native_tokens": 0.0,
+      "accepted_reference_correct_per_100_native_tokens": 0.0,
+      "reference_correct_and_kept_precision": 0.0,
+      "screen_rewritten_suffix_per_100_final_words": 25.44575458176467,
+      "deleted_characters_per_100_final_characters": 0.0,
+      "extra_forecaster_rtf": 0.023813580552261095,
+      "extra_ms_per_chunk": 7.2166438231954,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 0,
+      "wrong": 0,
+      "accepted": 0,
+      "correct_accepted": 0,
+      "retractions": 0
+    },
+    "test-other/single_step/gate": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 0.951473487635527,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 72.35833566198151,
+      "stable_mean_gain_ci95_ms": [
+        71.06378978312107,
+        73.59648966724384
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        68.79831688487751,
+        75.67790857144978
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 23.06838502805698,
+      "wrong_forecasts_per_100_native_tokens": 0.58930826434685,
+      "retracted_per_100_native_tokens": 0.13930926657178938,
+      "accepted_reference_correct_per_100_native_tokens": 16.523682575317203,
+      "reference_correct_and_kept_precision": 96.39829269718763,
+      "screen_rewritten_suffix_per_100_final_words": 35.901160012995206,
+      "deleted_characters_per_100_final_characters": 0.1161666476731747,
+      "extra_forecaster_rtf": 0.023825955140140586,
+      "extra_ms_per_chunk": 7.220393909957411,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 17103,
+      "wrong": 588,
+      "accepted": 16964,
+      "correct_accepted": 16487,
+      "retractions": 139
+    },
+    "test-other/crps_only/raw": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 1.000001,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 0.0,
+      "stable_mean_gain_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.0,
+      "wrong_forecasts_per_100_native_tokens": 0.0,
+      "retracted_per_100_native_tokens": 0.0,
+      "accepted_reference_correct_per_100_native_tokens": 0.0,
+      "reference_correct_and_kept_precision": 0.0,
+      "screen_rewritten_suffix_per_100_final_words": 25.44575458176467,
+      "deleted_characters_per_100_final_characters": 0.0,
+      "extra_forecaster_rtf": 0.025586796684174764,
+      "extra_ms_per_chunk": 7.754012372938759,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 0,
+      "wrong": 0,
+      "accepted": 0,
+      "correct_accepted": 0,
+      "retractions": 0
+    },
+    "test-other/crps_only/gate": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 0.9466115301822098,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 69.98388213444956,
+      "stable_mean_gain_ci95_ms": [
+        68.66304883170741,
+        71.19697879069955
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        66.20702019742527,
+        73.2460990536843
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 22.369529917165114,
+      "wrong_forecasts_per_100_native_tokens": 0.6344083866182926,
+      "retracted_per_100_native_tokens": 0.14532261620798173,
+      "accepted_reference_correct_per_100_native_tokens": 16.69406081500932,
+      "reference_correct_and_kept_precision": 96.1831620279478,
+      "screen_rewritten_suffix_per_100_final_words": 36.93122097578688,
+      "deleted_characters_per_100_final_characters": 0.10807909625289037,
+      "extra_forecaster_rtf": 0.025599171272054255,
+      "extra_ms_per_chunk": 7.75776245970077,
+      "confirmed_state_peak_bytes": 33792,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 33792,
+      "speculative_state_peak_bytes": 270336,
+      "predicted_state_tensor_peak_bytes": 262144,
+      "attempts": 17318,
+      "wrong": 633,
+      "accepted": 17173,
+      "correct_accepted": 16657,
+      "retractions": 145
+    },
+    "test-other/persistence/raw": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 1.000001,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 0.0,
+      "stable_mean_gain_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.0,
+        0.0
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.0,
+      "wrong_forecasts_per_100_native_tokens": 0.0,
+      "retracted_per_100_native_tokens": 0.0,
+      "accepted_reference_correct_per_100_native_tokens": 0.0,
+      "reference_correct_and_kept_precision": 0.0,
+      "screen_rewritten_suffix_per_100_final_words": 25.44575458176467,
+      "deleted_characters_per_100_final_characters": 0.0,
+      "extra_forecaster_rtf": 0.0015815435124073782,
+      "extra_ms_per_chunk": 0.4792826595262156,
+      "confirmed_state_peak_bytes": 16384,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 16384,
+      "speculative_state_peak_bytes": 0,
+      "predicted_state_tensor_peak_bytes": 32768,
+      "attempts": 0,
+      "wrong": 0,
+      "accepted": 0,
+      "correct_accepted": 0,
+      "retractions": 0
+    },
+    "test-other/persistence/gate": {
+      "utterances": 2939,
+      "wer_percent": 7.819574728234912,
+      "threshold": 0.3630780401636904,
+      "correct_final_words": 48651,
+      "stable_mean_gain_ms": 1.0546232061699898,
+      "stable_mean_gain_ci95_ms": [
+        0.8067072820512672,
+        1.305670152678543
+      ],
+      "stable_mean_gain_speaker_ci95_ms": [
+        0.7862655814601454,
+        1.3134140747522272
+      ],
+      "median_per_word_gain_ms": 0.0,
+      "correct_words_advanced_percent": 0.5426404390454461,
+      "wrong_forecasts_per_100_native_tokens": 0.3507787287778869,
+      "retracted_per_100_native_tokens": 0.33374090480867524,
+      "accepted_reference_correct_per_100_native_tokens": 0.44799454789632986,
+      "reference_correct_and_kept_precision": 56.015037593984964,
+      "screen_rewritten_suffix_per_100_final_words": 26.661188296672847,
+      "deleted_characters_per_100_final_characters": 0.19116030629762926,
+      "extra_forecaster_rtf": 0.0015939181002868695,
+      "extra_ms_per_chunk": 0.4830327462882267,
+      "confirmed_state_peak_bytes": 16384,
+      "audio_projection_cache_peak_bytes": 0,
+      "retained_forecaster_context_peak_bytes": 16384,
+      "speculative_state_peak_bytes": 0,
+      "predicted_state_tensor_peak_bytes": 32768,
+      "attempts": 798,
+      "wrong": 350,
+      "accepted": 465,
+      "correct_accepted": 447,
+      "retractions": 333
+    }
+  },
+  "paired_comparisons": {
+    "test-clean/state-minus-native": {
+      "delta_gain_ms": 25.7516662861394,
+      "ci95_ms": [
+        24.584354785571776,
+        26.8757116483145
+      ],
+      "speaker_ci95_ms": [
+        24.180250659247392,
+        27.43538812273459
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.08098708970511172,
+      "false_forecast_delta_ci95": [
+        0.04636558914453352,
+        0.11319888555559754
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.04347766411851347,
+        0.11927138381786848
+      ]
+    },
+    "test-clean/state-minus-full": {
+      "delta_gain_ms": -9.293860463001632,
+      "ci95_ms": [
+        -10.460352658717836,
+        -8.120925223887042
+      ],
+      "speaker_ci95_ms": [
+        -10.526816004410787,
+        -8.099781324368971
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.019055785812967463,
+      "false_forecast_delta_ci95": [
+        -0.020706283037453446,
+        0.06010632274614431
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.02142129324388899,
+        0.0612040676762231
+      ]
+    },
+    "test-clean/state-minus-band2": {
+      "delta_gain_ms": -4.565447573314089,
+      "ci95_ms": [
+        -5.778954157069702,
+        -3.37799990597729
+      ],
+      "speaker_ci95_ms": [
+        -5.816975334976392,
+        -3.2276199478993
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.04096993949788005,
+      "false_forecast_delta_ci95": [
+        0.004767198605253433,
+        0.08056438691270916
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.0010032928657432367,
+        0.08336153035157516
+      ]
+    },
+    "test-clean/state-minus-persistence": {
+      "delta_gain_ms": 83.93424950298379,
+      "ci95_ms": [
+        82.69648994020886,
+        85.20285532091509
+      ],
+      "speaker_ci95_ms": [
+        81.41116533224705,
+        86.86954204697841
+      ],
+      "delta_false_forecasts_per_100_native_tokens": -0.0038111571625934924,
+      "false_forecast_delta_ci95": [
+        -0.06245848600703877,
+        0.05384611279280778
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.07327648943447321,
+        0.06027405948525838
+      ]
+    },
+    "test-clean/state38-minus-native": {
+      "delta_gain_ms": 27.73581773252947,
+      "ci95_ms": [
+        26.563618815973673,
+        28.83246529339536
+      ],
+      "speaker_ci95_ms": [
+        26.077297975338485,
+        29.51305895872371
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.07812872183316659,
+      "false_forecast_delta_ci95": [
+        0.043034413741140205,
+        0.1123452194545155
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.045937485267150344,
+        0.11103900990412427
+      ]
+    },
+    "test-clean/state38-minus-full": {
+      "delta_gain_ms": -7.309709016611562,
+      "ci95_ms": [
+        -8.538330815647045,
+        -6.141551360027579
+      ],
+      "speaker_ci95_ms": [
+        -8.481294516362075,
+        -6.260554779302387
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.016197417941022342,
+      "false_forecast_delta_ci95": [
+        -0.019594990883400616,
+        0.054227745446331604
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.019501496692665796,
+        0.052276431240504906
+      ]
+    },
+    "test-clean/state38-minus-band2": {
+      "delta_gain_ms": -2.581296126924019,
+      "ci95_ms": [
+        -3.8337160625159634,
+        -1.3796148090864082
+      ],
+      "speaker_ci95_ms": [
+        -3.969804605860331,
+        -1.2299385712996773
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.038111571625934926,
+      "false_forecast_delta_ci95": [
+        0.002881979011708244,
+        0.07944523159126159
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.0019599633769116337,
+        0.07895313778883599
+      ]
+    },
+    "test-clean/state38-minus-state": {
+      "delta_gain_ms": 1.9841514463900705,
+      "ci95_ms": [
+        1.2966496729272767,
+        2.6757081051383875
+      ],
+      "speaker_ci95_ms": [
+        1.2692653252104873,
+        2.73242039098142
+      ],
+      "delta_false_forecasts_per_100_native_tokens": -0.0028583678719451195,
+      "false_forecast_delta_ci95": [
+        -0.027782731870457673,
+        0.01914216351251868
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.024464513599668423,
+        0.017702795750953664
+      ]
+    },
+    "test-clean/state38-minus-persistence": {
+      "delta_gain_ms": 85.91840094937386,
+      "ci95_ms": [
+        84.66627399181586,
+        87.09049152085704
+      ],
+      "speaker_ci95_ms": [
+        83.22211044838846,
+        89.0547488556751
+      ],
+      "delta_false_forecasts_per_100_native_tokens": -0.0066695250345386115,
+      "false_forecast_delta_ci95": [
+        -0.06627058427456302,
+        0.05046697504436097
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.07248893139188152,
+        0.05251381120848597
+      ]
+    },
+    "test-clean/ensemble-minus-native": {
+      "delta_gain_ms": 24.99154762747392,
+      "ci95_ms": [
+        23.75408363044322,
+        26.101784223475804
+      ],
+      "speaker_ci95_ms": [
+        23.347181272608623,
+        26.783481202947144
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.06574246105473774,
+      "false_forecast_delta_ci95": [
+        0.030295360898306242,
+        0.09861157242359847
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.03040896289031553,
+        0.10183192668164442
+      ]
+    },
+    "test-clean/ensemble-minus-full": {
+      "delta_gain_ms": -10.053979121667112,
+      "ci95_ms": [
+        -11.230312548520638,
+        -8.920570495510653
+      ],
+      "speaker_ci95_ms": [
+        -11.118032131044462,
+        -9.03149356178569
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.0038111571625934924,
+      "false_forecast_delta_ci95": [
+        -0.03374431431721019,
+        0.04334803089185851
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.033900768730784,
+        0.042916044125861384
+      ]
+    },
+    "test-clean/ensemble-minus-band2": {
+      "delta_gain_ms": -5.325566231979568,
+      "ci95_ms": [
+        -6.523140785731558,
+        -4.134081604908211
+      ],
+      "speaker_ci95_ms": [
+        -6.510501762539158,
+        -4.1145212392564945
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.025725310847506073,
+      "false_forecast_delta_ci95": [
+        -0.011289356241478575,
+        0.06464083273770187
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.016010401904921784,
+        0.06356090757549127
+      ]
+    },
+    "test-clean/ensemble-minus-state": {
+      "delta_gain_ms": -0.7601186586654796,
+      "ci95_ms": [
+        -1.2788189792485327,
+        -0.25008759835710653
+      ],
+      "speaker_ci95_ms": [
+        -1.242132897807796,
+        -0.27718241953902567
+      ],
+      "delta_false_forecasts_per_100_native_tokens": -0.01524462865037397,
+      "false_forecast_delta_ci95": [
+        -0.03572249347462677,
+        0.0038590399579096508
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.03693609297498325,
+        0.005900263728155852
+      ]
+    },
+    "test-clean/ensemble-minus-persistence": {
+      "delta_gain_ms": 83.1741308443183,
+      "ci95_ms": [
+        81.9076875900366,
+        84.41879099635385
+      ],
+      "speaker_ci95_ms": [
+        80.56297596488382,
+        86.18228356358482
+      ],
+      "delta_false_forecasts_per_100_native_tokens": -0.019055785812967463,
+      "false_forecast_delta_ci95": [
+        -0.07579632830470426,
+        0.03617656656649812
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.09175011877820267,
+        0.04715516181605836
+      ]
+    },
+    "test-clean/reset-minus-native": {
+      "delta_gain_ms": 26.071872133491294,
+      "ci95_ms": [
+        24.96530853387856,
+        27.130169367513012
+      ],
+      "speaker_ci95_ms": [
+        24.620709717275453,
+        27.828202495936605
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.08098708970511172,
+      "false_forecast_delta_ci95": [
+        0.047824110133736525,
+        0.11686850508129477
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.04268745037287776,
+        0.12191626079853497
+      ]
+    },
+    "test-clean/reset-minus-full": {
+      "delta_gain_ms": -8.973654615649737,
+      "ci95_ms": [
+        -10.124599635127975,
+        -7.805375281707491
+      ],
+      "speaker_ci95_ms": [
+        -10.205208253072648,
+        -7.7712783283779
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.019055785812967463,
+      "false_forecast_delta_ci95": [
+        -0.020300977298219263,
+        0.05976963293495419
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.017733920844672738,
+        0.0601790560381513
+      ]
+    },
+    "test-clean/reset-minus-band2": {
+      "delta_gain_ms": -4.2452417259621935,
+      "ci95_ms": [
+        -5.508763255892972,
+        -3.0547252314305764
+      ],
+      "speaker_ci95_ms": [
+        -5.543643544764431,
+        -2.8745106914500496
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.04096993949788005,
+      "false_forecast_delta_ci95": [
+        0.0038556740156258625,
+        0.08163022827654348
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.0009940547375926652,
+        0.08266438758319075
+      ]
+    },
+    "test-clean/reset-minus-state": {
+      "delta_gain_ms": 0.3202058473518953,
+      "ci95_ms": [
+        -0.2829879325357047,
+        0.9215976843074798
+      ],
+      "speaker_ci95_ms": [
+        -0.2517934597933995,
+        0.9144472218266538
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.0,
+      "false_forecast_delta_ci95": [
+        -0.021146958238721772,
+        0.021674338448166342
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.026840202795753526,
+        0.02745769525082027
+      ]
+    },
+    "test-clean/reset-minus-persistence": {
+      "delta_gain_ms": 84.25445535033568,
+      "ci95_ms": [
+        82.98503018748781,
+        85.49446112806868
+      ],
+      "speaker_ci95_ms": [
+        81.65781650214554,
+        87.34402783099132
+      ],
+      "delta_false_forecasts_per_100_native_tokens": -0.0038111571625934924,
+      "false_forecast_delta_ci95": [
+        -0.06298761045431804,
+        0.056226864738251975
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.0790346314848719,
+        0.06445367824421698
+      ]
+    },
+    "test-clean/deterministic-minus-native": {
+      "delta_gain_ms": 25.693447950165616,
+      "ci95_ms": [
+        24.52335168737482,
+        26.757351582212028
+      ],
+      "speaker_ci95_ms": [
+        24.08107980769523,
+        27.518337009301412
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.10194845409937592,
+      "false_forecast_delta_ci95": [
+        0.06789328018099713,
+        0.13465934086815717
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.07127243961373296,
+        0.1352026751841383
+      ]
+    },
+    "test-clean/deterministic-minus-full": {
+      "delta_gain_ms": -9.352078798975414,
+      "ci95_ms": [
+        -10.510009117502554,
+        -8.154376628065881
+      ],
+      "speaker_ci95_ms": [
+        -10.756345973225969,
+        -8.06917534842596
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.04001715020723167,
+      "false_forecast_delta_ci95": [
+        0.0,
+        0.08020526013473062
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.0030031844866235486,
+        0.07960150696029203
+      ]
+    },
+    "test-clean/deterministic-minus-band2": {
+      "delta_gain_ms": -4.623665909287871,
+      "ci95_ms": [
+        -5.965431294466458,
+        -3.3944408390940697
+      ],
+      "speaker_ci95_ms": [
+        -6.0353891809514115,
+        -3.1444425322201823
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.061931303892144254,
+      "false_forecast_delta_ci95": [
+        0.0258960756554547,
+        0.10259085169027948
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.0269329809011345,
+        0.09830557721610814
+      ]
+    },
+    "test-clean/deterministic-minus-state": {
+      "delta_gain_ms": -0.058218335973781885,
+      "ci95_ms": [
+        -0.7969296929577255,
+        0.6428916856281576
+      ],
+      "speaker_ci95_ms": [
+        -0.6800478892721752,
+        0.5621662102548065
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.020961364394264208,
+      "false_forecast_delta_ci95": [
+        -2.3041899389849192e-05,
+        0.04482640405982564
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.002830076665259338,
+        0.04416419104592381
+      ]
+    },
+    "test-clean/deterministic-minus-persistence": {
+      "delta_gain_ms": 83.87603116701,
+      "ci95_ms": [
+        82.65171468791732,
+        85.05692489750128
+      ],
+      "speaker_ci95_ms": [
+        81.28142305159163,
+        86.8844752255122
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.017150207231670715,
+      "false_forecast_delta_ci95": [
+        -0.04209601843143401,
+        0.07329342141885953
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.05526469030909788,
+        0.0844645565547674
+      ]
+    },
+    "test-clean/single_step-minus-native": {
+      "delta_gain_ms": 26.2482711622326,
+      "ci95_ms": [
+        25.06471425679728,
+        27.317890875766842
+      ],
+      "speaker_ci95_ms": [
+        24.683171454135064,
+        27.98373065658975
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.07527035396122148,
+      "false_forecast_delta_ci95": [
+        0.03957355335737534,
+        0.10885104201397698
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.047172293826435126,
+        0.10407945007938973
+      ]
+    },
+    "test-clean/single_step-minus-full": {
+      "delta_gain_ms": -8.79725558690843,
+      "ci95_ms": [
+        -9.958749321011384,
+        -7.6343911018963215
+      ],
+      "speaker_ci95_ms": [
+        -10.250732646696626,
+        -7.383117179380277
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.013339050069077223,
+      "false_forecast_delta_ci95": [
+        -0.02571694473061869,
+        0.05355422780877941
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.02348762085225796,
+        0.05730576555597821
+      ]
+    },
+    "test-clean/single_step-minus-band2": {
+      "delta_gain_ms": -4.068842697220886,
+      "ci95_ms": [
+        -5.331959153092773,
+        -2.861380302321926
+      ],
+      "speaker_ci95_ms": [
+        -5.604488710719674,
+        -2.459671602847544
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.035253203753989805,
+      "false_forecast_delta_ci95": [
+        -0.0009529997374668208,
+        0.07699165098361466
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.003778384676800103,
+        0.07946237347197008
+      ]
+    },
+    "test-clean/single_step-minus-state": {
+      "delta_gain_ms": 0.49660487609320286,
+      "ci95_ms": [
+        -0.15682938385133435,
+        1.1413132598741726
+      ],
+      "speaker_ci95_ms": [
+        -0.1536567931208966,
+        1.1751190057929866
+      ],
+      "delta_false_forecasts_per_100_native_tokens": -0.005716735743890239,
+      "false_forecast_delta_ci95": [
+        -0.02925098551781594,
+        0.01893127782521414
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.030248990245629544,
+        0.021813659186420194
+      ]
+    },
+    "test-clean/single_step-minus-persistence": {
+      "delta_gain_ms": 84.43085437907699,
+      "ci95_ms": [
+        83.22909967200127,
+        85.65615041339666
+      ],
+      "speaker_ci95_ms": [
+        82.05851734255582,
+        87.16335990339478
+      ],
+      "delta_false_forecasts_per_100_native_tokens": -0.009527892906483731,
+      "false_forecast_delta_ci95": [
+        -0.06845023997383498,
+        0.04874587159165345
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.07969105207648243,
+        0.052226140977047426
+      ]
+    },
+    "test-clean/crps_only-minus-native": {
+      "delta_gain_ms": 22.1443509379111,
+      "ci95_ms": [
+        21.019033302576997,
+        23.23539972839915
+      ],
+      "speaker_ci95_ms": [
+        20.310399664591245,
+        24.16416193548982
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.13243771140012386,
+      "false_forecast_delta_ci95": [
+        0.0986112311290415,
+        0.16550736787204642
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.09698027999346762,
+        0.16890323921274883
+      ]
+    },
+    "test-clean/crps_only-minus-full": {
+      "delta_gain_ms": -12.90117581122993,
+      "ci95_ms": [
+        -14.188975865631514,
+        -11.582920736442807
+      ],
+      "speaker_ci95_ms": [
+        -14.460534423455792,
+        -11.419991903258916
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.07050640750797961,
+      "false_forecast_delta_ci95": [
+        0.03004503357098452,
+        0.11182384157083665
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.022324921971747506,
+        0.11727800650496802
+      ]
+    },
+    "test-clean/crps_only-minus-band2": {
+      "delta_gain_ms": -8.172762921542388,
+      "ci95_ms": [
+        -9.55048451851873,
+        -6.792198089667342
+      ],
+      "speaker_ci95_ms": [
+        -9.860521581742875,
+        -6.389823952777661
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.09242056119289219,
+      "false_forecast_delta_ci95": [
+        0.053164734222569246,
+        0.13553350308765943
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.04492390071784105,
+        0.13995383637775405
+      ]
+    },
+    "test-clean/crps_only-minus-state": {
+      "delta_gain_ms": -3.607315348228298,
+      "ci95_ms": [
+        -4.498079901448818,
+        -2.733664760476358
+      ],
+      "speaker_ci95_ms": [
+        -4.861728268891512,
+        -2.37078449456578
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.05145062169501215,
+      "false_forecast_delta_ci95": [
+        0.02169286556835683,
+        0.07886617427896157
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.01902816696184898,
+        0.08543091086424345
+      ]
+    },
+    "test-clean/crps_only-minus-persistence": {
+      "delta_gain_ms": 80.32693415475549,
+      "ci95_ms": [
+        79.03516969974679,
+        81.51559780676999
+      ],
+      "speaker_ci95_ms": [
+        77.30639956390932,
+        83.62334074288711
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.04763946453241866,
+      "false_forecast_delta_ci95": [
+        -0.012355701740361671,
+        0.10675049904520195
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.024444656436591078,
+        0.11466882898807305
+      ]
+    },
+    "test-clean/persistence-minus-native": {
+      "delta_gain_ms": -58.182583216844385,
+      "ci95_ms": [
+        -59.27303371802002,
+        -57.03596788547112
+      ],
+      "speaker_ci95_ms": [
+        -60.617022765962055,
+        -56.22251209384193
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.08479824686770521,
+      "false_forecast_delta_ci95": [
+        0.02983362184277157,
+        0.13763550232686655
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.020237497392932673,
+        0.1555335863204632
+      ]
+    },
+    "test-clean/persistence-minus-full": {
+      "delta_gain_ms": -93.22810996598541,
+      "ci95_ms": [
+        -94.4271333013008,
+        -91.7953718360022
+      ],
+      "speaker_ci95_ms": [
+        -96.78281671660005,
+        -90.04303611032628
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.022866942975560956,
+      "false_forecast_delta_ci95": [
+        -0.032128197398249785,
+        0.07526585924108382
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.04376218790384893,
+        0.09519287270193352
+      ]
+    },
+    "test-clean/persistence-minus-band2": {
+      "delta_gain_ms": -88.49969707629788,
+      "ci95_ms": [
+        -89.7686989401096,
+        -87.15581814063141
+      ],
+      "speaker_ci95_ms": [
+        -92.04307818197108,
+        -85.06097538424058
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.044781096660473536,
+      "false_forecast_delta_ci95": [
+        -0.007640535466156634,
+        0.09847979590543998
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.020929260433510795,
+        0.1203254971443643
+      ]
+    },
+    "test-clean/persistence-minus-state": {
+      "delta_gain_ms": -83.93424950298379,
+      "ci95_ms": [
+        -85.20285532091509,
+        -82.69648994020886
+      ],
+      "speaker_ci95_ms": [
+        -86.86954204697841,
+        -81.41116533224705
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.0038111571625934924,
+      "false_forecast_delta_ci95": [
+        -0.05384611279280778,
+        0.06245848600703877
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.06027405948525839,
+        0.0732764894344732
+      ]
+    },
+    "test-other/state-minus-native": {
+      "delta_gain_ms": 18.4313324622656,
+      "ci95_ms": [
+        17.276050930860052,
+        19.496759169238846
+      ],
+      "speaker_ci95_ms": [
+        16.5998515725282,
+        20.014905149175384
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.07115797069494277,
+      "false_forecast_delta_ci95": [
+        0.027141586239052187,
+        0.11475462805988348
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.024299657336924352,
+        0.12170650224327983
+      ]
+    },
+    "test-other/state-minus-full": {
+      "delta_gain_ms": -3.137970484896347,
+      "ci95_ms": [
+        -4.385080949171038,
+        -1.7977840335911315
+      ],
+      "speaker_ci95_ms": [
+        -4.701179601369604,
+        -1.425187087979433
+      ],
+      "delta_false_forecasts_per_100_native_tokens": -0.005011124696826956,
+      "false_forecast_delta_ci95": [
+        -0.053192013306518675,
+        0.048893484679215574
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.0631912013957206,
+        0.047795375781290485
+      ]
+    },
+    "test-other/state-minus-band2": {
+      "delta_gain_ms": 1.8888943277304615,
+      "ci95_ms": [
+        0.6643100473671446,
+        3.103372183759908
+      ],
+      "speaker_ci95_ms": [
+        0.26639826747540285,
+        3.61599555808748
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.041091222513981035,
+      "false_forecast_delta_ci95": [
+        -0.008006968063977209,
+        0.09060567769486692
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.0009295417517648646,
+        0.08793358194671148
+      ]
+    },
+    "test-other/state-minus-persistence": {
+      "delta_gain_ms": 71.1177110460595,
+      "ci95_ms": [
+        69.73881431889974,
+        72.42438277971804
+      ],
+      "speaker_ci95_ms": [
+        67.46069308891478,
+        74.50772311622244
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.2275050612359438,
+      "false_forecast_delta_ci95": [
+        0.16797274479567922,
+        0.287657786597844
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.14161446990845084,
+        0.3267880045805308
+      ]
+    },
+    "test-other/state38-minus-native": {
+      "delta_gain_ms": 19.795016325415876,
+      "ci95_ms": [
+        18.65958338041031,
+        20.888800886475714
+      ],
+      "speaker_ci95_ms": [
+        18.02448693034997,
+        21.32995313929204
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.1032291687546353,
+      "false_forecast_delta_ci95": [
+        0.06014299704601135,
+        0.14884158757566854
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.04466635436472535,
+        0.15969372104407026
+      ]
+    },
+    "test-other/state38-minus-full": {
+      "delta_gain_ms": -1.7742866217460715,
+      "ci95_ms": [
+        -3.014252947833346,
+        -0.4921408107038335
+      ],
+      "speaker_ci95_ms": [
+        -3.3402896612729287,
+        -0.09512777582769125
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.02706007336286556,
+      "false_forecast_delta_ci95": [
+        -0.018024341525361653,
+        0.07598924693717989
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.03578739657232779,
+        0.08303367687443143
+      ]
+    },
+    "test-other/state38-minus-band2": {
+      "delta_gain_ms": 3.252578190880737,
+      "ci95_ms": [
+        1.9453260991947368,
+        4.497953940573903
+      ],
+      "speaker_ci95_ms": [
+        1.4846096612941337,
+        5.088151643045398
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.07316242057367356,
+      "false_forecast_delta_ci95": [
+        0.02492058848123409,
+        0.12123054827523694
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.021279702970121123,
+        0.12486597531768222
+      ]
+    },
+    "test-other/state38-minus-state": {
+      "delta_gain_ms": 1.3636838631502755,
+      "ci95_ms": [
+        0.6776022107715405,
+        2.081073167358921
+      ],
+      "speaker_ci95_ms": [
+        0.7865854670991479,
+        1.946272283133853
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.03207119805969252,
+      "false_forecast_delta_ci95": [
+        0.00196714661318155,
+        0.06530784361721871
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.01035178459434176,
+        0.05435213931265902
+      ]
+    },
+    "test-other/state38-minus-persistence": {
+      "delta_gain_ms": 72.48139490920978,
+      "ci95_ms": [
+        71.16412196082719,
+        73.76910108978488
+      ],
+      "speaker_ci95_ms": [
+        68.84684750035699,
+        75.83778246134393
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.2595762592956363,
+      "false_forecast_delta_ci95": [
+        0.19959204649338014,
+        0.32122596478215065
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.17654330962964512,
+        0.35967638022665943
+      ]
+    },
+    "test-other/ensemble-minus-native": {
+      "delta_gain_ms": 17.622587311610104,
+      "ci95_ms": [
+        16.50601863804558,
+        18.685794165293853
+      ],
+      "speaker_ci95_ms": [
+        15.88134009119432,
+        19.273342579527945
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.05913127142255808,
+      "false_forecast_delta_ci95": [
+        0.014565399795113362,
+        0.10128899497932868
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.007002777417462726,
+        0.11855305583212662
+      ]
+    },
+    "test-other/ensemble-minus-full": {
+      "delta_gain_ms": -3.946715635551843,
+      "ci95_ms": [
+        -5.0731038261990555,
+        -2.6219992615992127
+      ],
+      "speaker_ci95_ms": [
+        -5.577541816883463,
+        -2.188182806447216
+      ],
+      "delta_false_forecasts_per_100_native_tokens": -0.01703782396921165,
+      "false_forecast_delta_ci95": [
+        -0.06364484103940025,
+        0.03098911017489124
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.07414878153818807,
+        0.03699285830892634
+      ]
+    },
+    "test-other/ensemble-minus-band2": {
+      "delta_gain_ms": 1.0801491770749654,
+      "ci95_ms": [
+        -0.15545216891345154,
+        2.3647592708119043
+      ],
+      "speaker_ci95_ms": [
+        -0.5764734393085309,
+        2.819951244968143
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.029064523241596345,
+      "false_forecast_delta_ci95": [
+        -0.019227027086599256,
+        0.07954065462387376
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.01773579727584957,
+        0.07808826093437908
+      ]
+    },
+    "test-other/ensemble-minus-state": {
+      "delta_gain_ms": -0.8087451506554959,
+      "ci95_ms": [
+        -1.3526355517892001,
+        -0.2629238370904569
+      ],
+      "speaker_ci95_ms": [
+        -1.2498584999158944,
+        -0.3603250006724421
+      ],
+      "delta_false_forecasts_per_100_native_tokens": -0.012026699272384695,
+      "false_forecast_delta_ci95": [
+        -0.031573805379221165,
+        0.00798350825071908
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.029007925589141597,
+        0.006113424692393616
+      ]
+    },
+    "test-other/ensemble-minus-persistence": {
+      "delta_gain_ms": 70.308965895404,
+      "ci95_ms": [
+        68.96089884740452,
+        71.5665054146735
+      ],
+      "speaker_ci95_ms": [
+        66.72696267567913,
+        73.64050612176736
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.2154783619635591,
+      "false_forecast_delta_ci95": [
+        0.15356030722509345,
+        0.27385118853713236
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.12993690385883502,
+        0.3180924314310489
+      ]
+    },
+    "test-other/reset-minus-native": {
+      "delta_gain_ms": 17.92678937928712,
+      "ci95_ms": [
+        16.779878962276097,
+        19.031831499506975
+      ],
+      "speaker_ci95_ms": [
+        16.230974626793458,
+        19.542106266106405
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.08619134478542365,
+      "false_forecast_delta_ci95": [
+        0.042748269763328836,
+        0.12897533453601082
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.02862553763062647,
+        0.1421093764953733
+      ]
+    },
+    "test-other/reset-minus-full": {
+      "delta_gain_ms": -3.6425135678748313,
+      "ci95_ms": [
+        -4.853144193340149,
+        -2.3366970769472393
+      ],
+      "speaker_ci95_ms": [
+        -5.31428784839712,
+        -1.8345879043294278
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.010022249393653912,
+      "false_forecast_delta_ci95": [
+        -0.03445174163073631,
+        0.0571254946948138
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.049125253374342884,
+        0.06850891075930253
+      ]
+    },
+    "test-other/reset-minus-band2": {
+      "delta_gain_ms": 1.384351244751977,
+      "ci95_ms": [
+        0.1793972913201836,
+        2.610764201084667
+      ],
+      "speaker_ci95_ms": [
+        -0.3483420231028856,
+        3.2401276627582134
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.0561245966044619,
+      "false_forecast_delta_ci95": [
+        0.01068056371188997,
+        0.10163559697177688
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.003814218142086975,
+        0.11216380870580378
+      ]
+    },
+    "test-other/reset-minus-state": {
+      "delta_gain_ms": -0.5045430829784845,
+      "ci95_ms": [
+        -1.1199596400616476,
+        0.10495828681217421
+      ],
+      "speaker_ci95_ms": [
+        -1.1098149037432656,
+        0.06989663898590964
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.015033374090480868,
+      "false_forecast_delta_ci95": [
+        -0.01096252129336591,
+        0.04209455128860061
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.004967171293863886,
+        0.03758786902204163
+      ]
+    },
+    "test-other/reset-minus-persistence": {
+      "delta_gain_ms": 70.61316796308101,
+      "ci95_ms": [
+        69.27477986796869,
+        71.8922855396154
+      ],
+      "speaker_ci95_ms": [
+        66.87863971817272,
+        74.10314815112922
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.24253843532642466,
+      "false_forecast_delta_ci95": [
+        0.1830893286213821,
+        0.30154594499977594
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.14930426882693063,
+        0.3558874924511286
+      ]
+    },
+    "test-other/deterministic-minus-native": {
+      "delta_gain_ms": 17.943710363212393,
+      "ci95_ms": [
+        16.774964589117463,
+        19.023541846013025
+      ],
+      "speaker_ci95_ms": [
+        16.109325244972727,
+        19.50312149100444
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.07817354527050051,
+      "false_forecast_delta_ci95": [
+        0.03149737875531508,
+        0.11886190135847337
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.01982616949215362,
+        0.13634545622924285
+      ]
+    },
+    "test-other/deterministic-minus-full": {
+      "delta_gain_ms": -3.6255925839495555,
+      "ci95_ms": [
+        -4.896453072080459,
+        -2.3478699181143288
+      ],
+      "speaker_ci95_ms": [
+        -5.032083569057747,
+        -2.1240726989349072
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.0020044498787307823,
+      "false_forecast_delta_ci95": [
+        -0.04607106553038226,
+        0.05280103469674217
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.06235037619697278,
+        0.055771136384977556
+      ]
+    },
+    "test-other/deterministic-minus-band2": {
+      "delta_gain_ms": 1.4012722286772528,
+      "ci95_ms": [
+        0.15168470842215157,
+        2.640642042332018
+      ],
+      "speaker_ci95_ms": [
+        -0.132884932297448,
+        2.9149616800271394
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.04810679708953878,
+      "false_forecast_delta_ci95": [
+        -2.505361473553262e-05,
+        0.09684703536373741
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.004867894383727705,
+        0.09725614434880234
+      ]
+    },
+    "test-other/deterministic-minus-state": {
+      "delta_gain_ms": -0.4876220990532085,
+      "ci95_ms": [
+        -1.1784624147316518,
+        0.26182605026671874
+      ],
+      "speaker_ci95_ms": [
+        -1.1032154741107454,
+        0.11036115331423464
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.007015574575557738,
+      "false_forecast_delta_ci95": [
+        -0.02521285172645467,
+        0.038303547744947104
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.018531489313471428,
+        0.030390688655019885
+      ]
+    },
+    "test-other/deterministic-minus-persistence": {
+      "delta_gain_ms": 70.6300889470063,
+      "ci95_ms": [
+        69.2873542480215,
+        71.90013116736128
+      ],
+      "speaker_ci95_ms": [
+        66.97593282131308,
+        73.97047957108555
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.23452063581150154,
+      "false_forecast_delta_ci95": [
+        0.17635288818452713,
+        0.2902578777172927
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.1505633917984945,
+        0.3303029170022697
+      ]
+    },
+    "test-other/single_step-minus-native": {
+      "delta_gain_ms": 18.61733387201763,
+      "ci95_ms": [
+        17.466329121101182,
+        19.765046232305863
+      ],
+      "speaker_ci95_ms": [
+        16.84970059952658,
+        20.25020980380431
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.08218244502796207,
+      "false_forecast_delta_ci95": [
+        0.036748656138312685,
+        0.1264199247566698
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.027728655274584502,
+        0.13914521987788853
+      ]
+    },
+    "test-other/single_step-minus-full": {
+      "delta_gain_ms": -2.9519690751443224,
+      "ci95_ms": [
+        -4.1359805015196525,
+        -1.6694076773216133
+      ],
+      "speaker_ci95_ms": [
+        -4.427549237618242,
+        -1.3025851448922958
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.006013349636192347,
+      "false_forecast_delta_ci95": [
+        -0.04196383777412749,
+        0.05747258250359155
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.054808850117453026,
+        0.059682188390292226
+      ]
+    },
+    "test-other/single_step-minus-band2": {
+      "delta_gain_ms": 2.074895737482486,
+      "ci95_ms": [
+        0.7841912687503567,
+        3.3344622215612354
+      ],
+      "speaker_ci95_ms": [
+        0.5228990505312464,
+        3.7672830701117315
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.05211569684700034,
+      "false_forecast_delta_ci95": [
+        0.0020008512555457283,
+        0.09819003282474777
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.0049154027917704644,
+        0.10257566519378356
+      ]
+    },
+    "test-other/single_step-minus-state": {
+      "delta_gain_ms": 0.1860014097520246,
+      "ci95_ms": [
+        -0.5131127870887738,
+        0.8555700350788169
+      ],
+      "speaker_ci95_ms": [
+        -0.3832527106900782,
+        0.7670048084792571
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.011024474333019302,
+      "false_forecast_delta_ci95": [
+        -0.018380997560533633,
+        0.04058030814194438
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.016755415829584137,
+        0.03831020629096074
+      ]
+    },
+    "test-other/single_step-minus-persistence": {
+      "delta_gain_ms": 71.30371245581152,
+      "ci95_ms": [
+        70.02735958421981,
+        72.45557327989825
+      ],
+      "speaker_ci95_ms": [
+        67.73454402011194,
+        74.62920702182937
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.23852953556896309,
+      "false_forecast_delta_ci95": [
+        0.17758821168557462,
+        0.2950182275969601
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.147388885878087,
+        0.34487078744255173
+      ]
+    },
+    "test-other/crps_only-minus-native": {
+      "delta_gain_ms": 16.242880344485666,
+      "ci95_ms": [
+        15.15797192886709,
+        17.290662229182292
+      ],
+      "speaker_ci95_ms": [
+        14.560156616833053,
+        18.071045820564105
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.12728256729940468,
+      "false_forecast_delta_ci95": [
+        0.08199627171259515,
+        0.17456922252990428
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.07766853387093625,
+        0.17659593076734165
+      ]
+    },
+    "test-other/crps_only-minus-full": {
+      "delta_gain_ms": -5.326422602676284,
+      "ci95_ms": [
+        -6.515950472742249,
+        -4.07821307891688
+      ],
+      "speaker_ci95_ms": [
+        -6.875543197395944,
+        -3.651709084831606
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.05111347190763495,
+      "false_forecast_delta_ci95": [
+        0.0019984419073135174,
+        0.10266273269946713
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.005098767562295034,
+        0.10444983022038185
+      ]
+    },
+    "test-other/crps_only-minus-band2": {
+      "delta_gain_ms": -0.2995577900494755,
+      "ci95_ms": [
+        -1.5527241297013963,
+        0.9391998890830318
+      ],
+      "speaker_ci95_ms": [
+        -2.0068900290986322,
+        1.7468887987704393
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.09721581911844294,
+      "false_forecast_delta_ci95": [
+        0.04934742670147223,
+        0.1480971314969813
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.04873938214213967,
+        0.14557950980792556
+      ]
+    },
+    "test-other/crps_only-minus-state": {
+      "delta_gain_ms": -2.188452117779937,
+      "ci95_ms": [
+        -3.1196498846515586,
+        -1.263528857548039
+      ],
+      "speaker_ci95_ms": [
+        -3.152067578550753,
+        -1.0227662118702028
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.0561245966044619,
+      "false_forecast_delta_ci95": [
+        0.018331946489174484,
+        0.09250065986026512
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.025210827752873234,
+        0.0874412593678139
+      ]
+    },
+    "test-other/crps_only-minus-persistence": {
+      "delta_gain_ms": 68.92925892827957,
+      "ci95_ms": [
+        67.6430072162758,
+        70.14849877122113
+      ],
+      "speaker_ci95_ms": [
+        65.14400770174989,
+        72.1302471808587
+      ],
+      "delta_false_forecasts_per_100_native_tokens": 0.2836296578404057,
+      "false_forecast_delta_ci95": [
+        0.22106740626419694,
+        0.34485427319435913
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        0.19343731469012626,
+        0.38925294380765274
+      ]
+    },
+    "test-other/persistence-minus-native": {
+      "delta_gain_ms": -52.6863785837939,
+      "ci95_ms": [
+        -53.74795164927006,
+        -51.508239789406225
+      ],
+      "speaker_ci95_ms": [
+        -55.28223149641756,
+        -49.74420408099744
+      ],
+      "delta_false_forecasts_per_100_native_tokens": -0.15634709054100102,
+      "false_forecast_delta_ci95": [
+        -0.2144160596826577,
+        -0.09611265648202934
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.2657112650759786,
+        -0.062096747899725066
+      ]
+    },
+    "test-other/persistence-minus-full": {
+      "delta_gain_ms": -74.25568153095585,
+      "ci95_ms": [
+        -75.54852040127214,
+        -72.88563891296089
+      ],
+      "speaker_ci95_ms": [
+        -77.71064157144677,
+        -70.24697357212565
+      ],
+      "delta_false_forecasts_per_100_native_tokens": -0.23251618593277076,
+      "false_forecast_delta_ci95": [
+        -0.29292292095035544,
+        -0.16904490552529453
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.3572625432133619,
+        -0.13869728438822862
+      ]
+    },
+    "test-other/persistence-minus-band2": {
+      "delta_gain_ms": -69.22881671832904,
+      "ci95_ms": [
+        -70.51737943215424,
+        -67.87100324357445
+      ],
+      "speaker_ci95_ms": [
+        -72.35871743713653,
+        -65.60094686936189
+      ],
+      "delta_false_forecasts_per_100_native_tokens": -0.18641383872196277,
+      "false_forecast_delta_ci95": [
+        -0.24090544410069178,
+        -0.12927620095137815
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.2860317672291705,
+        -0.10299887576552845
+      ]
+    },
+    "test-other/persistence-minus-state": {
+      "delta_gain_ms": -71.1177110460595,
+      "ci95_ms": [
+        -72.42438277971804,
+        -69.73881431889974
+      ],
+      "speaker_ci95_ms": [
+        -74.50772311622244,
+        -67.46069308891478
+      ],
+      "delta_false_forecasts_per_100_native_tokens": -0.2275050612359438,
+      "false_forecast_delta_ci95": [
+        -0.287657786597844,
+        -0.16797274479567922
+      ],
+      "false_forecast_delta_speaker_ci95": [
+        -0.3267880045805308,
+        -0.14161446990845084
+      ]
+    }
+  },
+  "old_control_reproduction": {
+    "test-clean/native/raw": "exactly reproduced",
+    "test-clean/native/gate": "exactly reproduced",
+    "test-clean/full/raw": "exactly reproduced",
+    "test-clean/full/gate": "exactly reproduced",
+    "test-clean/band2/raw": "exactly reproduced",
+    "test-clean/band2/gate": "exactly reproduced",
+    "test-other/native/raw": "exactly reproduced",
+    "test-other/native/gate": "exactly reproduced",
+    "test-other/full/raw": "exactly reproduced",
+    "test-other/full/gate": "exactly reproduced",
+    "test-other/band2/raw": "exactly reproduced",
+    "test-other/band2/gate": "exactly reproduced"
+  },
+  "risk_gain_operating_points": {
+    "test-clean/native": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.9822567397710613,
+        "stable_mean_gain_ms": 17.28814284734021,
+        "wrong_forecasts_per_100_native_tokens": 0.07145919679862799,
+        "retracted_per_100_native_tokens": 0.0,
+        "attempts": 5743
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9696821796347515,
+        "stable_mean_gain_ms": 36.32573618538999,
+        "wrong_forecasts_per_100_native_tokens": 0.16769091515411366,
+        "retracted_per_100_native_tokens": 0.0066695250345386115,
+        "attempts": 11598
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9466387328818316,
+        "stable_mean_gain_ms": 59.26699363114921,
+        "wrong_forecasts_per_100_native_tokens": 0.3353818303082273,
+        "retracted_per_100_native_tokens": 0.03620599304463818,
+        "attempts": 18373
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.8913655877433252,
+        "stable_mean_gain_ms": 86.06826059839699,
+        "wrong_forecasts_per_100_native_tokens": 0.63836882473441,
+        "retracted_per_100_native_tokens": 0.1524462865037397,
+        "attempts": 26185
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.7760212939746366,
+        "stable_mean_gain_ms": 108.78809121960202,
+        "wrong_forecasts_per_100_native_tokens": 1.366299842789767,
+        "retracted_per_100_native_tokens": 0.6640941355819161,
+        "attempts": 32970
+      }
+    ],
+    "test-clean/full": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.9866373886300532,
+        "stable_mean_gain_ms": 25.324783020579787,
+        "wrong_forecasts_per_100_native_tokens": 0.08956219332094707,
+        "retracted_per_100_native_tokens": 0.010480682197132104,
+        "attempts": 6490
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9762262946664023,
+        "stable_mean_gain_ms": 59.05156978220909,
+        "wrong_forecasts_per_100_native_tokens": 0.21342480110523557,
+        "retracted_per_100_native_tokens": 0.0495450431137154,
+        "attempts": 15069
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9599379648914521,
+        "stable_mean_gain_ms": 94.31252038029024,
+        "wrong_forecasts_per_100_native_tokens": 0.39731313420037156,
+        "retracted_per_100_native_tokens": 0.11814587204039827,
+        "attempts": 24136
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9165381048551102,
+        "stable_mean_gain_ms": 129.63624164845106,
+        "wrong_forecasts_per_100_native_tokens": 0.7374589109618408,
+        "retracted_per_100_native_tokens": 0.25248916202181887,
+        "attempts": 34099
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.7705587707616821,
+        "stable_mean_gain_ms": 154.32561210036005,
+        "wrong_forecasts_per_100_native_tokens": 1.5006431327711875,
+        "retracted_per_100_native_tokens": 0.6926778143013672,
+        "attempts": 42320
+      }
+    ],
+    "test-clean/band2": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.986455221824116,
+        "stable_mean_gain_ms": 23.027675047388193,
+        "wrong_forecasts_per_100_native_tokens": 0.08765661473965032,
+        "retracted_per_100_native_tokens": 0.010480682197132104,
+        "attempts": 6013
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9765048843464781,
+        "stable_mean_gain_ms": 54.03894674923481,
+        "wrong_forecasts_per_100_native_tokens": 0.19532180458291648,
+        "retracted_per_100_native_tokens": 0.0495450431137154,
+        "attempts": 13978
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9608814796025323,
+        "stable_mean_gain_ms": 89.5841074906027,
+        "wrong_forecasts_per_100_native_tokens": 0.375398980515459,
+        "retracted_per_100_native_tokens": 0.12195702920299176,
+        "attempts": 23117
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9188000740572053,
+        "stable_mean_gain_ms": 127.13483542593514,
+        "wrong_forecasts_per_100_native_tokens": 0.740317278833786,
+        "retracted_per_100_native_tokens": 0.2839312086132152,
+        "attempts": 33570
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.7857421874897185,
+        "stable_mean_gain_ms": 152.75083026994696,
+        "wrong_forecasts_per_100_native_tokens": 1.4987375541898909,
+        "retracted_per_100_native_tokens": 0.7307893859273021,
+        "attempts": 41976
+      }
+    ],
+    "test-clean/state": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.979180267964788,
+        "stable_mean_gain_ms": 21.098980599120516,
+        "wrong_forecasts_per_100_native_tokens": 0.05430898956695727,
+        "retracted_per_100_native_tokens": 0.0038111571625934924,
+        "attempts": 4729
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9653629497774684,
+        "stable_mean_gain_ms": 53.43473377940913,
+        "wrong_forecasts_per_100_native_tokens": 0.21151922252393884,
+        "retracted_per_100_native_tokens": 0.029536468010099567,
+        "attempts": 13111
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9498875446047135,
+        "stable_mean_gain_ms": 85.01865991728862,
+        "wrong_forecasts_per_100_native_tokens": 0.41636892001333903,
+        "retracted_per_100_native_tokens": 0.1133819255871564,
+        "attempts": 21782
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9216000999651789,
+        "stable_mean_gain_ms": 119.10661793450534,
+        "wrong_forecasts_per_100_native_tokens": 0.7727121147158306,
+        "retracted_per_100_native_tokens": 0.23533895479014816,
+        "attempts": 32048
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.8568506288785633,
+        "stable_mean_gain_ms": 145.5038919323821,
+        "wrong_forecasts_per_100_native_tokens": 1.3834500500214377,
+        "retracted_per_100_native_tokens": 0.5640512600638369,
+        "attempts": 40723
+      }
+    ],
+    "test-clean/state38": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.9786254262548122,
+        "stable_mean_gain_ms": 23.12247486074798,
+        "wrong_forecasts_per_100_native_tokens": 0.07241198608927636,
+        "retracted_per_100_native_tokens": 0.008575103615835357,
+        "attempts": 5435
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9635186663437886,
+        "stable_mean_gain_ms": 57.02082708770645,
+        "wrong_forecasts_per_100_native_tokens": 0.22771664046496118,
+        "retracted_per_100_native_tokens": 0.03715878233528655,
+        "attempts": 14220
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9483812307367514,
+        "stable_mean_gain_ms": 87.00281136367869,
+        "wrong_forecasts_per_100_native_tokens": 0.41351055214139393,
+        "retracted_per_100_native_tokens": 0.09623171835548569,
+        "attempts": 22400
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9229913355499869,
+        "stable_mean_gain_ms": 117.04678877285339,
+        "wrong_forecasts_per_100_native_tokens": 0.7593730646467534,
+        "retracted_per_100_native_tokens": 0.23819732266209329,
+        "attempts": 31490
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.8568152595326458,
+        "stable_mean_gain_ms": 144.77161334117264,
+        "wrong_forecasts_per_100_native_tokens": 1.3634414749178219,
+        "retracted_per_100_native_tokens": 0.5554761564480015,
+        "attempts": 40551
+      }
+    ],
+    "test-clean/ensemble": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.9778079060037749,
+        "stable_mean_gain_ms": 23.11998425014126,
+        "wrong_forecasts_per_100_native_tokens": 0.06478967176408937,
+        "retracted_per_100_native_tokens": 0.005716735743890239,
+        "attempts": 5356
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9647640767754428,
+        "stable_mean_gain_ms": 54.65826561548213,
+        "wrong_forecasts_per_100_native_tokens": 0.21151922252393884,
+        "retracted_per_100_native_tokens": 0.03620599304463818,
+        "attempts": 13533
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9506907812743143,
+        "stable_mean_gain_ms": 84.25854125862313,
+        "wrong_forecasts_per_100_native_tokens": 0.40112429136296507,
+        "retracted_per_100_native_tokens": 0.1029012433900243,
+        "attempts": 21801
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9238882386578477,
+        "stable_mean_gain_ms": 117.31397759860855,
+        "wrong_forecasts_per_100_native_tokens": 0.7650898003906436,
+        "retracted_per_100_native_tokens": 0.23152779762755465,
+        "attempts": 31859
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.8555778391517227,
+        "stable_mean_gain_ms": 145.11197323939587,
+        "wrong_forecasts_per_100_native_tokens": 1.3863084178933829,
+        "retracted_per_100_native_tokens": 0.5650040493544852,
+        "attempts": 41027
+      }
+    ],
+    "test-clean/reset": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.977485315674941,
+        "stable_mean_gain_ms": 25.890146887905107,
+        "wrong_forecasts_per_100_native_tokens": 0.07336477537992472,
+        "retracted_per_100_native_tokens": 0.008575103615835357,
+        "attempts": 6016
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9652483832548496,
+        "stable_mean_gain_ms": 55.011023042064345,
+        "wrong_forecasts_per_100_native_tokens": 0.20675527607069696,
+        "retracted_per_100_native_tokens": 0.03334762517269306,
+        "attempts": 13537
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9505077903963963,
+        "stable_mean_gain_ms": 85.3388657646405,
+        "wrong_forecasts_per_100_native_tokens": 0.41636892001333903,
+        "retracted_per_100_native_tokens": 0.10194845409937592,
+        "attempts": 21886
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9237545566172464,
+        "stable_mean_gain_ms": 117.25004692252794,
+        "wrong_forecasts_per_100_native_tokens": 0.750797961030918,
+        "retracted_per_100_native_tokens": 0.23438616549949978,
+        "attempts": 31485
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.8579513990089084,
+        "stable_mean_gain_ms": 144.83413270819005,
+        "wrong_forecasts_per_100_native_tokens": 1.35296079272069,
+        "retracted_per_100_native_tokens": 0.5449954742508695,
+        "attempts": 40465
+      }
+    ],
+    "test-clean/deterministic": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.9789617516019643,
+        "stable_mean_gain_ms": 26.076212971765795,
+        "wrong_forecasts_per_100_native_tokens": 0.0886094040302987,
+        "retracted_per_100_native_tokens": 0.0066695250345386115,
+        "attempts": 6205
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9657301849320163,
+        "stable_mean_gain_ms": 55.12053777016088,
+        "wrong_forecasts_per_100_native_tokens": 0.21818874755847745,
+        "retracted_per_100_native_tokens": 0.028583678719451194,
+        "attempts": 13845
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9492993820155065,
+        "stable_mean_gain_ms": 84.96044158131483,
+        "wrong_forecasts_per_100_native_tokens": 0.43733028440760324,
+        "retracted_per_100_native_tokens": 0.10671240055261778,
+        "attempts": 22048
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9218170568695756,
+        "stable_mean_gain_ms": 116.60207625501343,
+        "wrong_forecasts_per_100_native_tokens": 0.7708065361345339,
+        "retracted_per_100_native_tokens": 0.23248058691820303,
+        "attempts": 31232
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.8546893779037156,
+        "stable_mean_gain_ms": 146.48484611040854,
+        "wrong_forecasts_per_100_native_tokens": 1.3786861035681959,
+        "retracted_per_100_native_tokens": 0.5583345243199467,
+        "attempts": 40604
+      }
+    ],
+    "test-clean/single_step": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.9772600839138721,
+        "stable_mean_gain_ms": 25.969594449423408,
+        "wrong_forecasts_per_100_native_tokens": 0.07241198608927636,
+        "retracted_per_100_native_tokens": 0.0066695250345386115,
+        "attempts": 6029
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9662735986311028,
+        "stable_mean_gain_ms": 53.951460914389465,
+        "wrong_forecasts_per_100_native_tokens": 0.21056643323329047,
+        "retracted_per_100_native_tokens": 0.04096993949788005,
+        "attempts": 13372
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.951473487635527,
+        "stable_mean_gain_ms": 85.51526479338182,
+        "wrong_forecasts_per_100_native_tokens": 0.41065218426944883,
+        "retracted_per_100_native_tokens": 0.11242913629650803,
+        "attempts": 22066
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9269244058847765,
+        "stable_mean_gain_ms": 117.92288522598102,
+        "wrong_forecasts_per_100_native_tokens": 0.7498451717402697,
+        "retracted_per_100_native_tokens": 0.22581106188366443,
+        "attempts": 31763
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.8657585063536587,
+        "stable_mean_gain_ms": 146.05717511080687,
+        "wrong_forecasts_per_100_native_tokens": 1.3215187461292934,
+        "retracted_per_100_native_tokens": 0.5145062169501214,
+        "attempts": 40911
+      }
+    ],
+    "test-clean/crps_only": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.9776203896360545,
+        "stable_mean_gain_ms": 27.125739572779487,
+        "wrong_forecasts_per_100_native_tokens": 0.08289266828640846,
+        "retracted_per_100_native_tokens": 0.01238626077842885,
+        "attempts": 6500
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9644796284248242,
+        "stable_mean_gain_ms": 55.47574128618198,
+        "wrong_forecasts_per_100_native_tokens": 0.2439140584059835,
+        "retracted_per_100_native_tokens": 0.055261778857605644,
+        "attempts": 14431
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9466115301822098,
+        "stable_mean_gain_ms": 81.41134456906032,
+        "wrong_forecasts_per_100_native_tokens": 0.4678195417083512,
+        "retracted_per_100_native_tokens": 0.11909866133104664,
+        "attempts": 22173
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9068778549643756,
+        "stable_mean_gain_ms": 105.9245243856725,
+        "wrong_forecasts_per_100_native_tokens": 0.7822400076223143,
+        "retracted_per_100_native_tokens": 0.24772521556857702,
+        "attempts": 30043
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.781038445878901,
+        "stable_mean_gain_ms": 120.81467537893803,
+        "wrong_forecasts_per_100_native_tokens": 1.3643942642084703,
+        "retracted_per_100_native_tokens": 0.5678624172264304,
+        "attempts": 35772
+      }
+    ],
+    "test-clean/persistence": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.5303984167563058,
+        "stable_mean_gain_ms": 0.7481770428436887,
+        "wrong_forecasts_per_100_native_tokens": 0.05812014672955076,
+        "retracted_per_100_native_tokens": 0.05335620027630889,
+        "attempts": 294
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.4296546204313997,
+        "stable_mean_gain_ms": 0.9661955418766105,
+        "wrong_forecasts_per_100_native_tokens": 0.21437759039588394,
+        "retracted_per_100_native_tokens": 0.20770806536134534,
+        "attempts": 627
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.3630780401636904,
+        "stable_mean_gain_ms": 1.084410414304827,
+        "wrong_forecasts_per_100_native_tokens": 0.42018007717593253,
+        "retracted_per_100_native_tokens": 0.41065218426944883,
+        "attempts": 989
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.2839910956381943,
+        "stable_mean_gain_ms": 0.8901323789041073,
+        "wrong_forecasts_per_100_native_tokens": 0.8575103615835358,
+        "retracted_per_100_native_tokens": 0.8355962078986232,
+        "attempts": 1651
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.1798986570600946,
+        "stable_mean_gain_ms": 0.3131627233308178,
+        "wrong_forecasts_per_100_native_tokens": 1.8264970701729313,
+        "retracted_per_100_native_tokens": 1.7998189700347769,
+        "attempts": 2981
+      }
+    ],
+    "test-other/native": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.9822567397710613,
+        "stable_mean_gain_ms": 14.505592696695349,
+        "wrong_forecasts_per_100_native_tokens": 0.09020024454288521,
+        "retracted_per_100_native_tokens": 0.004008899757461565,
+        "attempts": 4289
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9696821796347515,
+        "stable_mean_gain_ms": 31.10968877946726,
+        "wrong_forecasts_per_100_native_tokens": 0.25356290965944395,
+        "retracted_per_100_native_tokens": 0.01603559902984626,
+        "attempts": 9006
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9466387328818316,
+        "stable_mean_gain_ms": 53.74100178996389,
+        "wrong_forecasts_per_100_native_tokens": 0.5071258193188879,
+        "retracted_per_100_native_tokens": 0.05812904648319269,
+        "attempts": 15049
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.8913655877433252,
+        "stable_mean_gain_ms": 80.90354602806107,
+        "wrong_forecasts_per_100_native_tokens": 1.0844073843933533,
+        "retracted_per_100_native_tokens": 0.25757180941690555,
+        "attempts": 22315
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.7760212939746366,
+        "stable_mean_gain_ms": 105.62520518354452,
+        "wrong_forecasts_per_100_native_tokens": 2.1988815169676683,
+        "retracted_per_100_native_tokens": 0.9240513940948907,
+        "attempts": 29331
+      }
+    ],
+    "test-other/full": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.9866373886300532,
+        "stable_mean_gain_ms": 18.57235412837136,
+        "wrong_forecasts_per_100_native_tokens": 0.1012247188759045,
+        "retracted_per_100_native_tokens": 0.020044498787307824,
+        "attempts": 4355
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9762262946664023,
+        "stable_mean_gain_ms": 44.74310990308346,
+        "wrong_forecasts_per_100_native_tokens": 0.3026719316883481,
+        "retracted_per_100_native_tokens": 0.07316242057367356,
+        "attempts": 10451
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9599379648914521,
+        "stable_mean_gain_ms": 75.31030473712583,
+        "wrong_forecasts_per_100_native_tokens": 0.5832949147106576,
+        "retracted_per_100_native_tokens": 0.17138046463148188,
+        "attempts": 17713
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9165381048551102,
+        "stable_mean_gain_ms": 110.84038753689659,
+        "wrong_forecasts_per_100_native_tokens": 1.1635831546032191,
+        "retracted_per_100_native_tokens": 0.38184770189821404,
+        "attempts": 26618
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.7705587707616821,
+        "stable_mean_gain_ms": 141.46183774006826,
+        "wrong_forecasts_per_100_native_tokens": 2.3582352823267656,
+        "retracted_per_100_native_tokens": 1.0112449638196797,
+        "attempts": 35418
+      }
+    ],
+    "test-other/band2": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.986455221824116,
+        "stable_mean_gain_ms": 16.768337613593157,
+        "wrong_forecasts_per_100_native_tokens": 0.1032291687546353,
+        "retracted_per_100_native_tokens": 0.01804004890857704,
+        "attempts": 3971
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9765048843464781,
+        "stable_mean_gain_ms": 40.39202483681048,
+        "wrong_forecasts_per_100_native_tokens": 0.2555673595381747,
+        "retracted_per_100_native_tokens": 0.06414239611938503,
+        "attempts": 9535
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9608814796025323,
+        "stable_mean_gain_ms": 70.28343992449904,
+        "wrong_forecasts_per_100_native_tokens": 0.5371925674998497,
+        "retracted_per_100_native_tokens": 0.1593537653590972,
+        "attempts": 16544
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9188000740572053,
+        "stable_mean_gain_ms": 106.9908757539662,
+        "wrong_forecasts_per_100_native_tokens": 1.1204874822105073,
+        "retracted_per_100_native_tokens": 0.3928721762312333,
+        "attempts": 25801
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.7857421874897185,
+        "stable_mean_gain_ms": 138.51685169019834,
+        "wrong_forecasts_per_100_native_tokens": 2.2910862113892843,
+        "retracted_per_100_native_tokens": 1.0012227144260257,
+        "attempts": 34641
+      }
+    ],
+    "test-other/state": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.979180267964788,
+        "stable_mean_gain_ms": 16.239624270861544,
+        "wrong_forecasts_per_100_native_tokens": 0.09020024454288521,
+        "retracted_per_100_native_tokens": 0.010022249393653912,
+        "attempts": 3383
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9653629497774684,
+        "stable_mean_gain_ms": 43.31310208038755,
+        "wrong_forecasts_per_100_native_tokens": 0.3086852813245405,
+        "retracted_per_100_native_tokens": 0.04309567239271182,
+        "attempts": 9735
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9498875446047135,
+        "stable_mean_gain_ms": 72.17233425222949,
+        "wrong_forecasts_per_100_native_tokens": 0.5782837900138307,
+        "retracted_per_100_native_tokens": 0.1242758924813085,
+        "attempts": 16883
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9216000999651789,
+        "stable_mean_gain_ms": 105.11395134590882,
+        "wrong_forecasts_per_100_native_tokens": 1.150554230391469,
+        "retracted_per_100_native_tokens": 0.31269418108200203,
+        "attempts": 25913
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.8568506288785633,
+        "stable_mean_gain_ms": 134.69654410286398,
+        "wrong_forecasts_per_100_native_tokens": 2.226943815269899,
+        "retracted_per_100_native_tokens": 0.8158111006434284,
+        "attempts": 34799
+      }
+    ],
+    "test-other/state38": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.9786254262548122,
+        "stable_mean_gain_ms": 17.949106100827116,
+        "wrong_forecasts_per_100_native_tokens": 0.09621359417907756,
+        "retracted_per_100_native_tokens": 0.007015574575557738,
+        "attempts": 3816
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9635186663437886,
+        "stable_mean_gain_ms": 46.596450385552,
+        "wrong_forecasts_per_100_native_tokens": 0.3207119805969252,
+        "retracted_per_100_native_tokens": 0.04810679708953878,
+        "attempts": 10588
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9483812307367514,
+        "stable_mean_gain_ms": 73.53601811537976,
+        "wrong_forecasts_per_100_native_tokens": 0.6103549880735232,
+        "retracted_per_100_native_tokens": 0.12327366754194312,
+        "attempts": 17317
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9229913355499869,
+        "stable_mean_gain_ms": 102.66932155794746,
+        "wrong_forecasts_per_100_native_tokens": 1.1265008318466996,
+        "retracted_per_100_native_tokens": 0.3096875062639059,
+        "attempts": 25316
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.8568152595326458,
+        "stable_mean_gain_ms": 134.19548204418703,
+        "wrong_forecasts_per_100_native_tokens": 2.212912666118784,
+        "retracted_per_100_native_tokens": 0.8238289001583515,
+        "attempts": 34641
+      }
+    ],
+    "test-other/ensemble": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.9778079060037749,
+        "stable_mean_gain_ms": 18.136781491263477,
+        "wrong_forecasts_per_100_native_tokens": 0.09922026899717372,
+        "retracted_per_100_native_tokens": 0.010022249393653912,
+        "attempts": 3839
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9647640767754428,
+        "stable_mean_gain_ms": 44.577974863724926,
+        "wrong_forecasts_per_100_native_tokens": 0.3056786065064443,
+        "retracted_per_100_native_tokens": 0.045100122271442604,
+        "attempts": 10079
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9506907812743143,
+        "stable_mean_gain_ms": 71.363589101574,
+        "wrong_forecasts_per_100_native_tokens": 0.566257090741446,
+        "retracted_per_100_native_tokens": 0.1032291687546353,
+        "attempts": 16835
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9238882386578477,
+        "stable_mean_gain_ms": 103.76037345313893,
+        "wrong_forecasts_per_100_native_tokens": 1.147547555573373,
+        "retracted_per_100_native_tokens": 0.30066748180961733,
+        "attempts": 25829
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.8555778391517227,
+        "stable_mean_gain_ms": 134.73470781152108,
+        "wrong_forecasts_per_100_native_tokens": 2.280061737056265,
+        "retracted_per_100_native_tokens": 0.8468800737637555,
+        "attempts": 35134
+      }
+    ],
+    "test-other/reset": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.977485315674941,
+        "stable_mean_gain_ms": 19.989128703782143,
+        "wrong_forecasts_per_100_native_tokens": 0.11024474333019303,
+        "retracted_per_100_native_tokens": 0.012026699272384695,
+        "attempts": 4230
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9652483832548496,
+        "stable_mean_gain_ms": 45.01865266988566,
+        "wrong_forecasts_per_100_native_tokens": 0.3116919561426367,
+        "retracted_per_100_native_tokens": 0.04810679708953878,
+        "attempts": 10115
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9505077903963963,
+        "stable_mean_gain_ms": 71.667791169251,
+        "wrong_forecasts_per_100_native_tokens": 0.5933171641043116,
+        "retracted_per_100_native_tokens": 0.11726031790575077,
+        "attempts": 16826
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9237545566172464,
+        "stable_mean_gain_ms": 103.14773890714913,
+        "wrong_forecasts_per_100_native_tokens": 1.0854096093327186,
+        "retracted_per_100_native_tokens": 0.2816252079616749,
+        "attempts": 25291
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.8579513990089084,
+        "stable_mean_gain_ms": 133.5767351401545,
+        "wrong_forecasts_per_100_native_tokens": 2.1788370181803605,
+        "retracted_per_100_native_tokens": 0.7827376776443705,
+        "attempts": 34460
+      }
+    ],
+    "test-other/deterministic": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.9789617516019643,
+        "stable_mean_gain_ms": 19.679695093647354,
+        "wrong_forecasts_per_100_native_tokens": 0.10623584357273147,
+        "retracted_per_100_native_tokens": 0.013028924211750085,
+        "attempts": 4245
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9657301849320163,
+        "stable_mean_gain_ms": 44.9979878431206,
+        "wrong_forecasts_per_100_native_tokens": 0.31369640602136745,
+        "retracted_per_100_native_tokens": 0.04209344745334643,
+        "attempts": 10257
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9492993820155065,
+        "stable_mean_gain_ms": 71.68471215317628,
+        "wrong_forecasts_per_100_native_tokens": 0.5852993645893885,
+        "retracted_per_100_native_tokens": 0.11826254284511616,
+        "attempts": 16976
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9218170568695756,
+        "stable_mean_gain_ms": 101.86136476657252,
+        "wrong_forecasts_per_100_native_tokens": 1.0904207340295455,
+        "retracted_per_100_native_tokens": 0.29264968229469424,
+        "attempts": 25074
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.8546893779037156,
+        "stable_mean_gain_ms": 135.3729968692983,
+        "wrong_forecasts_per_100_native_tokens": 2.1507747198781293,
+        "retracted_per_100_native_tokens": 0.7777265529475436,
+        "attempts": 34551
+      }
+    ],
+    "test-other/single_step": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.9772600839138721,
+        "stable_mean_gain_ms": 20.237886602824535,
+        "wrong_forecasts_per_100_native_tokens": 0.10423139369400068,
+        "retracted_per_100_native_tokens": 0.01703782396921165,
+        "attempts": 4295
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9662735986311028,
+        "stable_mean_gain_ms": 43.78141213008924,
+        "wrong_forecasts_per_100_native_tokens": 0.2936519072340596,
+        "retracted_per_100_native_tokens": 0.0571268215438273,
+        "attempts": 9958
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.951473487635527,
+        "stable_mean_gain_ms": 72.35833566198151,
+        "wrong_forecasts_per_100_native_tokens": 0.58930826434685,
+        "retracted_per_100_native_tokens": 0.13930926657178938,
+        "attempts": 17103
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9269244058847765,
+        "stable_mean_gain_ms": 103.79053847615096,
+        "wrong_forecasts_per_100_native_tokens": 1.0623584357273146,
+        "retracted_per_100_native_tokens": 0.30066748180961733,
+        "attempts": 25564
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.8657585063536587,
+        "stable_mean_gain_ms": 135.38382150660226,
+        "wrong_forecasts_per_100_native_tokens": 2.147768045060033,
+        "retracted_per_100_native_tokens": 0.7236064062218124,
+        "attempts": 34870
+      }
+    ],
+    "test-other/crps_only": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.9776203896360545,
+        "stable_mean_gain_ms": 20.77751297135905,
+        "wrong_forecasts_per_100_native_tokens": 0.11124696826955842,
+        "retracted_per_100_native_tokens": 0.02505562348413478,
+        "attempts": 4508
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.9644796284248242,
+        "stable_mean_gain_ms": 45.951208929283126,
+        "wrong_forecasts_per_100_native_tokens": 0.35879652829281006,
+        "retracted_per_100_native_tokens": 0.069153520816212,
+        "attempts": 10895
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.9466115301822098,
+        "stable_mean_gain_ms": 69.98388213444956,
+        "wrong_forecasts_per_100_native_tokens": 0.6344083866182926,
+        "retracted_per_100_native_tokens": 0.14532261620798173,
+        "attempts": 17318
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.9068778549643756,
+        "stable_mean_gain_ms": 95.46640080781755,
+        "wrong_forecasts_per_100_native_tokens": 1.201667702299104,
+        "retracted_per_100_native_tokens": 0.3327386798693099,
+        "attempts": 24710
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.781038445878901,
+        "stable_mean_gain_ms": 114.11016359304084,
+        "wrong_forecasts_per_100_native_tokens": 2.278057287177534,
+        "retracted_per_100_native_tokens": 0.8488845236424863,
+        "attempts": 31071
+      }
+    ],
+    "test-other/persistence": [
+      {
+        "dev_budget": 0.1,
+        "threshold": 0.5303984167563058,
+        "stable_mean_gain_ms": 0.7932998651472235,
+        "wrong_forecasts_per_100_native_tokens": 0.03808454769588487,
+        "retracted_per_100_native_tokens": 0.03507787287778869,
+        "attempts": 236
+      },
+      {
+        "dev_budget": 0.25,
+        "threshold": 0.4296546204313997,
+        "stable_mean_gain_ms": 1.0289497189467265,
+        "wrong_forecasts_per_100_native_tokens": 0.18040048908577042,
+        "retracted_per_100_native_tokens": 0.1693760147527511,
+        "attempts": 524
+      },
+      {
+        "dev_budget": 0.5,
+        "threshold": 0.3630780401636904,
+        "stable_mean_gain_ms": 1.0546232061699898,
+        "wrong_forecasts_per_100_native_tokens": 0.3507787287778869,
+        "retracted_per_100_native_tokens": 0.33374090480867524,
+        "attempts": 798
+      },
+      {
+        "dev_budget": 1.0,
+        "threshold": 0.2839910956381943,
+        "stable_mean_gain_ms": 1.0208579689936674,
+        "wrong_forecasts_per_100_native_tokens": 0.7586842790996011,
+        "retracted_per_100_native_tokens": 0.7336286556154663,
+        "attempts": 1350
+      },
+      {
+        "dev_budget": 2.0,
+        "threshold": 0.1798986570600946,
+        "stable_mean_gain_ms": 0.8492438239013568,
+        "wrong_forecasts_per_100_native_tokens": 1.6105754775601837,
+        "retracted_per_100_native_tokens": 1.5634709054100102,
+        "attempts": 2492
+      }
+    ]
+  },
+  "gate_call_median_seconds": 3.750086762011051e-06,
+  "scope": "Fixed native final outputs; provisional single-token display only. Final WER unchanged by construction.",
+  "timing": "Paired stable-word display gain on exactly reference-matched final words; simulated native arrivals plus measured additional CPU forecaster time, including state updates and speculative decoding. No independent phonetic timestamps, actual UI or live encoder resource contention measured.",
+  "uncertainty": "1000 paired utterance and speaker-cluster bootstrap replicates. Model seeds 37/38 for full state model; ablations seed37. These intervals do not estimate training-seed variance.",
+  "memory": "Live tensor byte counts for bounded new forecaster states; excludes backbone, weights, allocator/temporary activations and offline evaluation cache. No claim of bounded whole-system memory.",
+  "risk": "Thresholds meet 0.5 false introduced forecasts/100 native tokens on dev calibration only. Test rates may differ; compare gain AND actual test error rates."
+}

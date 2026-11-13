@@ -1,25 +1,29 @@
-# LibriSpeech 데이터 준비 검증 결과
+# LibriSpeech Data Preparation Verification Results
 
-검증 실행 시각: 2026-11-10T11:01:56+00:00 (UTC). 원본: [OpenSLR SLR12](https://www.openslr.org/12), CC BY 4.0.
+Verification run time: 2026-11-11T22:11:16+00:00 (UTC). Source: [OpenSLR SLR12](https://www.openslr.org/12), CC BY 4.0.
 
-| Split | 발화 수 | 화자 수 | 음성 길이 (시간) |
+| Split | Number of utterances | Number of speakers | Voice length (hours) |
 |---|---:|---:|---:|
 | train-clean-100 | 28,539 | 251 | 100.591 |
+| train-clean-360 | 104,014 | 921 | 363.606 |
+| train-other-500 | 148,688 | 1166 | 496.858 |
 | dev-clean | 2,703 | 40 | 5.388 |
 | dev-other | 2,864 | 33 | 5.121 |
 | test-clean | 2,620 | 40 | 5.403 |
 | test-other | 2,939 | 33 | 5.342 |
 
-총 **39,665발화 / 121.845시간**. 압축 원본은 7.715 GB다.
+Total **292,367 utterances / 982.308 hours**. Original archives occupy 61.358 GB.
 
-- 선택한 5개 압축 파일의 공식 MD5와 수집 파일이 일치한다.
-- 모든 FLAC의 STREAMINFO를 읽고 16 kHz·mono·16-bit, sample 수와 길이를 확인했다.
-- 모든 음성과 전사 ID가 일대일 대응하며 전사 중복·빈 전사가 없다.
-- split 간 utterance ID 중복과 화자 중복이 없다.
-- 전체 waveform의 디코딩 검사를 수행한 것은 아니다. 원본 payload는 압축 파일 체크섬으로 확인했다.
+- The collection file matches the formula MD5 of the selected 7 compressed files.
+- We read the STREAMINFO of all FLACs and checked the number and length of 16 kHz·mono·16-bit, samples.
+- All voices and transcription IDs correspond one-to-one, and there are no duplicate or empty transcriptions.
+- There is no duplication of utterance ID and speaker duplication between splits.
+- A decoding inspection of the entire waveform was not performed. The original payload was confirmed using the compressed file checksum.
 
-원본: `data/raw/librispeech/LibriSpeech/`. 발화 manifest: `data/processed/manifests/`.
+Originals: `data/raw/librispeech/LibriSpeech/`. Utterance manifests: `data/processed/manifests/`.
 
-현재 단계는 원음·전사·발화 메타데이터 준비다. 모델 구조, tokenizer, acoustic feature, alignment 및 학습은 수행하지 않았다.
+This report verifies raw audio, transcripts and utterance metadata. Historical 100h runs remain separate; this collection did not generate new tokenizers/features/alignments or start model training.
 
-[기계 판독용 전체 보고서](librispeech_inventory.json) · [데이터 가이드](../../docs/datasets_and_mac.md)
+[Full Machine Readable Report](librispeech_inventory.json) · [Data Guide](../../docs/datasets_and_mac.md)
+
+Union of three training splits: **281,241 utterances / 961.054 hours / 2,338 speakers** in `data/processed/manifests/train-960.jsonl`, preserving original split fields and excluding dev/test.

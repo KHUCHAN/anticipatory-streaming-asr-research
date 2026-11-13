@@ -1,46 +1,46 @@
 # P11. Efficient Sequence Transduction by Jointly Predicting Tokens and Durations
 
-| 항목 | 내용 |
+| Field | Value |
 |---|---|
-| 저자 | Hainan Xu; Fei Jia; Somshubra Majumdar; He Huang; Shinji Watanabe; Boris Ginsburg |
-| 확인한 원문 날짜 | 2023-07-03 |
-| 발표 정보 | ICML 2023, PMLR 202 |
-| 분류 | ASR 정렬·인코더·스트리밍 기준선 |
-| 읽기 우선순위 | 2 — 시간축 건너뛰기 |
-| 원문 확인 범위 | 서지·초록 확인; PDF 전문 수집·파싱 검증 (전체 정독·재현 미수행) |
-| PDF | 23쪽; `papers/pdf/P11_tdt.pdf` |
-| 검증일 | 2026-11-10 |
+| Authors | Hainan Xu; Fei Jia; Somshubra Majumdar; He Huang; Shinji Watanabe; Boris Ginsburg |
+| Source date | 2023-07-03 |
+| Publication | ICML 2023, PMLR 202 |
+| Category | ASR alignment, encoders and streaming baselines |
+| Reading priority | 2 — Skip time base |
+| Review depth | Bibliography/abstract checked; full PDF collected and parsed; no exhaustive close reading or reproduction. |
+| PDF | 23 pages; `papers/pdf/P11_tdt.pdf` |
+| Source verification date | 2026-11-10 |
 
-[원문](https://proceedings.mlr.press/v202/xu23g.html) · [PDF](https://proceedings.mlr.press/v202/xu23g/xu23g.pdf)
+[Source](https://proceedings.mlr.press/v202/xu23g.html) · [PDF](https://proceedings.mlr.press/v202/xu23g/xu23g.pdf)
 
-## 핵심과 방법
+## Main idea and method
 
-토큰과 함께 입력 프레임의 진행량을 예측하는 Token-and-Duration Transducer다.
+Token-and-Duration Transducer predicts input-frame advancement together with tokens.
 
-독립적으로 정규화한 token·duration 출력으로 transducer의 디코딩 시간축을 여러 프레임씩 진행한다.
+Independently normalized token and duration outputs let transducer decoding advance by multiple frames.
 
-## 논문이 보고한 근거
+## Source-reported evidence
 
-음성인식에서 기존 transducer 대비 최대 2.82배 추론 가속을 보고한다.
+Reports ASR inference speedup up to 2.82 times over a conventional transducer.
 
-확인 위치: TDT formulation 및 ASR experiments.
+Evidence location: TDT formulation and ASR experiments.
 
-## 연구 아이디어와의 연결 — 정리자의 해석
+## Connection to this project — interpretation
 
-후보 선행 예측과 별개로, 검증·출력 단계의 joiner 호출을 줄이는 비교 방법이다.
+A comparison that reduces joiner calls during verification/output, independently of speculative candidate generation.
 
-## 적용할 때의 제한
+## Limitations when applying the result
 
-모든 음향 인코딩을 생략한다는 의미가 아니다. TDT 계열 체크포인트의 native streaming 지원은 해당 모델 설정별로 확인해야 한다.
+This does not skip all acoustic encoding. Native streaming support of TDT checkpoints must be checked per model configuration.
 
-## 코드와 모델
+## Code and models
 
 - [https://github.com/NVIDIA/NeMo](https://github.com/NVIDIA/NeMo)
 
-원문 NVIDIA/NeMo 주소는 현재 NVIDIA-NeMo/Speech로 redirect된다. 모델별 recipe·가중치·Mac 연산 지원은 실행 검증하지 않았다.
+Original NVIDIA/NeMo links now redirect to NVIDIA-NeMo/Speech. Per-model recipes, weights and Mac operation support were not execution-tested.
 
-## 원문 버전
+## Source version
 
-PDF SHA-256: `b637cea35e648e9f3469dac7f76d67b09308947b53d1ada81f5991100fd45519`. 링크의 원문 버전과 이 해시를 기준으로 수집했다. 학습 및 저자 실험의 재현은 수행하지 않았다.
+PDF SHA-256: `b637cea35e648e9f3469dac7f76d67b09308947b53d1ada81f5991100fd45519`. The source version and this hash identify the collected PDF. Training and author experiments were not reproduced in the initial literature review.
 
-[전체 논문 목록](../../papers/INDEX.md) · [연구 지도](../../docs/literature_map.md)
+[Paper index](../../papers/INDEX.md) · [Literature map](../../docs/literature_map.md)

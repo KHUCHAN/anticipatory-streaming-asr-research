@@ -1,0 +1,154 @@
+{
+  "training": [
+    {
+      "variant": "state_s37",
+      "completed_epochs": 16,
+      "selected_epoch": 16,
+      "selected_horizon": 8,
+      "selected_validation": {
+        "loss": 0.7414824068546295,
+        "state_crps": 0.5364597951993346,
+        "token_nll": 2.0502260364592075
+      },
+      "selection_criterion": "state CRPS +0.1 token NLL",
+      "params": 6323968,
+      "initial_state_sha256": "c0f102c34e72908a6484fc0a3f61f2286d2b14ee41ee8e509709958ac3c49a86",
+      "checkpoint_sha256": "e4e9a16bcefde1b3b70e9f44b30f416aa7fd9a9ef17a27b599258bcd611e4c3d"
+    },
+    {
+      "variant": "state_s38",
+      "completed_epochs": 16,
+      "selected_epoch": 15,
+      "selected_horizon": 8,
+      "selected_validation": {
+        "loss": 0.743440629914403,
+        "state_crps": 0.5364233963191509,
+        "token_nll": 2.0701723396778107
+      },
+      "selection_criterion": "state CRPS +0.1 token NLL",
+      "params": 6323968,
+      "initial_state_sha256": "44d1d554ec631a6d9d11b5d34cc8aabe77564411f4c4c348475ab69cf1268fe3",
+      "checkpoint_sha256": "54499f56b313c38d82ac51c241af0cda24a17475db6836436ce73ba20e0daafb"
+    },
+    {
+      "variant": "reset_s37",
+      "completed_epochs": 16,
+      "selected_epoch": 15,
+      "selected_horizon": 8,
+      "selected_validation": {
+        "loss": 0.744770210236311,
+        "state_crps": 0.5357811823487282,
+        "token_nll": 2.0898901410400867
+      },
+      "selection_criterion": "state CRPS +0.1 token NLL",
+      "params": 6323968,
+      "initial_state_sha256": "c0f102c34e72908a6484fc0a3f61f2286d2b14ee41ee8e509709958ac3c49a86",
+      "checkpoint_sha256": "f7ebd9945369240bd2745c6da341bd5b4e0f589e3d4926c540d8432eb6647437"
+    },
+    {
+      "variant": "deterministic_s37",
+      "completed_epochs": 16,
+      "selected_epoch": 16,
+      "selected_horizon": 8,
+      "selected_validation": {
+        "loss": 0.9562146533280611,
+        "state_crps": 0.7528181578963995,
+        "token_nll": 2.0339647866785526
+      },
+      "selection_criterion": "state CRPS +0.1 token NLL",
+      "params": 6323968,
+      "initial_state_sha256": "c0f102c34e72908a6484fc0a3f61f2286d2b14ee41ee8e509709958ac3c49a86",
+      "checkpoint_sha256": "478de3971d6a8b1a24ea7d6ab9921fd6f7037b50db956c758b1b94ab083d9503"
+    },
+    {
+      "variant": "single_step_s37",
+      "completed_epochs": 16,
+      "selected_epoch": 15,
+      "selected_horizon": 1,
+      "selected_validation": {
+        "loss": 0.9015855472534895,
+        "state_crps": 0.5608957000076771,
+        "token_nll": 3.4068983644247055
+      },
+      "selection_criterion": "state CRPS +0.1 token NLL",
+      "params": 6323968,
+      "initial_state_sha256": "c0f102c34e72908a6484fc0a3f61f2286d2b14ee41ee8e509709958ac3c49a86",
+      "checkpoint_sha256": "1229277d81a2612c2a2ace24b225dd83df3c7fdeda8e467b664c2f83b484d088"
+    },
+    {
+      "variant": "crps_only_s37",
+      "completed_epochs": 16,
+      "selected_epoch": 16,
+      "selected_horizon": 8,
+      "selected_validation": {
+        "loss": 0.5210936879739165,
+        "state_crps": 0.5210936879739165,
+        "token_nll": 4.376290813088417
+      },
+      "selection_criterion": "state CRPS only",
+      "params": 6323968,
+      "initial_state_sha256": "c0f102c34e72908a6484fc0a3f61f2286d2b14ee41ee8e509709958ac3c49a86",
+      "checkpoint_sha256": "130ad7bfc34ad08ce7851d649b0e08f9f10067a0c39a7d4230a3c2129287172d"
+    }
+  ],
+  "source_sha256": {
+    "README.md": "f31c0d5d71ef03f281983b82f6e04d5b81a8af8ffd51e4aaf2ff443a6e11fb58",
+    "analyze.py": "7c5aadf47c16f9bd82844968c29658c6a4c5975d33283153740387abe6cd6baa",
+    "check.py": "0b1fb0c3ab4d6464cf22671c6bda409adccb8ab4998b512bb7c02721e6568b06",
+    "check_crps_only.py": "73f00d16d2abdd7e3ba7f27cc03e18963db114fd3570c0652ea7e4775b398644",
+    "check_native_decode.py": "cf6263a4f5b69df99d51b28dd1dc5b5b221c0647c05ad8b76a188343636a862c",
+    "check_runtime.py": "3d6a0bf7a1e7e15157e06029dc74e1f40f2a5bf7ca580dbe93ab2124c66f4298",
+    "check_storage.py": "9479dc9da43048f9d216f76704f015154ac50f42dea22facbb978e4d3836cf08",
+    "collect.py": "2fc6621686efc8fac68dcffb4f87bf72fc914832a17de016760e18ff197eb873",
+    "config.json": "d04192b75adba8f1249e5487c3a8424a3433fbcf9704a018a6cb00732cf530aa",
+    "config_crps_only.json": "799fd2a4a8c23c142ac0df7d2d4c1b654592accad580613c05a6b52205e6f595",
+    "data.py": "47db0ad85a87f9db1eff4585dafc0ae871652e9dac7b2bd18f369cb1ba258857",
+    "diagnose.py": "b892b5f1cbbbfb73d462496ce54c6eda4f2daf90c93b8691a96557291156e7a6",
+    "model.py": "91d5d135e73910d38170fc35570ad5d87282472c82abd2323d1ae12f44d2de1d",
+    "prepare.py": "e1df558ac8a53fd719c58d89c00c7f9371c8f3823487ce9f6e4944bcc73c729a",
+    "report.py": "de904524747354d61bcc745d4475525ec233148bf1027979ad681825e15aa3ac",
+    "run_crps_only.py": "c2ca55fd0281e5ad2238175296a776d6a14f68e785ff9a8bd16a526fc4f834c9",
+    "run_evaluation.py": "5e9a43fbd59f24b7fc35cfea1a36c594534ca5f45796c091de2882c25b266d35",
+    "run_training.py": "bd5f644ae2ee4d2cac8a419096701c6898d73dcf236732a4763a297d1d7ed21d",
+    "runtime.py": "06f05672d0ef97236fcf45b92b88de762bf09c586a2e5001e85ec0bae890f73e",
+    "train.py": "91aebeb2183f811dc53a2408f2bb1cf8bc7a3607eb380a0cd7ab3259f1c02a15",
+    "train_crps_only.py": "40f67ae2eb7ffcc82f3d6781d9c59a22ce095d01e26a86de3904d668bcd9cdf9"
+  },
+  "torch": "2.15.0",
+  "platform": "macOS-26.7.2-arm64-arm-64bit-Mach-O",
+  "dependencies": {
+    "torch": "2.15.0",
+    "numpy": "2.5.4",
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.1",
+    "sentencepiece": "0.2.3",
+    "matplotlib": "3.10.8"
+  },
+  "training_backend": "MPS; one sequential training process",
+  "inference_backend": "CPU; one Torch thread per worker, six collection workers",
+  "collection_provenance": {
+    "model_sha256": {
+      "state_s37": "e4e9a16bcefde1b3b70e9f44b30f416aa7fd9a9ef17a27b599258bcd611e4c3d",
+      "state_s38": "54499f56b313c38d82ac51c241af0cda24a17475db6836436ce73ba20e0daafb",
+      "reset_s37": "f7ebd9945369240bd2745c6da341bd5b4e0f589e3d4926c540d8432eb6647437",
+      "deterministic_s37": "478de3971d6a8b1a24ea7d6ab9921fd6f7037b50db956c758b1b94ab083d9503",
+      "single_step_s37": "1229277d81a2612c2a2ace24b225dd83df3c7fdeda8e467b664c2f83b484d088",
+      "crps_only_s37": "130ad7bfc34ad08ce7851d649b0e08f9f10067a0c39a7d4230a3c2129287172d"
+    },
+    "frozen_bridge_sha256": "68df0c30ea0f4ef332f745139289fac91375a4a3db3a9bd5088ead557a71ceb0",
+    "normalization_sha256": "69d208a31df8acb30724120e63690c7fb46e7edbca9122147b47d7ef2a5ce650",
+    "backbone_config_sha256": "78dd5f8e817ea2d3baa537234743c26a97d2ac7da2ec1fabe21e9f8c7764d0f5",
+    "source_sha256": {
+      "model.py": "91d5d135e73910d38170fc35570ad5d87282472c82abd2323d1ae12f44d2de1d",
+      "runtime.py": "06f05672d0ef97236fcf45b92b88de762bf09c586a2e5001e85ec0bae890f73e",
+      "collect.py": "2fc6621686efc8fac68dcffb4f87bf72fc914832a17de016760e18ff197eb873",
+      "config.json": "d04192b75adba8f1249e5487c3a8424a3433fbcf9704a018a6cb00732cf530aa",
+      "config_crps_only.json": "799fd2a4a8c23c142ac0df7d2d4c1b654592accad580613c05a6b52205e6f595"
+    }
+  },
+  "finished_unix": 1794487940.607519,
+  "wall_elapsed_seconds": 9206.607518911362,
+  "wall_budget_seconds": 21600,
+  "model_definition": "6323968 trainable parameters per forecaster; frozen 66.11M backbone is additional.",
+  "bridge_max_difference": 7.62939453125e-06
+}

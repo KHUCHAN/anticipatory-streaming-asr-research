@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "continuous_two_step_backprop_gradient_norm": 0.026639671996235847,
+  "future_observed_state_gradient_max": 0.0,
+  "future_input_perturbation": "exactly invariant",
+  "old_history_influence_on_persistent_memory": 0.10941129922866821,
+  "reset_control_old_history_invariance": true,
+  "shared_noise_changes_state": true,
+  "deterministic_control_noise_invariance": true,
+  "first_cutoff_future_invariance": true,
+  "frozen_decoder_max_absolute_difference": 2.6226043701171875e-06,
+  "frozen_joiner_max_absolute_difference": 7.62939453125e-06,
+  "frozen_joiner_encoder_gradient": true,
+  "parameters": 6323968
+}

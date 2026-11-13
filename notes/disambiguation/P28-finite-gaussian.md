@@ -1,46 +1,46 @@
 # P28. Finite Gaussian Neurons: Defending against adversarial attacks by making neural networks say "I don't know"
 
-| 항목 | 내용 |
+| Field | Value |
 |---|---|
-| 저자 | Grezes, Felix |
-| 확인한 원문 날짜 | 2023-06-13 |
-| 발표 정보 | CUNY PhD dissertation / arXiv, 2023 |
-| 분류 | FGN/FGNN 동명 아키텍처 구분 |
-| 읽기 우선순위 | 3 — 약어 혼동 방지 |
-| 원문 확인 범위 | 서지·초록·핵심 본문/실험 설정 확인 (전체 정독·재현 미수행) |
-| PDF | 90쪽; `papers/pdf/P28_finite-gaussian.pdf` |
-| 검증일 | 2026-11-10 |
+| Authors | Grezes, Felix |
+| Source date | 2023-06-13 |
+| Publication | CUNY PhD dissertation / arXiv, 2023 |
+| Category | Disambiguating FGN/FGNN architectures |
+| Reading priority | 3 — Avoid abbreviation confusion |
+| Review depth | Bibliography, abstract, core sections and experimental setup checked; no exhaustive close reading or reproduction. |
+| PDF | 90 pages; `papers/pdf/P28_finite-gaussian.pdf` |
+| Source verification date | 2026-11-10 |
 
-[원문](https://arxiv.org/abs/2306.07796) · [PDF](https://arxiv.org/pdf/2306.07796v1)
+[Source](https://arxiv.org/abs/2306.07796) · [PDF](https://arxiv.org/pdf/2306.07796v1)
 
-## 핵심과 방법
+## Main idea and method
 
-Finite Gaussian Neuron으로 입력에서 멀어진 영역의 과도한 confidence를 줄이는 박사학위 논문이다.
+This is a doctoral thesis that reduces excessive confidence in areas far from the input using Finite Gaussian Neuron.
 
-기존 신경망을 FGN으로 변환·재학습하며 adversarial robustness를 평가한다.
+Converts and retrains existing neural networks as FGNs and evaluates adversarial robustness.
 
-## 논문이 보고한 근거
+## Source-reported evidence
 
-MNIST와 SpeechCommands에서 실험하며, 더 복잡한 음성 명령 및 강한 공격에서 한계도 보고한다.
+We experiment on MNIST and SpeechCommands, and also report limitations on more complex speech commands and strong attacks.
 
-확인 위치: 학위논문 abstract 및 SpeechCommands experiments.
+Evidence location: Thesis abstract and SpeechCommands experiments.
 
-## 연구 아이디어와의 연결 — 정리자의 해석
+## Connection to this project — interpretation
 
-처음 등장한 FGNN 설명의 출처를 보존하되 이 연구의 핵심 경로에서는 분리한다.
+Preserve the original FGNN reference while separating it from this project's main research direction.
 
-## 적용할 때의 제한
+## Limitations when applying the result
 
-SpeechCommands 분류는 연속 발화를 문장으로 전사하는 ASR과 다르다. Functional Generative Network와 같은 모델이 아니다.
+SpeechCommands classification is different from ASR, which transcribes continuous speech into sentences. It is not the same model as Functional Generative Network.
 
-## 코드와 모델
+## Code and models
 
 - [https://github.com/grezesf/FGN---Research](https://github.com/grezesf/FGN---Research)
 
-링크의 존재와 원문 연결을 확인했다. 설치·실행·가중치 다운로드·성능 재현은 수행하지 않았다.
+Implementation links and their source connection were checked; installation, execution, weight download and performance reproduction were not performed in that review.
 
-## 원문 버전
+## Source version
 
-PDF SHA-256: `0249184611054039ba37e6a5129175db141f75fb607a7bd04484f914aa25dd62`. 링크의 원문 버전과 이 해시를 기준으로 수집했다. 학습 및 저자 실험의 재현은 수행하지 않았다.
+PDF SHA-256: `0249184611054039ba37e6a5129175db141f75fb607a7bd04484f914aa25dd62`. The source version and this hash identify the collected PDF. Training and author experiments were not reproduced in the initial literature review.
 
-[전체 논문 목록](../../papers/INDEX.md) · [연구 지도](../../docs/literature_map.md)
+[Paper index](../../papers/INDEX.md) · [Literature map](../../docs/literature_map.md)

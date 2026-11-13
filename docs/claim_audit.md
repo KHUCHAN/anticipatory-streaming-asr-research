@@ -1,24 +1,56 @@
-# 첨부 대화의 주장 검토
+# Review the claims in the attached conversation
 
-검토일: 2026-11-10. 최초 설명을 그대로 연구 사실로 옮기지 않고 1차 출처를 확인했다.
+Preserves initial claims and corrections. [Current conclusions](conclusion_and_next_steps.md) take precedence, including subsequent correct-and-kept gate/P1–P4 checks. Distinguish the original unproven objective from demonstrated single-pass display benefit.
 
-| 원래 설명의 쟁점 | 확인 결과와 문서화 방식 | 근거 |
+Review date: 2026-11-10. Initial explanations were checked against primary sources rather than copied as established facts.
+
+| Issue in the original explanation | Verified finding and documentation | Evidence |
 |---|---|---|
-| FGNN은 Google 날씨 모델인가? | Google의 FGN은 Functional Generative Network다. Factor Graph NN 및 Finite Gaussian NN은 별도 연구다. | [P21](../notes/weather/P21-fgn.md), [P27](../notes/disambiguation/P27-factor-graph.md), [P28](../notes/disambiguation/P28-finite-gaussian.md) |
-| Chain rule이라서 Transformer보다 빠른가? | chain rule 자체와 과거 문맥을 제한하는 모델링 가정을 구분한다. Transformer도 autoregressive 분해를 사용한다. | [P21 Eq. (1)](https://arxiv.org/abs/2506.10772), [P05](https://proceedings.mlr.press/v202/leviathan23a.html) |
-| FGN의 상태는 32차원인가? | 32차원은 주입하는 확률 noise다. 모델 입력인 두 대기 상태는 고차원 배열이다. | [P21 원문](https://arxiv.org/abs/2506.10772) |
-| 하나의 forward로 모든 미래 후보·시간을 생성하나? | 해당 기상 예측 단계·ensemble member의 생성 비용을 뜻한다. rollout과 ensemble 규모의 추가 계산은 남는다. | [P21](../notes/weather/P21-fgn.md) |
-| FGN이 8배 빠르니 ASR도 빠른가? | 기상 GenCast의 diffusion sampling과 비교한 결과다. Whisper·ASR 속도의 근거가 아니다. | [P21 Section 3.3](https://arxiv.org/abs/2506.10772) |
-| ConMamba 2025의 속도 수치 | 63–70% 수치의 정확한 출처는 저자원 ASR 비교 논문이다. 원형 ConMamba 연구와 구분했다. | [P19](https://www.isca-archive.org/interspeech_2025/zevallos25_interspeech.html), [P18](https://arxiv.org/abs/2407.09732) |
-| SpecASR 3.04–3.79배 | Whisper 경로와 Llama/Vicuna simulated target을 쓰는 실험 설정을 반드시 함께 적는다. | [P03 PDF 5쪽](https://arxiv.org/pdf/2507.18181v2) |
-| ParaASR의 평균 5개 채택 | WenetSpeech meeting의 특정 MTP 설정이며 H800 RTF와 함께 조건을 기록했다. 본문 표 사이 일부 수치 불일치도 남겼다. | [P04 Tables 1–4](https://arxiv.org/abs/2607.29279) |
-| Speculative Listening은 미래 ASR 단어를 잘 맞히나? | full-duplex 출력 사전 계산 연구다. silence와 실제 입력에서 출력이 같은 비율은 다음 단어의 정확도가 아니다. | [P02](https://arxiv.org/abs/2611.06982) |
-| TDT는 음성 처리를 통째로 건너뛰나? | duration에 따라 transducer decoding 시간축을 진행한다. acoustic encoder가 항상 불필요해지는 것은 아니다. | [P11](https://proceedings.mlr.press/v202/xu23g.html) |
-| Mamba는 무조건 빠른 streaming ASR인가? | 길이·연산 커널·bidirectional/causal 설정에 따라 달라진다. CPU/MPS 성능은 별도 측정 대상이다. | [P18](https://arxiv.org/abs/2407.09732), [P20](https://www.isca-archive.org/interspeech_2025/moriya25_interspeech.html) |
-| 단순 Bayesian 곱셈으로 LM+ASR을 합칠 수 있나? | likelihood와 posterior를 구분해야 하며 언어 prior를 중복 반영할 수 있다. 결합·검증 규칙은 미확정이다. | [RNN-T formulation](https://arxiv.org/abs/1211.3711); 본 프로젝트의 방법론 검토 |
-| PyTorch 2.14 MPS CTC 지원 | 공식 발표에서 forward/backward 지원을 확인했다. 현재 설치된 버전은 2.12.0이며 업그레이드는 하지 않았다. | [공식 2.14 발표](https://pytorch.org/blog/pytorch-2-14-release-blog/) |
-| Common Voice 42,593시간·295언어 | v27 scripted 전체 녹음 통계다. 영어 validated 학습 시간이나 자발 대화 데이터의 규모가 아니다. | [Mozilla v27 공지](https://discourse.mozilla.org/t/common-voice-scripted-speech-v27-0-and-spontaneous-speech-v5-0-released/149490) |
-| 100시간·10–20M이면 정확도/학습 시간이 보장되나? | 초기 규모 제안일 뿐이다. 모델 크기와 학습 시간은 실제 구조·연산·메모리 측정 전에는 확정하지 않는다. | [준비 범위와 결정 항목](goal_and_methodology.md) |
-| WeatherNext 3의 세부 구조가 FGN 논문에 있나? | 공식 제품 페이지의 존재는 확인했다. P21은 WN2 기술보고서이며 WN3의 공개 구조를 동일하다고 단정하지 않는다. | [공식 제품 페이지](https://deepmind.google/science/weathernext/), [WN2 공식 저장소](https://github.com/google-deepmind/weathernext) |
+| Is FGNN Google's weather model? | Google's FGN is a Functional Generative Network. Factor Graph NN and Finite Gaussian NN are separate architectures. | [P21](../notes/weather/P21-fgn.md), [P27](../notes/disambiguation/P27-factor-graph.md), [P28](../notes/disambiguation/P28-finite-gaussian.md) |
+Is it faster than Transformer because it is | Chain rule? | Distinguish between the chain rule itself and modeling assumptions that limit the past context. Transformer also uses autoregressive decomposition. | [P21 Eq. (1)](https://arxiv.org/abs/2506.10772), [P05](https://proceedings.mlr.press/v202/leviathan23a.html) |
+Is the state of | FGN dimension 32? The | 32 dimension is the injecting probability noise. The two wait states that are model inputs are high-dimensional arrays. | [P21 Original text](https://arxiv.org/abs/2506.10772) |
+| Does one forward generate every future candidate and time? | It refers to generation for one weather step and ensemble member. Rollout and additional ensemble members still require computation. | [P21](../notes/weather/P21-fgn.md) |
+| FGN is 8 times faster, so is ASR also faster? This is the result of comparison with diffusion sampling of | meteorological GenCast. This is not the basis for Whisper·ASR speed. | [P21 Section 3.3](https://arxiv.org/abs/2506.10772) |
+The exact source of the speed figures of | ConMamba 2025 | 63–70% is the author's ASR comparison paper. Distinguished from the original ConMamba study. | [P19](https://www.isca-archive.org/interspeech_2025/zevallos25_interspeech.html), [P18](https://arxiv.org/abs/2407.09732) |
+| SpecASR 3.04–3.79 times | Be sure to write down the Whisper path and the experiment settings using Llama/Vicuna simulated target. | [P03 PDF 5 page](https://arxiv.org/pdf/2507.18181v2) |
+| Average 5 adoption of ParaASR | This is a specific MTP setting for WenetSpeech meeting, and the conditions were recorded along with H800 RTF. There were also some numerical discrepancies between the main text tables. | [P04 Tables 1–4](https://arxiv.org/abs/2607.29279) |
+| Is Speculative Listening good at guessing future ASR words? | full-duplex output pre-calculation study. The ratio of output being equal to silence and actual input is not the accuracy of the next word. | [P02](https://arxiv.org/abs/2611.06982) |
+| Does TDT skip voice processing entirely? Transducer decoding time axis proceeds according to | duration. An acoustic encoder is not always unnecessary. | [P11](https://proceedings.mlr.press/v202/xu23g.html) |
+| Is Mamba always a fast streaming ASR? | Depends on length, operation kernel, and bidirectional/causal settings. CPU/MPS performance is subject to separate measurement. | [P18](https://arxiv.org/abs/2407.09732), [P20](https://www.isca-archive.org/interspeech_2025/moriya25_interspeech.html) |
+| Can LM+ASR be combined with simple Bayesian multiplication? | Likelihood and posterior must be distinguished, and the language prior can be reflected redundantly. Combination and verification rules are unconfirmed. | [RNN-T formulation](https://arxiv.org/abs/1211.3711); Methodological review of this project |
+| PyTorch 2.14 MPS CTC support | Forward/backward support was confirmed in the official announcement. The currently installed version is 2.12.0 and has not been upgraded. | [Official 2.14 announced](https://pytorch.org/blog/pytorch-2-14-release-blog/) |
+| Common Voice 42,593Time·295Language | v27 scripted All recording statistics. English is not validated on the scale of learning time or spontaneous conversation data. | [Mozilla v27 Notice](https://discourse.mozilla.org/t/common-voice-scripted-speech-v27-0-and-spontaneous-speech-v5-0-released/149490) |
+If | 100 time·10–20M, is accuracy/learning time guaranteed? | This is only an initial scale proposal. Model size and learning time are not confirmed before actual structure, computation, and memory measurements. | [Preparation scope and decision items](goal_and_methodology.md) |
+| Is the detailed structure of WeatherNext 3 in the FGN paper? The existence of the | official product page has been confirmed. P21 is a technical report of WN2 and does not assume that the open structure of WN3 is the same. | [Official Product Page](https://deepmind.google/science/weathernext/), [WN2 Official Store](https://github.com/google-deepmind/weathernext) |
 
-고정 크기 상태, memory bank, KV cache, 후보 tree cache는 구분해서 측정한다. encoder의 상태가 제한되어도 다른 구성요소의 메모리가 무한히 증가하면 시스템 전체의 제한 메모리 목표는 충족되지 않는다.
+Measure bounded state, memory banks, KV caches and candidate-tree caches separately. A bounded encoder does not establish bounded system memory if other components grow indefinitely.
+
+## Add review of 2026-11-11 local experiment results
+
+Compare saved `runs/final/summary.json`, event files and evaluation code. Preserve original numbers while limiting interpretation below. [Separate review](results_review_2026-11-11.md) contains main tables, original SHA-256 and next checks.
+
+| Claim / issue | Verified finding |
+|---|---|
+| Are the results recorded? | H1–H3 156 Summary of settings JSON/Markdown and border-specific events are local. The learning/overall assessment was not re-run in this review. |
+| Are gate data and dev evaluation separated? By comparing the | stored IDs, we confirmed the intersection of 0 utterances of each dev-clean/dev-other chunk. It is different from speaker separation verification. |
+Did | H1 actually learn the correct answer? | `labelled()` then creates a label if the decoder confirmed output and forecast are the same. There are no implementation results yet regarding the correctness head/loss based on the actual correct answer transcription standard. |
+| Has the early display increased at the same precision? The goal of | reference value selection is the same as 95%, but the actual test-clean 320 ms is raw 96.6%, full gate 96.0%. Distinguish from same-risk comparison. |
+| 371→48 Is ms the confirmed delay actual measurement? | is a post-calculation of the displayed time. The final transcription is determined by the slow pass. It is not an end-to-end measurement of actual audio input, screen rendering, and simultaneous execution. |
+| Did the final pass revise 11 of every 100 displayed words? | This is edit distance between final strings per 100 final-pass words, not all screen revision or forecast-retraction events. |
+| 25 ms/voice 1 seconds is the total system cost? | is the estimated total of the encoder cost. The entire NAR, gate, decoder, merge, and resource contention are not included, and `tn` is not added to the forecast display time. |
+Is | H2 a short context FGN rollout? The | entire history AR predictor was rolled forward up to 3 tokens. This is not a model learned with past 3 tokens. |
+| Does original FGN generate every future time at once? | It generates the next state from two recent weather states, then feeds predictions back for rollout. This differs from the parallel 6-token ASR variant. |
+Is the weak acoustic model the reason for the small effect in | other? | There is no possible explanation or cause isolation experiment. It is not confirmed that the acoustic model quality is the cause. |
+
+### Reflection of subsequent correction results
+
+[Calibration and additional verification](research_plan_3stage.md#calibration-and-further-verification) supersede this initial review. Use the [review's current assessment](results_review_2026-11-11.md) for current numbers and conclusions.
+
+| Follow-up claim | Current interpretation |
+|---|---|
+| 2-pass's 48 ms·209 ms·amended 11 | withdrawn due to current results. The configuration of 300 speech screen playback includes P50 86.8 ms, P95 296.4 ms, and cumulative rewrite 34.64/100 words. |
+| Gate improvement at the same retraction rate was confirmed by comparison by scanning and interpolating the reference value curve on the | evaluation set. It is distinguished from the test operation performance of the threshold fixed by dev. |
+| Gate improvement Most of the FGN signals | Calibrated test-clean 320 ms The table shows the total gate −9.95 ms compared to raw, and −6.01 ms excluding NAR/FGN signals. It is limited to the additional contribution of separate model signals. |
+| 3 tokens are sufficient. In short context structures such as |, no benefit from 32 token expansion was observed. The cause of the gap with equivalence, universal sufficiency, or AR has not been determined. |
+| is the token ID formula for the state 24 byte | `P*8` per hypothesis. It does not include separate logp·trie·voice state·temporary tensor, so it is distinguished from the actual memory of the entire system. |
+| No additional single pass calculations. | There are no additional network calls for forecasts that only use existing AR scores. There is additional computation in the learning gate that uses a separate NAR signal. |

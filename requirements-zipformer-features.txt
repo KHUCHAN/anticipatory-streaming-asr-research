@@ -1,0 +1,3 @@
+# Separate frozen-backbone feature preparation environment.
+-r requirements-baseline.txt
+kaldi-native-fbank==1.23.0

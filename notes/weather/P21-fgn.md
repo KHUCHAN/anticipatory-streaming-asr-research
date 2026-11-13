@@ -1,46 +1,46 @@
 # P21. Skillful joint probabilistic weather forecasting from marginals
 
-| 항목 | 내용 |
+| Field | Value |
 |---|---|
-| 저자 | Alet, Ferran; Price, Ilan; El-Kadi, Andrew; Masters, Dominic; Markou, Stratis; Andersson, Tom R.; Stott, Jacklynn; Lam, Remi; Willson, Matthew; Sanchez-Gonzalez, Alvaro; Battaglia, Peter |
-| 확인한 원문 날짜 | 2025-06-12 |
-| 발표 정보 | arXiv technical report, 2025 |
-| 분류 | FGN·GraphCast·WeatherNext |
-| 읽기 우선순위 | 1 — FGN 원리 확인 |
-| 원문 확인 범위 | 서지·초록·핵심 본문/실험 설정 확인 (전체 정독·재현 미수행) |
-| PDF | 53쪽; `papers/pdf/P21_fgn.pdf` |
-| 검증일 | 2026-11-10 |
+| Authors | Alet, Ferran; Price, Ilan; El-Kadi, Andrew; Masters, Dominic; Markou, Stratis; Andersson, Tom R.; Stott, Jacklynn; Lam, Remi; Willson, Matthew; Sanchez-Gonzalez, Alvaro; Battaglia, Peter |
+| Source date | 2025-06-12 |
+| Publication | arXiv technical report, 2025 |
+| Category | FGN, GraphCast and WeatherNext |
+| Reading priority | 1 — Confirmation of FGN principle |
+| Review depth | Bibliography, abstract, core sections and experimental setup checked; no exhaustive close reading or reproduction. |
+| PDF | 53 pages; `papers/pdf/P21_fgn.pdf` |
+| Source verification date | 2026-11-10 |
 
-[원문](https://arxiv.org/abs/2506.10772) · [PDF](https://arxiv.org/pdf/2506.10772v1)
+[Source](https://arxiv.org/abs/2506.10772) · [PDF](https://arxiv.org/pdf/2506.10772v1)
 
-## 핵심과 방법
+## Main idea and method
 
-WeatherNext 2의 Functional Generative Network를 설명하는 확률적 기상 예측 논문이다.
+This is a probabilistic weather prediction paper explaining the Functional Generative Network of WeatherNext 2.
 
-최근 두 대기 상태에 조건을 두고, 32차원 공통 noise를 conditional normalization에 전달해 일관된 ensemble sample을 생성한다.
+Conditions on two recent atmospheric states; shared 32-dimensional noise enters conditional normalization to generate coherent ensemble samples.
 
-## 논문이 보고한 근거
+## Source-reported evidence
 
-2차 Markov 모형은 Eq. (1), noise 경로는 본문·부록에 명시된다. GenCast 대비 8배 가속은 반복 diffusion sampling과 비교한 기상 예측 결과다.
+The 2-order Markov model is calculated using Eq. (1), the noise path is specified in the main text and appendix. 8 times acceleration compared to GenCast is the result of weather prediction compared to repeated diffusion sampling.
 
-확인 위치: PDF 3쪽 Eq. (1), 7쪽 Section 3.3, 13쪽 및 22–23쪽.
+Evidence location: PDF 3 page Eq. (1), 7 page Section 3.3, 13 page and 22–23 page.
 
-## 연구 아이디어와의 연결 — 정리자의 해석
+## Connection to this project — interpretation
 
-여러 미래 후보를 일관되게 샘플링하는 선택적 확장 아이디어의 출처다. 우선 핵심 predict–verify 효과를 분리한 뒤 검토할 수 있다.
+An optional inspiration for coherent sampling of multiple futures; first isolate the core predict–verify effect.
 
-## 적용할 때의 제한
+## Limitations when applying the result
 
-32차원은 전체 기억 상태 크기가 아니라 확률적 변동을 제어하는 noise 차원이다. 날씨 결과는 ASR 가속이나 다음 단어 정확도를 증명하지 않는다.
+The 32 dimension is not the overall memory state size, but a noise dimension that controls stochastic fluctuations. Weather results do not demonstrate ASR acceleration or next word accuracy.
 
-## 코드와 모델
+## Code and models
 
 - [https://github.com/google-deepmind/weathernext](https://github.com/google-deepmind/weathernext)
 
-링크의 존재와 원문 연결을 확인했다. 설치·실행·가중치 다운로드·성능 재현은 수행하지 않았다.
+Implementation links and their source connection were checked; installation, execution, weight download and performance reproduction were not performed in that review.
 
-## 원문 버전
+## Source version
 
-PDF SHA-256: `2141e6fe9b314143a2fe3655f6d41e74e804c573de4987e7e94b16faf313e16e`. 링크의 원문 버전과 이 해시를 기준으로 수집했다. 학습 및 저자 실험의 재현은 수행하지 않았다.
+PDF SHA-256: `2141e6fe9b314143a2fe3655f6d41e74e804c573de4987e7e94b16faf313e16e`. The source version and this hash identify the collected PDF. Training and author experiments were not reproduced in the initial literature review.
 
-[전체 논문 목록](../../papers/INDEX.md) · [연구 지도](../../docs/literature_map.md)
+[Paper index](../../papers/INDEX.md) · [Literature map](../../docs/literature_map.md)

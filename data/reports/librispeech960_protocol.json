@@ -1,0 +1,72 @@
+{
+  "protocol": "librispeech960_v1",
+  "recorded_on": "2026-11-11",
+  "train_status": "All three training splits downloaded, checksum-verified and inventoried; train-960.jsonl prepared without dev/test. Existing dev assignments are unchanged.",
+  "group_by": "speaker_id",
+  "seed": 20261111,
+  "generation": "Sort numeric speaker IDs; shuffle using random.Random(seed + split_index); assign consecutive groups in configured partition order.",
+  "splits": {
+    "dev-clean": {
+      "source_manifest_sha256": "e3cb43a548b30de9f90252f3cc71d1e84c1dabb316d8af49bbfbab067e5ba069",
+      "seed": 20261111,
+      "partitions": {
+        "model_selection": {
+          "speakers": 20,
+          "utterances": 1368,
+          "hours": 2.689413,
+          "manifest": "data/processed/protocols/librispeech960_v1/manifests/dev-clean.model_selection.jsonl",
+          "nemo_manifest": "data/processed/protocols/librispeech960_v1/nemo/dev-clean.model_selection.jsonl"
+        },
+        "gate_fit": {
+          "speakers": 10,
+          "utterances": 653,
+          "hours": 1.349274,
+          "manifest": "data/processed/protocols/librispeech960_v1/manifests/dev-clean.gate_fit.jsonl",
+          "nemo_manifest": "data/processed/protocols/librispeech960_v1/nemo/dev-clean.gate_fit.jsonl"
+        },
+        "gate_calibration": {
+          "speakers": 10,
+          "utterances": 682,
+          "hours": 1.349125,
+          "manifest": "data/processed/protocols/librispeech960_v1/manifests/dev-clean.gate_calibration.jsonl",
+          "nemo_manifest": "data/processed/protocols/librispeech960_v1/nemo/dev-clean.gate_calibration.jsonl"
+        }
+      },
+      "utterance_overlap": 0,
+      "speaker_overlap": 0
+    },
+    "dev-other": {
+      "source_manifest_sha256": "d64b9a18dbf060a774082a54aac3adeb1ab85da575827f188e59e277357c0809",
+      "seed": 20261112,
+      "partitions": {
+        "model_selection": {
+          "speakers": 17,
+          "utterances": 1488,
+          "hours": 2.626342,
+          "manifest": "data/processed/protocols/librispeech960_v1/manifests/dev-other.model_selection.jsonl",
+          "nemo_manifest": "data/processed/protocols/librispeech960_v1/nemo/dev-other.model_selection.jsonl"
+        },
+        "gate_fit": {
+          "speakers": 8,
+          "utterances": 644,
+          "hours": 1.254742,
+          "manifest": "data/processed/protocols/librispeech960_v1/manifests/dev-other.gate_fit.jsonl",
+          "nemo_manifest": "data/processed/protocols/librispeech960_v1/nemo/dev-other.gate_fit.jsonl"
+        },
+        "gate_calibration": {
+          "speakers": 8,
+          "utterances": 732,
+          "hours": 1.240101,
+          "manifest": "data/processed/protocols/librispeech960_v1/manifests/dev-other.gate_calibration.jsonl",
+          "nemo_manifest": "data/processed/protocols/librispeech960_v1/nemo/dev-other.gate_calibration.jsonl"
+        }
+      },
+      "utterance_overlap": 0,
+      "speaker_overlap": 0
+    }
+  },
+  "test_utterances": {
+    "test-clean": 2620,
+    "test-other": 2939
+  }
+}

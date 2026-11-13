@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "checkpoint_epoch": 16,
+  "streaming_vs_offline_memory_max_difference": 2.2202730178833008e-06,
+  "forecast_branches_do_not_change_confirmed_state": true,
+  "observed_chunks_for_bounded_state_check": 1875,
+  "confirmed_tensor_bytes": 33792,
+  "single_model_8_member_2_step_mean_ms": 4.0794141617987085,
+  "single_model_8_member_2_step_p95_ms": 4.449833184480667,
+  "timing_note": "Warm CPU single-thread benchmark during MPS training; not a live full-ASR end-to-end latency test."
+}

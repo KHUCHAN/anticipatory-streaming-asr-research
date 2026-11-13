@@ -1,0 +1,39 @@
+{
+  "timestamp_unix": 1794481987.35027,
+  "status": "Local timestamped analysis plan; not a public preregistration. Prior control test results already known, new-model test forecasts not yet collected.",
+  "primary_single_model": "state_s37",
+  "secondary": "state_s38 independently, their ensemble, and matched seed37 ablations",
+  "test_threshold_rule": "Gate fit and five risk operating points chosen only from existing disjoint dev cohorts before test collection.",
+  "risk_grid": [
+    0.1,
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "selection": "Best fixed-H4 combined validation loss among16 epochs on256 fixed model-selection utterances.",
+  "scope": "Frozen native final outputs; correct-word stable display timing plus false introduced forecasts, reference-correct acceptance and measured additional CPU time.",
+  "source_sha256": {
+    "config.json": "d04192b75adba8f1249e5487c3a8424a3433fbcf9704a018a6cb00732cf530aa",
+    "model.py": "91d5d135e73910d38170fc35570ad5d87282472c82abd2323d1ae12f44d2de1d",
+    "runtime.py": "06f05672d0ef97236fcf45b92b88de762bf09c586a2e5001e85ec0bae890f73e",
+    "collect.py": "2fc6621686efc8fac68dcffb4f87bf72fc914832a17de016760e18ff197eb873",
+    "analyze.py": "7c5aadf47c16f9bd82844968c29658c6a4c5975d33283153740387abe6cd6baa",
+    "diagnose.py": "b892b5f1cbbbfb73d462496ce54c6eda4f2daf90c93b8691a96557291156e7a6",
+    "config_crps_only.json": "799fd2a4a8c23c142ac0df7d2d4c1b654592accad580613c05a6b52205e6f595",
+    "train_crps_only.py": "40f67ae2eb7ffcc82f3d6781d9c59a22ce095d01e26a86de3904d668bcd9cdf9",
+    "check_crps_only.py": "73f00d16d2abdd7e3ba7f27cc03e18963db114fd3570c0652ea7e4775b398644"
+  },
+  "revision_timestamp_unix": 1794485277.21789,
+  "revision_reason": "Pre-test reporting addition: compare total retained forecaster context (old text+audio KV versus new continuous states+memory); weights/temporary activations excluded. No training, forecast, gate or threshold change.",
+  "new_gate_feature_dimension": 11,
+  "additional_control": "persistence: copy latest arrived encoder chunk into each future state; one deterministic trajectory; same11 gate inputs.",
+  "crps_only_control": {
+    "token_loss_weight": 0,
+    "selection": "H4 state CRPS only; not composite task score",
+    "seed": 37,
+    "epochs": 16,
+    "same_initialization_and_cutoff_order": true,
+    "note": "The frozen encoder representation remains ASR-pretrained."
+  }
+}

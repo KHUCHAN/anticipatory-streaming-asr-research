@@ -1,46 +1,46 @@
 # P09. Sequence Transduction with Recurrent Neural Networks
 
-| 항목 | 내용 |
+| Field | Value |
 |---|---|
-| 저자 | Graves, Alex |
-| 확인한 원문 날짜 | 2012-11-14 |
-| 발표 정보 | arXiv preprint, 2012 |
-| 분류 | ASR 정렬·인코더·스트리밍 기준선 |
-| 읽기 우선순위 | 1 — 정렬 이론 |
-| 원문 확인 범위 | 서지·초록 확인; PDF 전문 수집·파싱 검증 (전체 정독·재현 미수행) |
-| PDF | 9쪽; `papers/pdf/P09_rnnt.pdf` |
-| 검증일 | 2026-11-10 |
+| Authors | Graves, Alex |
+| Source date | 2012-11-14 |
+| Publication | arXiv preprint, 2012 |
+| Category | ASR alignment, encoders and streaming baselines |
+| Reading priority | 1 — Sort theory |
+| Review depth | Bibliography/abstract checked; full PDF collected and parsed; no exhaustive close reading or reproduction. |
+| PDF | 9 pages; `papers/pdf/P09_rnnt.pdf` |
+| Source verification date | 2026-11-10 |
 
-[원문](https://arxiv.org/abs/1211.3711) · [PDF](https://arxiv.org/pdf/1211.3711v1)
+[Source](https://arxiv.org/abs/1211.3711) · [PDF](https://arxiv.org/pdf/1211.3711v1)
 
-## 핵심과 방법
+## Main idea and method
 
-음성과 출력 라벨의 길이가 다른 문제를 확률적으로 다루는 RNN Transducer의 원 논문이다.
+Original RNN Transducer paper probabilistically handles unequal audio and label sequence lengths.
 
-입력 인코더와 출력 이력의 prediction network를 joint distribution으로 결합하고 가능한 정렬들을 합산한다.
+Combines the input encoder and output-history prediction network in a joint distribution and sums over possible alignments.
 
-## 논문이 보고한 근거
+## Source-reported evidence
 
-TIMIT의 음소 인식으로 sequence transduction을 평가한다.
+Sequence transduction is evaluated using TIMIT's phoneme recognition.
 
-확인 위치: transducer formulation 및 TIMIT experiments.
+Evidence location: transducer formulation and TIMIT experiments.
 
-## 연구 아이디어와의 연결 — 정리자의 해석
+## Connection to this project — interpretation
 
-음성 프레임과 단어가 일대일로 대응하지 않는 상황에서 후보를 음향 증거로 검증할 정렬 기반을 제공한다.
+Provides acoustic-alignment foundations for candidate verification when speech frames and words are not one-to-one.
 
-## 적용할 때의 제한
+## Limitations when applying the result
 
-원 논문의 설정이 곧바로 현대적 causal streaming 구현임을 뜻하지 않는다. encoder의 미래 문맥과 decoding 정책을 따로 정해야 한다.
+The original setup does not automatically specify a modern causal streaming implementation. Define encoder future context and decoding policy separately.
 
-## 코드와 모델
+## Code and models
 
-공식 구현 링크를 이번 검토에서 확정하지 않았다. 코드가 없다는 뜻은 아니다.
+An official implementation link was not confirmed in this review. This does not establish that no implementation exists.
 
-공개 checkpoint의 존재를 추정하지 않는다.
+Do not assume a public checkpoint exists.
 
-## 원문 버전
+## Source version
 
-PDF SHA-256: `d28fddcfc95a646ad60d3007a7f5fbd0fbba35eec418c018a595da81089f06cf`. 링크의 원문 버전과 이 해시를 기준으로 수집했다. 학습 및 저자 실험의 재현은 수행하지 않았다.
+PDF SHA-256: `d28fddcfc95a646ad60d3007a7f5fbd0fbba35eec418c018a595da81089f06cf`. The source version and this hash identify the collected PDF. Training and author experiments were not reproduced in the initial literature review.
 
-[전체 논문 목록](../../papers/INDEX.md) · [연구 지도](../../docs/literature_map.md)
+[Paper index](../../papers/INDEX.md) · [Literature map](../../docs/literature_map.md)
