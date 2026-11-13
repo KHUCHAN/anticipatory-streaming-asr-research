@@ -25,3 +25,11 @@ The aggregate renderer is reused without editing the original experiment. Its fu
 ```
 
 These commands require locally generated checkpoints and cached encoder features from the preceding studies. Raw weights, detailed logs and feature files remain local-only. Public aggregate figures and provenance are written to `artifacts/`.
+
+## Post-hoc double-descent audit
+
+The [review](../../docs/double_descent_review_2026-11-13.md) separates token-risk trends from the late decline in state CRPS. It does not classify or exclude double descent from a finite, single-seed record. No additional training is part of this audit; longer training and wider size sweeps remain proposals.
+
+```bash
+.venv/bin/python experiments/fgn_capacity_long_v1/audit_double_descent.py
+```

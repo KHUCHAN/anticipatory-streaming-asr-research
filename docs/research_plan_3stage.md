@@ -734,3 +734,10 @@ The requested settings audit confirms **SiLU**, no FGN ReLU modules, hidden256/F
 The task remains one fixed token/cutoff for each of 28,539 training utterances, with 512-case teacher-forced train/dev probes and one seed. There is no new AR-only/no-noise continuation, test evaluation, final-WER, correction or inference-acceleration result. All 27-epoch histories, final optimizer steps (11,097), settings and original source/input/checkpoint hashes pass verification. Original experiments and best checkpoints remain unchanged in their original namespace.
 
 [Extended report and curves](fgn_capacity_long_2026-11-13.md) · [Protocol](../experiments/fgn_capacity_long_v1/README.md) · [Verified settings](../experiments/fgn_capacity_long_v1/artifacts/settings.json). New checkpoints and raw logs remain local-only in `runs/fgn_capacity_long_v1/`; public aggregates are in `experiments/fgn_capacity_long_v1/artifacts/`.
+
+
+## Double-descent interpretation review — 2026-11-13
+
+At the user's request, revisit the existing curves for possible later recovery. No models were retrained. Over epochs 12–27, descriptive dev token-NLL and joint-objective slopes are positive for all three sizes, while state-CRPS slopes are negative. State CRPS peaks at epoch 11 / 11 / 14 and subsequently recovers; this is a component-specific observation, not proof of a double-descent mechanism.
+
+The current record does not exclude a later second decline or a different model-size regime. The original early-stop rule located overfitting within its observed range, not an asymptotic limit. Whole-training-set interpolation thresholds, a broader size sweep and seed replication were not measured. Label smoothing and generator noise do not by themselves resolve this question. [Review, primary papers, numeric audit and proposed follow-ups](double_descent_review_2026-11-13.md).

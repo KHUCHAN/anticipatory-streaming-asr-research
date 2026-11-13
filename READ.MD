@@ -18,6 +18,7 @@ The selected goal is to predict an acoustic representation, correct it using new
 | [Compute profile](experiments/compute_profile_v1/README.md) | Reproducible encoder/prediction-network/joiner timing breakdown |
 | [FGN generator capacity diagnosis](docs/fgn_capacity_2026-11-12.md) | Completed 6.32M / 10.54M / 18.96M comparison; all met the overfit rule at epoch 11; no test use |
 | [Longer FGN training](docs/fgn_capacity_long_2026-11-13.md) | Completed epoch 11 → 27 continuation; fitting improves, dev NLL worsens; actual SiLU settings verified |
+| [Double-descent review](docs/double_descent_review_2026-11-13.md) | Post-hoc token/state curve audit, finite-range limits and proposed follow-ups; no new training |
 | [Implementation review](docs/results_review_2026-11-11.md) | Metric definitions, missing costs and corrected claims |
 | [Four follow-up experiments](docs/followup_experiments_2026-11-11.md) | Real cache release, long streams, seed repetitions and display stabilization |
 | [Public baseline reproduction](docs/baseline_zipformer_2026-11-11.md) | Frozen public 66.11M checkpoint, inference conditions and WER |
@@ -46,6 +47,7 @@ The selected goal is to predict an acoustic representation, correct it using new
 │   ├── band_fgn_hybrid_2026-11-12.md
 │   ├── fgn_capacity_2026-11-12.md
 │   ├── fgn_capacity_long_2026-11-13.md
+│   ├── double_descent_review_2026-11-13.md
 │   ├── librispeech960_benchmark_plan.md
 │   ├── literature_map.md
 │   ├── claim_audit.md

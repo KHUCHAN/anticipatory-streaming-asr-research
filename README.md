@@ -8,6 +8,8 @@ Start with the [predict–correct acceleration plan](docs/predict_correct_accele
 
 **Longer training completed:** [16 extra epochs per generator](docs/fgn_capacity_long_2026-11-13.md) brought all three models to epoch 27. Train-probe NLL fell to 0.1313 / 0.1322 / 0.1319, while dev NLL rose to 1.1147 / 1.1269 / 1.1306; all best-dev checkpoints remain at epoch 5. Added epochs improve fitting without a validation benefit in this fixed-case, single-seed task. Actual checkpoint settings confirm SiLU, no FGN ReLU modules, and fixed 256-dimensional hidden/memory sizes. Original results and checkpoints are preserved.
 
+The [double-descent review](docs/double_descent_review_2026-11-13.md) limits that conclusion to the measured range. Later recovery and other size regimes are not excluded. State CRPS already shows late recovery; no new training was run for this descriptive audit.
+
 **FGN capacity diagnosis completed:** [6.32M / 10.54M / 18.96M generators](docs/fgn_capacity_2026-11-12.md) all reached the declared overfit rule after 11 continuation epochs. At that common budget, train-probe NLL was 0.2288 / 0.2269 / 0.2228; best dev NLL was 0.9486 / 0.9509 / 0.9504. This single-seed, fixed-case study shows limited fitting benefit from depth growth and no observed dev improvement. It does not evaluate the proposed residual corrector, final WER or inference acceleration.
 
 ## Completed evidence

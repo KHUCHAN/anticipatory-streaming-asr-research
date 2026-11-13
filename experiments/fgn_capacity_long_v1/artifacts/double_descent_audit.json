@@ -1,0 +1,147 @@
+{
+  "status": "post-hoc descriptive audit; no additional training",
+  "observed_epoch_window": [
+    0,
+    27
+  ],
+  "inherited_epoch_window": [
+    0,
+    11
+  ],
+  "source_csv_sha256": "6e6fdfcf9a6d84f325f2adf780705ced97c9190de24814780a1847007b1981cc",
+  "seed_count": 1,
+  "generator_depths": [
+    4,
+    8,
+    16
+  ],
+  "models": [
+    {
+      "generator_layers": 4,
+      "metrics": {
+        "dev_nll": {
+          "early_min_epoch": 5,
+          "early_min": 0.948581206612289,
+          "late_min_epoch": 13,
+          "late_min": 1.011570279020816,
+          "peak_epoch": 27,
+          "peak": 1.1147163030691445,
+          "final": 1.1147163030691445,
+          "late_linear_slope_per_epoch": 0.006791214346337844,
+          "late_min_below_early_min": false
+        },
+        "dev_objective": {
+          "early_min_epoch": 2,
+          "early_min": 1.8088402604334988,
+          "late_min_epoch": 13,
+          "late_min": 1.8701451202796306,
+          "peak_epoch": 27,
+          "peak": 1.9398771477106493,
+          "final": 1.9398771477106493,
+          "late_linear_slope_per_epoch": 0.0044894182781247205,
+          "late_min_below_early_min": false
+        },
+        "dev_crps": {
+          "early_min_epoch": 1,
+          "early_min": 0.5007405587821268,
+          "late_min_epoch": 27,
+          "late_min": 0.5096081729861908,
+          "peak_epoch": 11,
+          "peak": 0.5244702760828659,
+          "final": 0.5096081729861908,
+          "late_linear_slope_per_epoch": -0.0009325764081201187,
+          "late_min_below_early_min": false
+        }
+      }
+    },
+    {
+      "generator_layers": 8,
+      "metrics": {
+        "dev_nll": {
+          "early_min_epoch": 5,
+          "early_min": 0.9508682489395142,
+          "late_min_epoch": 13,
+          "late_min": 1.0175056234002113,
+          "peak_epoch": 27,
+          "peak": 1.1269141770899296,
+          "final": 1.1269141770899296,
+          "late_linear_slope_per_epoch": 0.006847435511949965,
+          "late_min_below_early_min": false
+        },
+        "dev_objective": {
+          "early_min_epoch": 2,
+          "early_min": 1.8090211693779565,
+          "late_min_epoch": 13,
+          "late_min": 1.8751492517476436,
+          "peak_epoch": 27,
+          "peak": 1.949096229468705,
+          "final": 1.949096229468705,
+          "late_linear_slope_per_epoch": 0.0044623543806322705,
+          "late_min_below_early_min": false
+        },
+        "dev_crps": {
+          "early_min_epoch": 0,
+          "early_min": 0.501582017110195,
+          "late_min_epoch": 27,
+          "late_min": 0.5135959440958686,
+          "peak_epoch": 11,
+          "peak": 0.5273045139620081,
+          "final": 0.5135959440958686,
+          "late_linear_slope_per_epoch": -0.000849466363348149,
+          "late_min_below_early_min": false
+        }
+      }
+    },
+    {
+      "generator_layers": 16,
+      "metrics": {
+        "dev_nll": {
+          "early_min_epoch": 5,
+          "early_min": 0.9504283517599106,
+          "late_min_epoch": 13,
+          "late_min": 1.0238862223923206,
+          "peak_epoch": 27,
+          "peak": 1.130551821552217,
+          "final": 1.130551821552217,
+          "late_linear_slope_per_epoch": 0.00717230135205147,
+          "late_min_below_early_min": false
+        },
+        "dev_objective": {
+          "early_min_epoch": 3,
+          "early_min": 1.8079544866108335,
+          "late_min_epoch": 12,
+          "late_min": 1.8793927283841185,
+          "peak_epoch": 25,
+          "peak": 1.9520450859854463,
+          "final": 1.951595697971061,
+          "late_linear_slope_per_epoch": 0.004706155207395035,
+          "late_min_below_early_min": false
+        },
+        "dev_crps": {
+          "early_min_epoch": 0,
+          "early_min": 0.501582017110195,
+          "late_min_epoch": 26,
+          "late_min": 0.5208271147566848,
+          "peak_epoch": 14,
+          "peak": 0.5328525748918764,
+          "final": 0.521170258987695,
+          "late_linear_slope_per_epoch": -0.0007936041533385458,
+          "late_min_below_early_min": false
+        }
+      }
+    }
+  ],
+  "interpretation": "Late dev NLL and optimized-objective slopes are positive; dev CRPS slopes are negative. Component recovery is present, but no formal double-descent acceptance/rejection rule is applied.",
+  "caveats": [
+    "Slopes are descriptive least-squares summaries, not significance tests.",
+    "A second decline need not beat the first minimum; the below-minimum field is descriptive only.",
+    "Finite training and three warm-started depths cannot exclude later epoch-wise or other model-wise double descent.",
+    "The whole-training-set interpolation threshold was not measured. Train-probe accuracy is not a substitute.",
+    "Noise injected into the generator is not the same intervention as corrupted target labels in double-descent studies.",
+    "Label smoothing does not by itself rule out double descent."
+  ],
+  "primary_references": [
+    "https://arxiv.org/abs/1912.02292",
+    "https://arxiv.org/abs/1812.11118"
+  ]
+}
