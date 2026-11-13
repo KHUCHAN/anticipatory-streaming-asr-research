@@ -1,0 +1,98 @@
+{
+  "scope": "capacity diagnosis of the existing actual AR+FGN hybrid; not the unimplemented raw-audio residual corrector or encoder-skipping architecture",
+  "models": [
+    {
+      "layers": 4,
+      "parameters": 6323968,
+      "completed_epochs": 11,
+      "best_epoch": 5,
+      "best_dev_nll": 0.948581206612289,
+      "last_train_nll": 0.22882695496082306,
+      "last_dev_nll": 1.0042473478242755,
+      "last_train_objective": 1.2213607020443304,
+      "last_dev_objective": 1.8652049294556492,
+      "last_online_objective": 1.282141767859169,
+      "overfitting": {
+        "detected": true,
+        "best_epoch": 5,
+        "confirmed_epoch": 11,
+        "criterion": "five successive evaluation points: mixed-dev NLL worse by >=0.02 and fixed-train-probe NLL better by >=0.01 relative to dev-optimal epoch",
+        "best_dev_nll": 0.948581206612289,
+        "last_dev_nll": 1.0042473478242755,
+        "train_at_best": 0.3770756870508194,
+        "last_train_nll": 0.22882695496082306
+      }
+    },
+    {
+      "layers": 8,
+      "parameters": 10535680,
+      "completed_epochs": 11,
+      "best_epoch": 5,
+      "best_dev_nll": 0.9508682489395142,
+      "last_train_nll": 0.22694871574640274,
+      "last_dev_nll": 1.0127144465222955,
+      "last_train_objective": 1.2202958832378499,
+      "last_dev_objective": 1.8725052970112301,
+      "last_online_objective": 1.2789646807668273,
+      "overfitting": {
+        "detected": true,
+        "best_epoch": 5,
+        "confirmed_epoch": 11,
+        "criterion": "five successive evaluation points: mixed-dev NLL worse by >=0.02 and fixed-train-probe NLL better by >=0.01 relative to dev-optimal epoch",
+        "best_dev_nll": 0.9508682489395142,
+        "last_dev_nll": 1.0127144465222955,
+        "train_at_best": 0.373595729470253,
+        "last_train_nll": 0.22694871574640274
+      }
+    },
+    {
+      "layers": 16,
+      "parameters": 18959104,
+      "completed_epochs": 11,
+      "best_epoch": 5,
+      "best_dev_nll": 0.9504283517599106,
+      "last_train_nll": 0.22281078808009624,
+      "last_dev_nll": 1.0228119255043566,
+      "last_train_objective": 1.2179479046259076,
+      "last_dev_objective": 1.8817084168083966,
+      "last_online_objective": 1.2770253034113677,
+      "overfitting": {
+        "detected": true,
+        "best_epoch": 5,
+        "confirmed_epoch": 11,
+        "criterion": "five successive evaluation points: mixed-dev NLL worse by >=0.02 and fixed-train-probe NLL better by >=0.01 relative to dev-optimal epoch",
+        "best_dev_nll": 0.9504283517599106,
+        "last_dev_nll": 1.0228119255043566,
+        "train_at_best": 0.37222786992788315,
+        "last_train_nll": 0.22281078808009624
+      }
+    }
+  ],
+  "matched_epoch_comparison": {
+    "epoch": 11,
+    "models": {
+      "4": {
+        "train_nll": 0.22882695496082306,
+        "dev_nll": 1.0042473478242755,
+        "train_objective": 1.2213607020443304,
+        "dev_objective": 1.8652049294556492,
+        "online_objective": 1.282141767859169
+      },
+      "8": {
+        "train_nll": 0.22694871574640274,
+        "dev_nll": 1.0127144465222955,
+        "train_objective": 1.2202958832378499,
+        "dev_objective": 1.8725052970112301,
+        "online_objective": 1.2789646807668273
+      },
+      "16": {
+        "train_nll": 0.22281078808009624,
+        "dev_nll": 1.0228119255043566,
+        "train_objective": 1.2179479046259076,
+        "dev_objective": 1.8817084168083966,
+        "online_objective": 1.2770253034113677
+      }
+    }
+  },
+  "test_used": false
+}

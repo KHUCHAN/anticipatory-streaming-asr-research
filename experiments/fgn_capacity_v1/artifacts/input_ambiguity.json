@@ -1,0 +1,7 @@
+{
+  "train_cases": 28539,
+  "zero_arrived_audio_cases": 221,
+  "zero_audio_conflicting_target_cases": 221,
+  "conservative_empirical_unsmoothed_nll_lower_bound_from_exact_duplicate_no_audio_prefixes": 0.030191638558483818,
+  "scope": "Information ambiguity diagnostic, not an observed trained loss. Group by complete gold prefix with no arrived encoder state; expectation over fresh independent functional noise."
+}

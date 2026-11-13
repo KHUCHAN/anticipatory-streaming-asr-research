@@ -696,3 +696,22 @@ The user selected acoustic-representation prediction followed by inexpensive cor
 A read-only development profile of 24 utterances and 431 chunks measured native encoder/prediction-network/joiner times of 8.8421/0.0751/0.0764ms per chunk. Encoder share was 98.3159%; a standalone reproduction again measured approximately 98.3%. [Protocol and original records](../experiments/compute_profile_v1/README.md). This is not a live microphone/UI benchmark. The approximately 1.3ms AR forecaster cost is not the unmeasured cost of the proposed FGN/corrector.
 
 Existing model weights, full evaluations and chronological results are preserved. Public prose and report generators were converted to English; original runtime-source hashes describe their execution-time versions. This documentation change does not constitute another model-training run.
+
+
+## Actual FGN-generator capacity and overfitting diagnosis — 2026-11-12 completed
+
+The user requested increasing capacity until overfitting to test whether the remaining training loss requires a bigger model. Unlike the preceding AR-depth experiment, this study grows the generator itself: 4 / 8 / 16 residual blocks, or 6.32M / 10.54M / 18.96M generator parameters. AR stays four layers and remains jointly trainable. All models start from the same trained hybrid function; added residual blocks initially implement identity mappings.
+
+All 28,539 train-clean-100 utterances contribute one fixed token/cutoff case per epoch. This is a controlled fitting diagnosis, not exhaustive training over every prefix. Train and model-selection dev probes each contain 512 cases. Fixed two-step acoustic forecasts, branch-mean CE with smoothing 0.1 plus 0.1 state CRPS, AdamW learning rate 3e-5; one seed, no test evaluation. Sequential MPS training completed 33 continuation epochs in 1.04 hours.
+
+| Generator parameters | Best dev NLL (epoch 5) | Train-probe NLL (epoch 11) | Dev NLL (epoch 11) | Overfit rule met |
+|---|---:|---:|---:|---|
+| 6,323,968 | 0.9486 | 0.2288 | 1.0042 | Yes |
+| 10,535,680 | 0.9509 | 0.2269 | 1.0127 | Yes |
+| 18,959,104 | 0.9504 | 0.2228 | 1.0228 | Yes |
+
+All three met the predeclared rule at epoch 11: five consecutive dev NLL regressions of at least 0.02 while fixed-train-probe NLL improves at least 0.01 relative to the dev-best checkpoint. The original small model already overfits this task. Threefold generator growth yields a small fitting gain without observed dev improvement; this does not establish statistical equivalence or rule out other width/optimization/data-coverage regimes.
+
+State CRPS worsens while token NLL improves. Lower token loss therefore does not demonstrate better acoustic-state forecasts. Smoothed CE has a nonzero minimum (about 0.94466 nats here); unsmoothed token NLL and the optimized combined objective are recorded separately. No new WER, inference-acceleration, causal noise-regularization or raw-audio-corrector result is claimed.
+
+Saved best/last checkpoints, full epoch step counts, data-role separation, declared overfit events, added-block training and recorded source/input hashes passed verification. [Full results and curves](fgn_capacity_2026-11-12.md), [protocol](../experiments/fgn_capacity_v1/README.md), and public aggregate evidence in `experiments/fgn_capacity_v1/artifacts/`; local weights/logs in `runs/fgn_capacity_v1/`. Previous experiments remain preserved.

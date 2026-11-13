@@ -6,6 +6,8 @@ Research on predicting acoustic representations, correcting them with newly arri
 
 Start with the [predict–correct acceleration plan](docs/predict_correct_acceleration_plan_2026-11-12.md), [current conclusions](docs/conclusion_and_next_steps.md), and [repository map](READ.MD).
 
+**FGN capacity diagnosis completed:** [6.32M / 10.54M / 18.96M generators](docs/fgn_capacity_2026-11-12.md) all reached the declared overfit rule after 11 continuation epochs. At that common budget, train-probe NLL was 0.2288 / 0.2269 / 0.2228; best dev NLL was 0.9486 / 0.9509 / 0.9504. This single-seed, fixed-case study shows limited fitting benefit from depth growth and no observed dev improvement. It does not evaluate the proposed residual corrector, final WER or inference acceleration.
+
 ## Completed evidence
 
 | Study | Result | Interpretation |

@@ -41,6 +41,8 @@ An improvement in provisional display does not establish an improvement in the t
 
 FGN provides a continuous-state forecasting and rollout inspiration. Neither functional noise nor a particular ensemble is mandatory for the predict–correct objective. Scaling and overfitting effects require their own controls.
 
+The completed [generator-capacity diagnosis](fgn_capacity_2026-11-12.md) compares 6.32M / 10.54M / 18.96M from identical trained functions. All overfit the fixed-case task; added depth slightly improves fitting without an observed dev benefit in this seed. This is separate from training a raw-audio corrector or establishing a noise-regularization effect.
+
 ## Causal procedure
 
 1. Keep observations and confirmed state separate from speculative state.

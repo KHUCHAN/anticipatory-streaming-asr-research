@@ -4,13 +4,17 @@ Snapshot date: 2026-11-12, America/Los_Angeles. This is the current-conclusion e
 
 ## Selected direction: prediction plus acoustic correction
 
+**Capacity diagnosis completed:** [FGN generator growth](fgn_capacity_2026-11-12.md) compares 6.32M, 10.54M and 18.96M generators from identical initial functions, with AR depth unchanged. All met the predeclared overfit rule at continuation epoch 11. Matched-epoch train-probe NLL is 0.2288 / 0.2269 / 0.2228 and dev NLL is 1.0042 / 1.0127 / 1.0228; all selected dev-best checkpoints at epoch 5 (0.9486 / 0.9509 / 0.9504). The existing small generator already overfits this fixed-case problem. Threefold generator growth offers only a small fitting gain and no observed dev improvement in this seed. Test data is unused.
+
+This diagnoses one fixed prediction case per each of 28,539 training utterances, not every temporal prefix. It does not establish that capacity never limits the full task, or measure a causal noise-regularization effect. Acoustic-state CRPS rises while token NLL falls, so lower token loss is not proof of a better predicted acoustic representation. The raw-audio corrector remains unimplemented.
+
 The user selected a new target on 2026-11-12: predict an acoustic representation, correct it with inexpensive processing of actual incoming audio, and avoid full encoder work when recognition quality permits. A learned prior may help ambiguous speech, but must yield to unexpected names, numbers or topic changes. Reference-based training and explicit recovery tests are required.
 
 The [current acceleration plan](predict_correct_acceleration_plan_2026-11-12.md) records the architecture, losses, state/cache requirements, scaling sequence and comparisons. **The residual corrector, compute gate and encoder-skipping runtime are not yet implemented or trained.** Completed display results below do not establish this new hypothesis.
 
 An initial 24-utterance development CPU profile measured encoder/prediction-network/joiner work as 8.8421/0.0751/0.0764ms per chunk; the encoder took 98.3159% of native neural time. A standalone reproduction again measured about 98.3%. See [profile records](../experiments/compute_profile_v1/README.md). This is a small batch-1 adapter measurement, not a live-device benchmark. The prior 1.3–1.4ms figure belongs to the AR forecaster, not the proposed FGN/correction path.
 
-Start correction experiments with the existing approximately 6.3M state predictor and a small audio-conditioned corrector; compare their capacities separately. The completed large hybrid increased AR depth while leaving FGN-generator capacity unchanged. Lower NLL alone does not establish lower WER, less overfitting or faster inference.
+Start correction experiments with the existing approximately 6.3M state predictor and a small audio-conditioned corrector; compare their capacities separately. The earlier large-hybrid study increased AR depth while leaving FGN-generator capacity unchanged; the new generator sweep directly varies generator depth. Broaden training-cutoff coverage and examine the separate state/token objectives before attributing remaining error to capacity. Lower NLL alone does not establish lower WER, less overfitting or faster inference.
 
 ## Completed experimental conclusions
 

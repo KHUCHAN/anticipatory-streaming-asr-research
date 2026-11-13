@@ -1,0 +1,35 @@
+{
+  "captured_unix": 1794552193.346485,
+  "source_sha256": {
+    "experiments/fgn_capacity_v1/study.py": "d3d6fe612f52969e62f9ff2e31602716df8890e67bed8692b62af87916d90c28",
+    "experiments/fgn_capacity_v1/run.py": "29688aef754729f3842d96e851574e043183d3a2659583a94c88ff5005eba9f5",
+    "experiments/fgn_capacity_v1/report.py": "80cf829e671f766301177aed16f7c9d42298ffe440da36244efc2c14427b9edb",
+    "experiments/fgn_capacity_v1/config.json": "bb6dfa3ba849f930ff2a834b01bbf987821f79d5bc328470a217afe5a9f8b197",
+    "experiments/band_fgn_v1/model.py": "df694a052f356f03107d329750557aa3d72249d72d15bcead706688cf48fc715",
+    "experiments/band_fgn_v1/common.py": "f233ebe2598e282a9256b56153f32295e2ce5804956b1ca0fe2fa113fbdd8f53",
+    "experiments/fgn_state_v1/model.py": "91d5d135e73910d38170fc35570ad5d87282472c82abd2323d1ae12f44d2de1d",
+    "avs/model.py": "8114dbc4e58688d36f1fe87348be6944fd45080c13e50b9c5bda4868f4964b58",
+    "avs/stream.py": "2b19ee6a41e5750a17194e81e026848a313e5e175afa56ac129d2a4d2930f272",
+    "avs/zipformer_forecaster.py": "ca435d27de059c5b52f1d8f5e162cbf7461fbe30ae560e25431761351c48fa23"
+  },
+  "input_sha256": {
+    "runs/band_fgn_v1/small_fgn/best.pt": "036e65353125e2071f2b6a7a98d2b576acf47c89c71b1d9d8e571fdcd60e989f",
+    "runs/band_fgn_v1/gold_metadata.json": "6023aa12121d1c53889e69ff4d116c8f4603ab43ad38aec5790c49da0f7c9541",
+    "runs/fgn_state_v1/cache/index.json": "e06daaa6c358dcefa953523ab9500b3929e06d352d79cda8560065485c7e82c7",
+    "runs/fgn_state_v1/cache/stats.json": "69d208a31df8acb30724120e63690c7fb46e7edbca9122147b47d7ef2a5ce650",
+    "data/processed/manifests/train-clean-100.jsonl": "f603b69cbea61a8fd928040d3d32c6d906fdfffeaf4245656b515bfdb6bb4e74",
+    "data/processed/protocols/librispeech960_v1/manifests/model_selection.jsonl": "ca8fce8899d8315a1eb212ee4a5f97da4e315c5f6990b7e1cbf2b555b012e3ca"
+  },
+  "environment": {
+    "platform": "macOS-26.7.2-arm64-arm-64bit-Mach-O",
+    "dependencies": {
+      "torch": "2.15.0",
+      "numpy": "2.5.4",
+      "sentencepiece": "0.2.3",
+      "matplotlib": "3.10.8"
+    }
+  },
+  "training_device": "MPS; one model at a time",
+  "test_used": false,
+  "scope": "Pre-result source/input capture. Checkpoint files and raw features remain local-only. Matplotlib was installed for reporting after training began; Torch and NumPy were unchanged."
+}

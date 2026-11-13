@@ -16,6 +16,7 @@ The selected goal is to predict an acoustic representation, correct it using new
 | [FGN hybrid study](docs/band_fgn_hybrid_2026-11-12.md) | Actual joint AR+FGN continuation, two AR depths, costs and scaling limitations |
 | [Independent FGN state study](docs/fgn_state_pilot_2026-11-12.md) | Recurrent continuous-state predictor and component ablations |
 | [Compute profile](experiments/compute_profile_v1/README.md) | Reproducible encoder/prediction-network/joiner timing breakdown |
+| [FGN generator capacity diagnosis](docs/fgn_capacity_2026-11-12.md) | Completed 6.32M / 10.54M / 18.96M comparison; all met the overfit rule at epoch 11; no test use |
 | [Implementation review](docs/results_review_2026-11-11.md) | Metric definitions, missing costs and corrected claims |
 | [Four follow-up experiments](docs/followup_experiments_2026-11-11.md) | Real cache release, long streams, seed repetitions and display stabilization |
 | [Public baseline reproduction](docs/baseline_zipformer_2026-11-11.md) | Frozen public 66.11M checkpoint, inference conditions and WER |
@@ -42,6 +43,7 @@ The selected goal is to predict an acoustic representation, correct it using new
 │   ├── zipformer_ours_2026-11-12.md
 │   ├── fgn_state_pilot_2026-11-12.md
 │   ├── band_fgn_hybrid_2026-11-12.md
+│   ├── fgn_capacity_2026-11-12.md
 │   ├── librispeech960_benchmark_plan.md
 │   ├── literature_map.md
 │   ├── claim_audit.md
@@ -81,8 +83,10 @@ The selected goal is to predict an acoustic representation, correct it using new
 │   │   └── artifacts/                # Public aggregate results and figures
 │   ├── band_fgn_v1/                  # Actual AR+FGN hybrid study
 │   │   └── artifacts/                # Public results, checks and curves
-│   └── compute_profile_v1/           # Read-only bottleneck measurement
-│       └── artifacts/                # Initial and reproduced timings
+│   ├── compute_profile_v1/           # Read-only bottleneck measurement
+│   │   └── artifacts/                # Initial and reproduced timings
+│   └── fgn_capacity_v1/              # Actual generator growth / fitting study
+│       └── artifacts/                # Verified curves, completion and provenance
 ├── scripts/                          # Preparation, training and analysis
 ├── requirements-baseline.txt
 ├── requirements-zipformer-features.txt
@@ -97,8 +101,8 @@ Directory paths remain compatible with completed experiments. Local-only output 
 ## Status and data boundary
 
 - **Prepared:** initial 33-paper source set, English notes/catalog/BibTeX; LibriSpeech training splits and all four dev/test splits.
-- **Completed:** original AVS studies, follow-up controls, public Zipformer reproduction, actual full/band2 forecaster training, independent FGN and hybrid experiments, and the small CPU component profile.
-- **Proposed:** audio-conditioned residual correction, conditional encoder execution and cache recovery; new 960h acoustic training; larger FGN-generator capacity comparisons.
+- **Completed:** original AVS studies, follow-up controls, public Zipformer reproduction, actual full/band2 forecaster training, independent FGN and hybrid experiments, the small CPU component profile, and the three-capacity fixed-case FGN fitting diagnosis.
+- **Proposed:** audio-conditioned residual correction, conditional encoder execution and cache recovery; new 960h acoustic training; capacity comparisons for the new corrector and broader training-cutoff coverage.
 - **Not established:** lower total inference compute, lower irreversible commit latency, matched-test-risk Pareto superiority, live mobile performance, or a general FGN anti-overfitting effect.
 
 The local corpus contains 292,367 utterances / 982.308 hours. The training-only union contains 281,241 utterances / 961.054 hours and excludes dev/test. Dataset preparation does not mean a 960h model was trained.

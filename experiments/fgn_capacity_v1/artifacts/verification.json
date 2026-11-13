@@ -1,0 +1,101 @@
+{
+  "training_sources_unchanged": true,
+  "recorded_inputs_unchanged": true,
+  "data_audit": {
+    "train_utterances": 28539,
+    "cases_per_utterance": 1,
+    "train_batches_per_epoch": 411,
+    "each_training_utterance_once_per_epoch": true,
+    "train_probe_utterances": 512,
+    "dev_split_counts": {
+      "dev-clean": 250,
+      "dev-other": 262
+    },
+    "selected_dev_role": "model_selection",
+    "gate_speaker_overlap": false,
+    "train_dev_overlap": false,
+    "no_test_rows_in_training_or_probes": true
+  },
+  "models": [
+    {
+      "layers": 4,
+      "completed_epochs": 11,
+      "best_epoch": 5,
+      "generator_parameters": 6323968,
+      "best_sha256": "0ef76b2ec19d02832075a7456649622d67fa7623a246c9c2561645bb9c1d109e",
+      "last_sha256": "ffe988b1f8c5b97692c2ecb9e413c4d236272f62ef1135138dc4cb47e3692e94",
+      "overfitting": {
+        "detected": true,
+        "best_epoch": 5,
+        "confirmed_epoch": 11,
+        "criterion": "five successive evaluation points: mixed-dev NLL worse by >=0.02 and fixed-train-probe NLL better by >=0.01 relative to dev-optimal epoch",
+        "best_dev_nll": 0.948581206612289,
+        "last_dev_nll": 1.0042473478242755,
+        "train_at_best": 0.3770756870508194,
+        "last_train_nll": 0.22882695496082306
+      },
+      "added_block_output_norms": [],
+      "status": "verified through saved checkpoint"
+    },
+    {
+      "layers": 8,
+      "completed_epochs": 11,
+      "best_epoch": 5,
+      "generator_parameters": 10535680,
+      "best_sha256": "7c54d4cadfac43585a58d126d0b48f7b3eb8bd83a59f7bdf57e5b9e17c4c3967",
+      "last_sha256": "973ad85750f4b004f62c1b68d7f89df439555d219398e03dea98b3698e63fd7f",
+      "overfitting": {
+        "detected": true,
+        "best_epoch": 5,
+        "confirmed_epoch": 11,
+        "criterion": "five successive evaluation points: mixed-dev NLL worse by >=0.02 and fixed-train-probe NLL better by >=0.01 relative to dev-optimal epoch",
+        "best_dev_nll": 0.9508682489395142,
+        "last_dev_nll": 1.0127144465222955,
+        "train_at_best": 0.373595729470253,
+        "last_train_nll": 0.22694871574640274
+      },
+      "added_block_output_norms": [
+        1.130028486251831,
+        1.129634141921997,
+        1.1392453908920288,
+        1.1346828937530518
+      ],
+      "status": "verified through saved checkpoint"
+    },
+    {
+      "layers": 16,
+      "completed_epochs": 11,
+      "best_epoch": 5,
+      "generator_parameters": 18959104,
+      "best_sha256": "c11d453024a031c33b0c0a09e04b488d38ff1de2bf10b0eff14a95ca7e37f619",
+      "last_sha256": "14d447a7d8e61d29ccc73c48cc301901393780a785d380674772b30fe29668b6",
+      "overfitting": {
+        "detected": true,
+        "best_epoch": 5,
+        "confirmed_epoch": 11,
+        "criterion": "five successive evaluation points: mixed-dev NLL worse by >=0.02 and fixed-train-probe NLL better by >=0.01 relative to dev-optimal epoch",
+        "best_dev_nll": 0.9504283517599106,
+        "last_dev_nll": 1.0228119255043566,
+        "train_at_best": 0.37222786992788315,
+        "last_train_nll": 0.22281078808009624
+      },
+      "added_block_output_norms": [
+        0.9665581583976746,
+        0.9643455147743225,
+        0.9726007580757141,
+        0.9664604663848877,
+        0.9726731181144714,
+        0.968788743019104,
+        0.9662954807281494,
+        0.9681475162506104,
+        0.9701240658760071,
+        0.9760388731956482,
+        0.9718976616859436,
+        0.9750238060951233
+      ],
+      "status": "verified through saved checkpoint"
+    }
+  ],
+  "test_used": false,
+  "scope": "Checks saved checkpoints, not any currently running unsaved partial epoch."
+}

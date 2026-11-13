@@ -2,3 +2,4 @@
 numpy==2.5.4
 sentencepiece==0.2.3
 torch==2.15.0
+matplotlib==3.10.8

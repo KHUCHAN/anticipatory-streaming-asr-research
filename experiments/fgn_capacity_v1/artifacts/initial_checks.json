@@ -1,0 +1,27 @@
+{
+  "fixed_cases_independent_of_batch_order": true,
+  "models": [
+    {
+      "layers": 4,
+      "generator_parameters": 6323968,
+      "total_parameters": 10926836,
+      "initial_logit_max_difference": 0.0,
+      "last_block_output_gradient_norm": 0.005274592433124781
+    },
+    {
+      "layers": 8,
+      "generator_parameters": 10535680,
+      "total_parameters": 15138548,
+      "initial_logit_max_difference": 0.0,
+      "last_block_output_gradient_norm": 0.019036663696169853
+    },
+    {
+      "layers": 16,
+      "generator_parameters": 18959104,
+      "total_parameters": 23561972,
+      "initial_logit_max_difference": 0.0,
+      "last_block_output_gradient_norm": 0.018852677196264267
+    }
+  ],
+  "test_used": false
+}

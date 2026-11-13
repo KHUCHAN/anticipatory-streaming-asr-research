@@ -131,6 +131,8 @@ Approximate cache updates can accumulate error. Falling back to an old full-enco
 
 In the completed hybrid study, AR grew from 4.60M to 13.03M while the FGN generator remained 6.324M. Mixed-development token NLL changed from 1.0687 to 1.0450 for the stochastic hybrids, while display gains worsened. This is not a direct capacity experiment on the FGN generator.
 
+A subsequent [generator-depth diagnosis](fgn_capacity_2026-11-12.md) directly grew FGN to 6.32M / 10.54M / 18.96M with AR fixed at four layers. All met the overfit rule at continuation epoch 11. Train-probe NLL changed 0.2288 → 0.2228 from smallest to largest, while best dev NLL did not improve (0.9486 → 0.9504). This single-seed study uses one fixed case per training utterance; it favors examining cutoff coverage and the state/token loss balance before another size increase. It does not test the new corrector or settle capacity needs under broader training.
+
 The proposed order is:
 
 1. Reuse the approximately 6.3M state predictor and add a small audio-conditioned corrector. A 1–3M corrector is a candidate budget, not an implemented model or a measured speed estimate.
