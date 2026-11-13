@@ -43,6 +43,8 @@ FGN provides a continuous-state forecasting and rollout inspiration. Neither fun
 
 The completed [generator-capacity diagnosis](fgn_capacity_2026-11-12.md) compares 6.32M / 10.54M / 18.96M from identical trained functions. All overfit the fixed-case task; added depth slightly improves fitting without an observed dev benefit in this seed. This is separate from training a raw-audio corrector or establishing a noise-regularization effect.
 
+The [epoch-27 continuation](fgn_capacity_long_2026-11-13.md) restores optimizer/model states and adds 16 epochs to every size without overfit stopping. All final train-probe NLLs are about 0.131–0.132, while dev NLL worsens and the selected checkpoints remain at epoch 5. This confirms additional fitting within the fixed-case task, not a validation improvement or a test of width/memory growth. Actual SiLU settings are audited alongside the results.
+
 ## Causal procedure
 
 1. Keep observations and confirmed state separate from speculative state.

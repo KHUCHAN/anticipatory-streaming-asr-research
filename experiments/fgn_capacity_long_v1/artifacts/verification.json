@@ -1,0 +1,66 @@
+{
+  "captured_sources_and_inputs_unchanged": true,
+  "original_runs_unchanged": true,
+  "data_audit": {
+    "train_utterances": 28539,
+    "each_utterance_once_per_epoch": true,
+    "fixed_cases_per_utterance": 1,
+    "train_probe_utterances": 512,
+    "dev_split_counts": {
+      "dev-clean": 250,
+      "dev-other": 262
+    },
+    "test_used": false
+  },
+  "models": [
+    {
+      "layers": 4,
+      "status": "verified",
+      "epoch": 27,
+      "added_epochs": 16,
+      "generator_parameters": 6323968,
+      "best_epoch": 5,
+      "best_dev_nll": 0.948581206612289,
+      "original_best_preserved": true,
+      "settings_match_checkpoint_architecture": true,
+      "generator_relu_modules": 0,
+      "resumed_nll_max_difference": 0.0,
+      "final_overfit_rule_met": true,
+      "last_sha256": "4d47e1b6447032f3aee60483c2f7fd7cc612c21f3dad323ed9dee23e0f44f0fc",
+      "best_sha256": "0ef76b2ec19d02832075a7456649622d67fa7623a246c9c2561645bb9c1d109e"
+    },
+    {
+      "layers": 8,
+      "status": "verified",
+      "epoch": 27,
+      "added_epochs": 16,
+      "generator_parameters": 10535680,
+      "best_epoch": 5,
+      "best_dev_nll": 0.9508682489395142,
+      "original_best_preserved": true,
+      "settings_match_checkpoint_architecture": true,
+      "generator_relu_modules": 0,
+      "resumed_nll_max_difference": 0.0,
+      "final_overfit_rule_met": true,
+      "last_sha256": "3cc150f37610ad4e948ef1b39947aa5118ad22505f6366c1452ff58de115721e",
+      "best_sha256": "7c54d4cadfac43585a58d126d0b48f7b3eb8bd83a59f7bdf57e5b9e17c4c3967"
+    },
+    {
+      "layers": 16,
+      "status": "verified",
+      "epoch": 27,
+      "added_epochs": 16,
+      "generator_parameters": 18959104,
+      "best_epoch": 5,
+      "best_dev_nll": 0.9504283517599106,
+      "original_best_preserved": true,
+      "settings_match_checkpoint_architecture": true,
+      "generator_relu_modules": 0,
+      "resumed_nll_max_difference": 0.0,
+      "final_overfit_rule_met": true,
+      "last_sha256": "b1927ebfbe2025923a70ca30341b7e414ca1d24216fe83cf6482072434c23fd3",
+      "best_sha256": "c11d453024a031c33b0c0a09e04b488d38ff1de2bf10b0eff14a95ca7e37f619"
+    }
+  ],
+  "test_used": false
+}

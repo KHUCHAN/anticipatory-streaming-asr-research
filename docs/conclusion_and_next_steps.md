@@ -1,8 +1,12 @@
 # Current Conclusions and Next Experiments
 
-Snapshot date: 2026-11-12, America/Los_Angeles. This is the current-conclusion entry point. Initial numbers were checked against saved outputs and code; four follow-ups and [our strong-Zipformer study](zipformer_ours_2026-11-12.md) were actually executed. [History](research_plan_3stage.md) preserves detailed results; [implementation review](results_review_2026-11-11.md) explains initial corrections.
+Snapshot date: 2026-11-13, America/Los_Angeles. This is the current-conclusion entry point. Initial numbers were checked against saved outputs and code; four follow-ups and [our strong-Zipformer study](zipformer_ours_2026-11-12.md) were actually executed. [History](research_plan_3stage.md) preserves detailed results; [implementation review](results_review_2026-11-11.md) explains initial corrections.
 
 ## Selected direction: prediction plus acoustic correction
+
+**Longer-training extension completed:** at the user's request, all three models restored epoch-11 model/AdamW states and received 16 additional epochs through epoch 27, with overfit stopping disabled. Train-probe NLL fell from 0.2288 / 0.2269 / 0.2228 to 0.1313 / 0.1322 / 0.1319; dev NLL rose from 1.0042 / 1.0127 / 1.0228 to 1.1147 / 1.1269 / 1.1306. All best-dev checkpoints remain at epoch 5. The small model reaches a similar fitting value without generator growth. This is a fixed-case, single-seed observation, not statistical equivalence or a wider-model result. [Full extended results and settings](fgn_capacity_long_2026-11-13.md).
+
+Checkpoint audits confirm SiLU and zero ReLU modules in all three FGN generators. Hidden and GRU memory sizes remain 256; only depth differs. Dev state CRPS recovers relative to epoch 11 in all three, but stays worse than the shared trained epoch-0 function. Extra-epoch AR-only/noise-free controls and final ASR evaluation were not run. These data do not establish a general FGN/noise effect or the proposed corrector's behavior. Original studies and best checkpoints are preserved.
 
 **Capacity diagnosis completed:** [FGN generator growth](fgn_capacity_2026-11-12.md) compares 6.32M, 10.54M and 18.96M generators from identical initial functions, with AR depth unchanged. All met the predeclared overfit rule at continuation epoch 11. Matched-epoch train-probe NLL is 0.2288 / 0.2269 / 0.2228 and dev NLL is 1.0042 / 1.0127 / 1.0228; all selected dev-best checkpoints at epoch 5 (0.9486 / 0.9509 / 0.9504). The existing small generator already overfits this fixed-case problem. Threefold generator growth offers only a small fitting gain and no observed dev improvement in this seed. Test data is unused.
 

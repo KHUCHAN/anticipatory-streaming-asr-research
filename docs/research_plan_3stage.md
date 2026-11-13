@@ -715,3 +715,22 @@ All three met the predeclared rule at epoch 11: five consecutive dev NLL regress
 State CRPS worsens while token NLL improves. Lower token loss therefore does not demonstrate better acoustic-state forecasts. Smoothed CE has a nonzero minimum (about 0.94466 nats here); unsmoothed token NLL and the optimized combined objective are recorded separately. No new WER, inference-acceleration, causal noise-regularization or raw-audio-corrector result is claimed.
 
 Saved best/last checkpoints, full epoch step counts, data-role separation, declared overfit events, added-block training and recorded source/input hashes passed verification. [Full results and curves](fgn_capacity_2026-11-12.md), [protocol](../experiments/fgn_capacity_v1/README.md), and public aggregate evidence in `experiments/fgn_capacity_v1/artifacts/`; local weights/logs in `runs/fgn_capacity_v1/`. Previous experiments remain preserved.
+
+
+## Longer FGN training and settings audit — 2026-11-13 completed
+
+At the user's request, continue each of the three epoch-11 models for 16 additional epochs, through 27, without stopping on overfit observations. Restore both model and AdamW state; all source-checkpoint train/dev NLLs reproduce exactly before updates. Maintain architecture, fixed cases, global epoch seeds, learning rate 3e-5 and CE(smoothing 0.1) + 0.1 state CRPS. The 48 additional epochs took 1.75 hours sequentially on MPS, excluding prior training and feature preparation.
+
+| FGN generator parameters | Train-probe NLL: epoch 11 → 27 | Dev NLL: epoch 11 → 27 | Best dev epoch |
+|---|---:|---:|---:|
+| 6,323,968 | 0.2288 → 0.1313 | 1.0042 → 1.1147 | 5 |
+| 10,535,680 | 0.2269 → 0.1322 | 1.0127 → 1.1269 | 5 |
+| 18,959,104 | 0.2228 → 0.1319 | 1.0228 → 1.1306 | 5 |
+
+Extra epochs substantially improve fitting, but validation NLL and next-token Hit@1 worsen; no model selects a new dev-best checkpoint. Final training-probe NLLs are nearly the same across the three sizes in this seed. Dev state CRPS improves relative to epoch 11 in all three models, but remains above the shared trained epoch-0 function. Do not equate recovery during this extension with a new state-forecasting improvement over the initial function.
+
+The requested settings audit confirms **SiLU**, no FGN ReLU modules, hidden256/FFN1024/four heads, GRU memory256, noise32, two self-generated acoustic forecast steps and two noise branches of the same model. Output is a linear residual. Width and memory stay fixed; this is not a test of every capacity scaling strategy.
+
+The task remains one fixed token/cutoff for each of 28,539 training utterances, with 512-case teacher-forced train/dev probes and one seed. There is no new AR-only/no-noise continuation, test evaluation, final-WER, correction or inference-acceleration result. All 27-epoch histories, final optimizer steps (11,097), settings and original source/input/checkpoint hashes pass verification. Original experiments and best checkpoints remain unchanged in their original namespace.
+
+[Extended report and curves](fgn_capacity_long_2026-11-13.md) · [Protocol](../experiments/fgn_capacity_long_v1/README.md) · [Verified settings](../experiments/fgn_capacity_long_v1/artifacts/settings.json). New checkpoints and raw logs remain local-only in `runs/fgn_capacity_long_v1/`; public aggregates are in `experiments/fgn_capacity_long_v1/artifacts/`.

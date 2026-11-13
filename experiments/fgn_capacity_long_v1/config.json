@@ -1,0 +1,15 @@
+{
+  "experiment": "FGN capacity continuation beyond the earlier overfit stop",
+  "base_experiment": "experiments/fgn_capacity_v1",
+  "base_runs": "runs/fgn_capacity_v1",
+  "output": "runs/fgn_capacity_long_v1",
+  "generator_layers": [4, 8, 16],
+  "resume_epoch": 11,
+  "additional_epochs": 16,
+  "target_epoch": 27,
+  "stop_on_overfit": false,
+  "label_smoothing": 0.1,
+  "crps_weight": 0.1,
+  "test_used": false,
+  "scope": "Continue the same fixed-case AR+FGN hybrids and optimizer states; change only the training endpoint. Preserve original runs and best checkpoints. No residual-corrector, final-WER or inference-acceleration claim."
+}

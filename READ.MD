@@ -1,6 +1,6 @@
 # Repository guide and file map
 
-Snapshot date: 2026-11-12. All public prose is maintained in English.
+Snapshot date: 2026-11-13. All public prose is maintained in English.
 
 The selected goal is to predict an acoustic representation, correct it using newly arrived audio, and avoid sufficiently expensive encoder work at controlled recognition error. Existing display studies are completed; the residual-correction and encoder-skipping architecture is still a proposal.
 
@@ -17,6 +17,7 @@ The selected goal is to predict an acoustic representation, correct it using new
 | [Independent FGN state study](docs/fgn_state_pilot_2026-11-12.md) | Recurrent continuous-state predictor and component ablations |
 | [Compute profile](experiments/compute_profile_v1/README.md) | Reproducible encoder/prediction-network/joiner timing breakdown |
 | [FGN generator capacity diagnosis](docs/fgn_capacity_2026-11-12.md) | Completed 6.32M / 10.54M / 18.96M comparison; all met the overfit rule at epoch 11; no test use |
+| [Longer FGN training](docs/fgn_capacity_long_2026-11-13.md) | Completed epoch 11 → 27 continuation; fitting improves, dev NLL worsens; actual SiLU settings verified |
 | [Implementation review](docs/results_review_2026-11-11.md) | Metric definitions, missing costs and corrected claims |
 | [Four follow-up experiments](docs/followup_experiments_2026-11-11.md) | Real cache release, long streams, seed repetitions and display stabilization |
 | [Public baseline reproduction](docs/baseline_zipformer_2026-11-11.md) | Frozen public 66.11M checkpoint, inference conditions and WER |
@@ -44,6 +45,7 @@ The selected goal is to predict an acoustic representation, correct it using new
 │   ├── fgn_state_pilot_2026-11-12.md
 │   ├── band_fgn_hybrid_2026-11-12.md
 │   ├── fgn_capacity_2026-11-12.md
+│   ├── fgn_capacity_long_2026-11-13.md
 │   ├── librispeech960_benchmark_plan.md
 │   ├── literature_map.md
 │   ├── claim_audit.md
@@ -85,8 +87,10 @@ The selected goal is to predict an acoustic representation, correct it using new
 │   │   └── artifacts/                # Public results, checks and curves
 │   ├── compute_profile_v1/           # Read-only bottleneck measurement
 │   │   └── artifacts/                # Initial and reproduced timings
-│   └── fgn_capacity_v1/              # Actual generator growth / fitting study
-│       └── artifacts/                # Verified curves, completion and provenance
+│   ├── fgn_capacity_v1/              # Actual generator growth / fitting study
+│   │   └── artifacts/                # Verified curves, completion and provenance
+│   └── fgn_capacity_long_v1/         # Extra epochs beyond the original overfit stop
+│       └── artifacts/                # Verified extended curves, settings and completion
 ├── scripts/                          # Preparation, training and analysis
 ├── requirements-baseline.txt
 ├── requirements-zipformer-features.txt
@@ -101,7 +105,7 @@ Directory paths remain compatible with completed experiments. Local-only output 
 ## Status and data boundary
 
 - **Prepared:** initial 33-paper source set, English notes/catalog/BibTeX; LibriSpeech training splits and all four dev/test splits.
-- **Completed:** original AVS studies, follow-up controls, public Zipformer reproduction, actual full/band2 forecaster training, independent FGN and hybrid experiments, the small CPU component profile, and the three-capacity fixed-case FGN fitting diagnosis.
+- **Completed:** original AVS studies, follow-up controls, public Zipformer reproduction, actual full/band2 forecaster training, independent FGN and hybrid experiments, the small CPU component profile, the three-capacity fixed-case fitting diagnosis, and its 48-extra-epoch continuation/settings audit.
 - **Proposed:** audio-conditioned residual correction, conditional encoder execution and cache recovery; new 960h acoustic training; capacity comparisons for the new corrector and broader training-cutoff coverage.
 - **Not established:** lower total inference compute, lower irreversible commit latency, matched-test-risk Pareto superiority, live mobile performance, or a general FGN anti-overfitting effect.
 

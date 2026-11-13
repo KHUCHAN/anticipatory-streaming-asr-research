@@ -1,0 +1,171 @@
+{
+  "scope": "Continue the same fixed-case AR+FGN hybrids and optimizer states; change only the training endpoint. Preserve original runs and best checkpoints. No residual-corrector, final-WER or inference-acceleration claim.",
+  "models": [
+    {
+      "layers": 4,
+      "parameters": 6323968,
+      "completed_epochs": 27,
+      "best_epoch": 5,
+      "best_dev_nll": 0.948581206612289,
+      "last_train_nll": 0.13125947397202253,
+      "last_dev_nll": 1.1147163030691445,
+      "last_train_objective": 1.1448345158773008,
+      "last_dev_objective": 1.9398771477106493,
+      "last_online_objective": 1.1291859988168498,
+      "overfitting": {
+        "detected": true,
+        "best_epoch": 5,
+        "confirmed_epoch": 11,
+        "criterion": "five successive evaluation points: mixed-dev NLL worse by >=0.02 and fixed-train-probe NLL better by >=0.01 relative to dev-optimal epoch",
+        "best_dev_nll": 0.948581206612289,
+        "last_dev_nll": 1.0042473478242755,
+        "train_at_best": 0.3770756870508194,
+        "last_train_nll": 0.22882695496082306
+      }
+    },
+    {
+      "layers": 8,
+      "parameters": 10535680,
+      "completed_epochs": 27,
+      "best_epoch": 5,
+      "best_dev_nll": 0.9508682489395142,
+      "last_train_nll": 0.13215198135003448,
+      "last_dev_nll": 1.1269141770899296,
+      "last_train_objective": 1.1449276338797063,
+      "last_dev_objective": 1.949096229468705,
+      "last_online_objective": 1.1278815263669275,
+      "overfitting": {
+        "detected": true,
+        "best_epoch": 5,
+        "confirmed_epoch": 11,
+        "criterion": "five successive evaluation points: mixed-dev NLL worse by >=0.02 and fixed-train-probe NLL better by >=0.01 relative to dev-optimal epoch",
+        "best_dev_nll": 0.9508682489395142,
+        "last_dev_nll": 1.0127144465222955,
+        "train_at_best": 0.373595729470253,
+        "last_train_nll": 0.22694871574640274
+      }
+    },
+    {
+      "layers": 16,
+      "parameters": 18959104,
+      "completed_epochs": 27,
+      "best_epoch": 5,
+      "best_dev_nll": 0.9504283517599106,
+      "last_train_nll": 0.13189723528921604,
+      "last_dev_nll": 1.130551821552217,
+      "last_train_objective": 1.1447004450194072,
+      "last_dev_objective": 1.951595697971061,
+      "last_online_objective": 1.1276278985967891,
+      "overfitting": {
+        "detected": true,
+        "best_epoch": 5,
+        "confirmed_epoch": 11,
+        "criterion": "five successive evaluation points: mixed-dev NLL worse by >=0.02 and fixed-train-probe NLL better by >=0.01 relative to dev-optimal epoch",
+        "best_dev_nll": 0.9504283517599106,
+        "last_dev_nll": 1.0228119255043566,
+        "train_at_best": 0.37222786992788315,
+        "last_train_nll": 0.22281078808009624
+      }
+    }
+  ],
+  "matched_epoch_comparison": {
+    "epoch": 27,
+    "models": {
+      "4": {
+        "train_nll": 0.13125947397202253,
+        "dev_nll": 1.1147163030691445,
+        "train_objective": 1.1448345158773008,
+        "dev_objective": 1.9398771477106493,
+        "online_objective": 1.1291859988168498
+      },
+      "8": {
+        "train_nll": 0.13215198135003448,
+        "dev_nll": 1.1269141770899296,
+        "train_objective": 1.1449276338797063,
+        "dev_objective": 1.949096229468705,
+        "online_objective": 1.1278815263669275
+      },
+      "16": {
+        "train_nll": 0.13189723528921604,
+        "dev_nll": 1.130551821552217,
+        "train_objective": 1.1447004450194072,
+        "dev_objective": 1.951595697971061,
+        "online_objective": 1.1276278985967891
+      }
+    }
+  },
+  "test_used": false,
+  "status": "completed",
+  "inherited_epochs": [
+    0,
+    11
+  ],
+  "requested_additional_epochs": 16,
+  "target_epoch": 27,
+  "early_stopping_disabled": true,
+  "extension_comparison": [
+    {
+      "layers": 4,
+      "start_epoch": 11,
+      "end_epoch": 27,
+      "initial_train_nll": 0.6730610728263855,
+      "initial_dev_nll": 0.9795733727514744,
+      "initial_train_crps": 0.4888297071447596,
+      "initial_dev_crps": 0.501582017110195,
+      "start_train_nll": 0.22882695496082306,
+      "last_train_nll": 0.13125947397202253,
+      "start_dev_nll": 1.0042473478242755,
+      "last_dev_nll": 1.1147163030691445,
+      "start_train_hit1": 0.96875,
+      "last_train_hit1": 0.984375,
+      "start_dev_hit1": 0.79296875,
+      "last_dev_hit1": 0.779296875,
+      "start_train_crps": 0.512717924779281,
+      "last_train_crps": 0.5051202071481384,
+      "start_dev_crps": 0.5244702760828659,
+      "last_dev_crps": 0.5096081729861908
+    },
+    {
+      "layers": 8,
+      "start_epoch": 11,
+      "end_epoch": 27,
+      "initial_train_nll": 0.6730610728263855,
+      "initial_dev_nll": 0.9795733727514744,
+      "initial_train_crps": 0.4888297071447596,
+      "initial_dev_crps": 0.501582017110195,
+      "start_train_nll": 0.22694871574640274,
+      "last_train_nll": 0.13215198135003448,
+      "start_dev_nll": 1.0127144465222955,
+      "last_dev_nll": 1.1269141770899296,
+      "start_train_hit1": 0.96875,
+      "last_train_hit1": 0.984375,
+      "start_dev_hit1": 0.787109375,
+      "last_dev_hit1": 0.76953125,
+      "start_train_crps": 0.5162706178380176,
+      "last_train_crps": 0.5085264700464904,
+      "start_dev_crps": 0.5273045139620081,
+      "last_dev_crps": 0.5135959440958686
+    },
+    {
+      "layers": 16,
+      "start_epoch": 11,
+      "end_epoch": 27,
+      "initial_train_nll": 0.6730610728263855,
+      "initial_dev_nll": 0.9795733727514744,
+      "initial_train_crps": 0.4888297071447596,
+      "initial_dev_crps": 0.501582017110195,
+      "start_train_nll": 0.22281078808009624,
+      "last_train_nll": 0.13189723528921604,
+      "start_dev_nll": 1.0228119255043566,
+      "last_dev_nll": 1.130551821552217,
+      "start_train_hit1": 0.96875,
+      "last_train_hit1": 0.984375,
+      "start_dev_hit1": 0.783203125,
+      "last_dev_hit1": 0.7734375,
+      "start_train_crps": 0.5207296148873866,
+      "last_train_crps": 0.5109298952738754,
+      "start_dev_crps": 0.5326182181015611,
+      "last_dev_crps": 0.521170258987695
+    }
+  ]
+}
