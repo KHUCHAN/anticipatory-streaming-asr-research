@@ -23,7 +23,34 @@
     },
     {
       "layers": 16,
-      "status": "pending or running; verification deferred"
+      "status": "verified",
+      "epoch": 96,
+      "full_training_milestones_verified": [
+        27,
+        32,
+        48,
+        64,
+        80,
+        96
+      ],
+      "saved_snapshot_epochs": [
+        32,
+        48,
+        64,
+        80,
+        96
+      ],
+      "added_epochs": 69,
+      "generator_parameters": 18959104,
+      "best_epoch": 5,
+      "best_dev_nll": 0.9504283517599106,
+      "original_best_preserved": true,
+      "settings_match_checkpoint_architecture": true,
+      "generator_relu_modules": 0,
+      "resumed_nll_max_difference": 0.0,
+      "final_overfit_rule_met": true,
+      "last_sha256": "95ff2977c9ceeeb78ba782ccf6923aa756cea33dd577078c7ea58f7c305ead41",
+      "best_sha256": "c11d453024a031c33b0c0a09e04b488d38ff1de2bf10b0eff14a95ca7e37f619"
     }
   ],
   "test_used": false

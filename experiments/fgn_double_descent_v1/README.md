@@ -34,3 +34,11 @@ An initial input audit finds 221 cases with identical complete BOS-only prefixes
 ```
 
 The runner also generates final reports and verifies completed checkpoints automatically. Local prerequisite checkpoints and encoder caches come from preceding studies and are not bundled publicly. Raw checkpoints/per-utterance data stay local; public aggregate evidence lives in `artifacts/`.
+
+## Interim status inspection
+
+The [2026-11-13 interim assessment](../../docs/fgn_double_descent_interim_2026-11-13.md) captures the completed 19M epoch-96 run while the smaller models remain incomplete. Its token-risk window means rise while state CRPS recovers; these are separate metric-specific observations. This snapshot does not stop or change the active run.
+
+```bash
+.venv/bin/python experiments/fgn_double_descent_v1/interim.py
+```

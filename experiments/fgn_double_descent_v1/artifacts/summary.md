@@ -8,9 +8,9 @@ Fixed-case fitting diagnostic; no test use. Residual correction/encoder skipping
 
 | FGN blocks | Generator parameters | Epochs | Best epoch | Best dev NLL | Last train-probe NLL | Last dev NLL | Overfit confirmed |
 |---|---:|---:|---:|---:|---:|---:|---|
-| 4 | 6,323,968 | 27 | 5 | 0.9486 | 0.1313 | 1.1147 | Yes |
+| 4 | 6,323,968 | 70 | 5 | 0.9486 | 0.1134 | 1.2910 | Yes |
 | 8 | 10,535,680 | 27 | 5 | 0.9509 | 0.1322 | 1.1269 | Yes |
-| 16 | 18,959,104 | 28 | 5 | 0.9504 | 0.1304 | 1.1525 | Yes |
+| 16 | 18,959,104 | 96 | 5 | 0.9504 | 0.1272 | 1.4575 | Yes |
 
 Matched-epoch comparison at epoch 27:
 

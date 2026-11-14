@@ -1,0 +1,511 @@
+{
+  "status": "interim running-study snapshot",
+  "captured_utc": "2026-11-14T06:55:05.313319+00:00",
+  "runner_last_event": "training",
+  "runner_snapshot_sha256": "dea868e45416e1d057d3a0e6a34ebb1ce004e3483925676d8cf814afce94b2e1",
+  "additional_epochs_completed": 113,
+  "additional_epochs_requested": 207,
+  "models": [
+    {
+      "layers": 4,
+      "completed_epoch": 71,
+      "current_epoch": 72,
+      "last_event": "train",
+      "source_log_snapshot_sha256": "b0bfb1f0cbcbd8c00b56b964133e81e762b5ca2744046002f857851a714605e0",
+      "start_dev_nll": 1.1147163030691445,
+      "last_dev_nll": 1.28439184371382,
+      "last_train_probe_nll": 0.11486665904521942,
+      "last_dev_hit1": 0.763671875,
+      "best_dev_nll": 0.948581206612289,
+      "best_dev_epoch": 5,
+      "state_crps_peak_epoch": 11,
+      "state_crps_peak": 0.5244702760828659,
+      "last_dev_crps": 0.5042467953171581,
+      "predeclared_window_means": [
+        {
+          "epoch_window": [
+            28,
+            40
+          ],
+          "observed_points": 13,
+          "complete": true,
+          "dev_nll_mean": 1.133454688323232,
+          "dev_crps_mean": 0.5061205783008168
+        },
+        {
+          "epoch_window": [
+            48,
+            64
+          ],
+          "observed_points": 17,
+          "complete": true,
+          "dev_nll_mean": 1.2299389271339511,
+          "dev_crps_mean": 0.5042389748885077
+        },
+        {
+          "epoch_window": [
+            80,
+            96
+          ],
+          "observed_points": 0,
+          "complete": false,
+          "dev_nll_mean": null,
+          "dev_crps_mean": null
+        }
+      ],
+      "full_training_milestones": [
+        {
+          "examples": 28539,
+          "errors": 263,
+          "hit1": 0.9907845404534146,
+          "nll": 0.10302335239834322,
+          "ce": 1.0704015277814563,
+          "crps": 0.5010178157875469,
+          "objective": 1.120503309360211,
+          "target_vs_best_other_logp_margin": {
+            "mean": 5.5777106285095215,
+            "minimum": -5.1617536544799805,
+            "p05": 3.693847894668579,
+            "median": 5.674214839935303,
+            "nonpositive_count": 263
+          },
+          "zero_hard_error_in_this_evaluation": false,
+          "noise_seed": 502,
+          "stochastic_branches": 2,
+          "subsets": {
+            "zero_arrived_audio": {
+              "examples": 221,
+              "errors": 193,
+              "nll_sum": 928.5150508880615
+            },
+            "arrived_audio": {
+              "examples": 28318,
+              "errors": 70,
+              "nll_sum": 2011.6683819890022
+            }
+          },
+          "seconds": 42.08643984794617,
+          "interpretation": "Full fixed-case set, evaluation mode, one deterministic noise-seeded two-branch pass. This does not establish correct predictions for every noise draw or an interpolation threshold.",
+          "epoch": 27,
+          "generator_layers": 4
+        },
+        {
+          "examples": 28539,
+          "errors": 255,
+          "hit1": 0.9910648586145275,
+          "nll": 0.09841706986358636,
+          "ce": 1.0621283882831098,
+          "crps": 0.4988158675732829,
+          "objective": 1.1120099750404382,
+          "target_vs_best_other_logp_margin": {
+            "mean": 5.728173732757568,
+            "minimum": -4.7252984046936035,
+            "p05": 3.980914831161499,
+            "median": 5.806568145751953,
+            "nonpositive_count": 255
+          },
+          "zero_hard_error_in_this_evaluation": false,
+          "noise_seed": 502,
+          "stochastic_branches": 2,
+          "subsets": {
+            "zero_arrived_audio": {
+              "examples": 221,
+              "errors": 193,
+              "nll_sum": 930.64382147789
+            },
+            "arrived_audio": {
+              "examples": 28318,
+              "errors": 62,
+              "nll_sum": 1878.0809384584427
+            }
+          },
+          "seconds": 42.53896403312683,
+          "interpretation": "Full fixed-case set, evaluation mode, one deterministic noise-seeded two-branch pass. This does not establish correct predictions for every noise draw or an interpolation threshold.",
+          "epoch": 32,
+          "generator_layers": 4
+        },
+        {
+          "examples": 28539,
+          "errors": 233,
+          "hit1": 0.9918357335575878,
+          "nll": 0.09419749308502946,
+          "ce": 1.0438836334740724,
+          "crps": 0.49359756268091226,
+          "objective": 1.0932433897421636,
+          "target_vs_best_other_logp_margin": {
+            "mean": 6.0610456466674805,
+            "minimum": -4.979145050048828,
+            "p05": 4.605527400970459,
+            "median": 6.130220890045166,
+            "nonpositive_count": 233
+          },
+          "zero_hard_error_in_this_evaluation": false,
+          "noise_seed": 502,
+          "stochastic_branches": 2,
+          "subsets": {
+            "zero_arrived_audio": {
+              "examples": 221,
+              "errors": 193,
+              "nll_sum": 938.8303762674332
+            },
+            "arrived_audio": {
+              "examples": 28318,
+              "errors": 40,
+              "nll_sum": 1749.4718747138977
+            }
+          },
+          "seconds": 42.159322023391724,
+          "interpretation": "Full fixed-case set, evaluation mode, one deterministic noise-seeded two-branch pass. This does not establish correct predictions for every noise draw or an interpolation threshold.",
+          "epoch": 48,
+          "generator_layers": 4
+        },
+        {
+          "examples": 28539,
+          "errors": 229,
+          "hit1": 0.9919758926381443,
+          "nll": 0.09209640446556003,
+          "ce": 1.0328831599319177,
+          "crps": 0.49011457958035637,
+          "objective": 1.0818946178899533,
+          "target_vs_best_other_logp_margin": {
+            "mean": 6.325705528259277,
+            "minimum": -4.809170246124268,
+            "p05": 5.012997627258301,
+            "median": 6.386200428009033,
+            "nonpositive_count": 229
+          },
+          "zero_hard_error_in_this_evaluation": false,
+          "noise_seed": 502,
+          "stochastic_branches": 2,
+          "subsets": {
+            "zero_arrived_audio": {
+              "examples": 221,
+              "errors": 193,
+              "nll_sum": 943.7412600517273
+            },
+            "arrived_audio": {
+              "examples": 28318,
+              "errors": 36,
+              "nll_sum": 1684.5980241298676
+            }
+          },
+          "seconds": 39.16659379005432,
+          "interpretation": "Full fixed-case set, evaluation mode, one deterministic noise-seeded two-branch pass. This does not establish correct predictions for every noise draw or an interpolation threshold.",
+          "epoch": 64,
+          "generator_layers": 4
+        }
+      ]
+    },
+    {
+      "layers": 8,
+      "completed_epoch": 27,
+      "current_epoch": null,
+      "last_event": "continuation_complete",
+      "source_log_snapshot_sha256": "38515528baaf6990fe73a5ba08c8f1611276ca6d5369073298e7227deaf0b3c2",
+      "start_dev_nll": 1.1269141770899296,
+      "last_dev_nll": 1.1269141770899296,
+      "last_train_probe_nll": 0.13215198135003448,
+      "last_dev_hit1": 0.76953125,
+      "best_dev_nll": 0.9508682489395142,
+      "best_dev_epoch": 5,
+      "state_crps_peak_epoch": 11,
+      "state_crps_peak": 0.5273045139620081,
+      "last_dev_crps": 0.5135959440958686,
+      "predeclared_window_means": [
+        {
+          "epoch_window": [
+            28,
+            40
+          ],
+          "observed_points": 0,
+          "complete": false,
+          "dev_nll_mean": null,
+          "dev_crps_mean": null
+        },
+        {
+          "epoch_window": [
+            48,
+            64
+          ],
+          "observed_points": 0,
+          "complete": false,
+          "dev_nll_mean": null,
+          "dev_crps_mean": null
+        },
+        {
+          "epoch_window": [
+            80,
+            96
+          ],
+          "observed_points": 0,
+          "complete": false,
+          "dev_nll_mean": null,
+          "dev_crps_mean": null
+        }
+      ],
+      "full_training_milestones": []
+    },
+    {
+      "layers": 16,
+      "completed_epoch": 96,
+      "current_epoch": null,
+      "last_event": "continuation_complete",
+      "source_log_snapshot_sha256": "52bffaef4d3363c5fdaf5f1bf0117739f357e684fd986522660531960cb83c22",
+      "start_dev_nll": 1.130551821552217,
+      "last_dev_nll": 1.4575079060159624,
+      "last_train_probe_nll": 0.12724110623821616,
+      "last_dev_hit1": 0.744140625,
+      "best_dev_nll": 0.9504283517599106,
+      "best_dev_epoch": 5,
+      "state_crps_peak_epoch": 14,
+      "state_crps_peak": 0.5328525748918764,
+      "last_dev_crps": 0.5080260010436177,
+      "predeclared_window_means": [
+        {
+          "epoch_window": [
+            28,
+            40
+          ],
+          "observed_points": 13,
+          "complete": true,
+          "dev_nll_mean": 1.1692443420537388,
+          "dev_crps_mean": 0.516678912135271
+        },
+        {
+          "epoch_window": [
+            48,
+            64
+          ],
+          "observed_points": 17,
+          "complete": true,
+          "dev_nll_mean": 1.2790814461460447,
+          "dev_crps_mean": 0.5137797666384893
+        },
+        {
+          "epoch_window": [
+            80,
+            96
+          ],
+          "observed_points": 17,
+          "complete": true,
+          "dev_nll_mean": 1.4248198538963848,
+          "dev_crps_mean": 0.5086230689296772
+        }
+      ],
+      "full_training_milestones": [
+        {
+          "examples": 28539,
+          "errors": 261,
+          "hit1": 0.9908546199936928,
+          "nll": 0.10243553127252193,
+          "ce": 1.0685900245703128,
+          "crps": 0.5068718490113039,
+          "objective": 1.1192772094714434,
+          "target_vs_best_other_logp_margin": {
+            "mean": 5.610776424407959,
+            "minimum": -5.126961708068848,
+            "p05": 3.762434959411621,
+            "median": 5.707778453826904,
+            "nonpositive_count": 261
+          },
+          "zero_hard_error_in_this_evaluation": false,
+          "noise_seed": 502,
+          "stochastic_branches": 2,
+          "subsets": {
+            "zero_arrived_audio": {
+              "examples": 221,
+              "errors": 193,
+              "nll_sum": 928.3509871959686
+            },
+            "arrived_audio": {
+              "examples": 28318,
+              "errors": 68,
+              "nll_sum": 1995.056651711464
+            }
+          },
+          "seconds": 57.65340304374695,
+          "interpretation": "Full fixed-case set, evaluation mode, one deterministic noise-seeded two-branch pass. This does not establish correct predictions for every noise draw or an interpolation threshold.",
+          "epoch": 27,
+          "generator_layers": 16
+        },
+        {
+          "examples": 28539,
+          "errors": 248,
+          "hit1": 0.9913101370055012,
+          "nll": 0.09803745508853946,
+          "ce": 1.0607830540701721,
+          "crps": 0.5035175421373784,
+          "objective": 1.1111348082839099,
+          "target_vs_best_other_logp_margin": {
+            "mean": 5.766757965087891,
+            "minimum": -4.554260730743408,
+            "p05": 4.043198585510254,
+            "median": 5.835071563720703,
+            "nonpositive_count": 248
+          },
+          "zero_hard_error_in_this_evaluation": false,
+          "noise_seed": 502,
+          "stochastic_branches": 2,
+          "subsets": {
+            "zero_arrived_audio": {
+              "examples": 221,
+              "errors": 193,
+              "nll_sum": 930.4223973751068
+            },
+            "arrived_audio": {
+              "examples": 28318,
+              "errors": 55,
+              "nll_sum": 1867.4685472249985
+            }
+          },
+          "seconds": 60.82517695426941,
+          "interpretation": "Full fixed-case set, evaluation mode, one deterministic noise-seeded two-branch pass. This does not establish correct predictions for every noise draw or an interpolation threshold.",
+          "epoch": 32,
+          "generator_layers": 16
+        },
+        {
+          "examples": 28539,
+          "errors": 236,
+          "hit1": 0.9917306142471706,
+          "nll": 0.09471931356100366,
+          "ce": 1.0421335072702689,
+          "crps": 0.4963108736319024,
+          "objective": 1.0917645946334593,
+          "target_vs_best_other_logp_margin": {
+            "mean": 6.108293533325195,
+            "minimum": -4.883560657501221,
+            "p05": 4.6603899002075195,
+            "median": 6.177664279937744,
+            "nonpositive_count": 236
+          },
+          "zero_hard_error_in_this_evaluation": false,
+          "noise_seed": 502,
+          "stochastic_branches": 2,
+          "subsets": {
+            "zero_arrived_audio": {
+              "examples": 221,
+              "errors": 193,
+              "nll_sum": 938.9167943000793
+            },
+            "arrived_audio": {
+              "examples": 28318,
+              "errors": 43,
+              "nll_sum": 1764.2777042388916
+            }
+          },
+          "seconds": 56.81659412384033,
+          "interpretation": "Full fixed-case set, evaluation mode, one deterministic noise-seeded two-branch pass. This does not establish correct predictions for every noise draw or an interpolation threshold.",
+          "epoch": 48,
+          "generator_layers": 16
+        },
+        {
+          "examples": 28539,
+          "errors": 228,
+          "hit1": 0.9920109324082834,
+          "nll": 0.09333134434344226,
+          "ce": 1.029921600415046,
+          "crps": 0.4917283452638184,
+          "objective": 1.0790944349414278,
+          "target_vs_best_other_logp_margin": {
+            "mean": 6.391733169555664,
+            "minimum": -4.327122211456299,
+            "p05": 5.111696243286133,
+            "median": 6.458537578582764,
+            "nonpositive_count": 228
+          },
+          "zero_hard_error_in_this_evaluation": false,
+          "noise_seed": 502,
+          "stochastic_branches": 2,
+          "subsets": {
+            "zero_arrived_audio": {
+              "examples": 221,
+              "errors": 193,
+              "nll_sum": 943.9390246868134
+            },
+            "arrived_audio": {
+              "examples": 28318,
+              "errors": 35,
+              "nll_sum": 1719.6442155838013
+            }
+          },
+          "seconds": 54.979625940322876,
+          "interpretation": "Full fixed-case set, evaluation mode, one deterministic noise-seeded two-branch pass. This does not establish correct predictions for every noise draw or an interpolation threshold.",
+          "epoch": 64,
+          "generator_layers": 16
+        },
+        {
+          "examples": 28539,
+          "errors": 220,
+          "hit1": 0.9922912505693963,
+          "nll": 0.09298644567439031,
+          "ce": 1.020896684856529,
+          "crps": 0.4884855832925854,
+          "objective": 1.0697452431857877,
+          "target_vs_best_other_logp_margin": {
+            "mean": 6.60734224319458,
+            "minimum": -4.654201984405518,
+            "p05": 5.456910133361816,
+            "median": 6.671140670776367,
+            "nonpositive_count": 220
+          },
+          "zero_hard_error_in_this_evaluation": false,
+          "noise_seed": 502,
+          "stochastic_branches": 2,
+          "subsets": {
+            "zero_arrived_audio": {
+              "examples": 221,
+              "errors": 193,
+              "nll_sum": 943.7998404502869
+            },
+            "arrived_audio": {
+              "examples": 28318,
+              "errors": 27,
+              "nll_sum": 1709.940325498581
+            }
+          },
+          "seconds": 55.01474380493164,
+          "interpretation": "Full fixed-case set, evaluation mode, one deterministic noise-seeded two-branch pass. This does not establish correct predictions for every noise draw or an interpolation threshold.",
+          "epoch": 80,
+          "generator_layers": 16
+        },
+        {
+          "examples": 28539,
+          "errors": 217,
+          "hit1": 0.9923963698798136,
+          "nll": 0.09283692598083917,
+          "ce": 1.0154941079912199,
+          "crps": 0.4850240877343484,
+          "objective": 1.0639965167646548,
+          "target_vs_best_other_logp_margin": {
+            "mean": 6.814798831939697,
+            "minimum": -5.000263214111328,
+            "p05": 5.774963855743408,
+            "median": 6.886076927185059,
+            "nonpositive_count": 217
+          },
+          "zero_hard_error_in_this_evaluation": false,
+          "noise_seed": 502,
+          "stochastic_branches": 2,
+          "subsets": {
+            "zero_arrived_audio": {
+              "examples": 221,
+              "errors": 193,
+              "nll_sum": 945.2373089790344
+            },
+            "arrived_audio": {
+              "examples": 28318,
+              "errors": 24,
+              "nll_sum": 1704.2357213497162
+            }
+          },
+          "seconds": 56.19408082962036,
+          "interpretation": "Full fixed-case set, evaluation mode, one deterministic noise-seeded two-branch pass. This does not establish correct predictions for every noise draw or an interpolation threshold.",
+          "epoch": 96,
+          "generator_layers": 16
+        }
+      ]
+    }
+  ],
+  "test_used": false,
+  "interpretation": "Token NLL and state CRPS are distinct objectives. Window means are descriptive, not significance tests. Component recovery does not identify an interpolation-driven double-descent mechanism. Other models remain incomplete; no universal presence or absence conclusion."
+}
