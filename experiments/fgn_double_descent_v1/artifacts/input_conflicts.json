@@ -1,0 +1,11 @@
+{
+  "training_cases": 28539,
+  "zero_audio_cases": 221,
+  "distinct_complete_prefix_groups": 1,
+  "conflicting_groups": 1,
+  "conservative_expected_hard_error_count_lower_bound_from_zero_audio_groups": 193,
+  "conservative_expected_hard_error_rate_lower_bound": 0.006762675636847822,
+  "conservative_expected_nll_lower_bound": 0.030191638558483818,
+  "scope": "Exact complete reference prefixes with zero arrived audio and identical zero state/memory. Fresh functional noise independent of targets; bounds apply to expected empirical risk over fresh noise, not every finite fixed-noise evaluation. Grouping by complete prefixes is conservative for a shorter effective context. No per-utterance data or targets are exported.",
+  "test_used": false
+}

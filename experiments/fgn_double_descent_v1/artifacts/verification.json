@@ -1,0 +1,30 @@
+{
+  "captured_sources_and_inputs_unchanged": true,
+  "original_runs_unchanged": true,
+  "data_audit": {
+    "train_utterances": 28539,
+    "each_utterance_once_per_epoch": true,
+    "fixed_cases_per_utterance": 1,
+    "train_probe_utterances": 512,
+    "dev_split_counts": {
+      "dev-clean": 250,
+      "dev-other": 262
+    },
+    "test_used": false
+  },
+  "models": [
+    {
+      "layers": 4,
+      "status": "pending or running; verification deferred"
+    },
+    {
+      "layers": 8,
+      "status": "pending or running; verification deferred"
+    },
+    {
+      "layers": 16,
+      "status": "pending or running; verification deferred"
+    }
+  ],
+  "test_used": false
+}

@@ -1,0 +1,20 @@
+{
+  "experiment": "FGN epoch-wise double-descent investigation",
+  "base_experiment": "experiments/fgn_capacity_v1",
+  "base_runs": "runs/fgn_capacity_long_v1",
+  "output": "runs/fgn_double_descent_v1",
+  "generator_layers": [4, 8, 16],
+  "execution_order": [16, 4, 8],
+  "resume_epoch": 27,
+  "additional_epochs": 69,
+  "target_epoch": 96,
+  "stop_on_overfit": false,
+  "label_smoothing": 0.1,
+  "crps_weight": 0.1,
+  "full_train_evaluation_epochs": [27, 32, 48, 64, 80, 96],
+  "snapshot_epochs": [32, 48, 64, 80, 96],
+  "late_curve_windows": [[28, 40], [48, 64], [80, 96]],
+  "test_used": false,
+  "seed_count": 1,
+  "scope": "Epoch-wise recovery under unchanged fixed-case hybrid training; not a complete model-size interpolation sweep, independent replication, final-WER study or compute-acceleration validation."
+}

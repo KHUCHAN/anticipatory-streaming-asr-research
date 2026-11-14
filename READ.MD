@@ -19,6 +19,7 @@ The selected goal is to predict an acoustic representation, correct it using new
 | [FGN generator capacity diagnosis](docs/fgn_capacity_2026-11-12.md) | Completed 6.32M / 10.54M / 18.96M comparison; all met the overfit rule at epoch 11; no test use |
 | [Longer FGN training](docs/fgn_capacity_long_2026-11-13.md) | Completed epoch 11 → 27 continuation; fitting improves, dev NLL worsens; actual SiLU settings verified |
 | [Double-descent review](docs/double_descent_review_2026-11-13.md) | Post-hoc token/state curve audit, finite-range limits and proposed follow-ups; no new training |
+| [Epoch-wise double-descent experiment](experiments/fgn_double_descent_v1/README.md) | Running: epoch 27 → 96, fixed settings, whole-training hard errors/margins; no early stopping |
 | [Implementation review](docs/results_review_2026-11-11.md) | Metric definitions, missing costs and corrected claims |
 | [Four follow-up experiments](docs/followup_experiments_2026-11-11.md) | Real cache release, long streams, seed repetitions and display stabilization |
 | [Public baseline reproduction](docs/baseline_zipformer_2026-11-11.md) | Frozen public 66.11M checkpoint, inference conditions and WER |
@@ -91,8 +92,10 @@ The selected goal is to predict an acoustic representation, correct it using new
 │   │   └── artifacts/                # Initial and reproduced timings
 │   ├── fgn_capacity_v1/              # Actual generator growth / fitting study
 │   │   └── artifacts/                # Verified curves, completion and provenance
-│   └── fgn_capacity_long_v1/         # Extra epochs beyond the original overfit stop
-│       └── artifacts/                # Verified extended curves, settings and completion
+│   ├── fgn_capacity_long_v1/         # Extra epochs beyond the original overfit stop
+│   │   └── artifacts/                # Verified extended curves, settings and completion
+│   └── fgn_double_descent_v1/        # Declared epoch-96 investigation
+│       └── artifacts/                # Current curves, input audit and protocol provenance
 ├── scripts/                          # Preparation, training and analysis
 ├── requirements-baseline.txt
 ├── requirements-zipformer-features.txt

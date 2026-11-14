@@ -1,0 +1,246 @@
+{
+  "scope": "Epoch-wise recovery under unchanged fixed-case hybrid training; not a complete model-size interpolation sweep, independent replication, final-WER study or compute-acceleration validation.",
+  "models": [
+    {
+      "layers": 4,
+      "parameters": 6323968,
+      "completed_epochs": 27,
+      "best_epoch": 5,
+      "best_dev_nll": 0.948581206612289,
+      "last_train_nll": 0.13125947397202253,
+      "last_dev_nll": 1.1147163030691445,
+      "last_train_objective": 1.1448345158773008,
+      "last_dev_objective": 1.9398771477106493,
+      "last_online_objective": 1.1291859988168498,
+      "overfitting": {
+        "detected": true,
+        "best_epoch": 5,
+        "confirmed_epoch": 11,
+        "criterion": "five successive evaluation points: mixed-dev NLL worse by >=0.02 and fixed-train-probe NLL better by >=0.01 relative to dev-optimal epoch",
+        "best_dev_nll": 0.948581206612289,
+        "last_dev_nll": 1.0042473478242755,
+        "train_at_best": 0.3770756870508194,
+        "last_train_nll": 0.22882695496082306
+      }
+    },
+    {
+      "layers": 8,
+      "parameters": 10535680,
+      "completed_epochs": 27,
+      "best_epoch": 5,
+      "best_dev_nll": 0.9508682489395142,
+      "last_train_nll": 0.13215198135003448,
+      "last_dev_nll": 1.1269141770899296,
+      "last_train_objective": 1.1449276338797063,
+      "last_dev_objective": 1.949096229468705,
+      "last_online_objective": 1.1278815263669275,
+      "overfitting": {
+        "detected": true,
+        "best_epoch": 5,
+        "confirmed_epoch": 11,
+        "criterion": "five successive evaluation points: mixed-dev NLL worse by >=0.02 and fixed-train-probe NLL better by >=0.01 relative to dev-optimal epoch",
+        "best_dev_nll": 0.9508682489395142,
+        "last_dev_nll": 1.0127144465222955,
+        "train_at_best": 0.373595729470253,
+        "last_train_nll": 0.22694871574640274
+      }
+    },
+    {
+      "layers": 16,
+      "parameters": 18959104,
+      "completed_epochs": 28,
+      "best_epoch": 5,
+      "best_dev_nll": 0.9504283517599106,
+      "last_train_nll": 0.1304117999970913,
+      "last_dev_nll": 1.152538338676095,
+      "last_train_objective": 1.1401685331191402,
+      "last_dev_objective": 1.9672961649659555,
+      "last_online_objective": 1.123732802061559,
+      "overfitting": {
+        "detected": true,
+        "best_epoch": 5,
+        "confirmed_epoch": 11,
+        "criterion": "five successive evaluation points: mixed-dev NLL worse by >=0.02 and fixed-train-probe NLL better by >=0.01 relative to dev-optimal epoch",
+        "best_dev_nll": 0.9504283517599106,
+        "last_dev_nll": 1.0228119255043566,
+        "train_at_best": 0.37222786992788315,
+        "last_train_nll": 0.22281078808009624
+      }
+    }
+  ],
+  "matched_epoch_comparison": {
+    "epoch": 27,
+    "models": {
+      "4": {
+        "train_nll": 0.13125947397202253,
+        "dev_nll": 1.1147163030691445,
+        "train_objective": 1.1448345158773008,
+        "dev_objective": 1.9398771477106493,
+        "online_objective": 1.1291859988168498
+      },
+      "8": {
+        "train_nll": 0.13215198135003448,
+        "dev_nll": 1.1269141770899296,
+        "train_objective": 1.1449276338797063,
+        "dev_objective": 1.949096229468705,
+        "online_objective": 1.1278815263669275
+      },
+      "16": {
+        "train_nll": 0.13189723528921604,
+        "dev_nll": 1.130551821552217,
+        "train_objective": 1.1447004450194072,
+        "dev_objective": 1.951595697971061,
+        "online_objective": 1.1276278985967891
+      }
+    }
+  },
+  "test_used": false,
+  "status": "in progress",
+  "inherited_epoch_window": [
+    0,
+    27
+  ],
+  "new_epoch_window": [
+    28,
+    96
+  ],
+  "full_training_measurements": {
+    "4": [],
+    "8": [],
+    "16": [
+      {
+        "examples": 28539,
+        "errors": 261,
+        "hit1": 0.9908546199936928,
+        "nll": 0.10243553127252193,
+        "ce": 1.0685900245703128,
+        "crps": 0.5068718490113039,
+        "objective": 1.1192772094714434,
+        "target_vs_best_other_logp_margin": {
+          "mean": 5.610776424407959,
+          "minimum": -5.126961708068848,
+          "p05": 3.762434959411621,
+          "median": 5.707778453826904,
+          "nonpositive_count": 261
+        },
+        "zero_hard_error_in_this_evaluation": false,
+        "noise_seed": 502,
+        "stochastic_branches": 2,
+        "subsets": {
+          "zero_arrived_audio": {
+            "examples": 221,
+            "errors": 193,
+            "nll_sum": 928.3509871959686
+          },
+          "arrived_audio": {
+            "examples": 28318,
+            "errors": 68,
+            "nll_sum": 1995.056651711464
+          }
+        },
+        "seconds": 57.65340304374695,
+        "interpretation": "Full fixed-case set, evaluation mode, one deterministic noise-seeded two-branch pass. This does not establish correct predictions for every noise draw or an interpolation threshold.",
+        "epoch": 27,
+        "generator_layers": 16
+      }
+    ]
+  },
+  "predeclared_window_means": {
+    "4": [
+      {
+        "epoch_window": [
+          28,
+          40
+        ],
+        "observed_points": 0,
+        "complete": false,
+        "dev_nll_mean": null,
+        "dev_crps_mean": null
+      },
+      {
+        "epoch_window": [
+          48,
+          64
+        ],
+        "observed_points": 0,
+        "complete": false,
+        "dev_nll_mean": null,
+        "dev_crps_mean": null
+      },
+      {
+        "epoch_window": [
+          80,
+          96
+        ],
+        "observed_points": 0,
+        "complete": false,
+        "dev_nll_mean": null,
+        "dev_crps_mean": null
+      }
+    ],
+    "8": [
+      {
+        "epoch_window": [
+          28,
+          40
+        ],
+        "observed_points": 0,
+        "complete": false,
+        "dev_nll_mean": null,
+        "dev_crps_mean": null
+      },
+      {
+        "epoch_window": [
+          48,
+          64
+        ],
+        "observed_points": 0,
+        "complete": false,
+        "dev_nll_mean": null,
+        "dev_crps_mean": null
+      },
+      {
+        "epoch_window": [
+          80,
+          96
+        ],
+        "observed_points": 0,
+        "complete": false,
+        "dev_nll_mean": null,
+        "dev_crps_mean": null
+      }
+    ],
+    "16": [
+      {
+        "epoch_window": [
+          28,
+          40
+        ],
+        "observed_points": 1,
+        "complete": false,
+        "dev_nll_mean": 1.152538338676095,
+        "dev_crps_mean": 0.5197215687367134
+      },
+      {
+        "epoch_window": [
+          48,
+          64
+        ],
+        "observed_points": 0,
+        "complete": false,
+        "dev_nll_mean": null,
+        "dev_crps_mean": null
+      },
+      {
+        "epoch_window": [
+          80,
+          96
+        ],
+        "observed_points": 0,
+        "complete": false,
+        "dev_nll_mean": null,
+        "dev_crps_mean": null
+      }
+    ]
+  }
+}

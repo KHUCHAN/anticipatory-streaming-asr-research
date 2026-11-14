@@ -6,6 +6,8 @@ Research on predicting acoustic representations, correcting them with newly arri
 
 Start with the [predict–correct acceleration plan](docs/predict_correct_acceleration_plan_2026-11-12.md), [current conclusions](docs/conclusion_and_next_steps.md), and [repository map](READ.MD).
 
+**Epoch-wise double-descent experiment running:** the [declared long-horizon protocol](experiments/fgn_double_descent_v1/README.md) continues all three epoch-27 models through 96 without early stopping. It adds full-training hard-error/margin checks and preserved milestone checkpoints. No late-recovery result is claimed yet; this is not a broad model-wise size sweep.
+
 **Longer training completed:** [16 extra epochs per generator](docs/fgn_capacity_long_2026-11-13.md) brought all three models to epoch 27. Train-probe NLL fell to 0.1313 / 0.1322 / 0.1319, while dev NLL rose to 1.1147 / 1.1269 / 1.1306; all best-dev checkpoints remain at epoch 5. Added epochs improve fitting without a validation benefit in this fixed-case, single-seed task. Actual checkpoint settings confirm SiLU, no FGN ReLU modules, and fixed 256-dimensional hidden/memory sizes. Original results and checkpoints are preserved.
 
 The [double-descent review](docs/double_descent_review_2026-11-13.md) limits that conclusion to the measured range. Later recovery and other size regimes are not excluded. State CRPS already shows late recovery; no new training was run for this descriptive audit.

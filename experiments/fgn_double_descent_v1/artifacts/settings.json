@@ -1,0 +1,44 @@
+{
+  "generator": {
+    "hidden_dim": 256,
+    "ff_dim": 1024,
+    "heads": 4,
+    "memory_dim": 256,
+    "noise_dim": 32,
+    "state_frames": 8,
+    "state_features": 512,
+    "layers": [
+      4,
+      8,
+      16
+    ],
+    "activation": "SiLU",
+    "attention_dropout": 0.0,
+    "memory": "single-layer GRU",
+    "output": "linear residual on current acoustic state; no terminal ReLU",
+    "noise_rule": "new noise each forecast step, shared across all frame positions and conditional-normalization layers within that step",
+    "forecast_horizon": 2,
+    "training_branches": 2
+  },
+  "ar": {
+    "layers": 4,
+    "ff_activation": "SiLU"
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "learning_rate": 3e-05,
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "weight_decay": 0.01,
+    "gradient_clip": 5.0
+  },
+  "loss": {
+    "token": "branch-mean cross entropy",
+    "label_smoothing": 0.1,
+    "state": "two-member fair CRPS",
+    "state_weight": 0.1
+  },
+  "scope": "Actual hybrid continuation settings. Training optimizer/loss use the outer capacity config; older state.cfg training fields are inherited metadata, not the current training recipe."
+}
