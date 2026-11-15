@@ -1,0 +1,36 @@
+{
+  "models": [
+    {
+      "variant": "A",
+      "streaming_audio_max_difference": 0.0,
+      "sequence_vs_stream_recurrence_max_difference": 2.980232238769531e-07,
+      "future_audio_max_difference": 0.0,
+      "retained_state_is_own_corrected_output": true,
+      "trainable_parameters": 745600,
+      "total_parameters": 745600
+    },
+    {
+      "variant": "B",
+      "streaming_audio_max_difference": 0.0,
+      "sequence_vs_stream_recurrence_max_difference": 3.0547380447387695e-07,
+      "future_audio_max_difference": 0.0,
+      "retained_state_is_own_corrected_output": true,
+      "trainable_parameters": 811136,
+      "total_parameters": 7135104
+    },
+    {
+      "variant": "C",
+      "streaming_audio_max_difference": 0.0,
+      "sequence_vs_stream_recurrence_max_difference": 2.980232238769531e-07,
+      "future_audio_max_difference": 0.0,
+      "retained_state_is_own_corrected_output": true,
+      "trainable_parameters": 811136,
+      "total_parameters": 811136
+    }
+  ],
+  "initial_audio_head_functions_identical": true,
+  "common_head_and_prior_adapter_gradients_nonzero": true,
+  "frozen_predictor_gradients_absent": true,
+  "training_cutoffs_change_each_epoch": true,
+  "test_used": false
+}

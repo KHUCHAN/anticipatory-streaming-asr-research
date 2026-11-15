@@ -1,0 +1,12 @@
+{
+  "captured_unix": 1794720069.016695,
+  "sha256": {
+    "configs/zipformer_baseline.json": "78dd5f8e817ea2d3baa537234743c26a97d2ac7da2ec1fabe21e9f8c7764d0f5",
+    "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-2023-06-26/bpe.model": "c53433de083c4a6ad12d034550ef22de68cec62c4f58932a7b6b8b2f1e743fa5",
+    "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-2023-06-26/encoder-epoch-99-avg-1-chunk-16-left-128.onnx": "d1d74ba2fd9ce2186662cec93eab9f9c102d97a18e86dafdaf584776c961ab1d",
+    "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-2023-06-26/decoder-epoch-99-avg-1-chunk-16-left-128.onnx": "85914f840b71110487ece7a30ebd0bd4b8fb5c2623215bba3aa5ab4c138fc591",
+    "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-2023-06-26/joiner-epoch-99-avg-1-chunk-16-left-128.onnx": "5fe99bb91ea035ab82765f65955b6a9cd2f8b7ebd320761e432d16e432dcaad9"
+  },
+  "phase": "Before final evaluation; baseline files unchanged by the pilot.",
+  "test_used": false
+}

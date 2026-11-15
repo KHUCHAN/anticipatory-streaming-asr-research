@@ -1,0 +1,18 @@
+{
+  "event": "reporting_recovery",
+  "reason": "Convert NumPy aggregate scalars to JSON-native values after all timed decodes completed.",
+  "frozen_evaluation_source_unchanged": true,
+  "raw_records_unchanged": true,
+  "inference_rerun": false,
+  "serializer_sha256": "c2b900a489505ff1a2cc919e2fd4d3b8c82d6f44cbb414f24624eaa46552761a",
+  "raw_record_sha256": {
+    "evaluation/full_encoder_repeat0.json": "8960b8f6fb9cedc9b1690fa1eab4bd400532e0cdfab6c3431441ee3ac07b7ba8",
+    "evaluation/full_encoder_repeat1.json": "f06a402d5f930db3953a4692e697dc7b042392ad085c8308cf8a60eacb95849c",
+    "evaluation/A_repeat0.json": "6df2f980b53f673daa8c92ec762f6a6ff6f9659c3e8e65a61afc5d02f59a0350",
+    "evaluation/A_repeat1.json": "f192576a5927182bb8e3a9fcc52a285eda6f113e24fe9afcaeae4624509f01ed",
+    "evaluation/B_repeat0.json": "39aae3a03d337ea418fc3e920a376b47bcdc5e89958e1c9bbcf8df3c151e409b",
+    "evaluation/B_repeat1.json": "bf050ba51740e340accea4c8df3e8b2f2b13a451955624980f42feda58ad51fb",
+    "evaluation/C_repeat0.json": "97e2e69de502fc6ba9f77c3f06c5ce3396137988d2802bea737989488b26980e",
+    "evaluation/C_repeat1.json": "c2a665b88a4a9fd93479122c0fcf93d72ab922e210dad50ba5b92b5be3696da2"
+  }
+}

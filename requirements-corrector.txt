@@ -1,0 +1,4 @@
+-r requirements-forecaster.txt
+onnxruntime==1.31.1
+kaldi-native-fbank==1.23.0
+soundfile==0.14.0

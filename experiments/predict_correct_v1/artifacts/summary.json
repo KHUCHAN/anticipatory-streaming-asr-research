@@ -1,0 +1,1189 @@
+{
+  "status": "completed",
+  "completed_epochs": {
+    "A": 16,
+    "B": 16,
+    "C": 16
+  },
+  "epoch_history": {
+    "A": [
+      {
+        "event": "eval",
+        "epoch": 1,
+        "step": 446,
+        "train_loss": 9.184516285567005,
+        "validation": {
+          "loss": 8.170898914337158,
+          "mae": 0.8861075341701508,
+          "kl": 7.2847912311553955
+        },
+        "selection_wer": {
+          "wer_percent": 96.03143418467583,
+          "errors": 2444,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 91.55072212219238
+      },
+      {
+        "event": "eval",
+        "epoch": 2,
+        "step": 892,
+        "train_loss": 7.075832684478418,
+        "validation": {
+          "loss": 7.048406600952148,
+          "mae": 0.9003043174743652,
+          "kl": 6.148102283477783
+        },
+        "selection_wer": {
+          "wer_percent": 91.39489194499018,
+          "errors": 2326,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 87.23414826393127
+      },
+      {
+        "event": "eval",
+        "epoch": 3,
+        "step": 1338,
+        "train_loss": 6.149250212271652,
+        "validation": {
+          "loss": 6.463688135147095,
+          "mae": 0.8918009400367737,
+          "kl": 5.571887254714966
+        },
+        "selection_wer": {
+          "wer_percent": 88.91944990176817,
+          "errors": 2263,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 84.3059778213501
+      },
+      {
+        "event": "eval",
+        "epoch": 4,
+        "step": 1784,
+        "train_loss": 5.592381776715608,
+        "validation": {
+          "loss": 6.123035192489624,
+          "mae": 0.8919318914413452,
+          "kl": 5.231103420257568
+        },
+        "selection_wer": {
+          "wer_percent": 88.6836935166994,
+          "errors": 2257,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 83.8072919845581
+      },
+      {
+        "event": "eval",
+        "epoch": 5,
+        "step": 2230,
+        "train_loss": 5.228300801307096,
+        "validation": {
+          "loss": 5.843096017837524,
+          "mae": 0.8935394883155823,
+          "kl": 4.949556589126587
+        },
+        "selection_wer": {
+          "wer_percent": 84.71512770137525,
+          "errors": 2156,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 83.03216886520386
+      },
+      {
+        "event": "eval",
+        "epoch": 6,
+        "step": 2676,
+        "train_loss": 4.940217812499658,
+        "validation": {
+          "loss": 5.78531551361084,
+          "mae": 0.8940474390983582,
+          "kl": 4.891268014907837
+        },
+        "selection_wer": {
+          "wer_percent": 85.14734774066798,
+          "errors": 2167,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 82.69293713569641
+      },
+      {
+        "event": "eval",
+        "epoch": 7,
+        "step": 3122,
+        "train_loss": 4.748695291211252,
+        "validation": {
+          "loss": 5.6206464767456055,
+          "mae": 0.8876392841339111,
+          "kl": 4.733006954193115
+        },
+        "selection_wer": {
+          "wer_percent": 83.85068762278978,
+          "errors": 2134,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 81.9320342540741
+      },
+      {
+        "event": "eval",
+        "epoch": 8,
+        "step": 3568,
+        "train_loss": 4.568590737244474,
+        "validation": {
+          "loss": 5.470197439193726,
+          "mae": 0.8878263533115387,
+          "kl": 4.582371234893799
+        },
+        "selection_wer": {
+          "wer_percent": 79.60707269155206,
+          "errors": 2026,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 80.7558102607727
+      },
+      {
+        "event": "eval",
+        "epoch": 9,
+        "step": 4014,
+        "train_loss": 4.438517190415763,
+        "validation": {
+          "loss": 5.361874341964722,
+          "mae": 0.882926344871521,
+          "kl": 4.478947877883911
+        },
+        "selection_wer": {
+          "wer_percent": 80.35363457760315,
+          "errors": 2045,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 81.67676210403442
+      },
+      {
+        "event": "eval",
+        "epoch": 10,
+        "step": 4460,
+        "train_loss": 4.315426976691447,
+        "validation": {
+          "loss": 5.315660238265991,
+          "mae": 0.8892673850059509,
+          "kl": 4.4263927936553955
+        },
+        "selection_wer": {
+          "wer_percent": 79.52848722986248,
+          "errors": 2024,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 81.47551202774048
+      },
+      {
+        "event": "eval",
+        "epoch": 11,
+        "step": 4906,
+        "train_loss": 4.243761001146428,
+        "validation": {
+          "loss": 5.1729819774627686,
+          "mae": 0.8834825158119202,
+          "kl": 4.289499521255493
+        },
+        "selection_wer": {
+          "wer_percent": 77.64243614931237,
+          "errors": 1976,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 81.65276002883911
+      },
+      {
+        "event": "eval",
+        "epoch": 12,
+        "step": 5352,
+        "train_loss": 4.148167056353103,
+        "validation": {
+          "loss": 5.152789354324341,
+          "mae": 0.8765846192836761,
+          "kl": 4.276204824447632
+        },
+        "selection_wer": {
+          "wer_percent": 78.54616895874263,
+          "errors": 1999,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 81.82379388809204
+      },
+      {
+        "event": "eval",
+        "epoch": 13,
+        "step": 5798,
+        "train_loss": 4.096769946038456,
+        "validation": {
+          "loss": 5.113000869750977,
+          "mae": 0.8813295960426331,
+          "kl": 4.231671333312988
+        },
+        "selection_wer": {
+          "wer_percent": 76.8565815324165,
+          "errors": 1956,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 81.78258323669434
+      },
+      {
+        "event": "eval",
+        "epoch": 14,
+        "step": 6244,
+        "train_loss": 4.0529602937099645,
+        "validation": {
+          "loss": 5.070941925048828,
+          "mae": 0.8823886811733246,
+          "kl": 4.188553333282471
+        },
+        "selection_wer": {
+          "wer_percent": 77.79960707269156,
+          "errors": 1980,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 80.9321026802063
+      },
+      {
+        "event": "eval",
+        "epoch": 15,
+        "step": 6690,
+        "train_loss": 4.029383222618445,
+        "validation": {
+          "loss": 5.05240273475647,
+          "mae": 0.8805986046791077,
+          "kl": 4.171804189682007
+        },
+        "selection_wer": {
+          "wer_percent": 76.42436149312377,
+          "errors": 1945,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 81.87435388565063
+      },
+      {
+        "event": "eval",
+        "epoch": 16,
+        "step": 7136,
+        "train_loss": 4.001540100627951,
+        "validation": {
+          "loss": 5.045312881469727,
+          "mae": 0.8821797072887421,
+          "kl": 4.163133144378662
+        },
+        "selection_wer": {
+          "wer_percent": 76.89587426326129,
+          "errors": 1957,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 82.14999508857727
+      }
+    ],
+    "B": [
+      {
+        "event": "eval",
+        "epoch": 1,
+        "step": 446,
+        "train_loss": 9.114843806878334,
+        "validation": {
+          "loss": 8.095954418182373,
+          "mae": 0.8867669999599457,
+          "kl": 7.209187269210815
+        },
+        "selection_wer": {
+          "wer_percent": 95.6385068762279,
+          "errors": 2434,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 87.60476493835449
+      },
+      {
+        "event": "eval",
+        "epoch": 2,
+        "step": 892,
+        "train_loss": 7.004325982166512,
+        "validation": {
+          "loss": 6.968713998794556,
+          "mae": 0.896239161491394,
+          "kl": 6.072474956512451
+        },
+        "selection_wer": {
+          "wer_percent": 92.10216110019647,
+          "errors": 2344,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 88.72092819213867
+      },
+      {
+        "event": "eval",
+        "epoch": 3,
+        "step": 1338,
+        "train_loss": 6.078270611741618,
+        "validation": {
+          "loss": 6.408142805099487,
+          "mae": 0.8915751576423645,
+          "kl": 5.516567707061768
+        },
+        "selection_wer": {
+          "wer_percent": 88.48722986247544,
+          "errors": 2252,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 89.84688782691956
+      },
+      {
+        "event": "eval",
+        "epoch": 4,
+        "step": 1784,
+        "train_loss": 5.521628813893271,
+        "validation": {
+          "loss": 6.042975187301636,
+          "mae": 0.8892120122909546,
+          "kl": 5.153763294219971
+        },
+        "selection_wer": {
+          "wer_percent": 87.42632612966601,
+          "errors": 2225,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 90.01528596878052
+      },
+      {
+        "event": "eval",
+        "epoch": 5,
+        "step": 2230,
+        "train_loss": 5.153222434723858,
+        "validation": {
+          "loss": 5.772247791290283,
+          "mae": 0.8963085114955902,
+          "kl": 4.87593936920166
+        },
+        "selection_wer": {
+          "wer_percent": 83.1827111984283,
+          "errors": 2117,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 90.34592008590698
+      },
+      {
+        "event": "eval",
+        "epoch": 6,
+        "step": 2676,
+        "train_loss": 4.860518559212108,
+        "validation": {
+          "loss": 5.6806628704071045,
+          "mae": 0.8942497968673706,
+          "kl": 4.786412954330444
+        },
+        "selection_wer": {
+          "wer_percent": 82.12180746561886,
+          "errors": 2090,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 90.45855593681335
+      },
+      {
+        "event": "eval",
+        "epoch": 7,
+        "step": 3122,
+        "train_loss": 4.66756402430513,
+        "validation": {
+          "loss": 5.510660886764526,
+          "mae": 0.8912743330001831,
+          "kl": 4.619386672973633
+        },
+        "selection_wer": {
+          "wer_percent": 80.70726915520629,
+          "errors": 2054,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 90.64889788627625
+      },
+      {
+        "event": "eval",
+        "epoch": 8,
+        "step": 3568,
+        "train_loss": 4.4898041572271445,
+        "validation": {
+          "loss": 5.3757004737854,
+          "mae": 0.8850979506969452,
+          "kl": 4.490602493286133
+        },
+        "selection_wer": {
+          "wer_percent": 77.99607072691552,
+          "errors": 1985,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 90.9491012096405
+      },
+      {
+        "event": "eval",
+        "epoch": 9,
+        "step": 4014,
+        "train_loss": 4.354491634753788,
+        "validation": {
+          "loss": 5.2944416999816895,
+          "mae": 0.8846595883369446,
+          "kl": 4.40978217124939
+        },
+        "selection_wer": {
+          "wer_percent": 79.64636542239685,
+          "errors": 2027,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 91.09011387825012
+      },
+      {
+        "event": "eval",
+        "epoch": 10,
+        "step": 4460,
+        "train_loss": 4.229968968528269,
+        "validation": {
+          "loss": 5.219219446182251,
+          "mae": 0.8858586549758911,
+          "kl": 4.33336067199707
+        },
+        "selection_wer": {
+          "wer_percent": 78.1925343811395,
+          "errors": 1990,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 91.90382599830627
+      },
+      {
+        "event": "eval",
+        "epoch": 11,
+        "step": 4906,
+        "train_loss": 4.153225733560297,
+        "validation": {
+          "loss": 5.083616495132446,
+          "mae": 0.8822792768478394,
+          "kl": 4.2013373374938965
+        },
+        "selection_wer": {
+          "wer_percent": 78.58546168958743,
+          "errors": 2000,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 91.31103110313416
+      },
+      {
+        "event": "eval",
+        "epoch": 12,
+        "step": 5352,
+        "train_loss": 4.056083230159742,
+        "validation": {
+          "loss": 5.041472434997559,
+          "mae": 0.8757402300834656,
+          "kl": 4.165732383728027
+        },
+        "selection_wer": {
+          "wer_percent": 77.60314341846758,
+          "errors": 1975,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 89.32752466201782
+      },
+      {
+        "event": "eval",
+        "epoch": 13,
+        "step": 5798,
+        "train_loss": 3.9998224765195975,
+        "validation": {
+          "loss": 4.975443601608276,
+          "mae": 0.878640741109848,
+          "kl": 4.096802711486816
+        },
+        "selection_wer": {
+          "wer_percent": 77.01375245579568,
+          "errors": 1960,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 89.22585606575012
+      },
+      {
+        "event": "eval",
+        "epoch": 14,
+        "step": 6244,
+        "train_loss": 3.9553417437814278,
+        "validation": {
+          "loss": 4.953467130661011,
+          "mae": 0.879205048084259,
+          "kl": 4.0742621421813965
+        },
+        "selection_wer": {
+          "wer_percent": 75.91355599214145,
+          "errors": 1932,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 89.2796881198883
+      },
+      {
+        "event": "eval",
+        "epoch": 15,
+        "step": 6690,
+        "train_loss": 3.9315585336343055,
+        "validation": {
+          "loss": 4.931247711181641,
+          "mae": 0.8778381049633026,
+          "kl": 4.053409576416016
+        },
+        "selection_wer": {
+          "wer_percent": 75.28487229862475,
+          "errors": 1916,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 89.3026020526886
+      },
+      {
+        "event": "eval",
+        "epoch": 16,
+        "step": 7136,
+        "train_loss": 3.9024874394250024,
+        "validation": {
+          "loss": 4.918324947357178,
+          "mae": 0.8774045705795288,
+          "kl": 4.0409204959869385
+        },
+        "selection_wer": {
+          "wer_percent": 76.69941060903733,
+          "errors": 1952,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 89.50156092643738
+      }
+    ],
+    "C": [
+      {
+        "event": "eval",
+        "epoch": 1,
+        "step": 446,
+        "train_loss": 9.149436221529015,
+        "validation": {
+          "loss": 8.135289192199707,
+          "mae": 0.8861105740070343,
+          "kl": 7.249178647994995
+        },
+        "selection_wer": {
+          "wer_percent": 95.99214145383104,
+          "errors": 2443,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 80.28675413131714
+      },
+      {
+        "event": "eval",
+        "epoch": 2,
+        "step": 892,
+        "train_loss": 7.072730313502085,
+        "validation": {
+          "loss": 7.065773248672485,
+          "mae": 0.8972150683403015,
+          "kl": 6.168558359146118
+        },
+        "selection_wer": {
+          "wer_percent": 92.25933202357564,
+          "errors": 2348,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 80.53645992279053
+      },
+      {
+        "event": "eval",
+        "epoch": 3,
+        "step": 1338,
+        "train_loss": 6.157856776575336,
+        "validation": {
+          "loss": 6.512564182281494,
+          "mae": 0.8923317790031433,
+          "kl": 5.620232343673706
+        },
+        "selection_wer": {
+          "wer_percent": 89.23379174852653,
+          "errors": 2271,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 80.62564182281494
+      },
+      {
+        "event": "eval",
+        "epoch": 4,
+        "step": 1784,
+        "train_loss": 5.60422141669577,
+        "validation": {
+          "loss": 6.165615081787109,
+          "mae": 0.891654759645462,
+          "kl": 5.27396035194397
+        },
+        "selection_wer": {
+          "wer_percent": 87.34774066797642,
+          "errors": 2223,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 81.54221701622009
+      },
+      {
+        "event": "eval",
+        "epoch": 5,
+        "step": 2230,
+        "train_loss": 5.239226558283305,
+        "validation": {
+          "loss": 5.8912389278411865,
+          "mae": 0.8944366872310638,
+          "kl": 4.99680233001709
+        },
+        "selection_wer": {
+          "wer_percent": 84.32220039292731,
+          "errors": 2146,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 81.59474396705627
+      },
+      {
+        "event": "eval",
+        "epoch": 6,
+        "step": 2676,
+        "train_loss": 4.951492664525327,
+        "validation": {
+          "loss": 5.765030860900879,
+          "mae": 0.8977810144424438,
+          "kl": 4.867249965667725
+        },
+        "selection_wer": {
+          "wer_percent": 83.7328094302554,
+          "errors": 2131,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 81.78111600875854
+      },
+      {
+        "event": "eval",
+        "epoch": 7,
+        "step": 3122,
+        "train_loss": 4.754532061350186,
+        "validation": {
+          "loss": 5.619601488113403,
+          "mae": 0.8916112184524536,
+          "kl": 4.727990388870239
+        },
+        "selection_wer": {
+          "wer_percent": 82.27897838899804,
+          "errors": 2094,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 81.66841912269592
+      },
+      {
+        "event": "eval",
+        "epoch": 8,
+        "step": 3568,
+        "train_loss": 4.575481661766634,
+        "validation": {
+          "loss": 5.479443788528442,
+          "mae": 0.8856503069400787,
+          "kl": 4.593793630599976
+        },
+        "selection_wer": {
+          "wer_percent": 79.88212180746562,
+          "errors": 2033,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 80.90147304534912
+      },
+      {
+        "event": "eval",
+        "epoch": 9,
+        "step": 4014,
+        "train_loss": 4.4378458395132565,
+        "validation": {
+          "loss": 5.363986015319824,
+          "mae": 0.8834831118583679,
+          "kl": 4.4805028438568115
+        },
+        "selection_wer": {
+          "wer_percent": 79.80353634577604,
+          "errors": 2031,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 83.33974575996399
+      },
+      {
+        "event": "eval",
+        "epoch": 10,
+        "step": 4460,
+        "train_loss": 4.314037451829611,
+        "validation": {
+          "loss": 5.315582275390625,
+          "mae": 0.8882454335689545,
+          "kl": 4.427336692810059
+        },
+        "selection_wer": {
+          "wer_percent": 79.76424361493123,
+          "errors": 2030,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 83.15380787849426
+      },
+      {
+        "event": "eval",
+        "epoch": 11,
+        "step": 4906,
+        "train_loss": 4.236792753630155,
+        "validation": {
+          "loss": 5.194382429122925,
+          "mae": 0.8820559680461884,
+          "kl": 4.312326431274414
+        },
+        "selection_wer": {
+          "wer_percent": 78.46758349705304,
+          "errors": 1997,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 83.31232690811157
+      },
+      {
+        "event": "eval",
+        "epoch": 12,
+        "step": 5352,
+        "train_loss": 4.140290827494566,
+        "validation": {
+          "loss": 5.156224012374878,
+          "mae": 0.8783711791038513,
+          "kl": 4.277852773666382
+        },
+        "selection_wer": {
+          "wer_percent": 77.68172888015717,
+          "errors": 1977,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 83.595468044281
+      },
+      {
+        "event": "eval",
+        "epoch": 13,
+        "step": 5798,
+        "train_loss": 4.085246866059411,
+        "validation": {
+          "loss": 5.08354926109314,
+          "mae": 0.8804208040237427,
+          "kl": 4.203128337860107
+        },
+        "selection_wer": {
+          "wer_percent": 76.97445972495089,
+          "errors": 1959,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 82.95991110801697
+      },
+      {
+        "event": "eval",
+        "epoch": 14,
+        "step": 6244,
+        "train_loss": 4.0389118429791235,
+        "validation": {
+          "loss": 5.0890727043151855,
+          "mae": 0.8823450803756714,
+          "kl": 4.206727504730225
+        },
+        "selection_wer": {
+          "wer_percent": 76.46365422396856,
+          "errors": 1946,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 82.81190419197083
+      },
+      {
+        "event": "eval",
+        "epoch": 15,
+        "step": 6690,
+        "train_loss": 4.012478534950803,
+        "validation": {
+          "loss": 5.056498050689697,
+          "mae": 0.8812984526157379,
+          "kl": 4.175199747085571
+        },
+        "selection_wer": {
+          "wer_percent": 75.6385068762279,
+          "errors": 1925,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 82.32614088058472
+      },
+      {
+        "event": "eval",
+        "epoch": 16,
+        "step": 7136,
+        "train_loss": 3.9833595554924868,
+        "validation": {
+          "loss": 5.037988901138306,
+          "mae": 0.8807089328765869,
+          "kl": 4.157279968261719
+        },
+        "selection_wer": {
+          "wer_percent": 77.4852652259332,
+          "errors": 1972,
+          "reference_words": 2545,
+          "utterances": 128
+        },
+        "seconds": 82.67188000679016
+      }
+    ]
+  },
+  "test_used": false,
+  "primary": {
+    "full_encoder/dev-clean": {
+      "utterances": 400,
+      "wer_percent": 2.932889344262295,
+      "errors": 229,
+      "reference_words": 7808,
+      "audio_seconds": 2760.8401875,
+      "chunks": 9091,
+      "total_inference_seconds": 83.59165447048144,
+      "rtf": 0.030277614346875863,
+      "total_ms_per_chunk": 9.194990041852542,
+      "total_with_audio_io_rtf": 0.03055604936245812,
+      "feature_ms_per_chunk": 0.20818151370204757,
+      "components_ms_per_chunk": {
+        "audio": 8.635601305387244,
+        "prediction": 0.0,
+        "correction": 0.0,
+        "feedback": 0.0,
+        "decoder": 0.33324174831642145
+      },
+      "other_overhead_ms_per_chunk": 0.017965474446827532,
+      "compute_chunk_p50_ms": 8.96412500878796,
+      "compute_chunk_p95_ms": 9.289416513638571,
+      "state_mae": 0.000149596474374202,
+      "timing_repeat_total_ms_per_chunk": [
+        9.184556966729462,
+        9.20542311697562
+      ]
+    },
+    "full_encoder/dev-other": {
+      "utterances": 400,
+      "wer_percent": 8.816901408450704,
+      "errors": 626,
+      "reference_words": 7100,
+      "audio_seconds": 2457.545125,
+      "chunks": 8131,
+      "total_inference_seconds": 75.46645880001597,
+      "rtf": 0.030708066367658646,
+      "total_ms_per_chunk": 9.281325642604351,
+      "total_with_audio_io_rtf": 0.03108618156404058,
+      "feature_ms_per_chunk": 0.21076786497972294,
+      "components_ms_per_chunk": {
+        "audio": 8.713880921120406,
+        "prediction": 0.0,
+        "correction": 0.0,
+        "feedback": 0.0,
+        "decoder": 0.3364005284352967
+      },
+      "other_overhead_ms_per_chunk": 0.02027632806892481,
+      "compute_chunk_p50_ms": 8.989416528493166,
+      "compute_chunk_p95_ms": 9.528041759040207,
+      "state_mae": 0.0001513271478246776,
+      "timing_repeat_total_ms_per_chunk": [
+        9.180966051635696,
+        9.381685233573004
+      ]
+    },
+    "A/dev-clean": {
+      "utterances": 400,
+      "wer_percent": 71.40112704918033,
+      "errors": 5575,
+      "reference_words": 7808,
+      "audio_seconds": 2760.8401875,
+      "chunks": 9091,
+      "total_inference_seconds": 28.117514853714965,
+      "rtf": 0.010184405088356809,
+      "total_ms_per_chunk": 3.0928957049515966,
+      "total_with_audio_io_rtf": 0.010307830717082017,
+      "feature_ms_per_chunk": 0.2072022007774189,
+      "components_ms_per_chunk": {
+        "audio": 2.625573067001053,
+        "prediction": 0.0016904090967686208,
+        "correction": 0.04025824453310653,
+        "feedback": 0.001355140217852506,
+        "decoder": 0.2021580900679448
+      },
+      "other_overhead_ms_per_chunk": 0.014658553257452214,
+      "compute_chunk_p50_ms": 2.8735414962284267,
+      "compute_chunk_p95_ms": 3.119895758572966,
+      "state_mae": 0.8589909403529475,
+      "timing_repeat_total_ms_per_chunk": [
+        3.0981868031108837,
+        3.0876046067923095
+      ]
+    },
+    "A/dev-other": {
+      "utterances": 400,
+      "wer_percent": 80.38028169014085,
+      "errors": 5707,
+      "reference_words": 7100,
+      "audio_seconds": 2457.545125,
+      "chunks": 8131,
+      "total_inference_seconds": 24.901656161411665,
+      "rtf": 0.010132736082073636,
+      "total_ms_per_chunk": 3.062557638840446,
+      "total_with_audio_io_rtf": 0.010256336479136298,
+      "feature_ms_per_chunk": 0.20861588382260543,
+      "components_ms_per_chunk": {
+        "audio": 2.614082799943343,
+        "prediction": 0.0016719396353247179,
+        "correction": 0.04016983383734344,
+        "feedback": 0.0013446633571942358,
+        "decoder": 0.18150482357728986
+      },
+      "other_overhead_ms_per_chunk": 0.015167694667345293,
+      "compute_chunk_p50_ms": 2.841312496457249,
+      "compute_chunk_p95_ms": 3.0795520287938416,
+      "state_mae": 0.8748720404465778,
+      "timing_repeat_total_ms_per_chunk": [
+        3.0804108246158,
+        3.0447044530650915
+      ]
+    },
+    "B/dev-clean": {
+      "utterances": 400,
+      "wer_percent": 69.33913934426229,
+      "errors": 5414,
+      "reference_words": 7808,
+      "audio_seconds": 2760.8401875,
+      "chunks": 9091,
+      "total_inference_seconds": 35.35616805573227,
+      "rtf": 0.012806307375490662,
+      "total_ms_per_chunk": 3.889139594734602,
+      "total_with_audio_io_rtf": 0.012938933636884288,
+      "feature_ms_per_chunk": 0.20768497993192478,
+      "components_ms_per_chunk": {
+        "audio": 2.6429535499289356,
+        "prediction": 0.6956355782759873,
+        "correction": 0.05471521615792534,
+        "feedback": 0.04146110238838285,
+        "decoder": 0.22505334821990586
+      },
+      "other_overhead_ms_per_chunk": 0.021635819831540344,
+      "compute_chunk_p50_ms": 3.686791518703103,
+      "compute_chunk_p95_ms": 3.9703750226181,
+      "state_mae": 0.85883917545357,
+      "timing_repeat_total_ms_per_chunk": [
+        3.89779020249274,
+        3.8804889869764643
+      ]
+    },
+    "B/dev-other": {
+      "utterances": 400,
+      "wer_percent": 79.71830985915493,
+      "errors": 5660,
+      "reference_words": 7100,
+      "audio_seconds": 2457.545125,
+      "chunks": 8131,
+      "total_inference_seconds": 31.30024342093384,
+      "rtf": 0.01273638603927317,
+      "total_ms_per_chunk": 3.8494949478457556,
+      "total_with_audio_io_rtf": 0.012872040184643222,
+      "feature_ms_per_chunk": 0.20864783921279584,
+      "components_ms_per_chunk": {
+        "audio": 2.628845187902745,
+        "prediction": 0.6908673372559154,
+        "correction": 0.05461319364653608,
+        "feedback": 0.04140183455232302,
+        "decoder": 0.202950106026501
+      },
+      "other_overhead_ms_per_chunk": 0.022169449248939547,
+      "compute_chunk_p50_ms": 3.640791983343661,
+      "compute_chunk_p95_ms": 3.924239514162764,
+      "state_mae": 0.8753903974628788,
+      "timing_repeat_total_ms_per_chunk": [
+        3.8546752228727237,
+        3.8443146728187876
+      ]
+    },
+    "C/dev-clean": {
+      "utterances": 400,
+      "wer_percent": 70.08196721311475,
+      "errors": 5472,
+      "reference_words": 7808,
+      "audio_seconds": 2760.8401875,
+      "chunks": 9091,
+      "total_inference_seconds": 28.126866872655228,
+      "rtf": 0.010187792469844012,
+      "total_ms_per_chunk": 3.0939244167479076,
+      "total_with_audio_io_rtf": 0.010310814973965219,
+      "feature_ms_per_chunk": 0.2065504055598591,
+      "components_ms_per_chunk": {
+        "audio": 2.614426622175169,
+        "prediction": 0.001683568931479237,
+        "correction": 0.051803375967881635,
+        "feedback": 0.0013597599763315433,
+        "decoder": 0.20348542570718886
+      },
+      "other_overhead_ms_per_chunk": 0.014615258429998114,
+      "compute_chunk_p50_ms": 2.870374999474734,
+      "compute_chunk_p95_ms": 3.1241561810020357,
+      "state_mae": 0.861782938100995,
+      "timing_repeat_total_ms_per_chunk": [
+        3.0969608991900945,
+        3.0908879343057203
+      ]
+    },
+    "C/dev-other": {
+      "utterances": 400,
+      "wer_percent": 79.74647887323944,
+      "errors": 5662,
+      "reference_words": 7100,
+      "audio_seconds": 2457.545125,
+      "chunks": 8131,
+      "total_inference_seconds": 25.062793238437735,
+      "rtf": 0.010198304390621407,
+      "total_ms_per_chunk": 3.08237525992347,
+      "total_with_audio_io_rtf": 0.010322925289981816,
+      "feature_ms_per_chunk": 0.2091918851583605,
+      "components_ms_per_chunk": {
+        "audio": 2.617877180151006,
+        "prediction": 0.0016855496974817032,
+        "correction": 0.051749234872133315,
+        "feedback": 0.0013783425918528624,
+        "decoder": 0.18512848552616293
+      },
+      "other_overhead_ms_per_chunk": 0.015364581926472328,
+      "compute_chunk_p50_ms": 2.860125037841499,
+      "compute_chunk_p95_ms": 3.0996040150057524,
+      "state_mae": 0.8788014350598947,
+      "timing_repeat_total_ms_per_chunk": [
+        3.083993089291981,
+        3.080757430554959
+      ]
+    }
+  },
+  "paired_comparisons": {
+    "dev-clean/B-minus-A": {
+      "wer_difference_pp": -2.0619877049180326,
+      "ci95_pp": [
+        -3.2544617570776984,
+        -0.9142606672561834
+      ],
+      "replicates": 2000,
+      "unit": "paired utterance; does not measure training-seed variance"
+    },
+    "dev-clean/B-minus-C": {
+      "wer_difference_pp": -0.742827868852459,
+      "ci95_pp": [
+        -1.871939917110868,
+        0.38705721445706515
+      ],
+      "replicates": 2000,
+      "unit": "paired utterance; does not measure training-seed variance"
+    },
+    "dev-clean/C-minus-A": {
+      "wer_difference_pp": -1.3191598360655739,
+      "ci95_pp": [
+        -2.3408468585719393,
+        -0.29048032404464047
+      ],
+      "replicates": 2000,
+      "unit": "paired utterance; does not measure training-seed variance"
+    },
+    "dev-other/B-minus-A": {
+      "wer_difference_pp": -0.6619718309859155,
+      "ci95_pp": [
+        -1.7038673692397133,
+        0.40219910837595924
+      ],
+      "replicates": 2000,
+      "unit": "paired utterance; does not measure training-seed variance"
+    },
+    "dev-other/B-minus-C": {
+      "wer_difference_pp": -0.028169014084507043,
+      "ci95_pp": [
+        -1.0144504972500816,
+        0.929974554889847
+      ],
+      "replicates": 2000,
+      "unit": "paired utterance; does not measure training-seed variance"
+    },
+    "dev-other/C-minus-A": {
+      "wer_difference_pp": -0.6338028169014085,
+      "ci95_pp": [
+        -1.762735814097876,
+        0.4370075566476845
+      ],
+      "replicates": 2000,
+      "unit": "paired utterance; does not measure training-seed variance"
+    }
+  },
+  "decisions": {
+    "dev-clean": {
+      "b_wer_better_than_a": true,
+      "b_wer_ci_excludes_zero_in_beneficial_direction": true,
+      "b_observed_improvement_meets_0_5pp": true,
+      "b_total_time_lower_than_full_encoder": true,
+      "b_wer_delta_vs_full_encoder_pp": 66.40625,
+      "b_meets_teacher_wer_tolerance": false,
+      "b_meets_minimum_compute_saving": true,
+      "b_total_time_relative_to_a": 1.2574428515349718,
+      "b_speedup_vs_full_encoder": 2.3642735926222294,
+      "note": "Different total parameter/runtime budgets: this is a measured frontier comparison, not an iso-compute superiority claim. Check quality loss versus the full encoder separately."
+    },
+    "dev-other": {
+      "b_wer_better_than_a": true,
+      "b_wer_ci_excludes_zero_in_beneficial_direction": false,
+      "b_observed_improvement_meets_0_5pp": true,
+      "b_total_time_lower_than_full_encoder": true,
+      "b_wer_delta_vs_full_encoder_pp": 70.90140845070422,
+      "b_meets_teacher_wer_tolerance": false,
+      "b_meets_minimum_compute_saving": true,
+      "b_total_time_relative_to_a": 1.2569542852108613,
+      "b_speedup_vs_full_encoder": 2.411050220444721,
+      "note": "Different total parameter/runtime budgets: this is a measured frontier comparison, not an iso-compute superiority claim. Check quality loss versus the full encoder separately."
+    }
+  }
+}

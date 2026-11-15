@@ -1,0 +1,11 @@
+{
+  "captured_unix": 1794719068.265111,
+  "source_sha256": {
+    "experiments/predict_correct_v1/evaluate.py": "fdee747252fcc11a176ae8499d35e5bc78a49e9719d3da7c9af8ce74dc21cd09",
+    "experiments/predict_correct_v1/inference.py": "9a1c652b00d0d522ba61c11bc1aa71bc65942b40a07a678c434a2b8f0894a748",
+    "experiments/predict_correct_v1/config.json": "45aa3a21e79db675e3ef3caedc206e409bd693729261516afcb447e02db90357",
+    "scripts/zipformer_features.py": "9775998a1c25cc544db3e4ac7ade68ba9c25fbf1a2cb8052b9c1c562d0146bf1"
+  },
+  "scope": "Frozen before final held-out WER/timing collection; thresholds fixed in the original training config.",
+  "test_used": false
+}

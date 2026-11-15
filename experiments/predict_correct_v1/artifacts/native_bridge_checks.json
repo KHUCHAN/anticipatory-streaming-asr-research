@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "utterance_id": "1272-135031-0007",
+      "native_tokens_match": true,
+      "wer": 0.0,
+      "rtf": 0.03228420716091421
+    },
+    {
+      "utterance_id": "1272-141231-0018",
+      "native_tokens_match": true,
+      "wer": 0.0,
+      "rtf": 0.030066097388044
+    },
+    {
+      "utterance_id": "2035-147960-0008",
+      "native_tokens_match": true,
+      "wer": 0.0,
+      "rtf": 0.03159023105615267
+    },
+    {
+      "utterance_id": "2035-147960-0014",
+      "native_tokens_match": true,
+      "wer": 0.06666666666666667,
+      "rtf": 0.03187163294523871
+    }
+  ],
+  "all_match": true,
+  "test_used": false
+}

@@ -1,0 +1,16 @@
+{
+  "scores": {
+    "dev-clean": {
+      "mean_prediction_mae": 0.7929914085252714,
+      "oracle_previous_true_chunk_mae": 0.9516695176464375,
+      "elements": 37236736
+    },
+    "dev-other": {
+      "mean_prediction_mae": 0.7993163141885866,
+      "oracle_previous_true_chunk_mae": 0.9609973870540833,
+      "elements": 33304576
+    }
+  },
+  "scope": "Same final evaluation utterances, frames and train-only normalization as A/B/C. Mean baseline is constant normalized zero. Persistence uses previous TRUE teacher states as an offline oracle diagnostic; it is not the deployed C condition and is never a model input. Neither MAE reduction is a percentage of acoustic information.",
+  "test_used": false
+}

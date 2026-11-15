@@ -2,9 +2,11 @@
 
 Research on predicting acoustic representations, correcting them with newly arrived speech, and reducing streaming ASR computation at controlled recognition error.
 
-**Current direction:** reuse the existing FGN-style state predictor and bounded-context AR work as a starting point for a lightweight audio-conditioned correction path. The residual corrector and encoder-skipping runtime are **proposed, not implemented**. A learned prior may help ambiguous speech, but must allow unexpected words to override the forecast.
+**Current direction:** predict an acoustic representation and correct it cheaply with arriving audio. The first causal fbank-conv pilot is complete but fails to retain recognition accuracy. Diagnose and improve the cheap audio reconstruction path before scaling the state predictor. Adaptive encoder skipping and teacher-cache recovery remain proposed.
 
 Start with the [predict–correct acceleration plan](docs/predict_correct_acceleration_plan_2026-11-12.md), [current conclusions](docs/conclusion_and_next_steps.md), and [repository map](READ.MD).
+
+**Prediction-correction pilot completed:** [48 correction-training epochs and 800 dev utterances](docs/predict_correct_pilot_2026-11-14.md), with corrected-only feedback. WER clean/other: A audio-only 71.40/80.38%, B frozen FGN 69.34/79.72%, C previous corrected state 70.08/79.75%, versus full encoder 2.93/8.82%. B costs 3.89/3.85ms per chunk, versus C 3.09/3.08ms and full encoder 9.19/9.28ms. B improves on A on clean, but its advantage over C is not established; both paired intervals include zero. No cheap path retains full-encoder accuracy, so useful encoder-skipping acceleration is not demonstrated.
 
 **Epoch-96 double-descent investigation completed:** [all three generators](docs/fgn_double_descent_2026-11-13.md) completed 69 additional epochs each, without early stopping, in 7.50 hours. Dev token NLL at epoch 27 → 96 was 1.1147 → 1.3571 / 1.1269 → 1.4322 / 1.1306 → 1.4575; best-dev checkpoints remain at epoch 5. Token NLL rises across all declared late windows, while state CRPS shows recovery. No sustained second token-risk descent was observed through epoch 96. The small generator's final state CRPS is slightly below its trained epoch-0 score; a double-descent mechanism, model-wise behavior and ASR-WER improvement are not established. All checkpoints and input-preservation checks passed.
 
@@ -45,4 +47,4 @@ python3 scripts/validate_catalog.py
 python3 scripts/check_public_repository.py
 ```
 
-See [READ.MD](READ.MD) for preparation and execution commands. Snapshot date: 2026-11-12.
+See [READ.MD](READ.MD) for preparation and execution commands. Snapshot date: 2026-11-14.

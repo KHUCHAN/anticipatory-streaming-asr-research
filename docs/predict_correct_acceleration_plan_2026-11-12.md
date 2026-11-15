@@ -1,6 +1,6 @@
 # Predict–correct encoder acceleration
 
-Status: research direction selected on 2026-11-12; the residual corrector, computation gate and encoder-skipping runtime have **not** been implemented or trained. Existing display experiments remain completed results, not evidence of encoder acceleration.
+Status updated 2026-11-14: the first [audio-conditioned correction pilot](predict_correct_pilot_2026-11-14.md) is complete. All three cheap paths run faster but fail to retain full-encoder WER; B's benefit over previous-corrected-state C is not established. Diagnose the cheap audio reconstruction path before scaling the predictor. The computation gate and adaptive encoder-skipping/cache-recovery runtime remain unimplemented. Useful accuracy-preserving encoder acceleration is not established.
 
 ## Goal
 
@@ -20,10 +20,10 @@ A forecast is a provisional hypothesis. It must not restrict recognition to a fi
 | Public 66.11M streaming Zipformer | Evaluated; frozen weights | [Baseline reproduction](baseline_zipformer_2026-11-11.md) |
 | 4.60M layer-band2 AR forecaster and confidence gate | Trained on 100h; full test evaluation completed | [Strong-backbone experiment](zipformer_ours_2026-11-12.md) |
 | 6.324M recurrent FGN acoustic-state predictor | Trained; independent and hybrid evaluations completed | [State pilot](fgn_state_pilot_2026-11-12.md), [hybrid study](band_fgn_hybrid_2026-11-12.md) |
-| Raw-audio residual corrector | Proposed | No completed implementation or measurements |
+| Audio-conditioned corrector | First pilot complete; quality inadequate | [Causal fbank conv A/B/C](predict_correct_pilot_2026-11-14.md): WER 69–80%, versus full encoder 2.93/8.82%; own corrected feedback |
 | Gate selecting inexpensive versus full encoding | Proposed | Existing gates control display, not safe encoder omission |
 | Encoder-cache correction and recovery | Required design work | Predicting encoder outputs does not reconstruct all internal caches |
-| End-to-end compute acceleration | Not established | Existing forecasters add processing time |
+| End-to-end compute acceleration at retained accuracy | Not established | Cheap replacement paths reduce CPU time but lose recognition accuracy |
 
 The surviving display configuration is band2+gate. Its correct-word mean display gain over native eager output is 89.58ms on test-clean and 70.28ms on test-other. Its incremental gain over the inexpensive native-probability gate is 30.32/16.54ms. The median per-word gain is zero; final WER is fixed by design. Actual test forecast error rates differ between policies, so matched-risk Pareto superiority is not established.
 
@@ -93,7 +93,7 @@ An illustrative objective is:
 +\delta\mathcal L_{\rm state}.
 \]
 
-Weights, optimizer, learning rate and training duration are not finalized. Cost-aware gate fitting follows an adequate cheap path and uses development data only. A loss decrease alone does not establish lower WER or faster inference.
+The full adaptive-system weights, optimizer, learning rate and training duration are not finalized. The completed pilot has its own fixed [configuration](../experiments/predict_correct_v1/config.json). Cost-aware gate fitting follows an adequate cheap path and uses development data only. A loss decrease alone does not establish lower WER or faster inference.
 
 Past-only prediction has irreducible uncertainty about new speech. A larger predictor may reduce approximation error, but cannot reveal phonetic information that is absent from its inputs. The inexpensive current-audio path supplies that missing information.
 

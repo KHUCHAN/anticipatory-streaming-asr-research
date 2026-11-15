@@ -10,7 +10,7 @@ Predict the next acoustic representation from retained state. When actual speech
 
 The user also proposes a positive role for prediction: a well-trained prior may improve recognition when audio is ambiguous or noisy. The model must still follow clear acoustic evidence when the speaker uses an unexpected word. These are complementary hypotheses, not established findings.
 
-The [predict–correct acceleration plan](predict_correct_acceleration_plan_2026-11-12.md) defines the proposed architecture, objectives, capacity comparisons, causal gating and state-recovery requirements. Residual correction and encoder skipping are not yet implemented. The [current conclusions](conclusion_and_next_steps.md) and [experiment history](research_plan_3stage.md) provide completed evidence.
+The [predict–correct acceleration plan](predict_correct_acceleration_plan_2026-11-12.md) defines the proposed architecture, objectives, capacity comparisons, causal gating and state-recovery requirements. The first [causal fbank-conv A/B/C correction pilot](predict_correct_pilot_2026-11-14.md) is complete. Its cheaper inference incurs a large WER regression; no useful accuracy-preserving acceleration is established. Adaptive encoder skipping and teacher-cache recovery remain unimplemented. The [current conclusions](conclusion_and_next_steps.md) and [experiment history](research_plan_3stage.md) provide completed evidence.
 
 ## Original predict–verify objective
 

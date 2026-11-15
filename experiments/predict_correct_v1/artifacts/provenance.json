@@ -1,0 +1,25 @@
+{
+  "captured_unix": 1794718426.703559,
+  "sha256": {
+    "experiments/predict_correct_v1/config.json": "45aa3a21e79db675e3ef3caedc206e409bd693729261516afcb447e02db90357",
+    "experiments/predict_correct_v1/common.py": "6f0e1375e7c0e70bb320434fc723d58f846d3023cd3c15b94125d1358fc2fd11",
+    "experiments/predict_correct_v1/model.py": "0b153dd84689b22c67ca4f845d033dbfc3732ade4876a4ab262309925a495f36",
+    "experiments/predict_correct_v1/data.py": "9679fcd08bf61dee99d2c3702b19585882045e2bef6497248f7c45bd2c694381",
+    "experiments/predict_correct_v1/objective.py": "826afcdc7d3c80aa2ab3ab16d169f110da58ae93aec1c4da825572719223758b",
+    "experiments/predict_correct_v1/train.py": "901d7c219e195a7beb7826e8df97c2a9532e164e800ad9478530b78f3edef93e",
+    "experiments/predict_correct_v1/inference.py": "9a1c652b00d0d522ba61c11bc1aa71bc65942b40a07a678c434a2b8f0894a748",
+    "experiments/predict_correct_v1/prepare.py": "1ac5157555e4f6fc7aa0b16b119450d9e7271b6cbcc98e1f6886953a429c8b3d",
+    "runs/fgn_state_v1/deterministic_s37/best.pt": "478de3971d6a8b1a24ea7d6ab9921fd6f7037b50db956c758b1b94ab083d9503",
+    "runs/fgn_state_v1/rnnt_bridge.npz": "68df0c30ea0f4ef332f745139289fac91375a4a3db3a9bd5088ead557a71ceb0",
+    "runs/fgn_state_v1/cache/index.json": "e06daaa6c358dcefa953523ab9500b3929e06d352d79cda8560065485c7e82c7",
+    "runs/fgn_state_v1/cache/stats.json": "69d208a31df8acb30724120e63690c7fb46e7edbca9122147b47d7ef2a5ce650",
+    "experiments/fgn_state_v1/model.py": "91d5d135e73910d38170fc35570ad5d87282472c82abd2323d1ae12f44d2de1d",
+    "runs/predict_correct_v1/cache/index.json": "c8c904688335a0619a1e4aad28769a522e2212461504a510de35a79165da3d6d",
+    "runs/predict_correct_v1/cache/stats.json": "68cf512d592ded97b7774e2e9db42992c4f767bc5f3150b3dd27572554e11399",
+    "runs/predict_correct_v1/protocol.json": "f92eae32266323456459586cd8671c833dc0f4195c1fec5b6003b001c23db736"
+  },
+  "cached_feature_bytes": 6204191840,
+  "teacher_cache_bytes": 11602616320,
+  "full_binary_caches_rehashed": false,
+  "test_used": false
+}

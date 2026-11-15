@@ -1,6 +1,6 @@
 # AVS Architecture
 
-Current proposed extension: [predict–correct encoder acceleration](predict_correct_acceleration_plan_2026-11-12.md). The raw-audio corrector and conditional encoder runtime are not implemented. Architectures below preserve completed historical studies.
+Current extension: [predict–correct encoder acceleration](predict_correct_acceleration_plan_2026-11-12.md). The first [causal fbank-conv A/B/C correction pilot](predict_correct_pilot_2026-11-14.md) is complete: corrected-only feedback and actual WER/runtime were measured, but none of the cheap paths retained baseline accuracy. Conditional encoder skipping and teacher-cache recovery remain unimplemented. Architectures below preserve completed historical studies; the new pilot's exact design and limits are in its [protocol](../experiments/predict_correct_v1/README.md).
 
 Written: 2026-11-10. Code: [`avs/model.py`](../avs/model.py) · Methodology: [three-stage plan](research_plan_3stage.md)
 

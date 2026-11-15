@@ -760,3 +760,25 @@ Every 28,539-case full-training evaluation at epochs 27/32/48/64/80/96 was compl
 Verification checks all epoch histories, final optimizer steps, source/input preservation, original best selection, five checkpoint snapshots per size and six full-training milestones per size. This remains a one-seed, teacher-forced, fixed-case, depth-only study with no test evaluation or new WER/acceleration result. Finite-window non-recovery does not establish eventual absence or settle width/memory scaling.
 
 [Final report and compact comparison](fgn_double_descent_2026-11-13.md) · [Protocol](../experiments/fgn_double_descent_v1/README.md). Public evidence is in `experiments/fgn_double_descent_v1/artifacts/`; raw checkpoints/logs remain local-only in `runs/fgn_double_descent_v1/`. The report filename retains the launch date, and the final review date is recorded inside it.
+
+
+## Fbank + causal conv prediction-correction pilot — 2026-11-14 completed
+
+Test the selected encoder-omission goal directly with three paths: A cheap fbank audio conv only; B the same conv conditioned on one frozen deterministic FGN forecast; C the same conv conditioned on the previous corrected state. B/C always feed back their own corrected outputs, never a true encoder state. The full encoder is absent from their inference paths. This is 100% output replacement, without an adaptive fallback gate or teacher-cache recovery.
+
+Each new correction module trained for 16 epochs on all 28,539 train-clean-100 utterances. Random six-chunk windows change each epoch, with two burn-in and four supervised chunks; direct losses cover 74.4% of available training chunks over the run. Use normalized state MAE plus frozen-native-distribution KL. Select by actual free-running WER on 128 model-selection utterances, then evaluate a speaker-disjoint 400 dev-clean + 400 dev-other set. No test data used. One seed; equal new correction epochs do not match lifetime training or total parameters because B reuses a pretrained 6.324M FGN.
+
+| Path | Dev-clean WER | Dev-other WER | Complete ms/chunk, clean / other |
+|---|---:|---:|---:|
+| Full encoder | 2.933% | 8.817% | 9.195 / 9.281 |
+| A: audio only | 71.401% | 80.380% | 3.093 / 3.063 |
+| B: audio + FGN forecast | 69.339% | 79.718% | 3.889 / 3.849 |
+| C: audio + previous corrected state | 70.082% | 79.746% | 3.094 / 3.082 |
+
+B improves on A by 2.062pp on clean (paired 95% CI −3.254 to −0.914) and 0.662pp on other (CI −1.704 to +0.402). B-minus-C intervals include zero on both splits; additional forecasting value over simple corrected-state reuse is not established. B adds approximately 26% total CPU cost over A/C. Every cheap path misses the predeclared full-encoder WER tolerance by a large margin. The current small-conv recipe does not demonstrate accuracy-preserving encoder acceleration.
+
+Measured on Apple M5 Pro 24GiB, CPU batch 1 / one thread, nominal 320ms chunks. Two repetitions reverse path order; all repeated transcripts match. Full cost includes fbank, normalization, audio conv/cache updates, FGN forecast, correction head, corrected-memory update, native decoding and array/Python overhead. Disk IO is additionally reported. Full encoder uses ONNX; cheap paths/shared decoder use PyTorch. These are implementation timings, not microphone/display latency or backend-independent FLOP savings.
+
+All checkpoints, frozen sources/inputs, selected epochs, original FGN weights, coverage and aggregate timing sums passed verification. A NumPy-bool serialization error occurred after all eight timed decodes; a separate serializer recovered the unchanged records without rerunning training or inference. The complete runner/reporting window was 1.36h, excluding prior feature extraction and engineering checks. The original failure and recovery logs remain preserved.
+
+The next useful work is diagnosing and improving cheap audio reconstruction/distillation, including causal per-output context and training-window coverage, before increasing FGN size. This one-seed frozen-prior pilot does not settle jointly trained correctors or all prediction-correction architectures. [Full results, paired intervals, costs and curves](predict_correct_pilot_2026-11-14.md) · [Protocol and source](../experiments/predict_correct_v1/README.md).

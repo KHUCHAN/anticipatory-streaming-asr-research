@@ -1,0 +1,81 @@
+{
+  "status": "verified",
+  "models": [
+    {
+      "variant": "A",
+      "epochs": 16,
+      "best_epoch": 15,
+      "best_selection_wer": 76.42436149312377,
+      "best_sha256": "f82274d545772055a94303cc634be696c00be91a704b07272f8e2dafea6b1b2c"
+    },
+    {
+      "variant": "B",
+      "epochs": 16,
+      "best_epoch": 15,
+      "best_selection_wer": 75.28487229862475,
+      "best_sha256": "70f581d54950b4b2e2e49568723c9c3092781d6bc40bb092362ff7cc3f6c29a1"
+    },
+    {
+      "variant": "C",
+      "epochs": 16,
+      "best_epoch": 15,
+      "best_selection_wer": 75.6385068762279,
+      "best_sha256": "152f9daf73c8998886ad298939bce0034a29166fe22ee32b66d34519154b0c55"
+    }
+  ],
+  "original_predictor_unchanged": true,
+  "train_utterances": 28539,
+  "selection_utterances": 128,
+  "evaluation_utterances": 800,
+  "selection_evaluation_speakers_disjoint": true,
+  "all_timing_repeats_covered": true,
+  "timing_components_sum_to_total": true,
+  "raw_corpus_aggregates_verified": [
+    "full_encoder/dev-clean",
+    "full_encoder/dev-other",
+    "A/dev-clean",
+    "A/dev-other",
+    "B/dev-clean",
+    "B/dev-other",
+    "C/dev-clean",
+    "C/dev-other"
+  ],
+  "repeat_transcripts_independently_checked": true,
+  "initial_causality_and_streaming_checks": {
+    "models": [
+      {
+        "variant": "A",
+        "streaming_audio_max_difference": 0.0,
+        "sequence_vs_stream_recurrence_max_difference": 2.980232238769531e-07,
+        "future_audio_max_difference": 0.0,
+        "retained_state_is_own_corrected_output": true,
+        "trainable_parameters": 745600,
+        "total_parameters": 745600
+      },
+      {
+        "variant": "B",
+        "streaming_audio_max_difference": 0.0,
+        "sequence_vs_stream_recurrence_max_difference": 3.0547380447387695e-07,
+        "future_audio_max_difference": 0.0,
+        "retained_state_is_own_corrected_output": true,
+        "trainable_parameters": 811136,
+        "total_parameters": 7135104
+      },
+      {
+        "variant": "C",
+        "streaming_audio_max_difference": 0.0,
+        "sequence_vs_stream_recurrence_max_difference": 2.980232238769531e-07,
+        "future_audio_max_difference": 0.0,
+        "retained_state_is_own_corrected_output": true,
+        "trainable_parameters": 811136,
+        "total_parameters": 811136
+      }
+    ],
+    "initial_audio_head_functions_identical": true,
+    "common_head_and_prior_adapter_gradients_nonzero": true,
+    "frozen_predictor_gradients_absent": true,
+    "training_cutoffs_change_each_epoch": true,
+    "test_used": false
+  },
+  "test_used": false
+}

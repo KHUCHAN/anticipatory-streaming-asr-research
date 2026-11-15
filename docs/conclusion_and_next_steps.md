@@ -4,6 +4,17 @@ Snapshot date: 2026-11-14, America/Los_Angeles. This is the current-conclusion e
 
 ## Selected direction: prediction plus acoustic correction
 
+**Three-way correction pilot completed:** [fbank + causal conv results](predict_correct_pilot_2026-11-14.md), A audio-only / B frozen deterministic FGN prior / C previous corrected state. Each trained for 16 epochs using randomized windows; checkpoint selection and final 800-utterance dev evaluation use speaker-disjoint roles. Corrected-only feedback is used throughout, with no true encoder inference inputs. All timed decodes and verification completed in a 1.36h runner window, including a reporting-only serialization recovery.
+
+| Path | Dev-clean / dev-other WER | Complete ms/chunk, clean / other |
+|---|---:|---:|
+| Full encoder | 2.93 / 8.82% | 9.19 / 9.28 |
+| A: cheap audio | 71.40 / 80.38% | 3.09 / 3.06 |
+| B: cheap audio + FGN | 69.34 / 79.72% | 3.89 / 3.85 |
+| C: cheap audio + previous corrected state | 70.08 / 79.75% | 3.09 / 3.08 |
+
+B improves on A by 2.06pp on clean (paired 95% CI −3.25 to −0.91), but its advantage over C is not established on either split. B costs approximately 26% more than A/C. No path meets the declared full-encoder WER tolerance, despite lower CPU runtime. **This small-conv recipe does not demonstrate useful encoder-skipping acceleration. Improve and diagnose cheap audio reconstruction/distillation before another FGN size sweep.** One seed, strict causal sampling, incomplete direct supervision coverage and a frozen prior limit the conclusion; adaptive fallback/cache recovery was not tested.
+
 **Epoch-96 investigation completed:** [all three generators](fgn_double_descent_2026-11-13.md) received 69 additional epochs each without early stopping. The 207 new epochs plus verification took 7.50 hours. Every checkpoint, optimizer state, full-training milestone and captured input/source hash passed verification; original best checkpoints remain preserved.
 
 | Generator | Dev NLL mean, epochs 28–40 | Epochs 48–64 | Epochs 80–96 | State CRPS, initial → peak → final |
@@ -14,7 +25,7 @@ Snapshot date: 2026-11-14, America/Los_Angeles. This is the current-conclusion e
 
 No sustained second token-risk descent is observed through epoch 96. Dev next-token accuracy also falls from epoch 27 to 96, and best-NLL selection remains at epoch 5 for all sizes. State loss does show late recovery; the small model's final CRPS is slightly lower than its trained epoch-0 score, without a significance claim. This metric-specific curve does not identify an interpolation-driven double-descent mechanism. One fixed-case seed, unchanged learning rate, depth-only growth and the finite horizon constrain the conclusion; other regimes and later behavior remain open.
 
-Full-training arrived-audio errors fall 70 → 23 / 69 → 19 / 68 → 24 out of 28,318 cases. Zero-audio errors remain 193 in each final pass, consistent with the independently audited conflicting-input expected error floor. Better fitting does not improve measured held-out token risk. There is no new final-WER, compute-acceleration or raw-audio-corrector result.
+Full-training arrived-audio errors fall 70 → 23 / 69 → 19 / 68 → 24 out of 28,318 cases. Zero-audio errors remain 193 in each final pass, consistent with the independently audited conflicting-input expected error floor. Better fitting does not improve measured held-out token risk. That double-descent investigation did not measure final WER, compute acceleration or raw-audio correction; the separate correction pilot is described above.
 
 **Earlier review:** the [epoch-27 post-hoc review](double_descent_review_2026-11-13.md) motivated the completed experiment above. Its finite-window caution remains applicable: no model-wise interpolation threshold or universal absence is established, and label smoothing alone does not exclude double descent. That review itself performed no new training or test evaluation.
 
@@ -24,11 +35,11 @@ Checkpoint audits confirm SiLU and zero ReLU modules in all three FGN generators
 
 **Capacity diagnosis completed:** [FGN generator growth](fgn_capacity_2026-11-12.md) compares 6.32M, 10.54M and 18.96M generators from identical initial functions, with AR depth unchanged. All met the predeclared overfit rule at continuation epoch 11. Matched-epoch train-probe NLL is 0.2288 / 0.2269 / 0.2228 and dev NLL is 1.0042 / 1.0127 / 1.0228; all selected dev-best checkpoints at epoch 5 (0.9486 / 0.9509 / 0.9504). The existing small generator already overfits this fixed-case problem. Threefold generator growth offers only a small fitting gain and no observed dev improvement in this seed. Test data is unused.
 
-This diagnoses one fixed prediction case per each of 28,539 training utterances, not every temporal prefix. It does not establish that capacity never limits the full task, or measure a causal noise-regularization effect. Acoustic-state CRPS rises while token NLL falls, so lower token loss is not proof of a better predicted acoustic representation. The raw-audio corrector remains unimplemented.
+This diagnoses one fixed prediction case per each of 28,539 training utterances, not every temporal prefix. It does not establish that capacity never limits the full task, or measure a causal noise-regularization effect. Acoustic-state CRPS rises while token NLL falls, so lower token loss is not proof of a better predicted acoustic representation. Raw-audio correction was not included in that diagnosis.
 
 The user selected a new target on 2026-11-12: predict an acoustic representation, correct it with inexpensive processing of actual incoming audio, and avoid full encoder work when recognition quality permits. A learned prior may help ambiguous speech, but must yield to unexpected names, numbers or topic changes. Reference-based training and explicit recovery tests are required.
 
-The [current acceleration plan](predict_correct_acceleration_plan_2026-11-12.md) records the architecture, losses, state/cache requirements, scaling sequence and comparisons. **The residual corrector, compute gate and encoder-skipping runtime are not yet implemented or trained.** Completed display results below do not establish this new hypothesis.
+The [current acceleration plan](predict_correct_acceleration_plan_2026-11-12.md) records the architecture, losses, state/cache requirements, scaling sequence and comparisons. **The first causal correction pilot is complete, with inadequate WER; the compute gate and adaptive encoder-skipping/cache-recovery runtime remain unimplemented.** Completed display results below measure a different objective.
 
 An initial 24-utterance development CPU profile measured encoder/prediction-network/joiner work as 8.8421/0.0751/0.0764ms per chunk; the encoder took 98.3159% of native neural time. A standalone reproduction again measured about 98.3%. See [profile records](../experiments/compute_profile_v1/README.md). This is a small batch-1 adapter measurement, not a live-device benchmark. The prior 1.3–1.4ms figure belongs to the AR forecaster, not the proposed FGN/correction path.
 

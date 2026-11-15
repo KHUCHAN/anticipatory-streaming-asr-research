@@ -1,0 +1,18 @@
+{
+  "platform": "macOS-26.7.2-arm64-arm-64bit-Mach-O",
+  "dependencies": {
+    "torch": "2.15.0",
+    "numpy": "2.5.4",
+    "soundfile": "0.14.0",
+    "sentencepiece": "0.2.3",
+    "onnxruntime": "1.31.1",
+    "kaldi-native-fbank": "1.23.0",
+    "matplotlib": "3.10.8"
+  },
+  "training_device": "MPS",
+  "final_inference_device": "CPU, batch 1, one thread",
+  "test_used": false,
+  "cpu": "Apple M5 Pro",
+  "unified_memory_bytes": 25769803776,
+  "unified_memory_gib": 24.0
+}

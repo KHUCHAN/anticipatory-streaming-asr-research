@@ -1,0 +1,541 @@
+{
+  "status": "completed",
+  "elapsed_seconds": 4910.371643066406,
+  "results": {
+    "status": "evaluation completed",
+    "primary": {
+      "full_encoder/dev-clean": {
+        "utterances": 400,
+        "wer_percent": 2.932889344262295,
+        "errors": 229,
+        "reference_words": 7808,
+        "audio_seconds": 2760.8401875,
+        "chunks": 9091,
+        "total_inference_seconds": 83.59165447048144,
+        "rtf": 0.030277614346875863,
+        "total_ms_per_chunk": 9.194990041852542,
+        "total_with_audio_io_rtf": 0.03055604936245812,
+        "feature_ms_per_chunk": 0.20818151370204757,
+        "components_ms_per_chunk": {
+          "audio": 8.635601305387244,
+          "prediction": 0.0,
+          "correction": 0.0,
+          "feedback": 0.0,
+          "decoder": 0.33324174831642145
+        },
+        "other_overhead_ms_per_chunk": 0.017965474446827532,
+        "compute_chunk_p50_ms": 8.96412500878796,
+        "compute_chunk_p95_ms": 9.289416513638571,
+        "state_mae": 0.000149596474374202,
+        "timing_repeat_total_ms_per_chunk": [
+          9.184556966729462,
+          9.20542311697562
+        ]
+      },
+      "full_encoder/dev-other": {
+        "utterances": 400,
+        "wer_percent": 8.816901408450704,
+        "errors": 626,
+        "reference_words": 7100,
+        "audio_seconds": 2457.545125,
+        "chunks": 8131,
+        "total_inference_seconds": 75.46645880001597,
+        "rtf": 0.030708066367658646,
+        "total_ms_per_chunk": 9.281325642604351,
+        "total_with_audio_io_rtf": 0.03108618156404058,
+        "feature_ms_per_chunk": 0.21076786497972294,
+        "components_ms_per_chunk": {
+          "audio": 8.713880921120406,
+          "prediction": 0.0,
+          "correction": 0.0,
+          "feedback": 0.0,
+          "decoder": 0.3364005284352967
+        },
+        "other_overhead_ms_per_chunk": 0.02027632806892481,
+        "compute_chunk_p50_ms": 8.989416528493166,
+        "compute_chunk_p95_ms": 9.528041759040207,
+        "state_mae": 0.0001513271478246776,
+        "timing_repeat_total_ms_per_chunk": [
+          9.180966051635696,
+          9.381685233573004
+        ]
+      },
+      "A/dev-clean": {
+        "utterances": 400,
+        "wer_percent": 71.40112704918033,
+        "errors": 5575,
+        "reference_words": 7808,
+        "audio_seconds": 2760.8401875,
+        "chunks": 9091,
+        "total_inference_seconds": 28.117514853714965,
+        "rtf": 0.010184405088356809,
+        "total_ms_per_chunk": 3.0928957049515966,
+        "total_with_audio_io_rtf": 0.010307830717082017,
+        "feature_ms_per_chunk": 0.2072022007774189,
+        "components_ms_per_chunk": {
+          "audio": 2.625573067001053,
+          "prediction": 0.0016904090967686208,
+          "correction": 0.04025824453310653,
+          "feedback": 0.001355140217852506,
+          "decoder": 0.2021580900679448
+        },
+        "other_overhead_ms_per_chunk": 0.014658553257452214,
+        "compute_chunk_p50_ms": 2.8735414962284267,
+        "compute_chunk_p95_ms": 3.119895758572966,
+        "state_mae": 0.8589909403529475,
+        "timing_repeat_total_ms_per_chunk": [
+          3.0981868031108837,
+          3.0876046067923095
+        ]
+      },
+      "A/dev-other": {
+        "utterances": 400,
+        "wer_percent": 80.38028169014085,
+        "errors": 5707,
+        "reference_words": 7100,
+        "audio_seconds": 2457.545125,
+        "chunks": 8131,
+        "total_inference_seconds": 24.901656161411665,
+        "rtf": 0.010132736082073636,
+        "total_ms_per_chunk": 3.062557638840446,
+        "total_with_audio_io_rtf": 0.010256336479136298,
+        "feature_ms_per_chunk": 0.20861588382260543,
+        "components_ms_per_chunk": {
+          "audio": 2.614082799943343,
+          "prediction": 0.0016719396353247179,
+          "correction": 0.04016983383734344,
+          "feedback": 0.0013446633571942358,
+          "decoder": 0.18150482357728986
+        },
+        "other_overhead_ms_per_chunk": 0.015167694667345293,
+        "compute_chunk_p50_ms": 2.841312496457249,
+        "compute_chunk_p95_ms": 3.0795520287938416,
+        "state_mae": 0.8748720404465778,
+        "timing_repeat_total_ms_per_chunk": [
+          3.0804108246158,
+          3.0447044530650915
+        ]
+      },
+      "B/dev-clean": {
+        "utterances": 400,
+        "wer_percent": 69.33913934426229,
+        "errors": 5414,
+        "reference_words": 7808,
+        "audio_seconds": 2760.8401875,
+        "chunks": 9091,
+        "total_inference_seconds": 35.35616805573227,
+        "rtf": 0.012806307375490662,
+        "total_ms_per_chunk": 3.889139594734602,
+        "total_with_audio_io_rtf": 0.012938933636884288,
+        "feature_ms_per_chunk": 0.20768497993192478,
+        "components_ms_per_chunk": {
+          "audio": 2.6429535499289356,
+          "prediction": 0.6956355782759873,
+          "correction": 0.05471521615792534,
+          "feedback": 0.04146110238838285,
+          "decoder": 0.22505334821990586
+        },
+        "other_overhead_ms_per_chunk": 0.021635819831540344,
+        "compute_chunk_p50_ms": 3.686791518703103,
+        "compute_chunk_p95_ms": 3.9703750226181,
+        "state_mae": 0.85883917545357,
+        "timing_repeat_total_ms_per_chunk": [
+          3.89779020249274,
+          3.8804889869764643
+        ]
+      },
+      "B/dev-other": {
+        "utterances": 400,
+        "wer_percent": 79.71830985915493,
+        "errors": 5660,
+        "reference_words": 7100,
+        "audio_seconds": 2457.545125,
+        "chunks": 8131,
+        "total_inference_seconds": 31.30024342093384,
+        "rtf": 0.01273638603927317,
+        "total_ms_per_chunk": 3.8494949478457556,
+        "total_with_audio_io_rtf": 0.012872040184643222,
+        "feature_ms_per_chunk": 0.20864783921279584,
+        "components_ms_per_chunk": {
+          "audio": 2.628845187902745,
+          "prediction": 0.6908673372559154,
+          "correction": 0.05461319364653608,
+          "feedback": 0.04140183455232302,
+          "decoder": 0.202950106026501
+        },
+        "other_overhead_ms_per_chunk": 0.022169449248939547,
+        "compute_chunk_p50_ms": 3.640791983343661,
+        "compute_chunk_p95_ms": 3.924239514162764,
+        "state_mae": 0.8753903974628788,
+        "timing_repeat_total_ms_per_chunk": [
+          3.8546752228727237,
+          3.8443146728187876
+        ]
+      },
+      "C/dev-clean": {
+        "utterances": 400,
+        "wer_percent": 70.08196721311475,
+        "errors": 5472,
+        "reference_words": 7808,
+        "audio_seconds": 2760.8401875,
+        "chunks": 9091,
+        "total_inference_seconds": 28.126866872655228,
+        "rtf": 0.010187792469844012,
+        "total_ms_per_chunk": 3.0939244167479076,
+        "total_with_audio_io_rtf": 0.010310814973965219,
+        "feature_ms_per_chunk": 0.2065504055598591,
+        "components_ms_per_chunk": {
+          "audio": 2.614426622175169,
+          "prediction": 0.001683568931479237,
+          "correction": 0.051803375967881635,
+          "feedback": 0.0013597599763315433,
+          "decoder": 0.20348542570718886
+        },
+        "other_overhead_ms_per_chunk": 0.014615258429998114,
+        "compute_chunk_p50_ms": 2.870374999474734,
+        "compute_chunk_p95_ms": 3.1241561810020357,
+        "state_mae": 0.861782938100995,
+        "timing_repeat_total_ms_per_chunk": [
+          3.0969608991900945,
+          3.0908879343057203
+        ]
+      },
+      "C/dev-other": {
+        "utterances": 400,
+        "wer_percent": 79.74647887323944,
+        "errors": 5662,
+        "reference_words": 7100,
+        "audio_seconds": 2457.545125,
+        "chunks": 8131,
+        "total_inference_seconds": 25.062793238437735,
+        "rtf": 0.010198304390621407,
+        "total_ms_per_chunk": 3.08237525992347,
+        "total_with_audio_io_rtf": 0.010322925289981816,
+        "feature_ms_per_chunk": 0.2091918851583605,
+        "components_ms_per_chunk": {
+          "audio": 2.617877180151006,
+          "prediction": 0.0016855496974817032,
+          "correction": 0.051749234872133315,
+          "feedback": 0.0013783425918528624,
+          "decoder": 0.18512848552616293
+        },
+        "other_overhead_ms_per_chunk": 0.015364581926472328,
+        "compute_chunk_p50_ms": 2.860125037841499,
+        "compute_chunk_p95_ms": 3.0996040150057524,
+        "state_mae": 0.8788014350598947,
+        "timing_repeat_total_ms_per_chunk": [
+          3.083993089291981,
+          3.080757430554959
+        ]
+      }
+    },
+    "paired_comparisons": {
+      "dev-clean/B-minus-A": {
+        "wer_difference_pp": -2.0619877049180326,
+        "ci95_pp": [
+          -3.2544617570776984,
+          -0.9142606672561834
+        ],
+        "replicates": 2000,
+        "unit": "paired utterance; does not measure training-seed variance"
+      },
+      "dev-clean/B-minus-C": {
+        "wer_difference_pp": -0.742827868852459,
+        "ci95_pp": [
+          -1.871939917110868,
+          0.38705721445706515
+        ],
+        "replicates": 2000,
+        "unit": "paired utterance; does not measure training-seed variance"
+      },
+      "dev-clean/C-minus-A": {
+        "wer_difference_pp": -1.3191598360655739,
+        "ci95_pp": [
+          -2.3408468585719393,
+          -0.29048032404464047
+        ],
+        "replicates": 2000,
+        "unit": "paired utterance; does not measure training-seed variance"
+      },
+      "dev-other/B-minus-A": {
+        "wer_difference_pp": -0.6619718309859155,
+        "ci95_pp": [
+          -1.7038673692397133,
+          0.40219910837595924
+        ],
+        "replicates": 2000,
+        "unit": "paired utterance; does not measure training-seed variance"
+      },
+      "dev-other/B-minus-C": {
+        "wer_difference_pp": -0.028169014084507043,
+        "ci95_pp": [
+          -1.0144504972500816,
+          0.929974554889847
+        ],
+        "replicates": 2000,
+        "unit": "paired utterance; does not measure training-seed variance"
+      },
+      "dev-other/C-minus-A": {
+        "wer_difference_pp": -0.6338028169014085,
+        "ci95_pp": [
+          -1.762735814097876,
+          0.4370075566476845
+        ],
+        "replicates": 2000,
+        "unit": "paired utterance; does not measure training-seed variance"
+      }
+    },
+    "decisions": {
+      "dev-clean": {
+        "b_wer_better_than_a": true,
+        "b_wer_ci_excludes_zero_in_beneficial_direction": true,
+        "b_observed_improvement_meets_0_5pp": true,
+        "b_total_time_lower_than_full_encoder": true,
+        "b_wer_delta_vs_full_encoder_pp": 66.40625,
+        "b_meets_teacher_wer_tolerance": false,
+        "b_meets_minimum_compute_saving": true,
+        "b_total_time_relative_to_a": 1.2574428515349718,
+        "b_speedup_vs_full_encoder": 2.3642735926222294,
+        "note": "Different total parameter/runtime budgets: this is a measured frontier comparison, not an iso-compute superiority claim. Check quality loss versus the full encoder separately."
+      },
+      "dev-other": {
+        "b_wer_better_than_a": true,
+        "b_wer_ci_excludes_zero_in_beneficial_direction": false,
+        "b_observed_improvement_meets_0_5pp": true,
+        "b_total_time_lower_than_full_encoder": true,
+        "b_wer_delta_vs_full_encoder_pp": 70.90140845070422,
+        "b_meets_teacher_wer_tolerance": false,
+        "b_meets_minimum_compute_saving": true,
+        "b_total_time_relative_to_a": 1.2569542852108613,
+        "b_speedup_vs_full_encoder": 2.411050220444721,
+        "note": "Different total parameter/runtime budgets: this is a measured frontier comparison, not an iso-compute superiority claim. Check quality loss versus the full encoder separately."
+      }
+    },
+    "operating_points": {
+      "A/dev-clean": {
+        "wer_degradation_vs_full_encoder_pp": 68.46823770491804,
+        "speedup_vs_full_encoder": 2.972938928115729,
+        "meets_wer_tolerance": false,
+        "meets_compute_saving": true
+      },
+      "B/dev-clean": {
+        "wer_degradation_vs_full_encoder_pp": 66.40625,
+        "speedup_vs_full_encoder": 2.3642735926222294,
+        "meets_wer_tolerance": false,
+        "meets_compute_saving": true
+      },
+      "C/dev-clean": {
+        "wer_degradation_vs_full_encoder_pp": 67.14907786885246,
+        "speedup_vs_full_encoder": 2.971950443287686,
+        "meets_wer_tolerance": false,
+        "meets_compute_saving": true
+      },
+      "A/dev-other": {
+        "wer_degradation_vs_full_encoder_pp": 71.56338028169014,
+        "speedup_vs_full_encoder": 3.030579906446584,
+        "meets_wer_tolerance": false,
+        "meets_compute_saving": true
+      },
+      "B/dev-other": {
+        "wer_degradation_vs_full_encoder_pp": 70.90140845070422,
+        "speedup_vs_full_encoder": 2.411050220444721,
+        "meets_wer_tolerance": false,
+        "meets_compute_saving": true
+      },
+      "C/dev-other": {
+        "wer_degradation_vs_full_encoder_pp": 70.92957746478874,
+        "speedup_vs_full_encoder": 3.0110952950079115,
+        "meets_wer_tolerance": false,
+        "meets_compute_saving": true
+      }
+    },
+    "evaluation_source_sha256": "fdee747252fcc11a176ae8499d35e5bc78a49e9719d3da7c9af8ce74dc21cd09",
+    "model_sha256": {
+      "A": "f82274d545772055a94303cc634be696c00be91a704b07272f8e2dafea6b1b2c",
+      "B": "70f581d54950b4b2e2e49568723c9c3092781d6bc40bb092362ff7cc3f6c29a1",
+      "C": "152f9daf73c8998886ad298939bce0034a29166fe22ee32b66d34519154b0c55"
+    },
+    "all_repeated_transcripts_match": true,
+    "cfg": {
+      "experiment": "Causal fbank prediction-correction three-way feasibility pilot",
+      "variants": [
+        "A",
+        "B",
+        "C"
+      ],
+      "output": "runs/predict_correct_v1",
+      "seed": 137,
+      "train_split": "train-clean-100",
+      "gate_protocol": "data/processed/protocols/librispeech960_v1/manifests",
+      "selection_per_split": 64,
+      "evaluation_per_split": 400,
+      "selection_seed": 4137,
+      "evaluation_seed": 5137,
+      "feature_bins": 80,
+      "feature_hop": 32,
+      "feature_window": 45,
+      "state_frames": 8,
+      "state_features": 512,
+      "audio_width": 128,
+      "audio_expansion": 2,
+      "audio_dilations": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "audio_kernel": 5,
+      "head_hidden": 512,
+      "predictor_checkpoint": "runs/fgn_state_v1/deterministic_s37/best.pt",
+      "bridge": "runs/fgn_state_v1/rnnt_bridge.npz",
+      "encoder_cache": "runs/fgn_state_v1/cache",
+      "epochs": 16,
+      "batch_utterances": 64,
+      "burn_chunks": 2,
+      "loss_chunks": 4,
+      "learning_rate": 0.0006,
+      "warmup_steps": 200,
+      "weight_decay": 0.001,
+      "gradient_clip": 5.0,
+      "representation_weight": 1.0,
+      "distillation_weight": 1.0,
+      "distillation_temperature": 2.0,
+      "blank_frame_weight": 0.1,
+      "selection_metric": "free-running decoder corpus WER on the fixed model-selection subset",
+      "feedback": "own corrected normalized states; detached between chunks; no teacher-state inputs",
+      "predictor": "frozen deterministic FGN, one branch, one transition per chunk after the first; confirmed memory updated only from corrected states",
+      "timing_threads": 1,
+      "timing_repetitions": 2,
+      "bootstrap_replicates": 2000,
+      "practical_wer_improvement_pp": 0.5,
+      "max_wer_degradation_vs_teacher_pp": 0.5,
+      "minimum_compute_saving_fraction": 0.1,
+      "max_driver_memory_gib": 10.0,
+      "test_used": false,
+      "scope": "One-seed 100h student/distillation pilot; 100% encoder-output replacement on disjoint dev evaluation. Not an adaptive fallback/cache-recovery implementation or a matched-total-parameter comparison."
+    },
+    "test_used": false,
+    "timing_scope": "CPU batch-1 one-thread streaming replay from resident raw waveform. Includes fbank, normalization, conv caches, FGN prediction, correction, corrected-state memory update, token decoding and Python/array conversion overhead. Reference metrics and file IO excluded from primary runtime; IO-inclusive RTF reported separately. No microphone wait time or UI latency.",
+    "limitations": "Teacher-forced distillation contexts are labels only. Final decoding is free-running with own corrected feedback. Single seed, no adaptive fallback or teacher-cache recovery, no total-parameter matching. Timing repeat order reversed; two repeats do not establish hardware-wide uncertainty."
+  },
+  "verification": {
+    "status": "verified",
+    "models": [
+      {
+        "variant": "A",
+        "epochs": 16,
+        "best_epoch": 15,
+        "best_selection_wer": 76.42436149312377,
+        "best_sha256": "f82274d545772055a94303cc634be696c00be91a704b07272f8e2dafea6b1b2c"
+      },
+      {
+        "variant": "B",
+        "epochs": 16,
+        "best_epoch": 15,
+        "best_selection_wer": 75.28487229862475,
+        "best_sha256": "70f581d54950b4b2e2e49568723c9c3092781d6bc40bb092362ff7cc3f6c29a1"
+      },
+      {
+        "variant": "C",
+        "epochs": 16,
+        "best_epoch": 15,
+        "best_selection_wer": 75.6385068762279,
+        "best_sha256": "152f9daf73c8998886ad298939bce0034a29166fe22ee32b66d34519154b0c55"
+      }
+    ],
+    "original_predictor_unchanged": true,
+    "train_utterances": 28539,
+    "selection_utterances": 128,
+    "evaluation_utterances": 800,
+    "selection_evaluation_speakers_disjoint": true,
+    "all_timing_repeats_covered": true,
+    "timing_components_sum_to_total": true,
+    "raw_corpus_aggregates_verified": [
+      "full_encoder/dev-clean",
+      "full_encoder/dev-other",
+      "A/dev-clean",
+      "A/dev-other",
+      "B/dev-clean",
+      "B/dev-other",
+      "C/dev-clean",
+      "C/dev-other"
+    ],
+    "repeat_transcripts_independently_checked": true,
+    "initial_causality_and_streaming_checks": {
+      "models": [
+        {
+          "variant": "A",
+          "streaming_audio_max_difference": 0.0,
+          "sequence_vs_stream_recurrence_max_difference": 2.980232238769531e-07,
+          "future_audio_max_difference": 0.0,
+          "retained_state_is_own_corrected_output": true,
+          "trainable_parameters": 745600,
+          "total_parameters": 745600
+        },
+        {
+          "variant": "B",
+          "streaming_audio_max_difference": 0.0,
+          "sequence_vs_stream_recurrence_max_difference": 3.0547380447387695e-07,
+          "future_audio_max_difference": 0.0,
+          "retained_state_is_own_corrected_output": true,
+          "trainable_parameters": 811136,
+          "total_parameters": 7135104
+        },
+        {
+          "variant": "C",
+          "streaming_audio_max_difference": 0.0,
+          "sequence_vs_stream_recurrence_max_difference": 2.980232238769531e-07,
+          "future_audio_max_difference": 0.0,
+          "retained_state_is_own_corrected_output": true,
+          "trainable_parameters": 811136,
+          "total_parameters": 811136
+        }
+      ],
+      "initial_audio_head_functions_identical": true,
+      "common_head_and_prior_adapter_gradients_nonzero": true,
+      "frozen_predictor_gradients_absent": true,
+      "training_cutoffs_change_each_epoch": true,
+      "test_used": false
+    },
+    "test_used": false
+  },
+  "state_baselines": {
+    "scores": {
+      "dev-clean": {
+        "mean_prediction_mae": 0.7929914085252714,
+        "oracle_previous_true_chunk_mae": 0.9516695176464375,
+        "elements": 37236736
+      },
+      "dev-other": {
+        "mean_prediction_mae": 0.7993163141885866,
+        "oracle_previous_true_chunk_mae": 0.9609973870540833,
+        "elements": 33304576
+      }
+    },
+    "scope": "Same final evaluation utterances, frames and train-only normalization as A/B/C. Mean baseline is constant normalized zero. Persistence uses previous TRUE teacher states as an offline oracle diagnostic; it is not the deployed C condition and is never a model input. Neither MAE reduction is a percentage of acoustic information.",
+    "test_used": false
+  },
+  "training_coverage": {
+    "train_utterances": 28539,
+    "epochs": 16,
+    "available_chunks": 1164469,
+    "supervised_chunk_visits": 1826496,
+    "unique_supervised_chunks": 866723,
+    "unique_coverage_fraction": 0.7443074912256145,
+    "first_two_available_chunks": 57078,
+    "first_two_unique_supervised_chunks": 0,
+    "interpretation": "Coverage of direct losses, not input audio exposure. Burn-in outputs influence later inference feedback but are detached from later chunk gradients. Long-utterance first two chunks are burn-in only under this fixed recipe; this is a pilot training limitation.",
+    "changes_training": false,
+    "test_used": false
+  },
+  "reporting_source_sha256": {
+    "report.py": "06190c40d6292adbcc42e4ca972dd685b0720c28a78345e5cab39331f18ee3ac",
+    "evaluate.py": "fdee747252fcc11a176ae8499d35e5bc78a49e9719d3da7c9af8ce74dc21cd09",
+    "verify.py": "d77e332a6c724c8350758c4ca3fc0065541818f4a20eb55264487f2fc0bbb102",
+    "analyze.py": "ae81592aee0143321c46a2cf29a710dbb71b266d2070fe8421e022b164036ab9",
+    "finalize.py": "c2b900a489505ff1a2cc919e2fd4d3b8c82d6f44cbb414f24624eaa46552761a"
+  },
+  "conclusion": "No tested cheap path retains the full encoder's accuracy while meeting the compute-saving target. B meets the declared practical-plus-paired-CI WER improvement criterion over A on 1/2 splits. 0/6 cheap-path operating points meet both the full-encoder WER tolerance and compute-saving targets. These separate checks distinguish prior usefulness within this small student from accuracy-preserving encoder acceleration."
+}

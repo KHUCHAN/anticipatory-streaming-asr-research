@@ -1,0 +1,13 @@
+{
+  "train_utterances": 28539,
+  "epochs": 16,
+  "available_chunks": 1164469,
+  "supervised_chunk_visits": 1826496,
+  "unique_supervised_chunks": 866723,
+  "unique_coverage_fraction": 0.7443074912256145,
+  "first_two_available_chunks": 57078,
+  "first_two_unique_supervised_chunks": 0,
+  "interpretation": "Coverage of direct losses, not input audio exposure. Burn-in outputs influence later inference feedback but are detached from later chunk gradients. Long-utterance first two chunks are burn-in only under this fixed recipe; this is a pilot training limitation.",
+  "changes_training": false,
+  "test_used": false
+}
