@@ -1,0 +1,6 @@
+# Install separately: .venv/bin/python -m pip install --target .local/a2-export-deps -r requirements-a2-export.txt
+onnx==1.20.1
+ml_dtypes==0.6.0
+numpy==2.5.4
+protobuf==7.36.2
+typing_extensions==4.16.0

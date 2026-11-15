@@ -1,0 +1,17 @@
+{
+  "captured_unix": 1794730593.850156,
+  "source_sha256": {
+    "experiments/predict_correct_a2_v1/evaluate.py": "f05f993ee24e4460c5bba4cc969e4ce67968f39364cedf3fbffb843aa7d58369",
+    "experiments/predict_correct_a2_v1/inference.py": "b4fd728a6c27989363c355edd9f609cec67660bcf89728d3a8e6cd5385e75134",
+    "experiments/predict_correct_a2_v1/optimized_inference.py": "5a16aa328eb26d82984912a33ad325f0479952bf912198ad3d222b398f949074",
+    "experiments/predict_correct_a2_v1/onnx_backend.py": "106c9111e8b02f3de57ec6e5cdeae424480805fe4ea9bc1e64d8d391f9b52280",
+    "experiments/predict_correct_a2_v1/config.json": "7c7e61c4bdab03209138ef40cef16f03d32b8420a77f88fa11b831a08c075ce4",
+    "experiments/predict_correct_a2_v1/model.py": "82a576d9a252ff1d28b003c671d09c7e75d1f8b052dfc9bb2eeca2b0492fa6d7",
+    "experiments/predict_correct_a2_v1/common.py": "5fcbe71365396526d8242eb0ba104d9ff7cc38db3ceac5581768d52953caf005",
+    "experiments/predict_correct_v1/artifacts/results.json": "2019fa8edf35670bc4241765b6d244ae13a543ba90183811ac667854f6055d78"
+  },
+  "policy": "Frozen during MAE training, before any final-role A2 decoding. A2 FP32 ONNX exports use unchanged trained weights; compare to native ONNX teacher/small, plus both same-run and historical cost denominators. Choose phase/checkpoints only on model-selection data.",
+  "training_source_unchanged": true,
+  "test_used": false,
+  "historical_cost_input_pinned_unix": 1794730768.062988
+}

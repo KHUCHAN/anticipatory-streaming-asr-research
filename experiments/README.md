@@ -9,6 +9,7 @@
 | [fgn_capacity_long_v1](fgn_capacity_long_v1/README.md) | Completed | Restored epoch-11 models and optimizers; 16 extra epochs each, through 27; overfit stopping disabled | [Extended results](../docs/fgn_capacity_long_2026-11-13.md): similar final fitting across sizes, higher dev NLL, SiLU settings verified; no test use |
 | [fgn_double_descent_v1](fgn_double_descent_v1/README.md) | Completed and verified | Three depths reached epoch 96; 207 new epochs, 7.50h, no early stopping; all full-training milestones verified | [Final results](../docs/fgn_double_descent_2026-11-13.md): no sustained token-risk second descent, state CRPS recovers; one seed, no test evaluation |
 | [predict_correct_v1](predict_correct_v1/README.md) | Completed and verified | Causal fbank conv A/B/C, corrected-only feedback, 16 epochs each, 800 dev utterances, two full-cost repetitions | [Results](../docs/predict_correct_pilot_2026-11-14.md): lower CPU cost but inadequate WER; B-over-C benefit not established |
+| [predict_correct_a2_v1](predict_correct_a2_v1/README.md) | Running | 9.60M audio-only stride-4/chunk head, MAE then calibrated KL, native full/small Zipformer controls | Initial causality/tiny-fit/native checks and frozen protocol; final WER/cost pending |
 
 The [predict–correct encoder acceleration plan](../docs/predict_correct_acceleration_plan_2026-11-12.md) now has a completed feasibility pilot, which does not retain baseline accuracy. Full encoder-skipping with adaptive fallback and teacher-cache recovery is still a proposal.
 

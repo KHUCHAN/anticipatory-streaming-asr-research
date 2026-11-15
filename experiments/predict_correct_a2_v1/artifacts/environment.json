@@ -1,0 +1,18 @@
+{
+  "platform": "macOS-26.7.2-arm64-arm-64bit-Mach-O",
+  "python": "3.13.2",
+  "cpu": "Apple M5 Pro",
+  "unified_memory_gib": 24,
+  "hardware_source": "Verified hardware record from the preceding pilot on this same computer",
+  "dependencies": {
+    "torch": "2.15.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.1",
+    "kaldi-native-fbank": "1.23.0",
+    "soundfile": "0.14.0",
+    "matplotlib": "3.10.8"
+  },
+  "training": "MPS, float32; active original environment unchanged",
+  "inference": "CPU batch 1, one thread; FP32 ONNX",
+  "export_environment": "Isolated .local/a2-export-deps; onnx1.20.1, ml_dtypes0.6.0, numpy2.5.4, protobuf7.36.2, typing_extensions4.16.0"
+}

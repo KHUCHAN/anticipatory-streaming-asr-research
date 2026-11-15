@@ -1,0 +1,32 @@
+{
+  "captured_unix": 1794729377.146249,
+  "sha256": {
+    "experiments/predict_correct_a2_v1/common.py": "5fcbe71365396526d8242eb0ba104d9ff7cc38db3ceac5581768d52953caf005",
+    "experiments/predict_correct_a2_v1/config.json": "7c7e61c4bdab03209138ef40cef16f03d32b8420a77f88fa11b831a08c075ce4",
+    "experiments/predict_correct_a2_v1/model.py": "82a576d9a252ff1d28b003c671d09c7e75d1f8b052dfc9bb2eeca2b0492fa6d7",
+    "experiments/predict_correct_a2_v1/data.py": "afd7b93c6aed46ccde48d3182dbf0342374bc0c184a84b39bf113561eab5fd20",
+    "experiments/predict_correct_a2_v1/objective.py": "a54dba1d5f60b6d2f174d62f60f5db3118feb21a6d03170f085053aa1e9b342b",
+    "experiments/predict_correct_a2_v1/inference.py": "b4fd728a6c27989363c355edd9f609cec67660bcf89728d3a8e6cd5385e75134",
+    "experiments/predict_correct_a2_v1/train.py": "39d85e4a08fbe1ed993124ae398b37d79424cdf8147160d5d1993dc9222f508e",
+    "experiments/fgn_state_v1/model.py": "91d5d135e73910d38170fc35570ad5d87282472c82abd2323d1ae12f44d2de1d",
+    "experiments/predict_correct_v1/prepare.py": "1ac5157555e4f6fc7aa0b16b119450d9e7271b6cbcc98e1f6886953a429c8b3d",
+    "runs/predict_correct_v1/protocol.json": "f92eae32266323456459586cd8671c833dc0f4195c1fec5b6003b001c23db736",
+    "runs/fgn_state_v1/rnnt_bridge.npz": "68df0c30ea0f4ef332f745139289fac91375a4a3db3a9bd5088ead557a71ceb0",
+    "configs/zipformer_baseline.json": "78dd5f8e817ea2d3baa537234743c26a97d2ac7da2ec1fabe21e9f8c7764d0f5",
+    "runs/predict_correct_v1/cache/index.json": "c8c904688335a0619a1e4aad28769a522e2212461504a510de35a79165da3d6d",
+    "runs/predict_correct_v1/cache/stats.json": "68cf512d592ded97b7774e2e9db42992c4f767bc5f3150b3dd27572554e11399",
+    "runs/predict_correct_v1/cache/complete.json": "b6b5127219abb56f8f57caa0693ced12ef6e11ec7ba6a33c662b09652f46684c",
+    "runs/fgn_state_v1/cache/stats.json": "69d208a31df8acb30724120e63690c7fb46e7edbca9122147b47d7ef2a5ce650",
+    "runs/fgn_state_v1/cache/complete.json": "807a938d38edfc1bf90af46d5414dbfcc2df4accaf2b251b9a9215a464a68752",
+    "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-2023-06-26/encoder-epoch-99-avg-1-chunk-16-left-128.onnx": "d1d74ba2fd9ce2186662cec93eab9f9c102d97a18e86dafdaf584776c961ab1d",
+    "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-2023-06-26/decoder-epoch-99-avg-1-chunk-16-left-128.onnx": "85914f840b71110487ece7a30ebd0bd4b8fb5c2623215bba3aa5ab4c138fc591",
+    "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-2023-06-26/joiner-epoch-99-avg-1-chunk-16-left-128.onnx": "5fe99bb91ea035ab82765f65955b6a9cd2f8b7ebd320761e432d16e432dcaad9",
+    "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-2023-06-26/tokens.txt": "49e3c2646595fd907228b3c6787069658f67b17377c60aeb8619c4551b2316fb",
+    "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/encoder-epoch-99-avg-1.onnx": "f77a22f4ff94604e1afb2aeb13504d7699363528c047c97d3436087c95c9b659",
+    "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/decoder-epoch-99-avg-1.onnx": "45a7f940ecfb53d89fa270ad11b88b961e53a317203eb24b1c8e95ed208b0f30",
+    "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/joiner-epoch-99-avg-1.onnx": "343e17dffa4f386ca206e00d3c406908f68f473c3d35968d6c3cddd5b8559a94",
+    "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/tokens.txt": "49e3c2646595fd907228b3c6787069658f67b17377c60aeb8619c4551b2316fb"
+  },
+  "test_used": false,
+  "full_binary_caches_rehashed": false
+}

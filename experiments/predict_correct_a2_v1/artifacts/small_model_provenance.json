@@ -1,0 +1,14 @@
+{
+  "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17.tar.bz2",
+  "archive_sha256": "9c559283e8498d3fe95913c79ca1cb454bb26281ac2b102b41306c7d752765d9",
+  "model_directory": "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17",
+  "files": {
+    "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/encoder-epoch-99-avg-1.onnx": "f77a22f4ff94604e1afb2aeb13504d7699363528c047c97d3436087c95c9b659",
+    "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/decoder-epoch-99-avg-1.onnx": "45a7f940ecfb53d89fa270ad11b88b961e53a317203eb24b1c8e95ed208b0f30",
+    "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/joiner-epoch-99-avg-1.onnx": "343e17dffa4f386ca206e00d3c406908f68f473c3d35968d6c3cddd5b8559a94",
+    "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/tokens.txt": "49e3c2646595fd907228b3c6787069658f67b17377c60aeb8619c4551b2316fb"
+  },
+  "source_model": "https://huggingface.co/desh2608/icefall-asr-librispeech-pruned-transducer-stateless7-streaming-small",
+  "model_card": "https://huggingface.co/csukuangfj/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17",
+  "test_used": false
+}

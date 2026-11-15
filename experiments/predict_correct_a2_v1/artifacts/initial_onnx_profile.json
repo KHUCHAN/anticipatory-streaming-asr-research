@@ -1,0 +1,56 @@
+{
+  "status": "Untrained implementation check during GPU training; not final qualification",
+  "scores": {
+    "teacher": {
+      "utterances": 12,
+      "wer_percent": 2.641509433962264,
+      "errors": 7,
+      "reference_words": 265,
+      "audio_seconds": 97.5700625,
+      "chunks": 319,
+      "output_frames": 2552,
+      "feature_window": 45,
+      "feature_hop": 32,
+      "rtf": 0.033491880261514805,
+      "total_seconds": 3.267804850358516,
+      "total_ms_per_chunk": 10.243902352221053,
+      "rtf_with_audio_io": 0.03384831558798061,
+      "feature_ms_per_chunk": 0.21310971552056485,
+      "components_ms_per_chunk": {
+        "audio": 9.79595752009614,
+        "head": 0.0,
+        "decoder": 0.1842074488876475
+      },
+      "other_overhead_ms_per_chunk": 0.05062766771670139,
+      "state_mae": 0.00015220752187627208,
+      "compute_chunk_p50_ms": 10.087457951158285,
+      "compute_chunk_p95_ms": 11.03236285271123
+    },
+    "untrained_A2_ONNX": {
+      "utterances": 12,
+      "wer_percent": 100.0,
+      "errors": 265,
+      "reference_words": 265,
+      "audio_seconds": 97.5700625,
+      "chunks": 319,
+      "output_frames": 2552,
+      "feature_window": 45,
+      "feature_hop": 32,
+      "rtf": 0.004277018312298761,
+      "total_seconds": 0.4173089440446347,
+      "total_ms_per_chunk": 1.3081785079769113,
+      "rtf_with_audio_io": 0.004414803897066882,
+      "feature_ms_per_chunk": 0.21149921026606358,
+      "components_ms_per_chunk": {
+        "audio": 1.0025095228152496,
+        "head": 0.0,
+        "decoder": 0.07801892441700338
+      },
+      "other_overhead_ms_per_chunk": 0.016150850478594766,
+      "state_mae": 0.8192613793764743,
+      "compute_chunk_p50_ms": 1.0812919354066253,
+      "compute_chunk_p95_ms": 1.4007919700816267
+    }
+  },
+  "test_used": false
+}

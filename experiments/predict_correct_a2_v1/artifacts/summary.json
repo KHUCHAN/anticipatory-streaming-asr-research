@@ -1,0 +1,221 @@
+{
+  "status": "training in progress",
+  "completed_epochs": {
+    "mae": 7
+  },
+  "epoch_history": {
+    "mae": [
+      {
+        "event": "eval",
+        "phase": "mae",
+        "epoch": 1,
+        "step": 446,
+        "validation": {
+          "mae": 0.7182650929671928,
+          "kl": 0.0,
+          "constant_mae": 0.7990294651202092
+        },
+        "selection": {
+          "dev-clean": {
+            "wer_percent": 99.70866715222141,
+            "errors": 1369,
+            "reference_words": 1373,
+            "utterances": 64
+          },
+          "dev-other": {
+            "wer_percent": 99.82935153583618,
+            "errors": 1170,
+            "reference_words": 1172,
+            "utterances": 64
+          }
+        },
+        "gradient": null,
+        "weight": 0.0,
+        "train_mae": 0.752290560525629,
+        "train_kl": 0.0,
+        "seconds": 194.08438992500305
+      },
+      {
+        "event": "eval",
+        "phase": "mae",
+        "epoch": 2,
+        "step": 892,
+        "validation": {
+          "mae": 0.6922868363785021,
+          "kl": 0.0,
+          "constant_mae": 0.7990294651202092
+        },
+        "selection": {
+          "dev-clean": {
+            "wer_percent": 98.32483612527312,
+            "errors": 1350,
+            "reference_words": 1373,
+            "utterances": 64
+          },
+          "dev-other": {
+            "wer_percent": 98.37883959044369,
+            "errors": 1153,
+            "reference_words": 1172,
+            "utterances": 64
+          }
+        },
+        "gradient": null,
+        "weight": 0.0,
+        "train_mae": 0.7015974599149729,
+        "train_kl": 0.0,
+        "seconds": 193.03314518928528
+      },
+      {
+        "event": "eval",
+        "phase": "mae",
+        "epoch": 3,
+        "step": 1338,
+        "validation": {
+          "mae": 0.6724100639044015,
+          "kl": 0.0,
+          "constant_mae": 0.7990294651202092
+        },
+        "selection": {
+          "dev-clean": {
+            "wer_percent": 96.7225054624909,
+            "errors": 1328,
+            "reference_words": 1373,
+            "utterances": 64
+          },
+          "dev-other": {
+            "wer_percent": 97.44027303754267,
+            "errors": 1142,
+            "reference_words": 1172,
+            "utterances": 64
+          }
+        },
+        "gradient": null,
+        "weight": 0.0,
+        "train_mae": 0.6728288783888111,
+        "train_kl": 0.0,
+        "seconds": 192.3470208644867
+      },
+      {
+        "event": "eval",
+        "phase": "mae",
+        "epoch": 4,
+        "step": 1784,
+        "validation": {
+          "mae": 0.6582434113890311,
+          "kl": 0.0,
+          "constant_mae": 0.7990294651202092
+        },
+        "selection": {
+          "dev-clean": {
+            "wer_percent": 94.5375091041515,
+            "errors": 1298,
+            "reference_words": 1373,
+            "utterances": 64
+          },
+          "dev-other": {
+            "wer_percent": 96.24573378839591,
+            "errors": 1128,
+            "reference_words": 1172,
+            "utterances": 64
+          }
+        },
+        "gradient": null,
+        "weight": 0.0,
+        "train_mae": 0.6512234220323007,
+        "train_kl": 0.0,
+        "seconds": 192.74562573432922
+      },
+      {
+        "event": "eval",
+        "phase": "mae",
+        "epoch": 5,
+        "step": 2230,
+        "validation": {
+          "mae": 0.6451857972121775,
+          "kl": 0.0,
+          "constant_mae": 0.7990294651202092
+        },
+        "selection": {
+          "dev-clean": {
+            "wer_percent": 92.71667880553532,
+            "errors": 1273,
+            "reference_words": 1373,
+            "utterances": 64
+          },
+          "dev-other": {
+            "wer_percent": 95.39249146757679,
+            "errors": 1118,
+            "reference_words": 1172,
+            "utterances": 64
+          }
+        },
+        "gradient": null,
+        "weight": 0.0,
+        "train_mae": 0.6340740932477429,
+        "train_kl": 0.0,
+        "seconds": 191.55140924453735
+      },
+      {
+        "event": "eval",
+        "phase": "mae",
+        "epoch": 6,
+        "step": 2676,
+        "validation": {
+          "mae": 0.6348993256760949,
+          "kl": 0.0,
+          "constant_mae": 0.7990294651202092
+        },
+        "selection": {
+          "dev-clean": {
+            "wer_percent": 91.62418062636563,
+            "errors": 1258,
+            "reference_words": 1373,
+            "utterances": 64
+          },
+          "dev-other": {
+            "wer_percent": 94.45392491467577,
+            "errors": 1107,
+            "reference_words": 1172,
+            "utterances": 64
+          }
+        },
+        "gradient": null,
+        "weight": 0.0,
+        "train_mae": 0.6185783165185441,
+        "train_kl": 0.0,
+        "seconds": 195.51489210128784
+      },
+      {
+        "event": "eval",
+        "phase": "mae",
+        "epoch": 7,
+        "step": 3122,
+        "validation": {
+          "mae": 0.6270256701452641,
+          "kl": 0.0,
+          "constant_mae": 0.7990294651202092
+        },
+        "selection": {
+          "dev-clean": {
+            "wer_percent": 89.29351784413693,
+            "errors": 1226,
+            "reference_words": 1373,
+            "utterances": 64
+          },
+          "dev-other": {
+            "wer_percent": 93.08873720136519,
+            "errors": 1091,
+            "reference_words": 1172,
+            "utterances": 64
+          }
+        },
+        "gradient": null,
+        "weight": 0.0,
+        "train_mae": 0.6063250881941329,
+        "train_kl": 0.0,
+        "seconds": 194.1349971294403
+      }
+    ]
+  },
+  "test_used": false
+}

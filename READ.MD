@@ -1,6 +1,6 @@
 # Repository guide and file map
 
-Snapshot date: 2026-11-14. All public prose is maintained in English.
+Snapshot date: 2026-11-15. All public prose is maintained in English.
 
 The selected goal is to predict an acoustic representation, correct it using newly arrived audio, and avoid sufficiently expensive encoder work at controlled recognition error. Existing display studies are completed; the residual-correction and encoder-skipping architecture is still a proposal.
 
@@ -22,6 +22,7 @@ The selected goal is to predict an acoustic representation, correct it using new
 | [Epoch-wise double-descent results](docs/fgn_double_descent_2026-11-13.md) | Completed all three models through epoch 96; token risk worsens, state loss recovers; verified full-training diagnostics |
 | [Prediction-correction three-way results](docs/predict_correct_pilot_2026-11-14.md) | Completed: 48 epochs, 800 dev utterances, corrected-only feedback; cheaper inference loses accuracy; no established B-over-C benefit |
 | [Correction-pilot interpretation review](docs/predict_correct_review_2026-11-14.md) | Failed audio student leaves general FGN value unresolved; post-hoc gradient audit and proposed A-only qualification |
+| [A2 audio-only qualification](experiments/predict_correct_a2_v1/README.md) | Running: 9.60M stride-4/chunk-wide model, MAE then calibrated KL; native small/full recognizer controls |
 | [Implementation review](docs/results_review_2026-11-11.md) | Metric definitions, missing costs and corrected claims |
 | [Four follow-up experiments](docs/followup_experiments_2026-11-11.md) | Real cache release, long streams, seed repetitions and display stabilization |
 | [Public baseline reproduction](docs/baseline_zipformer_2026-11-11.md) | Frozen public 66.11M checkpoint, inference conditions and WER |
@@ -102,13 +103,16 @@ The selected goal is to predict an acoustic representation, correct it using new
 │   │   └── artifacts/                # Verified extended curves, settings and completion
 │   ├── fgn_double_descent_v1/        # Declared epoch-96 investigation
 │   │   └── artifacts/                # Verified final curves, diagnostics and completion
-│   └── predict_correct_v1/           # Causal fbank A/B/C feasibility pilot
-│       └── artifacts/                # Initial causal checks, source capture and current curves
+│   ├── predict_correct_v1/           # Causal fbank A/B/C feasibility pilot
+│   │   └── artifacts/                # Verified results, checks and curves
+│   └── predict_correct_a2_v1/        # Audio-only MAE/KL qualification
+│       └── artifacts/                # Checks, provenance and current curves
 ├── scripts/                          # Preparation, training and analysis
 ├── requirements-baseline.txt
 ├── requirements-zipformer-features.txt
 ├── requirements-forecaster.txt
 ├── requirements-corrector.txt
+├── requirements-a2-export.txt        # Isolated ONNX export dependencies
 ├── runs/                             # Local-only checkpoints and raw outputs
 ├── checkpoints/                      # Local-only downloaded model weights
 └── .local/                           # Local environments and work records

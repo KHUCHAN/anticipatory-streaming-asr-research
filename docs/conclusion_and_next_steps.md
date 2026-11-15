@@ -1,8 +1,10 @@
 # Current Conclusions and Next Experiments
 
-Snapshot date: 2026-11-14, America/Los_Angeles. This is the current-conclusion entry point. Initial numbers were checked against saved outputs and code; four follow-ups and [our strong-Zipformer study](zipformer_ours_2026-11-12.md) were actually executed. [History](research_plan_3stage.md) preserves detailed results; [implementation review](results_review_2026-11-11.md) explains initial corrections.
+Snapshot date: 2026-11-15, America/Los_Angeles. This is the current-conclusion entry point. Initial numbers were checked against saved outputs and code; four follow-ups and [our strong-Zipformer study](zipformer_ours_2026-11-12.md) were actually executed. [History](research_plan_3stage.md) preserves detailed results; [implementation review](results_review_2026-11-11.md) explains initial corrections.
 
 ## Selected direction: prediction plus acoustic correction
+
+**A2 qualification running:** the user authorized the [audio-only follow-up](../experiments/predict_correct_a2_v1/README.md). Actual architecture is 9.60M, initial stride 4 and a joint chunk head. The fixed budget is 12 MAE epochs then up to 24 calibrated-KL epochs, preserving MAE-best. Whole-sequence dev WER and complete CPU cost will be compared with both native full and small Zipformers. Final qualification is WER <10% and <=50% of both same-run and previous complete teacher cost. Initial PyTorch cost was excessive; equivalent FP32 ONNX first/step graphs passed numerical checks and are the declared final backend before held-out collection. The early untrained ONNX profile is not a qualification result.
 
 **Three-way correction pilot completed:** [fbank + causal conv results](predict_correct_pilot_2026-11-14.md), A audio-only / B frozen deterministic FGN prior / C previous corrected state. Each trained for 16 epochs using randomized windows; checkpoint selection and final 800-utterance dev evaluation use speaker-disjoint roles. Corrected-only feedback is used throughout, with no true encoder inference inputs. All timed decodes and verification completed in a 1.36h runner window, including a reporting-only serialization recovery.
 

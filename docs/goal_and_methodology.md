@@ -1,5 +1,7 @@
 # Research goal and methodology
 
+Current execution, 2026-11-15: the [A2 audio-only qualification](../experiments/predict_correct_a2_v1/README.md) is training MAE before calibrated KL, with native full/small Zipformer controls prepared. No final A2 result is claimed yet.
+
 Initial scope: 2026-11-10. Current direction updated: 2026-11-12. This document distinguishes the user's objective, completed experiments and proposed implementation.
 
 ## Current selected goal

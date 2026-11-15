@@ -1,5 +1,7 @@
 # Interpretation review and audio-only qualification plan — 2026-11-14
 
+Follow-up execution, 2026-11-15: the user subsequently authorized [A2 implementation and training](../experiments/predict_correct_a2_v1/README.md). The review below records the earlier proposal; use the linked run protocol for actual fixed settings and current status. Final A2 WER/cost is pending.
+
 The completed [A/B/C pilot](predict_correct_pilot_2026-11-14.md) does not settle the general value of FGN prediction. It establishes that this small audio reconstruction recipe cannot replace the teacher encoder at useful accuracy. Keep the reported numbers and paired intervals, but treat the failed audio path as the first problem to resolve. No new training is launched by this review.
 
 ## What the existing results support

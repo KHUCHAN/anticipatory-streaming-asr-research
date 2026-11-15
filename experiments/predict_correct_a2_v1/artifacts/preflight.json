@@ -1,0 +1,18 @@
+{
+  "parameters": 9597696,
+  "history_features": 724,
+  "batch_stream_max_difference": 8.642673492431641e-07,
+  "future_chunk_max_difference": 0.0,
+  "last_arrived_frame_affects_first_output": 0.249855637550354,
+  "first_chunk_direct_supervision": true,
+  "test_used": false,
+  "tiny_fit": {
+    "steps": 128,
+    "utterances": 8,
+    "initial_mae": 0.8403698205947876,
+    "final_mae": 0.024931184947490692,
+    "seconds": 5.124348163604736,
+    "memory_gib": 1.3526458740234375,
+    "disposable_model_not_used_for_training": true
+  }
+}

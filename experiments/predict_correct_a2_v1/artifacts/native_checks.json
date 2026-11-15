@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "model": "teacher",
+      "utterance_id": "1272-135031-0007",
+      "native_tokens_match": true,
+      "native_chunks_match": true,
+      "window": 45,
+      "chunks": 14,
+      "rtf": 0.03314875692138322
+    },
+    {
+      "model": "teacher",
+      "utterance_id": "1272-141231-0018",
+      "native_tokens_match": true,
+      "native_chunks_match": true,
+      "window": 45,
+      "chunks": 20,
+      "rtf": 0.03091765249458452
+    },
+    {
+      "model": "teacher",
+      "utterance_id": "116-288047-0013",
+      "native_tokens_match": true,
+      "native_chunks_match": true,
+      "window": 45,
+      "chunks": 10,
+      "rtf": 0.03285364884427412
+    },
+    {
+      "model": "teacher",
+      "utterance_id": "116-288048-0013",
+      "native_tokens_match": true,
+      "native_chunks_match": true,
+      "window": 45,
+      "chunks": 12,
+      "rtf": 0.030771808628729625
+    },
+    {
+      "model": "small",
+      "utterance_id": "1272-135031-0007",
+      "native_tokens_match": true,
+      "native_chunks_match": true,
+      "window": 39,
+      "chunks": 14,
+      "rtf": 0.015575256951970914
+    },
+    {
+      "model": "small",
+      "utterance_id": "1272-141231-0018",
+      "native_tokens_match": true,
+      "native_chunks_match": true,
+      "window": 39,
+      "chunks": 20,
+      "rtf": 0.014461618013835201
+    },
+    {
+      "model": "small",
+      "utterance_id": "116-288047-0013",
+      "native_tokens_match": true,
+      "native_chunks_match": true,
+      "window": 39,
+      "chunks": 10,
+      "rtf": 0.015305334054831919
+    },
+    {
+      "model": "small",
+      "utterance_id": "116-288048-0013",
+      "native_tokens_match": true,
+      "native_chunks_match": true,
+      "window": 39,
+      "chunks": 13,
+      "rtf": 0.015724802773684512
+    }
+  ],
+  "all_match": true,
+  "test_used": false
+}

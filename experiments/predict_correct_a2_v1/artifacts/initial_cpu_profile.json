@@ -1,0 +1,56 @@
+{
+  "status": "untrained implementation profile only; not final qualification",
+  "scores": {
+    "teacher": {
+      "utterances": 12,
+      "wer_percent": 2.641509433962264,
+      "errors": 7,
+      "reference_words": 265,
+      "audio_seconds": 97.5700625,
+      "chunks": 319,
+      "output_frames": 2552,
+      "feature_window": 45,
+      "feature_hop": 32,
+      "rtf": 0.03411840387737413,
+      "total_seconds": 3.328934798715636,
+      "total_ms_per_chunk": 10.435532284375036,
+      "rtf_with_audio_io": 0.03445426893032269,
+      "feature_ms_per_chunk": 0.21666275238075228,
+      "components_ms_per_chunk": {
+        "audio": 9.978945939261525,
+        "head": 0.0,
+        "decoder": 0.18928451157031947
+      },
+      "other_overhead_ms_per_chunk": 0.050639081162438496,
+      "state_mae": 0.00015220752187627208,
+      "compute_chunk_p50_ms": 10.290417005307972,
+      "compute_chunk_p95_ms": 11.220579058863223
+    },
+    "untrained_A2": {
+      "utterances": 12,
+      "wer_percent": 100.0,
+      "errors": 265,
+      "reference_words": 265,
+      "audio_seconds": 97.5700625,
+      "chunks": 319,
+      "output_frames": 2552,
+      "feature_window": 45,
+      "feature_hop": 32,
+      "rtf": 0.03522299780353759,
+      "total_seconds": 3.4367100971285254,
+      "total_ms_per_chunk": 10.77338588441544,
+      "rtf_with_audio_io": 0.03537084454711596,
+      "feature_ms_per_chunk": 0.21733815685428423,
+      "components_ms_per_chunk": {
+        "audio": 10.135128807282326,
+        "head": 0.26793819509131317,
+        "decoder": 0.1154499702143912
+      },
+      "other_overhead_ms_per_chunk": 0.03753075497312512,
+      "state_mae": 0.8192613808712615,
+      "compute_chunk_p50_ms": 10.542041971348226,
+      "compute_chunk_p95_ms": 11.168108007404951
+    }
+  },
+  "test_used": false
+}
