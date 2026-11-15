@@ -741,3 +741,22 @@ The task remains one fixed token/cutoff for each of 28,539 training utterances, 
 At the user's request, revisit the existing curves for possible later recovery. No models were retrained. Over epochs 12–27, descriptive dev token-NLL and joint-objective slopes are positive for all three sizes, while state-CRPS slopes are negative. State CRPS peaks at epoch 11 / 11 / 14 and subsequently recovers; this is a component-specific observation, not proof of a double-descent mechanism.
 
 The current record does not exclude a later second decline or a different model-size regime. The original early-stop rule located overfitting within its observed range, not an asymptotic limit. Whole-training-set interpolation thresholds, a broader size sweep and seed replication were not measured. Label smoothing and generator noise do not by themselves resolve this question. [Review, primary papers, numeric audit and proposed follow-ups](double_descent_review_2026-11-13.md).
+
+
+## Epoch-96 double-descent investigation — final review 2026-11-14
+
+All three generators completed 69 additional epochs from 27 through 96, with original model/AdamW states restored and no early stopping. The 207 new epochs plus final verification took 7.50 hours. Architecture, fixed cases, learning rate 3e-5, label smoothing 0.1 and state-CRPS weight 0.1 stayed unchanged. Earlier logs, source/input hashes and best checkpoints remain preserved.
+
+| Generator parameters | Final train-probe NLL | Dev NLL: epoch 27 → 96 | Dev state CRPS: initial → peak → final |
+|---|---:|---:|---:|
+| 6,323,968 | 0.11777 | 1.11472 → 1.35715 | 0.50158 → 0.52447 → 0.49998 |
+| 10,535,680 | 0.11635 | 1.12691 → 1.43219 | 0.50158 → 0.52730 → 0.50572 |
+| 18,959,104 | 0.12724 | 1.13055 → 1.45751 | 0.50158 → 0.53285 → 0.50803 |
+
+Dev token-NLL means rise across declared windows 28–40 / 48–64 / 80–96 for every size. Dev next-token Hit@1 also declines from epoch 27 to 96. There is no sustained second token-risk descent in the observed range, and all best-NLL checkpoints remain epoch 5. State CRPS recovers after an earlier peak; the small model's final score is slightly below the trained epoch-0 function, without a significance claim. These different metric trajectories do not prove an interpolation-driven mechanism or improved ASR recognition.
+
+Every 28,539-case full-training evaluation at epochs 27/32/48/64/80/96 was completed. Arrived-audio errors fall 70 → 23 / 69 → 19 / 68 → 24 out of 28,318; zero-audio errors stay 193. The independent input audit finds 221 identical BOS-only no-audio prefixes with conflicting labels, contributing a conservative expected 193 unavoidable hard errors under fresh independent noise. This is not a per-pass guarantee. Training fit is close to that floor, while token validation worsens.
+
+Verification checks all epoch histories, final optimizer steps, source/input preservation, original best selection, five checkpoint snapshots per size and six full-training milestones per size. This remains a one-seed, teacher-forced, fixed-case, depth-only study with no test evaluation or new WER/acceleration result. Finite-window non-recovery does not establish eventual absence or settle width/memory scaling.
+
+[Final report and compact comparison](fgn_double_descent_2026-11-13.md) · [Protocol](../experiments/fgn_double_descent_v1/README.md). Public evidence is in `experiments/fgn_double_descent_v1/artifacts/`; raw checkpoints/logs remain local-only in `runs/fgn_double_descent_v1/`. The report filename retains the launch date, and the final review date is recorded inside it.

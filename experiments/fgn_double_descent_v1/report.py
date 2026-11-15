@@ -47,6 +47,27 @@ def main():
         inherited_epoch_window=[0,cfg['resume_epoch']],new_epoch_window=[cfg['resume_epoch']+1,cfg['target_epoch']],
         full_training_measurements=full,predeclared_window_means=windows,
         scope=cfg['scope'],test_used=False)
+    if summary['status']=='completed':
+        fig,axes = plt.subplots(1,2,figsize=(11,4))
+        for layers in cfg['generator_layers']:
+            history = [row for row in records(out/f'layers_{layers}/log.jsonl') if row.get('event')=='eval']
+            parameters = next(row['parameters'] for row in summary['models'] if row['layers']==layers)
+            label = f'{parameters/1e6:.2f}M generator'
+            epochs = [row['epoch'] for row in history]
+            axes[0].plot(epochs,[row['dev']['all']['nll'] for row in history],label=label,linewidth=1.5)
+            axes[1].plot(epochs,[row['dev']['all']['crps'] for row in history],label=label,linewidth=1.5)
+        axes[0].set(title='Token validation risk: no late recovery',ylabel='Dev token NLL (lower is better)')
+        axes[1].set(title='State validation loss: late recovery',ylabel='Dev acoustic-state CRPS (lower is better)')
+        axes[1].axhline(history[0]['dev']['all']['crps'],color='gray',linestyle=':',linewidth=1,label='Shared trained epoch-0 state loss')
+        for axis in axes:
+            axis.axvline(cfg['resume_epoch'],color='gray',linestyle='--',linewidth=1)
+            axis.set(xlabel='Continuation epoch',xlim=(0,cfg['target_epoch']))
+            axis.grid(alpha=.2)
+            axis.legend(fontsize=8)
+        fig.suptitle('Three FGN depths, one seed, 512-case dev probe; no test evaluation\nDashed line: new epoch-27 to 96 continuation begins',fontsize=10)
+        fig.tight_layout()
+        fig.savefig(HERE/'artifacts/double_descent_summary.png',dpi=180,bbox_inches='tight')
+        plt.close(fig)
     (HERE/'artifacts/summary.json').write_text(json.dumps(summary,indent=2)+'\n')
     heading = ('# Epoch-wise double-descent investigation\n\n'+
                f"Status: {summary['status']}. Epochs 0–27 are inherited; only epochs 28–96 are newly trained here. "

@@ -45,6 +45,8 @@ The completed [generator-capacity diagnosis](fgn_capacity_2026-11-12.md) compare
 
 The [epoch-27 continuation](fgn_capacity_long_2026-11-13.md) restores optimizer/model states and adds 16 epochs to every size without overfit stopping. All final train-probe NLLs are about 0.131–0.132, while dev NLL worsens and the selected checkpoints remain at epoch 5. This confirms additional fitting within the fixed-case task, not a validation improvement or a test of width/memory growth. Actual SiLU settings are audited alongside the results.
 
+The completed [epoch-96 investigation](fgn_double_descent_2026-11-13.md), reviewed on 2026-11-14, extends every generator another 69 epochs without early stopping. Token NLL rises across every declared late window for all three models; no sustained second token-risk descent is observed in the measured horizon. State CRPS recovers, and the small model's final value slightly improves on the trained epoch-0 function. That component-specific behavior does not establish better held-out token prediction, a double-descent mechanism or ASR-WER improvement. All original best-NLL checkpoints remain at epoch 5.
+
 ## Causal procedure
 
 1. Keep observations and confirmed state separate from speculative state.

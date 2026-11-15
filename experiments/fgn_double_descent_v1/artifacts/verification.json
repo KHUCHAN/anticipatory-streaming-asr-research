@@ -15,11 +15,65 @@
   "models": [
     {
       "layers": 4,
-      "status": "pending or running; verification deferred"
+      "status": "verified",
+      "epoch": 96,
+      "full_training_milestones_verified": [
+        27,
+        32,
+        48,
+        64,
+        80,
+        96
+      ],
+      "saved_snapshot_epochs": [
+        32,
+        48,
+        64,
+        80,
+        96
+      ],
+      "added_epochs": 69,
+      "generator_parameters": 6323968,
+      "best_epoch": 5,
+      "best_dev_nll": 0.948581206612289,
+      "original_best_preserved": true,
+      "settings_match_checkpoint_architecture": true,
+      "generator_relu_modules": 0,
+      "resumed_nll_max_difference": 0.0,
+      "final_overfit_rule_met": true,
+      "last_sha256": "734d19fe3428cb03725f483dceaac75db028d530c005a8c0cd999bee81a8cc1c",
+      "best_sha256": "0ef76b2ec19d02832075a7456649622d67fa7623a246c9c2561645bb9c1d109e"
     },
     {
       "layers": 8,
-      "status": "pending or running; verification deferred"
+      "status": "verified",
+      "epoch": 96,
+      "full_training_milestones_verified": [
+        27,
+        32,
+        48,
+        64,
+        80,
+        96
+      ],
+      "saved_snapshot_epochs": [
+        32,
+        48,
+        64,
+        80,
+        96
+      ],
+      "added_epochs": 69,
+      "generator_parameters": 10535680,
+      "best_epoch": 5,
+      "best_dev_nll": 0.9508682489395142,
+      "original_best_preserved": true,
+      "settings_match_checkpoint_architecture": true,
+      "generator_relu_modules": 0,
+      "resumed_nll_max_difference": 0.0,
+      "final_overfit_rule_met": true,
+      "last_sha256": "9c8e41dd07eb68c1bd9f8e04c30a3a710b9fb851884251d79d64b9f42ca2ce06",
+      "best_sha256": "7c54d4cadfac43585a58d126d0b48f7b3eb8bd83a59f7bdf57e5b9e17c4c3967"
     },
     {
       "layers": 16,

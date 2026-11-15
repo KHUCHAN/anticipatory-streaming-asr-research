@@ -1,12 +1,22 @@
 # Current Conclusions and Next Experiments
 
-Snapshot date: 2026-11-13, America/Los_Angeles. This is the current-conclusion entry point. Initial numbers were checked against saved outputs and code; four follow-ups and [our strong-Zipformer study](zipformer_ours_2026-11-12.md) were actually executed. [History](research_plan_3stage.md) preserves detailed results; [implementation review](results_review_2026-11-11.md) explains initial corrections.
+Snapshot date: 2026-11-14, America/Los_Angeles. This is the current-conclusion entry point. Initial numbers were checked against saved outputs and code; four follow-ups and [our strong-Zipformer study](zipformer_ours_2026-11-12.md) were actually executed. [History](research_plan_3stage.md) preserves detailed results; [implementation review](results_review_2026-11-11.md) explains initial corrections.
 
 ## Selected direction: prediction plus acoustic correction
 
-**Long-horizon experiment now running:** [epoch 27 → 96](../experiments/fgn_double_descent_v1/README.md), same model/AdamW states and training settings, no overfit stopping. Full-training-set errors/margins are measured at declared milestones. An input audit identifies 221 identical no-audio prefixes with contradictory targets, yielding a conservative expected hard-error contribution of 193; observed arrived-audio errors are therefore tracked separately. No long-horizon result is declared before completion.
+**Epoch-96 investigation completed:** [all three generators](fgn_double_descent_2026-11-13.md) received 69 additional epochs each without early stopping. The 207 new epochs plus verification took 7.50 hours. Every checkpoint, optimizer state, full-training milestone and captured input/source hash passed verification; original best checkpoints remain preserved.
 
-**Double descent remains open:** the [post-hoc review](double_descent_review_2026-11-13.md) finds rising late token NLL/joint objective but falling state CRPS over the recorded epoch-12–27 window. The operational epoch-11 overfit stop and a finite epoch-27 extension do not exclude later recovery. Three warm-started depths and probe accuracy do not locate a model-wise interpolation threshold. Label smoothing alone is not evidence against double descent. No new training or test evaluation was performed for the audit.
+| Generator | Dev NLL mean, epochs 28–40 | Epochs 48–64 | Epochs 80–96 | State CRPS, initial → peak → final |
+|---|---:|---:|---:|---:|
+| 6.32M | 1.1335 | 1.2299 | 1.3422 | 0.50158 → 0.52447 → 0.49998 |
+| 10.54M | 1.1501 | 1.2592 | 1.3941 | 0.50158 → 0.52730 → 0.50572 |
+| 18.96M | 1.1692 | 1.2791 | 1.4248 | 0.50158 → 0.53285 → 0.50803 |
+
+No sustained second token-risk descent is observed through epoch 96. Dev next-token accuracy also falls from epoch 27 to 96, and best-NLL selection remains at epoch 5 for all sizes. State loss does show late recovery; the small model's final CRPS is slightly lower than its trained epoch-0 score, without a significance claim. This metric-specific curve does not identify an interpolation-driven double-descent mechanism. One fixed-case seed, unchanged learning rate, depth-only growth and the finite horizon constrain the conclusion; other regimes and later behavior remain open.
+
+Full-training arrived-audio errors fall 70 → 23 / 69 → 19 / 68 → 24 out of 28,318 cases. Zero-audio errors remain 193 in each final pass, consistent with the independently audited conflicting-input expected error floor. Better fitting does not improve measured held-out token risk. There is no new final-WER, compute-acceleration or raw-audio-corrector result.
+
+**Earlier review:** the [epoch-27 post-hoc review](double_descent_review_2026-11-13.md) motivated the completed experiment above. Its finite-window caution remains applicable: no model-wise interpolation threshold or universal absence is established, and label smoothing alone does not exclude double descent. That review itself performed no new training or test evaluation.
 
 **Longer-training extension completed:** at the user's request, all three models restored epoch-11 model/AdamW states and received 16 additional epochs through epoch 27, with overfit stopping disabled. Train-probe NLL fell from 0.2288 / 0.2269 / 0.2228 to 0.1313 / 0.1322 / 0.1319; dev NLL rose from 1.0042 / 1.0127 / 1.0228 to 1.1147 / 1.1269 / 1.1306. All best-dev checkpoints remain at epoch 5. The small model reaches a similar fitting value without generator growth. This is a fixed-case, single-seed observation, not statistical equivalence or a wider-model result. [Full extended results and settings](fgn_capacity_long_2026-11-13.md).
 

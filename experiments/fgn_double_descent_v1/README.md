@@ -1,6 +1,8 @@
 # FGN epoch-wise double-descent investigation
 
-Status: running since 2026-11-13; live training status and completion are recorded in `runs/fgn_double_descent_v1/runner.jsonl`. The 19M model restored its epoch-27 model/optimizer states with zero probe-NLL difference and completed its first additional epoch. No long-horizon result is claimed before completion.
+Status: all three models completed epoch 96 and passed final verification; results reviewed on 2026-11-14. The 207 additional epochs and verification took 7.50 hours. Model/optimizer restoration reproduced saved probe NLL exactly, and all original best checkpoints remain preserved. See the [final report](../../docs/fgn_double_descent_2026-11-13.md) and `artifacts/completion.json`. Detailed logs remain local in `runs/fgn_double_descent_v1/`.
+
+Dev token-NLL means increase across all three declared late windows for every generator. State CRPS decreases across those windows, with a slightly lower final-than-initial score for the 6.32M generator. No sustained second token-risk descent was observed through epoch 96; this does not exclude later recovery, other width/memory regimes or other seeds. The original dev-NLL-selected epoch-5 checkpoints remain best.
 
 The user requested an experiment after the [double-descent review](../../docs/double_descent_review_2026-11-13.md). Continue all three existing generators from epoch 27 through **96**: **69 new epochs per model**, with no stopping based on worsening validation risk. Run one MPS model at a time, largest first (16 / 4 / 8 blocks). Preserve the original namespace and all previous best/last checkpoints.
 
@@ -37,7 +39,7 @@ The runner also generates final reports and verifies completed checkpoints autom
 
 ## Interim status inspection
 
-The [2026-11-13 interim assessment](../../docs/fgn_double_descent_interim_2026-11-13.md) captures the completed 19M epoch-96 run while the smaller models remain incomplete. Its token-risk window means rise while state CRPS recovers; these are separate metric-specific observations. This snapshot does not stop or change the active run.
+The [2026-11-13 interim assessment](../../docs/fgn_double_descent_interim_2026-11-13.md) preserves the historical point when only the 19M run had completed. It is superseded by the final report above. Its inspection script does not train or change weights.
 
 ```bash
 .venv/bin/python experiments/fgn_double_descent_v1/interim.py

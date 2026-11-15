@@ -7,7 +7,7 @@
 | [compute_profile_v1](compute_profile_v1/README.md) | Small development profile complete | Native encoder/prediction-network/joiner compute breakdown | Initial and reproduced timing records in `artifacts/` |
 | [fgn_capacity_v1](fgn_capacity_v1/README.md) | Completed | Actual generator 6.32M / 10.54M / 18.96M; 33 continuation epochs total, all met the overfit rule at 11 | Verified fixed-case train/dev curves and [capacity report](../docs/fgn_capacity_2026-11-12.md); one seed, no test evaluation |
 | [fgn_capacity_long_v1](fgn_capacity_long_v1/README.md) | Completed | Restored epoch-11 models and optimizers; 16 extra epochs each, through 27; overfit stopping disabled | [Extended results](../docs/fgn_capacity_long_2026-11-13.md): similar final fitting across sizes, higher dev NLL, SiLU settings verified; no test use |
-| [fgn_double_descent_v1](fgn_double_descent_v1/README.md) | Running | Restore epoch-27 states; train three depths through 96 with no early stopping; measure full-training errors/margins | Declared finite-window epoch-wise investigation; one seed, no test evaluation |
+| [fgn_double_descent_v1](fgn_double_descent_v1/README.md) | Completed and verified | Three depths reached epoch 96; 207 new epochs, 7.50h, no early stopping; all full-training milestones verified | [Final results](../docs/fgn_double_descent_2026-11-13.md): no sustained token-risk second descent, state CRPS recovers; one seed, no test evaluation |
 
 The [predict–correct encoder acceleration plan](../docs/predict_correct_acceleration_plan_2026-11-12.md) is a proposal. There is no completed residual-corrector or encoder-skipping experiment to reproduce yet.
 

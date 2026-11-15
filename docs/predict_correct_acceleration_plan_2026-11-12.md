@@ -135,6 +135,8 @@ A subsequent [generator-depth diagnosis](fgn_capacity_2026-11-12.md) directly gr
 
 An [additional 16 epochs per size](fgn_capacity_long_2026-11-13.md) brought all models to epoch 27. Final train-probe NLLs converge descriptively near 0.131–0.132, while dev NLL worsens to 1.115–1.131 and the dev-best epochs remain 5. More training improves fixed-case fitting, with no observed validation gain. Hidden size, memory and loss remain fixed; width/corrector scaling is still a separate question. These results do not demonstrate a benefit from skipping encoder computation.
 
+The [completed epoch-96 investigation](fgn_double_descent_2026-11-13.md) adds 69 further epochs per size. Full-training arrived-audio errors fall to 23 / 19 / 24 out of 28,318, while declared late-window dev token NLL rises for every generator. No sustained second token-risk descent is observed within this fixed-seed horizon. State CRPS shows recovery, including a slightly better-than-initial final score for the small model; this still does not validate useful correction or lower encoder cost. Additional depth or unchanged-recipe epochs have not supplied a token-validation gain in these studies.
+
 The proposed order is:
 
 1. Reuse the approximately 6.3M state predictor and add a small audio-conditioned corrector. A 1–3M corrector is a candidate budget, not an implemented model or a measured speed estimate.
