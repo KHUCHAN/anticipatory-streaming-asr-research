@@ -22,7 +22,9 @@ The selected goal is to predict an acoustic representation, correct it using new
 | [Epoch-wise double-descent results](docs/fgn_double_descent_2026-11-13.md) | Completed all three models through epoch 96; token risk worsens, state loss recovers; verified full-training diagnostics |
 | [Prediction-correction three-way results](docs/predict_correct_pilot_2026-11-14.md) | Completed: 48 epochs, 800 dev utterances, corrected-only feedback; cheaper inference loses accuracy; no established B-over-C benefit |
 | [Correction-pilot interpretation review](docs/predict_correct_review_2026-11-14.md) | Failed audio student leaves general FGN value unresolved; post-hoc gradient audit and proposed A-only qualification |
-| [A2 audio-only results](docs/predict_correct_a2_2026-11-15.md) | Completed: 36 epochs, 800 dev utterances; cost passes at 13.32% of teacher, WER 42.30% fails; small model's published level remains unvalidated |
+| [A2 audio-only results](docs/predict_correct_a2_2026-11-15.md) | Completed: 36 epochs, 800 dev utterances; cost passes at 13.32% of teacher, WER 42.30% fails; original small result superseded by the correction below |
+| [20M reproduction correction](docs/small_zipformer_reproduction_2026-11-15.md) | Resolved legacy decoder padding mismatch; corrected WER 3.56/10.97%, native verification on all 800 utterances |
+| [A3 matched KL-weight protocol](experiments/kl_weight_a3_v1/README.md) | Running: only KL coefficient changes, same initial checkpoint/data/24 epochs; control replay verified |
 | [Implementation review](docs/results_review_2026-11-11.md) | Metric definitions, missing costs and corrected claims |
 | [Four follow-up experiments](docs/followup_experiments_2026-11-11.md) | Real cache release, long streams, seed repetitions and display stabilization |
 | [Public baseline reproduction](docs/baseline_zipformer_2026-11-11.md) | Frozen public 66.11M checkpoint, inference conditions and WER |
@@ -57,6 +59,7 @@ The selected goal is to predict an acoustic representation, correct it using new
 │   ├── predict_correct_pilot_2026-11-14.md # A/B/C WER and full cost
 │   ├── predict_correct_review_2026-11-14.md # Interpretation and proposed A2
 │   ├── predict_correct_a2_2026-11-15.md # Final A2 WER/cost and small-model audit
+│   ├── small_zipformer_reproduction_2026-11-15.md # Legacy padding repair
 │   ├── librispeech960_benchmark_plan.md
 │   ├── literature_map.md
 │   ├── claim_audit.md
@@ -106,8 +109,12 @@ The selected goal is to predict an acoustic representation, correct it using new
 │   │   └── artifacts/                # Verified final curves, diagnostics and completion
 │   ├── predict_correct_v1/           # Causal fbank A/B/C feasibility pilot
 │   │   └── artifacts/                # Verified results, checks and curves
-│   └── predict_correct_a2_v1/        # Audio-only MAE/KL qualification
-│       └── artifacts/                # Final results, verification, curves and native audit
+│   ├── predict_correct_a2_v1/        # Audio-only MAE/KL qualification
+│   │   └── artifacts/                # Final results, verification, curves and native audit
+│   ├── small_zipformer_reproduction_v1/ # Separate legacy decoder repair
+│   │   └── artifacts/                # Corrected results and independent native checks
+│   └── kl_weight_a3_v1/              # Matched 4x/16x KL-weight continuation
+│       └── artifacts/                # Fixed protocol and control replay; final results pending
 ├── scripts/                          # Preparation, training and analysis
 ├── requirements-baseline.txt
 ├── requirements-zipformer-features.txt
@@ -126,7 +133,9 @@ Directory paths remain compatible with completed experiments. Local-only output 
 - **Prepared:** initial 33-paper source set, English notes/catalog/BibTeX; LibriSpeech training splits and all four dev/test splits.
 - **Completed:** original AVS studies, follow-up controls, public Zipformer reproduction, actual full/band2 forecaster training, independent FGN and hybrid experiments, the small CPU component profile, the three-capacity fixed-case fitting diagnosis, its 48-extra-epoch continuation/settings audit, and the 207-extra-epoch investigation through epoch 96.
 - **Completed correction pilot:** causal fbank-conv A/B/C, 16 epochs each and 800 dev utterances with two CPU timing repetitions; full-encoder accuracy was not retained. See the result report above.
-- **Completed A2 qualification:** 12 MAE + 24 KL epochs, 800 dev utterances and two CPU timing repetitions. Selected A2 costs 13.32% of the same-run teacher but has 42.30% dev-clean WER, failing the <10% accuracy gate. Native small-model outputs are independently verified; its much stronger published benchmark level remains unvalidated.
+- **Completed A2 qualification:** 12 MAE + 24 KL epochs, 800 dev utterances and two CPU timing repetitions. Selected A2 costs 13.32% of the same-run teacher but has 42.30% dev-clean WER, failing the <10% accuracy gate.
+- **Corrected 20M baseline:** legacy padding repaired; clean/other WER 3.56/10.97%, independent native agreement on all 800 utterances. Original teacher/A2 results preserved.
+- **Running A3:** two 24-epoch continuations with only KL weight changed; final WER/cost pending.
 - **Proposed:** conditional encoder execution and teacher-cache recovery; new 960h acoustic training; broader capacity and data-coverage studies beyond the current pilot.
 - **Not established:** lower total inference compute while retaining useful recognition accuracy, lower irreversible commit latency, matched-test-risk Pareto superiority, live mobile performance, or a general FGN anti-overfitting effect.
 

@@ -1,0 +1,11 @@
+{
+  "original_sha256": "45a7f940ecfb53d89fa270ad11b88b961e53a317203eb24b1c8e95ed208b0f30",
+  "wrapped_sha256": "710d5225009026b0b6fecce0aed5cf2ca52d1d32ecc7d249469e3cff049c3705",
+  "wrapper": "runs/small_zipformer_reproduction_v1/decoder-blank-padding.onnx",
+  "original_weights_preserved": true,
+  "wrapper_vs_explicit_blank_max_difference": 0.0,
+  "original_negative_vs_last_vocab_id_max_difference": 0.0,
+  "original_negative_vs_blank_max_difference": 5.006786823272705,
+  "scope": "Legacy 2023 English 20M decoder only; explicit negative padding -> blank input contract; no learned weights changed",
+  "source_sha256": "b0e4a6125c617d7b1cd179de7be66112de313d2f333b5c1aba838d1bbea73151"
+}

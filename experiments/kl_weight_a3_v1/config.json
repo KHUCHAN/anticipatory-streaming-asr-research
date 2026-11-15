@@ -1,0 +1,15 @@
+{
+  "experiment": "A3: matched continuation with KL coefficient as the only training treatment",
+  "base_config": "experiments/predict_correct_a2_v1/config.json",
+  "initial_checkpoint": "runs/predict_correct_a2_v1/mae/best.pt",
+  "base_calibration": "runs/predict_correct_a2_v1/kl_calibration.json",
+  "arms": {"control": 1.0, "kl4": 4.0, "kl16": 16.0},
+  "training_arms": ["kl4", "kl16"],
+  "control": "Reuse the completed A2 24-epoch KL arm; first replay its first 100 optimizer updates in disposable weights to verify matching inputs/initialization/sampling/objective",
+  "epochs_per_arm": 24,
+  "selection": "Select each arm's checkpoint by model-selection dev-clean WER; choose the final arm using that role before final evaluation",
+  "held_out_role": "Same previously used speaker-disjoint 400 dev-clean + 400 dev-other development role; not a new untouched test",
+  "fixed": ["A2 architecture and initial weights", "seed", "sampled windows and order", "optimizer and learning-rate schedule", "gradient clipping", "temperature", "blank/nonblank frame weights", "24-epoch budget", "two-epoch KL ramp", "selection rule", "decoder and feature extraction"],
+  "changed": "Multiply only the A2 calibrated KL coefficient by the declared arm multiplier",
+  "test_used": false
+}

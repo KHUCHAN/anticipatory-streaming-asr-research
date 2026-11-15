@@ -1,5 +1,7 @@
 # A2 audio-only qualification and small-Zipformer control — 2026-11-15
 
+**Subsequent correction:** the [20M reproduction gap is now resolved](small_zipformer_reproduction_2026-11-15.md). Legacy decoder padding caused the old small-baseline WER; corrected clean/other WER is 3.56/10.97%. Teacher/A2 values are unchanged. The tables and unresolved-gap discussion below preserve the original A2 execution record and are superseded for the small model only.
+
 A2 qualification FAIL: selected kl checkpoint has dev-clean WER 42.303%, complete cost 13.32% of the same-run teacher and 12.95% of the previous teacher. Targets are WER <10% and cost <=50% against both denominators.
 
 Completed 36 phase epochs and 800-utterance held-out-role development evaluation in 2.09 hours from runner start, excluding prior engineering/preparation and the later small-model diagnostic audit. One seed; no test splits. Runner completion: 2026-11-15T02:01:55.207470-08:00.

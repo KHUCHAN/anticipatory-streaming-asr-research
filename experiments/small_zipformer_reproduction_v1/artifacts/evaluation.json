@@ -1,0 +1,87 @@
+{
+  "status": "completed",
+  "role": "evaluation",
+  "scores": {
+    "teacher": {
+      "dev-clean": {
+        "utterances": 400,
+        "errors": 229,
+        "reference_words": 7808,
+        "wer_percent": 2.932889344262295,
+        "total_seconds": 84.19759135704953,
+        "audio_seconds": 2760.8401875,
+        "chunks": 9091,
+        "rtf": 0.03049708988526868,
+        "total_ms_per_chunk": 9.26164243285112,
+        "fbank_ms_per_chunk": 0.20612895365370273,
+        "encoder_ms_per_chunk": 8.85104746753313,
+        "decoder_ms_per_chunk": 0.16330420865680678,
+        "timing_repetitions": [
+          9.241002310232249,
+          9.282282555469992
+        ]
+      },
+      "dev-other": {
+        "utterances": 400,
+        "errors": 626,
+        "reference_words": 7100,
+        "wer_percent": 8.816901408450704,
+        "total_seconds": 75.30483692570124,
+        "audio_seconds": 2457.545125,
+        "chunks": 8131,
+        "rtf": 0.030642300790184367,
+        "total_ms_per_chunk": 9.261448398192258,
+        "fbank_ms_per_chunk": 0.21054521680385416,
+        "encoder_ms_per_chunk": 8.846992775136663,
+        "decoder_ms_per_chunk": 0.16154815160118793,
+        "timing_repetitions": [
+          9.244361922309025,
+          9.278534874075488
+        ]
+      }
+    },
+    "small": {
+      "dev-clean": {
+        "utterances": 400,
+        "errors": 278,
+        "reference_words": 7808,
+        "wer_percent": 3.560450819672131,
+        "total_seconds": 40.21731688908767,
+        "audio_seconds": 2760.8401875,
+        "chunks": 9162,
+        "rtf": 0.014567057184684533,
+        "total_ms_per_chunk": 4.389578355063051,
+        "fbank_ms_per_chunk": 0.2092956347280007,
+        "encoder_ms_per_chunk": 4.010337391787472,
+        "decoder_ms_per_chunk": 0.14913258118703565,
+        "timing_repetitions": [
+          4.390925269790341,
+          4.38823144033576
+        ]
+      },
+      "dev-other": {
+        "utterances": 400,
+        "errors": 779,
+        "reference_words": 7100,
+        "wer_percent": 10.971830985915492,
+        "total_seconds": 36.01880606886698,
+        "audio_seconds": 2457.545125,
+        "chunks": 8211,
+        "rtf": 0.014656416967670931,
+        "total_ms_per_chunk": 4.386652791239433,
+        "fbank_ms_per_chunk": 0.21051969410519947,
+        "encoder_ms_per_chunk": 4.007791509393751,
+        "decoder_ms_per_chunk": 0.1478082247505686,
+        "timing_repetitions": [
+          4.396521263038906,
+          4.376784319439959
+        ]
+      }
+    }
+  },
+  "change": "Only legacy decoder initial context [-1,0] -> [0,0]; original ONNX weights and encoder states unchanged",
+  "source_sha256": "828a0bbe424f1b745af1700b761fd8d3a0f1c486cee82e8796aa6dfcb2bf84a7",
+  "all_repeated_transcripts_match": true,
+  "frozen_A2_sources_changed": false,
+  "test_used": false
+}

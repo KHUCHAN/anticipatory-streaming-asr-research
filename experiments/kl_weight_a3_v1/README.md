@@ -1,0 +1,11 @@
+# A3: matched KL-weight continuation
+
+Status: launched after user authorization and the verified 20M reproduction correction on 2026-11-15. Control replay precedes the two 24-epoch training arms; final A3 results are pending. Public prose is English. Original A2 sources, inputs, checkpoints and results remain unchanged.
+
+The only training treatment is the relative KL coefficient in `MAE + lambda * KL`. Reuse the A2 MAE-best checkpoint, random seed 237, 24-epoch continuation budget, fresh AdamW at 3e-4, exact data windows/order, two-epoch coefficient ramp, temperature 2, blank-frame weight 0.1 and all original architecture/optimizer/selection settings. The coefficients are the original calibrated 0.026009175696980615 multiplied by 1, 4 or 16. Architecture, data coverage and nonblank weighting do not change.
+
+The completed A2 KL arm is the control. A disposable 100-update replay must reproduce its first logged training losses before the two new arms launch. `model.py`, `data.py`, `objective.py`, `inference.py`, `onnx_backend.py` and `optimized_inference.py` are exact A2 source copies; their byte identities are verified. Additional source/input hashes are captured before training.
+
+Select each checkpoint by free-running dev-clean WER on the original 128-utterance selection role. Select the final arm with that same role before the separate 800-utterance development-role evaluation. These project dev roles have already been used; they are not new external test data. Report all arms, paired utterance uncertainty, state/KL losses, monitored gradient ratios and complete CPU costs. This is one seed and two declared coefficient changes, not an exhaustive sweep or evidence about every distillation method. No FGN, frame-weight change, reference-supervised transducer retraining or 960h teacher-label expansion is included.
+
+Local checkpoint/log namespace: `runs/kl_weight_a3_v1/`. Aggregate public evidence: `artifacts/`. The repaired small recognizer has a model-specific blank-padding contract; A2/A3 retain their existing 66M teacher decoder contract for a matched comparison.

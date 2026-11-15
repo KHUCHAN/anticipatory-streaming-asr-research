@@ -1,0 +1,28 @@
+{
+  "status": "verified",
+  "original_A2_inputs_sources_and_weights_preserved": true,
+  "teacher_tokens_unchanged": true,
+  "legacy_negative_id_wraparound_confirmed": true,
+  "original_weights_preserved_by_wrapper": true,
+  "all_repeated_transcripts_match": true,
+  "independent_native_800_tokens_and_chunks_match": true,
+  "diagnostics": {
+    "teacher": {
+      "old_empty": 0,
+      "repaired_empty": 0,
+      "changed_utterance_tokens": 0
+    },
+    "small": {
+      "old_empty": 41,
+      "repaired_empty": 0,
+      "changed_utterance_tokens": 790
+    }
+  },
+  "source_sha256": {
+    "native_audit.py": "704bf207e5e18790d494208ae5cdcf0d3f422f332b9c89636598af99bc1d025c",
+    "reproduce.py": "828a0bbe424f1b745af1700b761fd8d3a0f1c486cee82e8796aa6dfcb2bf84a7",
+    "patch_decoder.py": "b0e4a6125c617d7b1cd179de7be66112de313d2f333b5c1aba838d1bbea73151",
+    "verify.py": "318face950f2d8988e8f40e2659e527350df73bee079ff691a2649eb9ffc2f20"
+  },
+  "test_used": false
+}

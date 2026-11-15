@@ -1,0 +1,31 @@
+{
+  "status": "verified",
+  "updates": 100,
+  "old": {
+    "event": "train",
+    "phase": "kl",
+    "epoch": 1,
+    "step": 100,
+    "mae": 0.5735941112041474,
+    "kl": 3.636017782688141,
+    "weight": 0.013004587848490307,
+    "seconds": 36.083832025527954,
+    "memory_gib": 3.203643798828125
+  },
+  "replay": {
+    "event": "train",
+    "phase": "kl",
+    "epoch": 1,
+    "step": 100,
+    "mae": 0.5735941112041474,
+    "kl": 3.636017782688141,
+    "weight": 0.013004587848490307,
+    "seconds": 39.06791114807129,
+    "memory_gib": 3.1797943115234375
+  },
+  "disposable_weights": true,
+  "tolerance": {
+    "relative": 0.0002,
+    "absolute": 2e-05
+  }
+}

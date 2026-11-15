@@ -1,0 +1,9 @@
+{
+  "status": "verified",
+  "utterances": 800,
+  "all_tokens_match": true,
+  "all_chunks_match": true,
+  "native_version": "2.0.1",
+  "decoder": "Unchanged learned parameters; negative padding mapped to the legacy blank convention",
+  "test_used": false
+}
