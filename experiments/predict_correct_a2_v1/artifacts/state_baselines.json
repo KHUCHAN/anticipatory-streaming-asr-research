@@ -1,0 +1,63 @@
+{
+  "scores": {
+    "dev-clean": {
+      "mean": 0.7929914101241983,
+      "sampled_median": 0.792451794896762
+    },
+    "dev-other": {
+      "mean": 0.7993163147355017,
+      "sampled_median": 0.7991438586397257
+    }
+  },
+  "median_estimation": {
+    "training_frames_sampled": 65536,
+    "seed": 8237,
+    "exact_population_median": false
+  },
+  "direct_supervision_coverage": {
+    "available": 1164469,
+    "visits": 8217864,
+    "unique": 1162121,
+    "first_chunks_seen": 28437,
+    "completed_global_epochs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ]
+  },
+  "scope": "Constant estimates from training data only; scores are diagnostic reference metrics, never inference inputs or policy tuning",
+  "test_used": false
+}

@@ -1,0 +1,110 @@
+{
+  "mae": {
+    "actual_audio_checks": [
+      {
+        "utterance_id": "1272-135031-0007",
+        "tokens_match": true,
+        "torch_errors": 8,
+        "onnx_errors": 8
+      },
+      {
+        "utterance_id": "1272-141231-0018",
+        "tokens_match": true,
+        "torch_errors": 14,
+        "onnx_errors": 14
+      },
+      {
+        "utterance_id": "2035-147960-0008",
+        "tokens_match": true,
+        "torch_errors": 13,
+        "onnx_errors": 13
+      },
+      {
+        "utterance_id": "2035-147960-0014",
+        "tokens_match": true,
+        "torch_errors": 15,
+        "onnx_errors": 15
+      },
+      {
+        "utterance_id": "116-288047-0013",
+        "tokens_match": true,
+        "torch_errors": 8,
+        "onnx_errors": 8
+      },
+      {
+        "utterance_id": "116-288048-0013",
+        "tokens_match": true,
+        "torch_errors": 9,
+        "onnx_errors": 9
+      },
+      {
+        "utterance_id": "1255-138279-0024",
+        "tokens_match": true,
+        "torch_errors": 5,
+        "onnx_errors": 5
+      },
+      {
+        "utterance_id": "1255-74899-0018",
+        "tokens_match": true,
+        "torch_errors": 9,
+        "onnx_errors": 9
+      }
+    ],
+    "all_checked_tokens_match": true,
+    "random_stream_maximum_difference": 3.5762786865234375e-06
+  },
+  "kl": {
+    "actual_audio_checks": [
+      {
+        "utterance_id": "1272-135031-0007",
+        "tokens_match": true,
+        "torch_errors": 2,
+        "onnx_errors": 2
+      },
+      {
+        "utterance_id": "1272-141231-0018",
+        "tokens_match": true,
+        "torch_errors": 10,
+        "onnx_errors": 10
+      },
+      {
+        "utterance_id": "2035-147960-0008",
+        "tokens_match": true,
+        "torch_errors": 8,
+        "onnx_errors": 8
+      },
+      {
+        "utterance_id": "2035-147960-0014",
+        "tokens_match": true,
+        "torch_errors": 5,
+        "onnx_errors": 5
+      },
+      {
+        "utterance_id": "116-288047-0013",
+        "tokens_match": true,
+        "torch_errors": 7,
+        "onnx_errors": 7
+      },
+      {
+        "utterance_id": "116-288048-0013",
+        "tokens_match": true,
+        "torch_errors": 4,
+        "onnx_errors": 4
+      },
+      {
+        "utterance_id": "1255-138279-0024",
+        "tokens_match": true,
+        "torch_errors": 5,
+        "onnx_errors": 5
+      },
+      {
+        "utterance_id": "1255-74899-0018",
+        "tokens_match": true,
+        "torch_errors": 8,
+        "onnx_errors": 8
+      }
+    ],
+    "all_checked_tokens_match": true,
+    "random_stream_maximum_difference": 5.0067901611328125e-06
+  }
+}

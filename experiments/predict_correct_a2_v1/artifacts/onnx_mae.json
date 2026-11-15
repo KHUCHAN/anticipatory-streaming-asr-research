@@ -1,0 +1,29 @@
+{
+  "directory": "runs/predict_correct_a2_v1/onnx/mae/045c1950fc6c",
+  "source_model_sha256": "045c1950fc6c69f51857edabaa44db09829877b46a5d1305c74452251a16cc6a",
+  "model_source_sha256": "82a576d9a252ff1d28b003c671d09c7e75d1f8b052dfc9bb2eeca2b0492fa6d7",
+  "backend_source_sha256": "106c9111e8b02f3de57ec6e5cdeae424480805fe4ea9bc1e64d8d391f9b52280",
+  "onnx_version": "1.20.1",
+  "files": {
+    "first.onnx": "31337e8d75c7df5a2612bc8f9e3ae1d370539b78efcd93c1929840d409dee845",
+    "step.onnx": "f15dd0b102c3c177a889d061bdb82bf9726c8148ae38e28bb3bc982372290c68"
+  },
+  "fp32": true,
+  "quantized": false,
+  "weights_changed": false,
+  "random_stream_max_differences": [
+    1.5497207641601562e-06,
+    3.5762786865234375e-06,
+    2.384185791015625e-06,
+    3.5762786865234375e-06,
+    2.0265579223632812e-06,
+    2.2649765014648438e-06,
+    2.115964889526367e-06,
+    2.86102294921875e-06,
+    2.6226043701171875e-06,
+    1.430511474609375e-06,
+    2.7418136596679688e-06,
+    1.9073486328125e-06
+  ],
+  "phase_contract": "First graph consumes 45 frames at stride phase 0; step graph consumes 32 frames at stride phase 1, preserved after every subsequent hop."
+}

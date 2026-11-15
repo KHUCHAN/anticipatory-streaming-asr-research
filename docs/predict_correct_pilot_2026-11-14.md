@@ -4,7 +4,7 @@ No tested cheap path retains the full encoder's accuracy while meeting the compu
 
 Completed A/B/C training and held-out dev decoding in 1.36 hours from runner start, excluding prior fbank extraction and engineering checks. Frozen native decoder; own corrected-state feedback, no teacher-state inference input. No test data used.
 
-**Interpretation qualification:** the failed cheap audio path prevents this pilot from settling the general value of FGN prediction in a viable recognizer. Fixed-checkpoint paired comparisons remain descriptive evidence within this weak student. See the [post-hoc review, loss-gradient audit and proposed A-only qualification](predict_correct_review_2026-11-14.md). No new A2 training has run.
+**Interpretation qualification:** the failed cheap audio path prevents this pilot from settling the general value of FGN prediction in a viable recognizer. Fixed-checkpoint paired comparisons remain descriptive evidence within this weak student. See the [post-hoc review and loss-gradient audit](predict_correct_review_2026-11-14.md). The subsequent [A2 audio-only study](predict_correct_a2_2026-11-15.md) is now complete: cost qualifies, accuracy does not; this report preserves the original A/B/C measurements.
 
 ## WER and complete inference cost
 

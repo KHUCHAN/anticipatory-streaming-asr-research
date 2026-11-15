@@ -2,6 +2,8 @@
 
 Current extension: [predict–correct encoder acceleration](predict_correct_acceleration_plan_2026-11-12.md). The first [causal fbank-conv A/B/C correction pilot](predict_correct_pilot_2026-11-14.md) is complete: corrected-only feedback and actual WER/runtime were measured, but none of the cheap paths retained baseline accuracy. Conditional encoder skipping and teacher-cache recovery remain unimplemented. Architectures below preserve completed historical studies; the new pilot's exact design and limits are in its [protocol](../experiments/predict_correct_v1/README.md).
 
+The [A2 audio-only follow-up](predict_correct_a2_2026-11-15.md) is also complete: 9,597,696 parameters, initial causal stride 4, twelve low-rate width-256 blocks and a joint eight-frame chunk head. Twelve MAE epochs precede 24 calibrated-KL epochs; equivalent FP32 ONNX inference passes numerical/token checks. Complete clean cost is 13.32% of the teacher, but 42.30% clean WER fails the <10% gate. This implemented branch contains no FGN prior and does not establish prediction-based encoder acceleration.
+
 Written: 2026-11-10. Code: [`avs/model.py`](../avs/model.py) · Methodology: [three-stage plan](research_plan_3stage.md)
 
 This document describes historical 100h/17.28M AVS, distinct from [current conclusions](conclusion_and_next_steps.md) and the [960h/114M proposal](librispeech960_benchmark_plan.md). Bounded per-layer acoustic K/V does not automatically bound the candidate trie, token history or all predictor state.

@@ -1,0 +1,36 @@
+{
+  "status": "verified",
+  "phases": [
+    {
+      "phase": "mae",
+      "epochs": 12,
+      "selected_epoch": 12,
+      "model_sha256": "045c1950fc6c69f51857edabaa44db09829877b46a5d1305c74452251a16cc6a"
+    },
+    {
+      "phase": "kl",
+      "epochs": 24,
+      "selected_epoch": 21,
+      "model_sha256": "c7b70b4d2176ce2ee42dd832a8099ee65660f854e072771171af6704e12ac7d1"
+    }
+  ],
+  "corpora_verified": [
+    "teacher/dev-clean",
+    "teacher/dev-other",
+    "small/dev-clean",
+    "small/dev-other",
+    "mae/dev-clean",
+    "mae/dev-other",
+    "kl/dev-clean",
+    "kl/dev-other"
+  ],
+  "original_inputs_unchanged": true,
+  "selected_before_heldout_decoding": true,
+  "speaker_disjoint_roles": true,
+  "all_repeated_transcripts_match": true,
+  "complete_runtime_sums_verified": true,
+  "fp32_onnx_exports_verified": true,
+  "selection_utterances": 128,
+  "evaluation_utterances": 800,
+  "test_used": false
+}

@@ -1,0 +1,39 @@
+{
+  "weight": 0.026009175696980615,
+  "batches": [
+    {
+      "mae": 0.6325981616973877,
+      "kl": 5.21742057800293,
+      "mae_gradient_norm": 0.6075239433075629,
+      "kl_gradient_norm": 22.272967539324718,
+      "raw_kl_to_mae_ratio": 36.6618761032911,
+      "cosine": 0.3834358087455343
+    },
+    {
+      "mae": 0.5554908514022827,
+      "kl": 3.5313737392425537,
+      "mae_gradient_norm": 0.7188285287168314,
+      "kl_gradient_norm": 18.45792201884888,
+      "raw_kl_to_mae_ratio": 25.677781670404485,
+      "cosine": 0.3596773180713854
+    },
+    {
+      "mae": 0.6789911985397339,
+      "kl": 7.044253826141357,
+      "mae_gradient_norm": 0.6823468634916762,
+      "kl_gradient_norm": 28.626151382411678,
+      "raw_kl_to_mae_ratio": 41.95249207408555,
+      "cosine": 0.5485377824580897
+    },
+    {
+      "mae": 0.6384161710739136,
+      "kl": 5.2611613273620605,
+      "mae_gradient_norm": 0.5136209324861116,
+      "kl_gradient_norm": 20.75902021209131,
+      "raw_kl_to_mae_ratio": 40.41700580934294,
+      "cosine": 0.2680947468835848
+    }
+  ],
+  "source_mae_sha256": "045c1950fc6c69f51857edabaa44db09829877b46a5d1305c74452251a16cc6a",
+  "scope": "One-time shared-audio-trunk gradient calibration on training data only"
+}

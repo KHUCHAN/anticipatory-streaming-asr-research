@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "sherpa_onnx_version": "2.0.1",
+  "scores": {
+    "dev-clean": {
+      "wer_percent": 23.693647540983605,
+      "utterances": 400
+    },
+    "dev-other": {
+      "wer_percent": 32.352112676056336,
+      "utterances": 400
+    }
+  },
+  "upstream_demo_exact_match": true,
+  "all_native_tokens_match": true,
+  "all_native_chunk_counts_match": true,
+  "interpretation": "Token/chunk sequences agree with the independent native engine. Native text formatting has a small WER difference, recorded separately. The source card reports different test splits and incompletely matched publication conditions; its substantially lower reported level is not validated by this protocol. The gap remains unresolved.",
+  "extra_checks": "Public-demo waveform scaling and high-frequency settings were checked in separate local diagnostics; changing to PCM-scale inputs produced empty demo transcripts. Longer tail padding did not change the public demo. Prefix-silence probes did not consistently repair selection-role outputs. These diagnostic variants do not replace the frozen primary results.",
+  "training_changed": false,
+  "test_splits_evaluated": false,
+  "text_difference_count": 161,
+  "native_minus_primary_errors": {
+    "dev-clean": -1,
+    "dev-other": 0
+  }
+}

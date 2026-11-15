@@ -1,6 +1,8 @@
 # A2: audio-only qualification before renewed FGN comparisons
 
-Status: launched 2026-11-14; training in progress. Training and evaluation remain local in `runs/predict_correct_a2_v1/`. This is a one-seed 100h distillation study, not a new 960h acoustic model or a B/C experiment. Final numerical qualification is not claimed before both phases and held-out evaluation finish.
+Status: completed and verified 2026-11-15. Twelve MAE epochs and 24 KL epochs plus 800-utterance development evaluation finished in a 2.09h runner window, excluding prior engineering and the later native small-model audit. Selected KL epoch 21 has clean/other WER **42.30/61.92%** at complete CPU cost **1.191/1.187ms per chunk**. Cost passes at 13.32% of same-run teacher and 12.95% of its previous pipeline; clean WER fails the <10% gate. [Full results, costs, checks and curves](../../docs/predict_correct_a2_2026-11-15.md).
+
+Training and raw evaluation remain local in `runs/predict_correct_a2_v1/`; public aggregate evidence is in `artifacts/`. This is a one-seed 100h distillation study, not a new 960h acoustic model or a B/C experiment. MAE-best remains preserved. No B/C continuation was launched after failed qualification.
 
 ## Fixed model and data
 
@@ -25,6 +27,8 @@ The entry gate is **dev-clean WER <10% and full inference cost ≤50%** of both 
 
 Controls are the existing 66M public teacher and the official [English small streaming Zipformer export](https://huggingface.co/csukuangfj/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17). Each uses its own native ONNX encoder/decoder/joiner and token table; A2 shares the teacher's native prediction network/joiner. Small-model input is 39 frames versus 45 for teacher/A2, with the same 32-frame hop and eight output frames. Its native availability window is 60ms shorter; do not claim exactly matched lookahead. Eight independent sherpa-onnx decodes match the custom native adapter's tokens and chunk counts.
 
+The final small-model WER is 23.71/32.35%, substantially worse than its source card's 3.94/9.79% on different test splits and incompletely matched publication conditions. A post-hoc independent sherpa-onnx 2.0.1 audit matches all 800 token sequences/chunk counts, and the supplied public demo text matches exactly. Native text formatting changes one clean word error, which does not explain the large gap. The source's performance level remains unvalidated; do not call this a successful reproduction of the strong small-model benchmark. Frozen primary outputs are preserved. The audit and bounded feature/startup diagnostics changed no training, checkpoint or qualification decisions.
+
 An initial untrained PyTorch CPU profile was too slow (about 10.8ms/chunk). The same FP32 A2 computation was exported as first/step ONNX graphs without changed weights or quantization. A twelve-chunk random-stream check differed by at most about 1e-6. The untrained ONNX profile was about 1.3ms/chunk, but both early profiles ran during GPU training and are not final qualification. Final inference uses the checked ONNX path for A2 and both controls; original PyTorch training/selection sources remain frozen. Exports and further real-audio token checks are recorded for each final checkpoint before held-out decoding.
 
 ## Run and inspect
@@ -39,3 +43,11 @@ An initial untrained PyTorch CPU profile was too slow (about 10.8ms/chunk). The 
 ```
 
 Training needs approved MPS access in the desktop sandbox. The native-reference audit uses the existing independent baseline environment. Feature/teacher caches and role manifests must first be prepared by the documented preceding studies. Input hashes, checkpoint hashes, epoch logs and raw transcripts remain preserved; public artifacts contain aggregate evidence only. The ONNX exporter dependencies are isolated from the active training environment.
+
+Post-hoc native audit and artifact checks, after the primary run:
+
+```bash
+.local/venv-baseline/bin/python experiments/predict_correct_a2_v1/audit_small_reproduction.py
+.venv/bin/python experiments/predict_correct_a2_v1/verify.py
+.venv/bin/python experiments/predict_correct_a2_v1/report.py
+```

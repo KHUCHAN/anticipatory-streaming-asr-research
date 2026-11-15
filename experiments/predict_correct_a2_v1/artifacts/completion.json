@@ -1,0 +1,672 @@
+{
+  "status": "completed",
+  "completed_local": "2026-11-15T02:01:55.207470-08:00",
+  "report_generated_local": "2026-11-15T02:23:38.276546-08:00",
+  "elapsed_seconds": 7538.061221122742,
+  "selected": "kl",
+  "conclusion": "A2 qualification FAIL: selected kl checkpoint has dev-clean WER 42.303%, complete cost 13.32% of the same-run teacher and 12.95% of the previous teacher. Targets are WER <10% and cost <=50% against both denominators.",
+  "source_sha256": {
+    "report.py": "494f3593497e492c88f30198c87130a9f67c9038429027d762f299406bba4555",
+    "verify.py": "bbd31e04faf84faac760c231d15fbfa2a29d4ecc3f31b1fac17fcafcc3fe122d",
+    "evaluate.py": "f05f993ee24e4460c5bba4cc969e4ce67968f39364cedf3fbffb843aa7d58369",
+    "onnx_backend.py": "106c9111e8b02f3de57ec6e5cdeae424480805fe4ea9bc1e64d8d391f9b52280",
+    "optimized_inference.py": "5a16aa328eb26d82984912a33ad325f0479952bf912198ad3d222b398f949074",
+    "baselines.py": "18b75455ed20d33b75ed7e4dbaeed2f56fea36b6d47f4eaf5dd9166a3f4f89f2",
+    "audit_small_reproduction.py": "7e74541c60ae77a27950438599e8bbde0770488a3817cfab38f37140cbeb0493"
+  },
+  "results": {
+    "status": "evaluation completed",
+    "selected_candidate": "kl",
+    "model_selection": {
+      "mae": {
+        "epoch": 12,
+        "dev_clean_wer": 84.77785870356882
+      },
+      "kl": {
+        "epoch": 21,
+        "dev_clean_wer": 46.54042243262928
+      }
+    },
+    "primary": {
+      "teacher/dev-clean": {
+        "utterances": 400,
+        "wer_percent": 2.932889344262295,
+        "errors": 229,
+        "reference_words": 7808,
+        "audio_seconds": 2760.8401875,
+        "chunks": 9091,
+        "output_frames": 72728,
+        "feature_window": 45,
+        "feature_hop": 32,
+        "rtf": 0.02944298345499495,
+        "total_seconds": 81.28737196244765,
+        "total_ms_per_chunk": 8.941521500654236,
+        "rtf_with_audio_io": 0.029729650193654845,
+        "feature_ms_per_chunk": 0.21018030780589142,
+        "components_ms_per_chunk": {
+          "audio": 8.538821858138832,
+          "head": 0.0,
+          "decoder": 0.1525978696180753
+        },
+        "other_overhead_ms_per_chunk": 0.039921465091437625,
+        "state_mae": 0.00014959647429096587,
+        "compute_chunk_p50_ms": 8.704958949238062,
+        "compute_chunk_p95_ms": 8.92606220440939,
+        "timing_repeat_ms_per_chunk": [
+          8.940642953994468,
+          8.942400047314003
+        ]
+      },
+      "teacher/dev-other": {
+        "utterances": 400,
+        "wer_percent": 8.816901408450704,
+        "errors": 626,
+        "reference_words": 7100,
+        "audio_seconds": 2457.545125,
+        "chunks": 8131,
+        "output_frames": 65048,
+        "feature_window": 45,
+        "feature_hop": 32,
+        "rtf": 0.029563698506707505,
+        "total_seconds": 72.65412314212881,
+        "total_ms_per_chunk": 8.93544744092102,
+        "rtf_with_audio_io": 0.02986622709639318,
+        "feature_ms_per_chunk": 0.21196606313654437,
+        "components_ms_per_chunk": {
+          "audio": 8.531267023254188,
+          "head": 0.0,
+          "decoder": 0.15131588975720583
+        },
+        "other_overhead_ms_per_chunk": 0.04089846477308119,
+        "state_mae": 0.00015132714785062802,
+        "compute_chunk_p50_ms": 8.695875061675906,
+        "compute_chunk_p95_ms": 8.92073952127248,
+        "timing_repeat_ms_per_chunk": [
+          8.930131610302645,
+          8.940763271539394
+        ]
+      },
+      "small/dev-clean": {
+        "utterances": 400,
+        "wer_percent": 23.706454918032787,
+        "errors": 1851,
+        "reference_words": 7808,
+        "audio_seconds": 2760.8401875,
+        "chunks": 9162,
+        "output_frames": 73296,
+        "feature_window": 39,
+        "feature_hop": 32,
+        "rtf": 0.014110966687451001,
+        "total_seconds": 38.95812391518848,
+        "total_ms_per_chunk": 4.25214188116006,
+        "rtf_with_audio_io": 0.014244001550661724,
+        "feature_ms_per_chunk": 0.20935681493128688,
+        "components_ms_per_chunk": {
+          "audio": 3.8962582644245725,
+          "head": 0.0,
+          "decoder": 0.12805140619949923
+        },
+        "other_overhead_ms_per_chunk": 0.018475395604702557,
+        "state_mae": null,
+        "compute_chunk_p50_ms": 4.031510528875515,
+        "compute_chunk_p95_ms": 4.156370836426504,
+        "timing_repeat_ms_per_chunk": [
+          4.249703220971647,
+          4.254580541348474
+        ]
+      },
+      "small/dev-other": {
+        "utterances": 400,
+        "wer_percent": 32.352112676056336,
+        "errors": 2297,
+        "reference_words": 7100,
+        "audio_seconds": 2457.545125,
+        "chunks": 8211,
+        "output_frames": 65688,
+        "feature_window": 39,
+        "feature_hop": 32,
+        "rtf": 0.014167840291443433,
+        "total_seconds": 34.81810684001539,
+        "total_ms_per_chunk": 4.240422218976421,
+        "rtf_with_audio_io": 0.01430448148444904,
+        "feature_ms_per_chunk": 0.210341100652504,
+        "components_ms_per_chunk": {
+          "audio": 3.8862261833717646,
+          "head": 0.0,
+          "decoder": 0.12482194788544151
+        },
+        "other_overhead_ms_per_chunk": 0.019032987066710305,
+        "state_mae": null,
+        "compute_chunk_p50_ms": 4.017563012894243,
+        "compute_chunk_p95_ms": 4.141093755606562,
+        "timing_repeat_ms_per_chunk": [
+          4.232809344475476,
+          4.248035093477365
+        ]
+      },
+      "mae/dev-clean": {
+        "utterances": 400,
+        "wer_percent": 81.63422131147541,
+        "errors": 6374,
+        "reference_words": 7808,
+        "audio_seconds": 2760.8401875,
+        "chunks": 9091,
+        "output_frames": 72728,
+        "feature_window": 45,
+        "feature_hop": 32,
+        "rtf": 0.003787588144441971,
+        "total_seconds": 10.456925562873948,
+        "total_ms_per_chunk": 1.1502503094130403,
+        "rtf_with_audio_io": 0.003916956812892797,
+        "feature_ms_per_chunk": 0.2087739910616915,
+        "components_ms_per_chunk": {
+          "audio": 0.8508012375701435,
+          "head": 0.0,
+          "decoder": 0.08039357138329675
+        },
+        "other_overhead_ms_per_chunk": 0.010281509397908539,
+        "state_mae": 0.5730045079097387,
+        "compute_chunk_p50_ms": 0.9237505146302283,
+        "compute_chunk_p95_ms": 1.0491982393432409,
+        "timing_repeat_ms_per_chunk": [
+          1.150291918555342,
+          1.1502087002707384
+        ]
+      },
+      "mae/dev-other": {
+        "utterances": 400,
+        "wer_percent": 89.29577464788733,
+        "errors": 6340,
+        "reference_words": 7100,
+        "audio_seconds": 2457.545125,
+        "chunks": 8131,
+        "output_frames": 65048,
+        "feature_window": 45,
+        "feature_hop": 32,
+        "rtf": 0.0037923959365932657,
+        "total_seconds": 9.31998414604459,
+        "total_ms_per_chunk": 1.1462285261400307,
+        "rtf_with_audio_io": 0.003924530832650472,
+        "feature_ms_per_chunk": 0.21111920568364706,
+        "components_ms_per_chunk": {
+          "audio": 0.8498787950643498,
+          "head": 0.0,
+          "decoder": 0.07452375526182503
+        },
+        "other_overhead_ms_per_chunk": 0.010706770130208758,
+        "state_mae": 0.6199797528800823,
+        "compute_chunk_p50_ms": 0.9178340551443398,
+        "compute_chunk_p95_ms": 1.0473752627149224,
+        "timing_repeat_ms_per_chunk": [
+          1.1445075007667072,
+          1.1479495515133542
+        ]
+      },
+      "kl/dev-clean": {
+        "utterances": 400,
+        "wer_percent": 42.302766393442624,
+        "errors": 3303,
+        "reference_words": 7808,
+        "audio_seconds": 2760.8401875,
+        "chunks": 9091,
+        "output_frames": 72728,
+        "feature_window": 45,
+        "feature_hop": 32,
+        "rtf": 0.003920920675037452,
+        "total_seconds": 10.825035371643025,
+        "total_ms_per_chunk": 1.190741983460898,
+        "rtf_with_audio_io": 0.004050576487684962,
+        "feature_ms_per_chunk": 0.2092257667005168,
+        "components_ms_per_chunk": {
+          "audio": 0.8515723490612828,
+          "head": 0.0,
+          "decoder": 0.11964694081352126
+        },
+        "other_overhead_ms_per_chunk": 0.010296926885577332,
+        "state_mae": 0.5333295831815951,
+        "compute_chunk_p50_ms": 0.9759164531715214,
+        "compute_chunk_p95_ms": 1.0773542453534901,
+        "timing_repeat_ms_per_chunk": [
+          1.1883675897018207,
+          1.1931163772199758
+        ]
+      },
+      "kl/dev-other": {
+        "utterances": 400,
+        "wer_percent": 61.91549295774648,
+        "errors": 4396,
+        "reference_words": 7100,
+        "audio_seconds": 2457.545125,
+        "chunks": 8131,
+        "output_frames": 65048,
+        "feature_window": 45,
+        "feature_hop": 32,
+        "rtf": 0.00392642517281089,
+        "total_seconds": 9.649367042118683,
+        "total_ms_per_chunk": 1.1867380447815377,
+        "rtf_with_audio_io": 0.004057619045842191,
+        "feature_ms_per_chunk": 0.21041434774166812,
+        "components_ms_per_chunk": {
+          "audio": 0.8534294571685135,
+          "head": 0.0,
+          "decoder": 0.11245873262467763
+        },
+        "other_overhead_ms_per_chunk": 0.010435507246678553,
+        "state_mae": 0.5960289798145503,
+        "compute_chunk_p50_ms": 0.968083506450057,
+        "compute_chunk_p95_ms": 1.0738755227066576,
+        "timing_repeat_ms_per_chunk": [
+          1.1865818539909012,
+          1.186894235572174
+        ]
+      }
+    },
+    "qualification": {
+      "mae": {
+        "wer_below_10": false,
+        "same_run_cost_fraction": 0.12864145205364416,
+        "previous_cost_fraction": 0.12509532954113955,
+        "same_run_cost_at_most_half": true,
+        "previous_cost_at_most_half": true,
+        "passes_both_cost_denominators_and_wer": false
+      },
+      "kl": {
+        "wer_below_10": false,
+        "same_run_cost_fraction": 0.13316995137502868,
+        "previous_cost_fraction": 0.12949899652321928,
+        "same_run_cost_at_most_half": true,
+        "previous_cost_at_most_half": true,
+        "passes_both_cost_denominators_and_wer": false
+      }
+    },
+    "paired_comparisons": {
+      "dev-clean/mae-minus-teacher": {
+        "wer_difference_pp": 78.70133196721312,
+        "ci95_pp": [
+          77.43481538032844,
+          79.91753254404892
+        ],
+        "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+      },
+      "dev-clean/mae-minus-small": {
+        "wer_difference_pp": 57.927766393442624,
+        "ci95_pp": [
+          55.30024376183073,
+          60.226185848855444
+        ],
+        "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+      },
+      "dev-other/mae-minus-teacher": {
+        "wer_difference_pp": 80.47887323943662,
+        "ci95_pp": [
+          79.20854210521402,
+          81.73569914207437
+        ],
+        "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+      },
+      "dev-other/mae-minus-small": {
+        "wer_difference_pp": 56.943661971830984,
+        "ci95_pp": [
+          54.3785167607692,
+          59.32655083828372
+        ],
+        "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+      },
+      "dev-clean/kl-minus-teacher": {
+        "wer_difference_pp": 39.369877049180324,
+        "ci95_pp": [
+          37.69593327439301,
+          40.95523064989054
+        ],
+        "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+      },
+      "dev-clean/kl-minus-small": {
+        "wer_difference_pp": 18.596311475409838,
+        "ci95_pp": [
+          15.862497422702775,
+          21.09906315314365
+        ],
+        "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+      },
+      "dev-clean/kl-minus-mae": {
+        "wer_difference_pp": -39.33145491803279,
+        "ci95_pp": [
+          -40.81949870349428,
+          -37.67098359679785
+        ],
+        "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+      },
+      "dev-other/kl-minus-teacher": {
+        "wer_difference_pp": 53.098591549295776,
+        "ci95_pp": [
+          51.322964771564614,
+          55.01617905923152
+        ],
+        "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+      },
+      "dev-other/kl-minus-small": {
+        "wer_difference_pp": 29.56338028169014,
+        "ci95_pp": [
+          26.58681391038719,
+          32.31055189608731
+        ],
+        "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+      },
+      "dev-other/kl-minus-mae": {
+        "wer_difference_pp": -27.380281690140844,
+        "ci95_pp": [
+          -28.9779127403102,
+          -25.76156876663709
+        ],
+        "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+      }
+    },
+    "model_sha256": {
+      "mae": "045c1950fc6c69f51857edabaa44db09829877b46a5d1305c74452251a16cc6a",
+      "kl": "c7b70b4d2176ce2ee42dd832a8099ee65660f854e072771171af6704e12ac7d1"
+    },
+    "backend_checks": {
+      "mae": {
+        "actual_audio_checks": [
+          {
+            "utterance_id": "1272-135031-0007",
+            "tokens_match": true,
+            "torch_errors": 8,
+            "onnx_errors": 8
+          },
+          {
+            "utterance_id": "1272-141231-0018",
+            "tokens_match": true,
+            "torch_errors": 14,
+            "onnx_errors": 14
+          },
+          {
+            "utterance_id": "2035-147960-0008",
+            "tokens_match": true,
+            "torch_errors": 13,
+            "onnx_errors": 13
+          },
+          {
+            "utterance_id": "2035-147960-0014",
+            "tokens_match": true,
+            "torch_errors": 15,
+            "onnx_errors": 15
+          },
+          {
+            "utterance_id": "116-288047-0013",
+            "tokens_match": true,
+            "torch_errors": 8,
+            "onnx_errors": 8
+          },
+          {
+            "utterance_id": "116-288048-0013",
+            "tokens_match": true,
+            "torch_errors": 9,
+            "onnx_errors": 9
+          },
+          {
+            "utterance_id": "1255-138279-0024",
+            "tokens_match": true,
+            "torch_errors": 5,
+            "onnx_errors": 5
+          },
+          {
+            "utterance_id": "1255-74899-0018",
+            "tokens_match": true,
+            "torch_errors": 9,
+            "onnx_errors": 9
+          }
+        ],
+        "all_checked_tokens_match": true,
+        "random_stream_maximum_difference": 3.5762786865234375e-06
+      },
+      "kl": {
+        "actual_audio_checks": [
+          {
+            "utterance_id": "1272-135031-0007",
+            "tokens_match": true,
+            "torch_errors": 2,
+            "onnx_errors": 2
+          },
+          {
+            "utterance_id": "1272-141231-0018",
+            "tokens_match": true,
+            "torch_errors": 10,
+            "onnx_errors": 10
+          },
+          {
+            "utterance_id": "2035-147960-0008",
+            "tokens_match": true,
+            "torch_errors": 8,
+            "onnx_errors": 8
+          },
+          {
+            "utterance_id": "2035-147960-0014",
+            "tokens_match": true,
+            "torch_errors": 5,
+            "onnx_errors": 5
+          },
+          {
+            "utterance_id": "116-288047-0013",
+            "tokens_match": true,
+            "torch_errors": 7,
+            "onnx_errors": 7
+          },
+          {
+            "utterance_id": "116-288048-0013",
+            "tokens_match": true,
+            "torch_errors": 4,
+            "onnx_errors": 4
+          },
+          {
+            "utterance_id": "1255-138279-0024",
+            "tokens_match": true,
+            "torch_errors": 5,
+            "onnx_errors": 5
+          },
+          {
+            "utterance_id": "1255-74899-0018",
+            "tokens_match": true,
+            "torch_errors": 8,
+            "onnx_errors": 8
+          }
+        ],
+        "all_checked_tokens_match": true,
+        "random_stream_maximum_difference": 5.0067901611328125e-06
+      }
+    },
+    "all_repeated_transcripts_match": true,
+    "evaluation_source_sha256": "f05f993ee24e4460c5bba4cc969e4ce67968f39364cedf3fbffb843aa7d58369",
+    "test_used": false,
+    "timing_scope": "CPU batch 1, one thread. Resident raw waveform to free-running native transcription; fbank, normalization, caches, A2 head, decoder, conversion/Python overhead included. Model load and reference metrics excluded; file IO additionally reported. No microphone waiting/display latency.",
+    "decoder_scope": "Each recognizer uses its own native ONNX prediction network/joiner and tokens. A2 and teacher share native decoder weights; A2 loads/runs no teacher encoder. A2 frontend/head use FP32 ONNX first/step exports; training/selection used the numerically checked PyTorch implementation.",
+    "limitations": "Single seed; reused project dev roles, no test split. Small recognizer uses native 39-frame window versus 45 for teacher/A2; all hop 32 frames. All measured neural paths use ONNX CPU. Two timing repetitions do not establish hardware-wide uncertainty.",
+    "cfg": {
+      "experiment": "A2 audio-only MAE then KL qualification",
+      "seed": 237,
+      "input_cache": "runs/predict_correct_v1/cache",
+      "protocol": "runs/predict_correct_v1/protocol.json",
+      "encoder_cache": "runs/fgn_state_v1/cache",
+      "bridge": "runs/fgn_state_v1/rnnt_bridge.npz",
+      "teacher_config": "configs/zipformer_baseline.json",
+      "small_model": "checkpoints/baselines/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17",
+      "train_split": "train-clean-100",
+      "feature_window": 45,
+      "feature_hop": 32,
+      "width": 256,
+      "stride": 4,
+      "kernel": 5,
+      "expansion": 2,
+      "dilations": [
+        1,
+        2,
+        4,
+        8,
+        1,
+        2,
+        4,
+        8,
+        1,
+        2,
+        4,
+        8
+      ],
+      "head_hidden": 1024,
+      "chunks_per_window": 8,
+      "batch_utterances": 64,
+      "mae_epochs": 12,
+      "kl_epochs": 24,
+      "mae_learning_rate": 0.0006,
+      "kl_learning_rate": 0.0003,
+      "warmup_steps": 200,
+      "weight_decay": 0.001,
+      "gradient_clip": 5.0,
+      "kl_temperature": 2.0,
+      "blank_frame_weight": 0.1,
+      "kl_calibration_batches": 4,
+      "kl_calibration_batch_size": 4,
+      "kl_weight_min": 0.001,
+      "kl_weight_max": 1.0,
+      "kl_trunk_gradient_target_ratio": 1.0,
+      "kl_weight_warmup_epochs": 2,
+      "representation_gate": "Best MAE checkpoint must beat the train-mean constant on the same fixed model-selection windows; otherwise report representation-stage failure and skip KL",
+      "checkpoint_selection": "MAE stage by representation MAE; KL stage and final candidate by free-running dev-clean WER on the model-selection role",
+      "sampling": "Per utterance/epoch: start window 1/8, end window 1/8, random window 6/8; no excluded burn-in chunks; causal past features only",
+      "qualification_wer_clean_below": 10.0,
+      "qualification_cost_fraction_at_most": 0.5,
+      "cost_rule": "Require at most half of both same-run complete teacher cost and recorded previous complete teacher cost on dev-clean; report each denominator",
+      "previous_cost_results": "experiments/predict_correct_v1/artifacts/results.json",
+      "timing_repetitions": 2,
+      "timing_threads": 1,
+      "bootstrap_replicates": 2000,
+      "max_driver_memory_gib": 12.0,
+      "test_used": false,
+      "scope": "One-seed local 100h correction/distillation run. Teacher and small public recognizer have separate upstream training. No FGN/B/C training or adaptive fallback. Qualification is not teacher-WER parity."
+    }
+  },
+  "verification": {
+    "status": "verified",
+    "phases": [
+      {
+        "phase": "mae",
+        "epochs": 12,
+        "selected_epoch": 12,
+        "model_sha256": "045c1950fc6c69f51857edabaa44db09829877b46a5d1305c74452251a16cc6a"
+      },
+      {
+        "phase": "kl",
+        "epochs": 24,
+        "selected_epoch": 21,
+        "model_sha256": "c7b70b4d2176ce2ee42dd832a8099ee65660f854e072771171af6704e12ac7d1"
+      }
+    ],
+    "corpora_verified": [
+      "teacher/dev-clean",
+      "teacher/dev-other",
+      "small/dev-clean",
+      "small/dev-other",
+      "mae/dev-clean",
+      "mae/dev-other",
+      "kl/dev-clean",
+      "kl/dev-other"
+    ],
+    "original_inputs_unchanged": true,
+    "selected_before_heldout_decoding": true,
+    "speaker_disjoint_roles": true,
+    "all_repeated_transcripts_match": true,
+    "complete_runtime_sums_verified": true,
+    "fp32_onnx_exports_verified": true,
+    "selection_utterances": 128,
+    "evaluation_utterances": 800,
+    "test_used": false
+  },
+  "state_baselines": {
+    "scores": {
+      "dev-clean": {
+        "mean": 0.7929914101241983,
+        "sampled_median": 0.792451794896762
+      },
+      "dev-other": {
+        "mean": 0.7993163147355017,
+        "sampled_median": 0.7991438586397257
+      }
+    },
+    "median_estimation": {
+      "training_frames_sampled": 65536,
+      "seed": 8237,
+      "exact_population_median": false
+    },
+    "direct_supervision_coverage": {
+      "available": 1164469,
+      "visits": 8217864,
+      "unique": 1162121,
+      "first_chunks_seen": 28437,
+      "completed_global_epochs": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ]
+    },
+    "scope": "Constant estimates from training data only; scores are diagnostic reference metrics, never inference inputs or policy tuning",
+    "test_used": false
+  },
+  "post_hoc_small_native_audit": {
+    "status": "completed",
+    "sherpa_onnx_version": "2.0.1",
+    "scores": {
+      "dev-clean": {
+        "wer_percent": 23.693647540983605,
+        "utterances": 400
+      },
+      "dev-other": {
+        "wer_percent": 32.352112676056336,
+        "utterances": 400
+      }
+    },
+    "upstream_demo_exact_match": true,
+    "all_native_tokens_match": true,
+    "all_native_chunk_counts_match": true,
+    "interpretation": "Token/chunk sequences agree with the independent native engine. Native text formatting has a small WER difference, recorded separately. The source card reports different test splits and incompletely matched publication conditions; its substantially lower reported level is not validated by this protocol. The gap remains unresolved.",
+    "extra_checks": "Public-demo waveform scaling and high-frequency settings were checked in separate local diagnostics; changing to PCM-scale inputs produced empty demo transcripts. Longer tail padding did not change the public demo. Prefix-silence probes did not consistently repair selection-role outputs. These diagnostic variants do not replace the frozen primary results.",
+    "training_changed": false,
+    "test_splits_evaluated": false,
+    "text_difference_count": 161,
+    "native_minus_primary_errors": {
+      "dev-clean": -1,
+      "dev-other": 0
+    }
+  }
+}

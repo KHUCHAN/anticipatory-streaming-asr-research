@@ -1,6 +1,6 @@
 # Predict–correct encoder acceleration
 
-A2 follow-up status, 2026-11-15: [implemented and training](../experiments/predict_correct_a2_v1/README.md) after explicit user authorization. MAE then calibrated KL, native small/full recognizer controls and complete-cost qualification are pending; this is still audio-only and does not train FGN or implement adaptive fallback.
+A2 follow-up status, 2026-11-15: [completed and verified](predict_correct_a2_2026-11-15.md), with 12 MAE + 24 calibrated-KL epochs and 800 dev utterances. Selected A2 has clean/other WER 42.30/61.92% at 1.191/1.187ms per chunk. Complete clean cost passes at 13.32% of same-run teacher cost, but WER fails the <10% gate. The native small model was evaluated and independently audited; its published performance level remains unvalidated. A2 is audio-only: no new FGN/B/C training, adaptive fallback or teacher-cache recovery was implemented.
 
 Status updated 2026-11-14: the first [audio-conditioned correction pilot](predict_correct_pilot_2026-11-14.md) is complete. All three cheap paths run faster but fail to retain full-encoder WER; B's benefit over previous-corrected-state C is not established. Diagnose the cheap audio reconstruction path before scaling the predictor. The computation gate and adaptive encoder-skipping/cache-recovery runtime remain unimplemented. Useful accuracy-preserving encoder acceleration is not established.
 

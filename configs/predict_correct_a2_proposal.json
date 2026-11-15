@@ -1,5 +1,5 @@
 {
-  "status": "Historical proposal; subsequently implemented in experiments/predict_correct_a2_v1. See that directory's fixed config and run status; this file is not the executed training config.",
+  "status": "Historical proposal; implemented and completed in experiments/predict_correct_a2_v1 on 2026-11-15. See docs/predict_correct_a2_2026-11-15.md: cost passes, WER fails. This file is not the executed training config.",
   "experiment": "Audio-only qualification before any renewed FGN comparison",
   "input": "Existing 80-bin fbank, train-only normalization, unchanged chunk-boundary availability",
   "raw_frontend": {"channels": 256, "kernel": 5, "stride": 4, "causal_left_padding": 4},
