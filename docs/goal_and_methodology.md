@@ -12,6 +12,8 @@ The user also proposes a positive role for prediction: a well-trained prior may 
 
 The [predict–correct acceleration plan](predict_correct_acceleration_plan_2026-11-12.md) defines the proposed architecture, objectives, capacity comparisons, causal gating and state-recovery requirements. The first [causal fbank-conv A/B/C correction pilot](predict_correct_pilot_2026-11-14.md) is complete. Its cheaper inference incurs a large WER regression; no useful accuracy-preserving acceleration is established. Adaptive encoder skipping and teacher-cache recovery remain unimplemented. The [current conclusions](conclusion_and_next_steps.md) and [experiment history](research_plan_3stage.md) provide completed evidence.
 
+The [interpretation review](predict_correct_review_2026-11-14.md) limits that result to an inadequate cheap student: it does not settle general FGN value. Local loss-gradient measurements are completed; the proposed A-only qualification architecture and small streaming-model control have not been executed.
+
 ## Original predict–verify objective
 
 Use observed speech and the recognized prefix to prepare possible continuations while waiting for new input. Verify those candidates using newly arrived audio; reuse valid work and recover from disagreement. Reduce committed-transcript latency and unnecessary sequential computation at matched recognition quality.

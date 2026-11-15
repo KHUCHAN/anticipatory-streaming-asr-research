@@ -534,8 +534,280 @@
     "report.py": "06190c40d6292adbcc42e4ca972dd685b0720c28a78345e5cab39331f18ee3ac",
     "evaluate.py": "fdee747252fcc11a176ae8499d35e5bc78a49e9719d3da7c9af8ce74dc21cd09",
     "verify.py": "d77e332a6c724c8350758c4ca3fc0065541818f4a20eb55264487f2fc0bbb102",
-    "analyze.py": "ae81592aee0143321c46a2cf29a710dbb71b266d2070fe8421e022b164036ab9",
+    "analyze.py": "1d6f4214d5d491d996836ed16486f689058e94929025759a89f19c5589464db3",
     "finalize.py": "c2b900a489505ff1a2cc919e2fd4d3b8c82d6f44cbb414f24624eaa46552761a"
   },
-  "conclusion": "No tested cheap path retains the full encoder's accuracy while meeting the compute-saving target. B meets the declared practical-plus-paired-CI WER improvement criterion over A on 1/2 splits. 0/6 cheap-path operating points meet both the full-encoder WER tolerance and compute-saving targets. These separate checks distinguish prior usefulness within this small student from accuracy-preserving encoder acceleration."
+  "conclusion": "No tested cheap path retains the full encoder's accuracy while meeting the compute-saving target. B meets the declared practical-plus-paired-CI WER improvement criterion over A on 1/2 splits. 0/6 cheap-path operating points meet both the full-encoder WER tolerance and compute-saving targets. These separate checks distinguish prior usefulness within this small student from accuracy-preserving encoder acceleration.",
+  "post_hoc_loss_gradient_audit": {
+    "status": "post-hoc diagnostic completed",
+    "training": false,
+    "parameter_updates": 0,
+    "sample": "16 fixed model-selection utterances, 8 per split; four batches of four; fixed validation windows",
+    "checkpoint_sha256": {
+      "best": "f82274d545772055a94303cc634be696c00be91a704b07272f8e2dafea6b1b2c",
+      "last": "94ff7fe98de0663c305095c64ca89b9b6cf68867211e6ce756f9a67e7ad6e3f2"
+    },
+    "objective_sha256": "826afcdc7d3c80aa2ab3ab16d169f110da58ae93aec1c4da825572719223758b",
+    "audit_source_sha256": "13fa16f696cfe0c311584d53b6988ab9382ffb8bf2f4241c1480dd2eb069be4a",
+    "utterance_ids": [
+      "1272-135031-0007",
+      "1272-141231-0018",
+      "2035-147960-0008",
+      "2035-147960-0014",
+      "2035-147961-0035",
+      "2035-152373-0013",
+      "2078-142845-0012",
+      "2078-142845-0015",
+      "116-288047-0013",
+      "116-288048-0013",
+      "1255-138279-0024",
+      "1255-74899-0018",
+      "1255-90407-0013",
+      "1255-90407-0016",
+      "1255-90407-0019",
+      "1255-90407-0028"
+    ],
+    "summary": {
+      "best": {
+        "epoch": 15,
+        "global_norm_ratio_median": 27.060171229537595,
+        "global_norm_ratio_range": [
+          23.41540681027431,
+          49.863001645989904
+        ],
+        "gradient_cosine_median": 0.37674288546734114,
+        "mae_gradient_nonzero": true
+      },
+      "last": {
+        "epoch": 16,
+        "global_norm_ratio_median": 27.44438485141619,
+        "global_norm_ratio_range": [
+          26.763697096471706,
+          50.357880398647545
+        ],
+        "gradient_cosine_median": 0.3781695552811848,
+        "mae_gradient_nonzero": true
+      }
+    },
+    "records": [
+      {
+        "checkpoint": "best",
+        "epoch": 15,
+        "batch": 0,
+        "weighted_mae": 0.8938064575195312,
+        "weighted_kl": 3.839350700378418,
+        "gradients": {
+          "all": {
+            "mae_gradient_norm": 0.6584948870804075,
+            "kl_gradient_norm": 17.24738867732119,
+            "kl_to_mae_norm_ratio": 26.19213757876171,
+            "cosine": 0.500822061270035
+          },
+          "audio": {
+            "mae_gradient_norm": 0.6403220251167271,
+            "kl_gradient_norm": 16.34901733340319,
+            "kl_to_mae_norm_ratio": 25.53249254611046,
+            "cosine": 0.5266379965824326
+          },
+          "head": {
+            "mae_gradient_norm": 0.15363339630904518,
+            "kl_gradient_norm": 5.493819110479455,
+            "kl_to_mae_norm_ratio": 35.759276579606585,
+            "cosine": 0.20711676454829148
+          }
+        }
+      },
+      {
+        "checkpoint": "best",
+        "epoch": 15,
+        "batch": 1,
+        "weighted_mae": 0.9375620484352112,
+        "weighted_kl": 5.036130428314209,
+        "gradients": {
+          "all": {
+            "mae_gradient_norm": 0.626372033141431,
+            "kl_gradient_norm": 17.49344647287239,
+            "kl_to_mae_norm_ratio": 27.928204880313476,
+            "cosine": 0.416280320696266
+          },
+          "audio": {
+            "mae_gradient_norm": 0.6050835265744857,
+            "kl_gradient_norm": 16.25048967222912,
+            "kl_to_mae_norm_ratio": 26.85660567265284,
+            "cosine": 0.44516389511556687
+          },
+          "head": {
+            "mae_gradient_norm": 0.16191309326275524,
+            "kl_gradient_norm": 6.476284035774385,
+            "kl_to_mae_norm_ratio": 39.998519608692575,
+            "cosine": 0.17556695659618624
+          }
+        }
+      },
+      {
+        "checkpoint": "best",
+        "epoch": 15,
+        "batch": 2,
+        "weighted_mae": 0.8629828095436096,
+        "weighted_kl": 5.427321434020996,
+        "gradients": {
+          "all": {
+            "mae_gradient_norm": 0.5497335011482518,
+            "kl_gradient_norm": 27.41136247261107,
+            "kl_to_mae_norm_ratio": 49.863001645989904,
+            "cosine": 0.2529824635539578
+          },
+          "audio": {
+            "mae_gradient_norm": 0.5290163188600456,
+            "kl_gradient_norm": 26.383770125088834,
+            "kl_to_mae_norm_ratio": 49.87326323305504,
+            "cosine": 0.25914383017076564
+          },
+          "head": {
+            "mae_gradient_norm": 0.1494946710236909,
+            "kl_gradient_norm": 7.4350162468780425,
+            "kl_to_mae_norm_ratio": 49.73432294252008,
+            "cosine": 0.17561288650176415
+          }
+        }
+      },
+      {
+        "checkpoint": "best",
+        "epoch": 15,
+        "batch": 3,
+        "weighted_mae": 0.8748888969421387,
+        "weighted_kl": 4.438271999359131,
+        "gradients": {
+          "all": {
+            "mae_gradient_norm": 0.9116138808204995,
+            "kl_gradient_norm": 21.34580987330492,
+            "kl_to_mae_norm_ratio": 23.41540681027431,
+            "cosine": 0.33720545023841625
+          },
+          "audio": {
+            "mae_gradient_norm": 0.8946691240665546,
+            "kl_gradient_norm": 20.21928848134452,
+            "kl_to_mae_norm_ratio": 22.59973876089682,
+            "cosine": 0.35406581530387443
+          },
+          "head": {
+            "mae_gradient_norm": 0.17494863859600587,
+            "kl_gradient_norm": 6.8428044291394565,
+            "kl_to_mae_norm_ratio": 39.11321907992075,
+            "cosine": 0.13100184337948323
+          }
+        }
+      },
+      {
+        "checkpoint": "last",
+        "epoch": 16,
+        "batch": 0,
+        "weighted_mae": 0.896860659122467,
+        "weighted_kl": 3.813372850418091,
+        "gradients": {
+          "all": {
+            "mae_gradient_norm": 0.6485768510884465,
+            "kl_gradient_norm": 17.35831438631462,
+            "kl_to_mae_norm_ratio": 26.763697096471706,
+            "cosine": 0.47492472090091636
+          },
+          "audio": {
+            "mae_gradient_norm": 0.6296771834171472,
+            "kl_gradient_norm": 16.428391763881418,
+            "kl_to_mae_norm_ratio": 26.090181122217942,
+            "cosine": 0.4996010875208447
+          },
+          "head": {
+            "mae_gradient_norm": 0.15543029451060492,
+            "kl_gradient_norm": 5.605267378686784,
+            "kl_to_mae_norm_ratio": 36.062901356108156,
+            "cosine": 0.20503553127979687
+          }
+        }
+      },
+      {
+        "checkpoint": "last",
+        "epoch": 16,
+        "batch": 1,
+        "weighted_mae": 0.9388737678527832,
+        "weighted_kl": 4.984898090362549,
+        "gradients": {
+          "all": {
+            "mae_gradient_norm": 0.6341132376261065,
+            "kl_gradient_norm": 17.56956429266352,
+            "kl_to_mae_norm_ratio": 27.707297766622407,
+            "cosine": 0.4049335626926666
+          },
+          "audio": {
+            "mae_gradient_norm": 0.6125496170822278,
+            "kl_gradient_norm": 16.257211684294745,
+            "kl_to_mae_norm_ratio": 26.54023646563214,
+            "cosine": 0.4345359535374181
+          },
+          "head": {
+            "mae_gradient_norm": 0.16395903374038026,
+            "kl_gradient_norm": 6.662781527715545,
+            "kl_to_mae_norm_ratio": 40.636867488897735,
+            "cosine": 0.168562888053572
+          }
+        }
+      },
+      {
+        "checkpoint": "last",
+        "epoch": 16,
+        "batch": 2,
+        "weighted_mae": 0.8662906289100647,
+        "weighted_kl": 5.476047515869141,
+        "gradients": {
+          "all": {
+            "mae_gradient_norm": 0.5836548697486879,
+            "kl_gradient_norm": 29.391622124892635,
+            "kl_to_mae_norm_ratio": 50.357880398647545,
+            "cosine": 0.27897272019284247
+          },
+          "audio": {
+            "mae_gradient_norm": 0.5635918529886997,
+            "kl_gradient_norm": 28.383873456135934,
+            "kl_to_mae_norm_ratio": 50.36246231313965,
+            "cosine": 0.28622048780980514
+          },
+          "head": {
+            "mae_gradient_norm": 0.15171430461931293,
+            "kl_gradient_norm": 7.630411440973569,
+            "kl_to_mae_norm_ratio": 50.2946077505353,
+            "cosine": 0.17881945416681666
+          }
+        }
+      },
+      {
+        "checkpoint": "last",
+        "epoch": 16,
+        "batch": 3,
+        "weighted_mae": 0.8714339733123779,
+        "weighted_kl": 4.398784637451172,
+        "gradients": {
+          "all": {
+            "mae_gradient_norm": 0.8304642160019581,
+            "kl_gradient_norm": 22.573239781283842,
+            "kl_to_mae_norm_ratio": 27.181471936209974,
+            "cosine": 0.351405547869703
+          },
+          "audio": {
+            "mae_gradient_norm": 0.8120479719343041,
+            "kl_gradient_norm": 21.421022680484207,
+            "kl_to_mae_norm_ratio": 26.379011364881777,
+            "cosine": 0.36964505051626356
+          },
+          "head": {
+            "mae_gradient_norm": 0.17392212434630164,
+            "kl_gradient_norm": 7.1197571268630115,
+            "kl_to_mae_norm_ratio": 40.93646598224989,
+            "cosine": 0.12727667171029372
+          }
+        }
+      }
+    ],
+    "interpretation": "Weighted loss gradients, not scalar loss sizes, quantify local objective pressure. These final-checkpoint minibatches do not reconstruct historical gradients, optimizer moments or causal effects on training.",
+    "test_used": false
+  }
 }

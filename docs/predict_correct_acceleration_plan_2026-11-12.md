@@ -2,6 +2,8 @@
 
 Status updated 2026-11-14: the first [audio-conditioned correction pilot](predict_correct_pilot_2026-11-14.md) is complete. All three cheap paths run faster but fail to retain full-encoder WER; B's benefit over previous-corrected-state C is not established. Diagnose the cheap audio reconstruction path before scaling the predictor. The computation gate and adaptive encoder-skipping/cache-recovery runtime remain unimplemented. Useful accuracy-preserving encoder acceleration is not established.
 
+The [post-hoc review](predict_correct_review_2026-11-14.md) records why this weak-student result cannot settle general FGN usefulness. Its approximately 9.60M chunk-wide stride-4 A-only configuration is proposed, not implemented/trained. The next comparison must first qualify cheap-audio accuracy and complete cost, then revisit B/C across seeds and a native small-recognizer control.
+
 ## Goal
 
 Predict the next acoustic representation from a bounded history. When the actual audio arrives, use a lightweight audio-conditioned module to correct the prediction. Run the full encoder only when the inexpensive path is insufficient. Measure the complete cost of prediction, correction, verification, fallback and state recovery at controlled recognition error.

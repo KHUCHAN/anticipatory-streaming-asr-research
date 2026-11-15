@@ -25,10 +25,13 @@ def main():
                 f"{len(passed)}/6 cheap-path operating points meet both the full-encoder WER tolerance and compute-saving targets. "
                 "These separate checks distinguish prior usefulness within this small student from accuracy-preserving encoder acceleration.")
     result['conclusion']=conclusion
+    audit_path=HERE/'artifacts/loss_gradient_audit.json'
+    if audit_path.exists():result['post_hoc_loss_gradient_audit']=json.loads(audit_path.read_text())
     write(HERE/'artifacts/completion.json',result)
     lines=['# Fbank prediction-correction three-way pilot — 2026-11-14','',
         conclusion,'',
         f"Completed A/B/C training and held-out dev decoding in {result['elapsed_seconds']/3600:.2f} hours from runner start, excluding prior fbank extraction and engineering checks. Frozen native decoder; own corrected-state feedback, no teacher-state inference input. No test data used.",'',
+        '**Interpretation qualification:** the failed cheap audio path prevents this pilot from settling the general value of FGN prediction in a viable recognizer. Fixed-checkpoint paired comparisons remain descriptive evidence within this weak student. See the [post-hoc review, loss-gradient audit and proposed A-only qualification](predict_correct_review_2026-11-14.md). No new A2 training has run.','',
         '## WER and complete inference cost','',
         '| Split | Path | WER % | Normalized state MAE | Total ms/chunk | RTF | RTF including audio file IO |',
         '|---|---|---:|---:|---:|---:|---:|']

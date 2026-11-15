@@ -21,6 +21,7 @@ The selected goal is to predict an acoustic representation, correct it using new
 | [Double-descent review](docs/double_descent_review_2026-11-13.md) | Post-hoc token/state curve audit, finite-range limits and proposed follow-ups; no new training |
 | [Epoch-wise double-descent results](docs/fgn_double_descent_2026-11-13.md) | Completed all three models through epoch 96; token risk worsens, state loss recovers; verified full-training diagnostics |
 | [Prediction-correction three-way results](docs/predict_correct_pilot_2026-11-14.md) | Completed: 48 epochs, 800 dev utterances, corrected-only feedback; cheaper inference loses accuracy; no established B-over-C benefit |
+| [Correction-pilot interpretation review](docs/predict_correct_review_2026-11-14.md) | Failed audio student leaves general FGN value unresolved; post-hoc gradient audit and proposed A-only qualification |
 | [Implementation review](docs/results_review_2026-11-11.md) | Metric definitions, missing costs and corrected claims |
 | [Four follow-up experiments](docs/followup_experiments_2026-11-11.md) | Real cache release, long streams, seed repetitions and display stabilization |
 | [Public baseline reproduction](docs/baseline_zipformer_2026-11-11.md) | Frozen public 66.11M checkpoint, inference conditions and WER |
@@ -53,6 +54,7 @@ The selected goal is to predict an acoustic representation, correct it using new
 │   ├── fgn_double_descent_interim_2026-11-13.md
 │   ├── fgn_double_descent_2026-11-13.md # Final review on 2026-11-14
 │   ├── predict_correct_pilot_2026-11-14.md # A/B/C WER and full cost
+│   ├── predict_correct_review_2026-11-14.md # Interpretation and proposed A2
 │   ├── librispeech960_benchmark_plan.md
 │   ├── literature_map.md
 │   ├── claim_audit.md

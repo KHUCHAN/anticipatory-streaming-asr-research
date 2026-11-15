@@ -1,0 +1,41 @@
+{
+  "status": "Proposal only; not implemented, profiled or trained",
+  "experiment": "Audio-only qualification before any renewed FGN comparison",
+  "input": "Existing 80-bin fbank, train-only normalization, unchanged chunk-boundary availability",
+  "raw_frontend": {"channels": 256, "kernel": 5, "stride": 4, "causal_left_padding": 4},
+  "low_rate_blocks": {
+    "count": 12,
+    "width": 256,
+    "expansion": 2,
+    "kernel": 5,
+    "dilations": [1, 2, 4, 8, 1, 2, 4, 8, 1, 2, 4, 8],
+    "normalization": "Per-position channel LayerNorm",
+    "activation": "SiLU"
+  },
+  "chunk_head": {
+    "input": "Flatten the final eight stride-4 representations, including the chunk's last available frame",
+    "input_features": 2048,
+    "hidden_features": 1024,
+    "output_features": 4096,
+    "reshape_output": [8, 512],
+    "contract": "Every output may depend on every arrived frame through the chunk head; no later chunk is visible"
+  },
+  "estimated_parameters": 9597696,
+  "parameter_count_note": "Analytical count for the proposed modules, not an instantiated-model measurement",
+  "training": {
+    "phase_1": "Representation MAE only; check a fixed tiny training subset can be fitted and held-out MAE beats a training-only constant baseline",
+    "phase_2": "Add KL only after the representation gate; log per-loss weighted gradient norms and cosine, and preserve MAE-only checkpoint",
+    "coverage": "Include utterance beginnings and ends in direct supervision; do not always exclude the first two chunks",
+    "duration": "Fix epoch/step/time limits and stopping checks before launch; not specified or executed here"
+  },
+  "qualification": {
+    "dev_clean_wer_percent_below": 10.0,
+    "end_to_end_cpu_cost_fraction_at_most": 0.5,
+    "baseline": "Same-run full encoder pipeline, including fbank and native decoding",
+    "additional_cost_record": "Also report audio-network-only time relative to the full encoder's neural time",
+    "meaning": "Entry gate for renewed B/C tests, not accuracy-preserving acceleration versus the 2.93% teacher",
+    "failure_scope": "Stop this bounded recipe; do not claim impossibility for all fbank-conditioned correctors"
+  },
+  "follow_up_if_qualified": "A/B/C with 2-3 training seeds, common data/initialization/budgets, full-sequence corrected-state feedback and all forecast costs charged",
+  "test_used": false
+}

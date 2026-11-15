@@ -2,6 +2,8 @@
 
 Status: completed and verified on 2026-11-14. All three paths trained 16 epochs; 800 dev utterances were decoded with two timing repetitions. [Results](../../docs/predict_correct_pilot_2026-11-14.md): B improves over A on clean, but B-over-C benefit is not established; every cheap path loses full-encoder accuracy. No useful encoder-skipping acceleration is demonstrated. Original raw logs and the reporting-only serialization recovery remain in `runs/predict_correct_v1/`.
 
+The [interpretation review](../../docs/predict_correct_review_2026-11-14.md) leaves general FGN value unresolved in a viable student. Its post-hoc loss-gradient audit is separate from the original training/evaluation; the proposed A2 architecture and small-recognizer evaluation have not run. Original training sources, checkpoints and decode records remain unchanged.
+
 The user authorized three ablations with WER and **complete inference cost** as outcomes:
 
 | Path | Current audio | Additional input |
