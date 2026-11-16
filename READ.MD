@@ -30,7 +30,8 @@ The selected goal is to predict an acoustic representation, correct it using new
 | [Public baseline reproduction](docs/baseline_zipformer_2026-11-11.md) | Frozen public 66.11M checkpoint, inference conditions and WER |
 | [960h benchmark proposal](docs/librispeech960_benchmark_plan.md) | Prepared data, speaker-separated dev roles and unexecuted acoustic-training recipe |
 | [Prior-work comparison](docs/prior_work_predict_refine_2026-11-16.md) and [new paper folder](notes/predict-refine/README.md) | 17 additions: future simulation, prompt-and-refine, emission timing, rewriting, distillation and adaptive waiting |
-| [Literature map](docs/literature_map.md) and [50-paper index](papers/INDEX.md) | Initial 33 plus 17 additions; source relationships, notes, original links and reading priorities |
+| [LLM correction review](docs/prior_work_llm_correction_2026-11-16.md) and [paper folder](notes/llm-correction/README.md) | Ten additions: fixed-list selection, generation, acoustic fusion, streaming cost and teacher provenance; research only |
+| [Literature map](docs/literature_map.md) and [60-paper index](papers/INDEX.md) | Initial 33 plus 17 future-context and ten LLM additions; source relationships and evidence |
 | [Dataset guide](data/README.md) and [inventory](data/reports/librispeech_inventory.md) | Local data organization and verified preparation status |
 
 ## File structure
@@ -63,15 +64,17 @@ The selected goal is to predict an acoustic representation, correct it using new
 │   ├── small_zipformer_reproduction_2026-11-15.md # Legacy padding repair
 │   ├── kl_weight_a3_2026-11-15.md     # Matched coefficient comparison
 │   ├── prior_work_predict_refine_2026-11-16.md # Related-work comparison and novelty boundaries
+│   ├── prior_work_llm_correction_2026-11-16.md # LLM correction, timing and source provenance
 │   ├── librispeech960_benchmark_plan.md
 │   ├── literature_map.md
 │   ├── claim_audit.md
 │   ├── datasets_and_mac.md
 │   ├── resources.md
 │   └── scope_and_provenance.md
-├── notes/                            # 50 English paper notes plus the new folder guide
+├── notes/                            # 60 English paper notes plus topic folder guides
 │   ├── anticipatory/                 # P01–P02
 │   ├── predict-refine/               # P34–P50; ZeroPrompt, CUSIDE and related work
+│   ├── llm-correction/               # P51–P60; LLM selection, correction and fusion
 │   ├── decoding/                     # P03–P08
 │   ├── streaming/                    # P09–P15, P30
 │   ├── state-space/                  # P16–P20
@@ -87,7 +90,8 @@ The selected goal is to predict an acoustic representation, correct it using new
 │   ├── catalog.csv
 │   ├── references.bib
 │   └── reviews/
-│       └── predict_refine_2026-11-16.json # Source versions, search scope and evidence checks
+│       ├── predict_refine_2026-11-16.json # Source versions, search scope and evidence checks
+│       └── llm_correction_2026-11-16.json # LLM source evidence and teacher text-source audit
 ├── configs/
 │   ├── zipformer_baseline.json        # Executed baseline conditions
 │   ├── zipformer_ours.json            # Executed forecaster/gate study
@@ -136,7 +140,7 @@ Directory paths remain compatible with completed experiments. Local-only output 
 
 ## Status and data boundary
 
-- **Prepared:** 50-paper source set, English notes/catalog/BibTeX (initial 33 plus 17 added on 2026-11-16); LibriSpeech training splits and all four dev/test splits.
+- **Prepared:** 60-paper source set, English notes/catalog/BibTeX (initial 33 plus 17 future-context and ten LLM additions); LibriSpeech training splits and all four dev/test splits. Both 2026-11-16 literature extensions are research-only.
 - **Completed:** original AVS studies, follow-up controls, public Zipformer reproduction, actual full/band2 forecaster training, independent FGN and hybrid experiments, the small CPU component profile, the three-capacity fixed-case fitting diagnosis, its 48-extra-epoch continuation/settings audit, and the 207-extra-epoch investigation through epoch 96.
 - **Completed correction pilot:** causal fbank-conv A/B/C, 16 epochs each and 800 dev utterances with two CPU timing repetitions; full-encoder accuracy was not retained. See the result report above.
 - **Completed A2 qualification:** 12 MAE + 24 KL epochs, 800 dev utterances and two CPU timing repetitions. Selected A2 costs 13.32% of the same-run teacher but has 42.30% dev-clean WER, failing the <10% accuracy gate.
@@ -168,6 +172,9 @@ python3 scripts/prepare_librispeech.py
 
 # Retrieve only the 17 new related-work PDFs.
 python3 scripts/download_papers.py --category predict-refine
+
+# Retrieve only the ten LLM correction/fusion PDFs.
+python3 scripts/download_papers.py --category llm-correction
 
 # Full 960h plus dev/test; reuse and verify existing downloads.
 python3 scripts/prepare_librispeech.py --scope 960h --mirror elda --workers 2 --connections 16

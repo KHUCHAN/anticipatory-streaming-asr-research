@@ -1,6 +1,6 @@
 # Paper index
 
-Initial catalog: 33 papers, reviewed 2026-11-10. Current catalog: 50 papers; last extension 2026-11-16. Individual notes retain their own review dates. IDs group topics rather than publication years.
+Initial catalog: 33 papers, reviewed 2026-11-10. Current catalog: 60 papers; last extension 2026-11-16. Individual notes retain their own review dates. IDs group topics rather than publication years.
 
 Notes separate source-reported evidence from project interpretation. Original PDFs are local-only and can be obtained from the linked sources. Later related-work links appear in the research documents.
 
@@ -32,6 +32,21 @@ Notes separate source-reported evidence from project interpretation. Original PD
 | P48 | [Delayed-KD: Delayed Knowledge Distillation based CTC for Low-Latency Streaming ASR](../notes/predict-refine/P48-delayed-kd.md) | 2025 / Interspeech 2025 | 1 - direct comparison |
 | P49 | [Fast-U2++: Fast and Accurate End-to-End Speech Recognition in Joint CTC/Attention Frames](../notes/predict-refine/P49-fast-u2pp.md) | 2022 / arXiv preprint; collected v1 | 1 - direct comparison |
 | P50 | [Selective Lookahead for Attention-Based Streaming ASR](../notes/predict-refine/P50-selective-lookahead.md) | 2026 / IEEE SLT 2026 (acceptance stated on arXiv) | 1 - direct comparison |
+
+## LLM hypothesis selection, correction and fusion
+
+| ID | Paper | Source year / publication | Priority |
+|---|---|---|---|
+| P51 | [N-best T5: Robust ASR Error Correction using Multiple Input Hypotheses and Constrained Decoding Space](../notes/llm-correction/P51-nbest-t5.md) | 2023 / Interspeech 2023 | 1 - direct comparison |
+| P52 | [Can Generative Large Language Models Perform ASR Error Correction?](../notes/llm-correction/P52-chatgpt-asr-correction.md) | 2023 / arXiv preprint; collected v2 | 1 - direct comparison |
+| P53 | [HyPoradise: An Open Baseline for Generative Speech Recognition with Large Language Models](../notes/llm-correction/P53-hyporadise.md) | 2023 / NeurIPS 2023 Datasets and Benchmarks | 2 - generation or fusion control |
+| P54 | [Listen Again and Choose the Right Answer: A New Paradigm for Automatic Speech Recognition with Large Language Models](../notes/llm-correction/P54-clozeger.md) | 2024 / Findings of ACL 2024 | 2 - generation or fusion control |
+| P55 | [ProGRes: Prompted Generative Rescoring on ASR n-Best](../notes/llm-correction/P55-progres.md) | 2024 / IEEE SLT 2024 | 1 - direct comparison |
+| P56 | [Generative Speech Recognition Error Correction with Large Language Models and Task-Activating Prompting](../notes/llm-correction/P56-task-activating.md) | 2023 / IEEE ASRU 2023 | 2 - generation or fusion control |
+| P57 | [Delayed Fusion: Integrating Large Language Models into First-Pass Decoding in End-to-end Speech Recognition](../notes/llm-correction/P57-delayed-fusion.md) | 2025 / ICASSP 2025 (acceptance stated on arXiv) | 1 - direct comparison |
+| P58 | [SALSA: Speedy ASR-LLM Synchronous Aggregation](../notes/llm-correction/P58-salsa.md) | 2024 / Interspeech 2024 | 2 - generation or fusion control |
+| P59 | [StreamCorrect: Self-Supervised Error Correction for Real-Time ASR with Offline Recognizers](../notes/llm-correction/P59-streamcorrect.md) | 2026 / EMNLP 2026 Industry Track | 1 - direct comparison |
+| P60 | [It's Never Too Late: Fusing Acoustic Information into Large Language Models for Automatic Speech Recognition](../notes/llm-correction/P60-late-acoustic-fusion.md) | 2024 / ICLR 2024 | 2 - generation or fusion control |
 
 ## Speculative decoding and path reuse
 

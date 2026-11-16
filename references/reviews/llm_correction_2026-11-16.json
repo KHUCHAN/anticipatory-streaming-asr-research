@@ -1,0 +1,496 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-16",
+  "search_cutoff": "2026-11-16",
+  "scope": "Targeted LLM hypothesis selection, generative correction, acoustic fusion and actual streaming-cost review. Not exhaustive; not a novelty certification.",
+  "added_count": 10,
+  "catalog_count_before": 50,
+  "catalog_count_after": 60,
+  "collected_pdf_pages": 107,
+  "execution_boundary": "Research/source collection and documentation only. No author model, LLM API inference, training, decoding benchmark, forced alignment, checkpoint conversion or temporary-experiment migration.",
+  "recorded_search_queries": [
+    {
+      "query": "large language model ASR n-best hypothesis reranking generative error correction streaming speech recognition latency",
+      "service": "Consensus; discovery only, not cited as evidence"
+    },
+    {
+      "query": "LLM ASR n-best rescoring reranking error correction streaming latency 2024 2025 2026",
+      "service": "web search"
+    },
+    {
+      "query": "\"Can Generative Large Language Models Perform ASR Error Correction\"",
+      "service": "web search"
+    },
+    {
+      "query": "\"N-best T5\" \"Ma\" \"2023\"",
+      "service": "web search"
+    },
+    {
+      "query": "\"Progres: Prompted Generative Rescoring\" arxiv",
+      "service": "web search"
+    },
+    {
+      "query": "\"Generative Speech Recognition Error Correction\" \"Task-Activating\"",
+      "service": "web search"
+    },
+    {
+      "query": "\"Listen Again and Choose the Right Answer\"",
+      "service": "web search"
+    },
+    {
+      "query": "\"StreamCorrect\" \"2026\"",
+      "service": "web search"
+    },
+    {
+      "query": "\"Streaming Speech Recognition with Decoder-Only Large Language Models and Latency Optimization\"",
+      "service": "web search"
+    }
+  ],
+  "search_log_note": "Recorded queries are a subset of searches and direct primary-source checks, not a complete search export. Conclusions rely on collected PDFs/publisher records, not discovery summaries.",
+  "visual_checks": [
+    {
+      "paper_id": "P51",
+      "pdf_pages": [
+        4
+      ],
+      "items": "N-best versus lattice constraints; Tables 1-4"
+    },
+    {
+      "paper_id": "P53",
+      "pdf_pages": [
+        20
+      ],
+      "items": "Strong LibriSpeech baseline and correction failures; Table 6"
+    },
+    {
+      "paper_id": "P54",
+      "pdf_pages": [
+        6
+      ],
+      "items": "Cloze/calibration/post-processing attribution; Tables 1-2"
+    },
+    {
+      "paper_id": "P55",
+      "pdf_pages": [
+        4
+      ],
+      "items": "Table 1 and contradictory prose value"
+    },
+    {
+      "paper_id": "P57",
+      "pdf_pages": [
+        3
+      ],
+      "items": "Full-utterance-context qualification; Table I and hardware/timing subset"
+    },
+    {
+      "paper_id": "P58",
+      "pdf_pages": [
+        4
+      ],
+      "items": "Tables 1-3 and Runtime Complexity"
+    },
+    {
+      "paper_id": "P59",
+      "pdf_pages": [
+        6
+      ],
+      "items": "Table 2 streaming CER/endpoint latency; Table 3"
+    }
+  ],
+  "source_caveats": [
+    {
+      "paper_id": "P53",
+      "issue": "Publisher landing abstract >316k pairs versus collected PDF >334k. Counts kept version-specific."
+    },
+    {
+      "paper_id": "P55",
+      "issue": "Table 1 GPT-4 ProGRes ASR2 WER 9.32%, Section 5.2 prose 9.82%. Table row retained, discrepancy unresolved."
+    },
+    {
+      "paper_id": "P55",
+      "issue": "Generated hypothesis borrows original best ASR score; not independent acoustic likelihood."
+    },
+    {
+      "paper_id": "P57",
+      "issue": "Streamable decoding algorithm evaluated with full-utterance encoder context. RTF on first 200 lh-other utterances; not a word-delay trial."
+    },
+    {
+      "paper_id": "P59",
+      "issue": "Abstract up-to-39% headline does not cover all Table 2 arithmetic. Exact table cells used."
+    },
+    {
+      "paper_id": "P59",
+      "issue": "Named 1B corrector has approximately 1.92B total parameters according to deployment section."
+    },
+    {
+      "paper_id": "P60",
+      "issue": "OpenReview PDF HTTP 403; evidence collected from pinned author arXiv v1, bearing ICLR 2024 publication header."
+    }
+  ],
+  "selected_measurements": [
+    {
+      "paper_id": "P51",
+      "dataset": "LibriSpeech test-clean/test-other",
+      "baseline_wer_pct": [
+        2.88,
+        7.06
+      ],
+      "nbest_constrained_wer_pct": [
+        2.54,
+        6.31
+      ],
+      "lattice_constrained_wer_pct": [
+        2.53,
+        6.27
+      ],
+      "locator": "PDF p.4 Table 4",
+      "timing": "No measured streaming delay/RTF result found in inspected text"
+    },
+    {
+      "paper_id": "P52",
+      "dataset": "LibriSpeech test-other",
+      "baseline_transducer_wer_pct": 6.9,
+      "one_shot_closest_wer_pct": 6.24,
+      "locator": "PDF Table 2; Table 1 split identity",
+      "timing": "No measured causal streaming display result found"
+    },
+    {
+      "paper_id": "P53",
+      "dataset": "LibriSpeech",
+      "baseline_wer_pct": [
+        1.8,
+        3.7
+      ],
+      "h2t_lora_wer_pct": [
+        1.7,
+        3.8
+      ],
+      "locator": "PDF p.20 Table 6",
+      "interpretation": "Correction does not universally improve a strong baseline"
+    },
+    {
+      "paper_id": "P55",
+      "dataset": "CommonVoice, two different ASR systems/versions",
+      "baseline_wer_pct": [
+        42.94,
+        12.38
+      ],
+      "gpt4_progres_table_wer_pct": [
+        40.84,
+        9.32
+      ],
+      "gpt4_progres_prose_asr2_wer_pct": 9.82,
+      "locator": "PDF p.4 Table 1 and Sections 5.1-5.2"
+    },
+    {
+      "paper_id": "P57",
+      "dataset": "LibriHeavy 50kh training",
+      "baseline_wer_pct": [
+        3.47,
+        6.41
+      ],
+      "delayed_openllama3b_wer_pct": [
+        3.05,
+        5.68
+      ],
+      "reported_decode_rtf": [
+        0.018,
+        0.115
+      ],
+      "hardware": "Xeon Skylake 2.4GHz plus V100",
+      "timing_subset": "First 200 lh-other utterances",
+      "causal_encoder": false,
+      "locator": "PDF p.3 Section IV-A and Table I"
+    },
+    {
+      "paper_id": "P58",
+      "reported_rtf": {
+        "whisper": 0.42,
+        "salsa": 0.64,
+        "whispering_llama": 1.3
+      },
+      "hardware": "A100 80GB",
+      "locator": "PDF p.4 Runtime Complexity",
+      "scope": "Isolated utterances; synchronous decoder does not imply audio streaming"
+    },
+    {
+      "paper_id": "P59",
+      "dataset": "AISHELL-1, 100ms chunk, beam4",
+      "cer_pct": [
+        27.3,
+        11.7
+      ],
+      "first_token_latency_ms": [
+        158,
+        207
+      ],
+      "last_token_latency_ms": [
+        200,
+        284
+      ],
+      "hardware": "NVIDIA H20",
+      "locator": "PDF p.6 Table 2",
+      "scope": "First/last utterance endpoints, not per-word percentiles"
+    }
+  ],
+  "teacher_provenance": {
+    "local_configuration": "configs/zipformer_baseline.json",
+    "upstream_model_revision": "37cb5606808f3d5e55a3fc73554bdf757d82465a",
+    "model_card": "https://huggingface.co/Zengwei/icefall-asr-librispeech-streaming-zipformer-2023-05-17",
+    "linked_recipe_pr": "https://github.com/k2-fsa/icefall/pull/1058",
+    "source_files": [
+      {
+        "url": "https://huggingface.co/Zengwei/icefall-asr-librispeech-streaming-zipformer-2023-05-17/blob/37cb5606808f3d5e55a3fc73554bdf757d82465a/exp/train.sh",
+        "sha256": "9f09308ba85ddf7031ecb91d3f28d77ca99ef485ee8a8934b0596331e3df7530",
+        "bytes": 254,
+        "evidence_location": "Launch command"
+      },
+      {
+        "url": "https://huggingface.co/Zengwei/icefall-asr-librispeech-streaming-zipformer-2023-05-17/blob/37cb5606808f3d5e55a3fc73554bdf757d82465a/exp/log/log-train-2023-05-06-10-28-37-0",
+        "sha256": "61a937de0a73d7cc3fc669b4607addb38227ec19b52d9175ac268816a83a90e7",
+        "bytes": 3296548,
+        "evidence_location": "Lines 1-5: launch environment, initial parameter dictionary and model size"
+      }
+    ],
+    "observed_settings": {
+      "causal": true,
+      "num_epochs": 30,
+      "vocab_size": 500,
+      "parameter_count": 66110931,
+      "recorded_icefall_revision": "0d931583-dirty"
+    },
+    "finding": "No FastEmit or delay-penalty flag/coefficient in distributed launch script or initial log parameter dictionary. Linked PR describes delay penalty among future additions.",
+    "limit": "Unlogged changes in a dirty source tree are not excluded. Exact training-loss absence is not certified; no checkpoint execution was performed."
+  },
+  "supplementary_metadata_only": [
+    {
+      "title": "ASR Error Correction Using Large Language Models",
+      "source": "https://ieeexplore.ieee.org/document/10930744/",
+      "status": "2025 journal metadata/abstract checked; not a separate full-text-reviewed catalog entry or independent replication"
+    },
+    {
+      "title": "Streaming Speech Recognition with Decoder-Only Large Language Models and Latency Optimization",
+      "source": "https://arxiv.org/abs/2601.22779",
+      "status": "2026 metadata/abstract checked; adjacent integrated architecture, not external reranking"
+    }
+  ],
+  "unverified_local_claims": [
+    "The supplied temporary dev-other minus 0.62pp LLM improvement and its significance were not re-evaluated in this research-only task."
+  ],
+  "source_files": [
+    {
+      "id": "P51",
+      "title": "N-best T5: Robust ASR Error Correction using Multiple Input Hypotheses and Constrained Decoding Space",
+      "paper_url": "https://www.isca-archive.org/interspeech_2023/ma23e_interspeech.html",
+      "pdf_url": "https://www.isca-archive.org/interspeech_2023/ma23e_interspeech.pdf",
+      "publication": "Interspeech 2023",
+      "arxiv_id": "2303.00456",
+      "arxiv_version": null,
+      "pdf_pages": 5,
+      "pdf_bytes": 681526,
+      "pdf_sha256": "687e5ceb9c3e67ae05c3ce614e66b424c1c818985fe07371bd5d14ad8401a9a9",
+      "local_pdf_path": "papers/pdf/P51_nbest-t5.pdf",
+      "note_path": "notes/llm-correction/P51-nbest-t5.md",
+      "evidence_location": "PDF Sections 2-4, constrained-decoding methods; p. 4 Tables 1-4 and Figure 5",
+      "evidence_en": "LibriSpeech, Table 4: baseline clean/other WER 2.88/7.06%; 10-best T5 unrestricted 2.67/6.56%, N-best constrained 2.54/6.31%, lattice constrained 2.53/6.27%. No measured streaming word-delay/RTF result was found in the inspected paper.",
+      "code_urls": [],
+      "code_note": "An exact author implementation and checkpoint were not confirmed in this bounded review. This does not establish their absence."
+    },
+    {
+      "id": "P52",
+      "title": "Can Generative Large Language Models Perform ASR Error Correction?",
+      "paper_url": "https://arxiv.org/abs/2307.04172",
+      "pdf_url": "https://arxiv.org/pdf/2307.04172v2",
+      "publication": "arXiv preprint; collected v2",
+      "arxiv_id": "2307.04172",
+      "arxiv_version": 2,
+      "pdf_pages": 8,
+      "pdf_bytes": 269873,
+      "pdf_sha256": "ebdc75dda7f1b1bcd36e7ad1e7071c74fcc0b8dfd292d677dfaa363723f7e280",
+      "local_pdf_path": "papers/pdf/P52_chatgpt-asr-correction.pdf",
+      "note_path": "notes/llm-correction/P52-chatgpt-asr-correction.md",
+      "evidence_location": "PDF Section 3 methods; Section 4.1 setup; Table 2 and error-analysis Tables 3-6",
+      "evidence_en": "Table 2, LibriSpeech test-other Conformer-Transducer: WER 6.90 to 6.24% for one-shot closest mapping; Whisper small.en 7.37 to 7.03%. On TED, unrestricted zero-shot correction of Whisper worsens 3.89 to 5.84%. The historical model is gpt-3.5-turbo-0613.",
+      "code_urls": [],
+      "code_note": "An exact author implementation and checkpoint were not confirmed in this bounded review. This does not establish their absence."
+    },
+    {
+      "id": "P53",
+      "title": "HyPoradise: An Open Baseline for Generative Speech Recognition with Large Language Models",
+      "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/6492267465a7ac507be1f9fd1174e78d-Abstract-Datasets_and_Benchmarks.html",
+      "pdf_url": "https://proceedings.neurips.cc/paper_files/paper/2023/file/6492267465a7ac507be1f9fd1174e78d-Paper-Datasets_and_Benchmarks.pdf",
+      "publication": "NeurIPS 2023 Datasets and Benchmarks",
+      "arxiv_id": "2309.15701",
+      "arxiv_version": null,
+      "pdf_pages": 24,
+      "pdf_bytes": 955111,
+      "pdf_sha256": "5259464e7e887f35a44dcdde1d773c536f9146f8fc26ebbb0aefdc630d2c4ab4",
+      "local_pdf_path": "papers/pdf/P53_hyporadise.pdf",
+      "note_path": "notes/llm-correction/P53-hyporadise.md",
+      "evidence_location": "Publisher PDF pp. 4-8, benchmark/methods and Tables 1-3; p. 20 Appendix Table 6 and failure-case discussion",
+      "evidence_en": "Table 2 reports cross-domain WER benefits. Appendix Table 6, LibriSpeech: baseline clean/other 1.8/3.7%; H2T-LoRA 1.7/3.8%, H2T-ft 1.8/3.9%. Larger language models do not yield a universal gain on this strong baseline.",
+      "code_urls": [
+        "https://github.com/Hypotheses-Paradise/Hypo2Trans"
+      ],
+      "code_note": "Official benchmark/code repository confirmed; its data, models and evaluation were not downloaded or run. The collected publisher PDF is the evidence version."
+    },
+    {
+      "id": "P54",
+      "title": "Listen Again and Choose the Right Answer: A New Paradigm for Automatic Speech Recognition with Large Language Models",
+      "paper_url": "https://aclanthology.org/2024.findings-acl.37/",
+      "pdf_url": "https://aclanthology.org/2024.findings-acl.37.pdf",
+      "publication": "Findings of ACL 2024",
+      "arxiv_id": "2405.10025",
+      "arxiv_version": null,
+      "pdf_pages": 14,
+      "pdf_bytes": 1177690,
+      "pdf_sha256": "da2a92c8cf458eeafe137707c3325e7e068e2d7f8e1e558a3f7f36697a1f77ae",
+      "local_pdf_path": "papers/pdf/P54_clozeger.pdf",
+      "note_path": "notes/llm-correction/P54-clozeger.md",
+      "evidence_location": "PDF Sections 3-4, Figure 2; p. 6 Tables 1-2; pp. 7-8 calibration and post-processing ablations",
+      "evidence_en": "Table 1 SpeechGPT branch: CommonVoice WER 14.4% baseline, 13.7% raw ClozeGER, 12.4% calibrated and 8.5% after post-processing. Table 2 text-only branch reaches 8.6%. Final gains cannot be assigned to selection alone or acoustic input alone.",
+      "code_urls": [
+        "https://github.com/Hypotheses-Paradise/Hypo2Trans"
+      ],
+      "code_note": "The paper points to the HyPoradise repository, which is accessible. A separate complete ClozeGER implementation/checkpoint was not confirmed in that review."
+    },
+    {
+      "id": "P55",
+      "title": "ProGRes: Prompted Generative Rescoring on ASR n-Best",
+      "paper_url": "https://arxiv.org/abs/2409.00217",
+      "pdf_url": "https://arxiv.org/pdf/2409.00217v2",
+      "publication": "IEEE SLT 2024",
+      "arxiv_id": "2409.00217",
+      "arxiv_version": 2,
+      "pdf_pages": 8,
+      "pdf_bytes": 374112,
+      "pdf_sha256": "06aedec89d099f523299e9022e429b1897ac476f09465b3ca097819edc4aea2f",
+      "local_pdf_path": "papers/pdf/P55_progres.pdf",
+      "note_path": "notes/llm-correction/P55-progres.md",
+      "evidence_location": "Collected v2 PDF pp. 2-3 methods; p. 4 Table 1 and Sections 5.1-5.2",
+      "evidence_en": "Table 1, GPT-4 expansion: CommonVoice ASR1/ASR2 WER 40.84/9.32%; Section 5.1 baselines are 42.94/12.38%. The prose reports 9.82 for ASR2, conflicting with the table. Original-list ProGRes gives 42.84/11.42% without generated additions.",
+      "code_urls": [
+        "https://github.com/AdaDTur/ProGRes"
+      ],
+      "code_note": "Official code/data repository and IEEE publication metadata confirmed. Code, API inference and author metrics were not reproduced."
+    },
+    {
+      "id": "P56",
+      "title": "Generative Speech Recognition Error Correction with Large Language Models and Task-Activating Prompting",
+      "paper_url": "https://arxiv.org/abs/2309.15649",
+      "pdf_url": "https://arxiv.org/pdf/2309.15649v2",
+      "publication": "IEEE ASRU 2023",
+      "arxiv_id": "2309.15649",
+      "arxiv_version": 2,
+      "pdf_pages": 8,
+      "pdf_bytes": 491248,
+      "pdf_sha256": "19f01fa8b4b3f4da445e1f90ba278ea36d99d9fd2c30fa05ccff2226f4e7e4d5",
+      "local_pdf_path": "papers/pdf/P56_task-activating.pdf",
+      "note_path": "notes/llm-correction/P56-task-activating.md",
+      "evidence_location": "PDF Sections 3-4; p. 6 Tables 2-4 and Figure 5 discussion",
+      "evidence_en": "Table 3, frozen InstructGPT with TAP: WSJ WER 11.87 to 8.72%, ATIS 8.82 to 6.39%. Tables 2 and 4 separate prompt variants and fine-tuning; those are distinct conditions.",
+      "code_urls": [],
+      "code_note": "An exact author implementation and checkpoint were not confirmed in this bounded review. This does not establish their absence."
+    },
+    {
+      "id": "P57",
+      "title": "Delayed Fusion: Integrating Large Language Models into First-Pass Decoding in End-to-end Speech Recognition",
+      "paper_url": "https://arxiv.org/abs/2501.09258",
+      "pdf_url": "https://arxiv.org/pdf/2501.09258v1",
+      "publication": "ICASSP 2025 (acceptance stated on arXiv)",
+      "arxiv_id": "2501.09258",
+      "arxiv_version": 1,
+      "pdf_pages": 5,
+      "pdf_bytes": 859138,
+      "pdf_sha256": "6b30ee77895f3de66ea42fe710e31c1611f2d29aa4b25b883909bd85b42af2a3",
+      "local_pdf_path": "papers/pdf/P57_delayed-fusion.pdf",
+      "note_path": "notes/llm-correction/P57-delayed-fusion.md",
+      "evidence_location": "PDF pp. 2-3 Algorithm 1 and retokenization; p. 3 Section IV-A/Table I; p. 4 Tables II-III",
+      "evidence_en": "Table I, LibriHeavy 50kh, CTC-prefix mode: no LM clean/other WER 3.47/6.41%, RTF 0.018; OpenLLaMA-3B delayed fusion 3.05/5.68%, RTF 0.115. RTF uses the first 200 lh-other utterances on Xeon+V100. Table II exposes an accuracy-cost frontier.",
+      "code_urls": [],
+      "code_note": "An exact author implementation and checkpoint were not confirmed in this bounded review. This does not establish their absence."
+    },
+    {
+      "id": "P58",
+      "title": "SALSA: Speedy ASR-LLM Synchronous Aggregation",
+      "paper_url": "https://www.isca-archive.org/interspeech_2024/mittal24_interspeech.html",
+      "pdf_url": "https://www.isca-archive.org/interspeech_2024/mittal24_interspeech.pdf",
+      "publication": "Interspeech 2024",
+      "arxiv_id": "",
+      "arxiv_version": null,
+      "pdf_pages": 5,
+      "pdf_bytes": 1656270,
+      "pdf_sha256": "0f48126dafac57e8877d77c4ae139b079f43db14e38e0dadd1d372f750c10c40",
+      "local_pdf_path": "papers/pdf/P58_salsa.pdf",
+      "note_path": "notes/llm-correction/P58-salsa.md",
+      "evidence_location": "PDF pp. 2-3 coupling/decoding; p. 4 Tables 1-3 and Runtime Complexity",
+      "evidence_en": "Section 5 runtime: A100-80GB RTF Whisper 0.42, SALSA 0.64, Whispering-LLaMA 1.30. Table 1, eight selected FLEURS languages: LoRA Whisper average WER 39.4%, SALSA-7B on the fine-tuned recognizer 33.0%.",
+      "code_urls": [
+        "https://github.com/csalt-research/salsa"
+      ],
+      "code_note": "Official training/inference repository confirmed. No dependency installation, model download or execution was performed."
+    },
+    {
+      "id": "P59",
+      "title": "StreamCorrect: Self-Supervised Error Correction for Real-Time ASR with Offline Recognizers",
+      "paper_url": "https://aclanthology.org/2026.emnlp-industry.142/",
+      "pdf_url": "https://aclanthology.org/2026.emnlp-industry.142.pdf",
+      "publication": "EMNLP 2026 Industry Track",
+      "arxiv_id": "",
+      "arxiv_version": null,
+      "pdf_pages": 13,
+      "pdf_bytes": 3284475,
+      "pdf_sha256": "db5f0153ec0718a424a51d17c4a7c8c75c6e0ba33bb383a78f5f58c9008a7cae",
+      "local_pdf_path": "papers/pdf/P59_streamcorrect.pdf",
+      "note_path": "notes/llm-correction/P59-streamcorrect.md",
+      "evidence_location": "PDF pp. 3-5 method/setup; p. 6 Table 2; p. 7 deployment discussion and p. 8 limitations",
+      "evidence_en": "Table 2, AISHELL-1 100ms chunks, SimulStreaming to StreamCorrect: CER 27.3 to 11.7%; first-token latency 158 to 207ms, last-token latency 200 to 284ms on NVIDIA H20. At 500ms CER 16.3 to 9.8%, FTL 158 to 219ms, LTL 213 to 295ms.",
+      "code_urls": [
+        "https://github.com/vu-duy-tung/StreamCorrect"
+      ],
+      "code_note": "Official repository confirmed; its README uses a different subtitle from the published paper. Code and metrics were not reproduced."
+    },
+    {
+      "id": "P60",
+      "title": "It's Never Too Late: Fusing Acoustic Information into Large Language Models for Automatic Speech Recognition",
+      "paper_url": "https://arxiv.org/abs/2402.05457",
+      "pdf_url": "https://arxiv.org/pdf/2402.05457v1",
+      "publication": "ICLR 2024",
+      "arxiv_id": "2402.05457",
+      "arxiv_version": 1,
+      "pdf_pages": 17,
+      "pdf_bytes": 605887,
+      "pdf_sha256": "de2453e0ccb0b9cd924614724215e0fc8c09bddfe95fa1ac527b7ad9ce4987ea",
+      "local_pdf_path": "papers/pdf/P60_late-acoustic-fusion.pdf",
+      "note_path": "notes/llm-correction/P60-late-acoustic-fusion.md",
+      "evidence_location": "Collected arXiv v1 pp. 4-6 methods/setup; p. 7 Table 1; p. 8 Table 2",
+      "evidence_en": "Table 1: GER baseline ATIS/WSJ WER 1.61/2.83%; static late fusion 1.36/2.55%, UADF 1.24/2.47%. Early/mid fusion comparisons and uncertainty ablations are also reported.",
+      "code_urls": [
+        "https://github.com/Hypotheses-Paradise/UADF",
+        "https://huggingface.co/PeacefulData/UADFusionGER"
+      ],
+      "code_note": "Official repository and model-card pointers confirmed. OpenReview PDF download returned HTTP 403, so the collected evidence version is the author arXiv v1 with an ICLR-2024 publication header."
+    }
+  ],
+  "validation": {
+    "catalog_and_local_pdf_hashes": {
+      "command": "python3 scripts/validate_catalog.py --pdfs",
+      "papers": 60,
+      "errors": 0
+    },
+    "public_repository_snapshot": {
+      "command": "python3 scripts/check_public_repository.py",
+      "public_files": 420,
+      "python_files_parsed": 158,
+      "markdown_files_checked": 114,
+      "errors": 0,
+      "note": "Snapshot includes unrelated untracked files from concurrent work; those are excluded from this research commit."
+    },
+    "whitespace": {
+      "command": "git diff --check",
+      "errors": 0
+    },
+    "preservation": "All 50 existing individual paper notes are byte-identical to HEAD. No existing experiment code or result artifact was edited. Unrelated experiments/preview_filler_v1 files are outside this research task and excluded from its commit."
+  }
+}

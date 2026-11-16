@@ -1,10 +1,12 @@
 # Prior work: future context, provisional display and encoder acceleration
 
-Reviewed 2026-11-15 to 2026-11-16. This targeted extension adds **17 papers, P34-P50**, to the initial 33-paper catalog. All 17 source PDFs were collected, with version identifiers, SHA-256 hashes and individual English notes. Core methods and selected experiments were read; selected tables were also checked visually. No author experiment was reproduced. This is a bounded related-work review, not an exhaustive search or a certification of novelty.
+Reviewed 2026-11-15 to 2026-11-16. This targeted extension adds **17 papers, P34-P50**, to the initial 33-paper catalog, bringing that snapshot to 50. All 17 source PDFs were collected, with version identifiers, SHA-256 hashes and individual English notes. Core methods and selected experiments were read; selected tables were also checked visually. No author experiment was reproduced. This is a bounded related-work review, not an exhaustive search or a certification of novelty.
+
+**Separate research-only extension:** the [LLM correction review](prior_work_llm_correction_2026-11-16.md) fills the candidate-selection/rescoring gap with P51-P60. The current catalog has 60 entries. That update also distinguishes fixed-list selection from free correction, audits public teacher training text, and records actual streaming-cost evidence. It does not launch the proposed experiments below. No unfilled comparison in this review should be read as proof that nobody has studied that broader topic.
 
 **The basic ideas of filling unavailable future frames, showing provisional words and correcting them later already have close precedents.** ZeroPrompt is the direct comparison for training-free preview; CUSIDE/CUSIDE-T for learned future acoustic context; Fast-U2++ and Partial Rewriting for fast/slow output paths. These papers do not establish that our proposed prediction-plus-correction system can skip expensive current-chunk encoder work at useful accuracy.
 
-[New paper folder and reading order](../notes/predict-refine/README.md) · [Complete 50-paper index](../papers/INDEX.md) · [Source/evidence manifest](../references/reviews/predict_refine_2026-11-16.json)
+[Paper folder and reading order](../notes/predict-refine/README.md) · [Current paper index](../papers/INDEX.md) · [Source/evidence manifest for this 17-paper extension](../references/reviews/predict_refine_2026-11-16.json)
 
 ## 1. Which problem each paper solves
 

@@ -8,9 +8,15 @@ The initial source collection has 2 anticipatory papers, 6 speculative-decoding 
 
 ## Targeted extension, 2026-11-16
 
-The catalog now contains **50 papers**: the initial 33 plus [17 additions on future context, prompt-and-refine, emission latency, rewriting, distillation and adaptive waiting](prior_work_predict_refine_2026-11-16.md). P43/P44 promote two previously supplementary links to collected catalog entries. Other supplementary links remain outside the count. Old note review dates are preserved; new notes carry their own verification date.
+The future-context extension brought the catalog to **50 papers**: the initial 33 plus [17 additions on future context, prompt-and-refine, emission latency, rewriting, distillation and adaptive waiting](prior_work_predict_refine_2026-11-16.md). P43/P44 promote two previously supplementary links to collected catalog entries. Other supplementary links remain outside the count. Old note review dates are preserved; new notes carry their own verification date.
 
 The [extension manifest](../references/reviews/predict_refine_2026-11-16.json) records the bounded search, source versions, selected numerical cells and visual checks. All 17 PDFs were collected and their core methods/selected experiments inspected. Author experiments were not reproduced. Source PDFs can be proceedings versions or pinned arXiv versions, as recorded per entry. Later arXiv versions and acceptance metadata do not silently replace the collected evidence. This extension does not certify exhaustive coverage or novelty.
+
+## LLM correction extension, 2026-11-16
+
+The current catalog has **60 papers** after [ten LLM candidate-selection, correction and fusion additions](prior_work_llm_correction_2026-11-16.md), P51-P60. Their full PDFs, original English notes and [review manifest](../references/reviews/llm_correction_2026-11-16.json) distinguish fixed-list reranking, unrestricted generation, acoustic fusion and actual streaming measurements. Supplementary metadata-only sources are not counted as full-text-reviewed entries.
+
+The user limited this task to research. Only source retrieval/inspection and documentation checks were performed; no training, benchmark, model inference, experiment migration or architecture change was executed. The teacher check uses publicly distributed text sources and preserves the uncertainty caused by a dirty upstream training revision. Public notes omit internal paths and network identifiers appearing in the upstream raw log.
 
 arXiv, ISCA, PMLR, JMLR, author pages, Nature/NOAA original text, and official project repositories were used. The search was conducted focusing on SSR, speculative listening/ASR, token tree verification, ConMamba/LC-BiMamba, FGN/WeatherNext, contextual graph ASR, Zipformer, and the attached dataset name.
 

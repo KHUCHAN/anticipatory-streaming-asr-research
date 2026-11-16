@@ -16,7 +16,7 @@ Start with the [comparison and novelty review](../../docs/prior_work_predict_ref
 | 6 | [P47 Back Chunks](P47-back-chunks.md), [P48 Delayed-KD](P48-delayed-kd.md), [P46 SENS-ASR](P46-sens-asr.md) | Future-aware, alignment-aware and semantic distillation |
 | 7 | [P50 Selective Lookahead](P50-selective-lookahead.md) | Recent adaptive waiting policy and median/tail/runtime trade-offs |
 
-For predicting unheard text, also read existing [P01 SSR](../anticipatory/P01-ssr.md) and [P02 Speculative Listening](../anticipatory/P02-speculative-listening.md). Our existing [paper index](../../papers/INDEX.md) now has 50 entries, retaining the original 33 IDs and review dates.
+For predicting unheard text, also read existing [P01 SSR](../anticipatory/P01-ssr.md) and [P02 Speculative Listening](../anticipatory/P02-speculative-listening.md). This extension brought the catalog to 50 entries. The [current paper index](../../papers/INDEX.md) has 60 after the separate [LLM correction extension](../llm-correction/README.md), retaining earlier paper IDs and review dates.
 
 ## Reuse
 

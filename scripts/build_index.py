@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CATEGORIES = {
     'anticipatory': 'Prediction before audio arrival',
     'predict-refine': 'Future context, provisional output and emission latency',
+    'llm-correction': 'LLM hypothesis selection, correction and fusion',
     'decoding': 'Speculative decoding and path reuse',
     'streaming': 'ASR alignment, encoders and streaming baselines',
     'state-space': 'State-space models and ConMamba',

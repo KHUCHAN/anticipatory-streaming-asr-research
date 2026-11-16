@@ -1,6 +1,6 @@
 # Thesis guidance and reading order
 
-The [2026-11-16 prior-work review](prior_work_predict_refine_2026-11-16.md) adds 17 collected papers, P34-P50, with an [English folder guide](../notes/predict-refine/README.md). The catalog now has 50 entries. It distinguishes future-context simulation, provisional text, learned emission timing and actual encoder-compute reduction; it does not certify novelty or reproduce author results.
+The [2026-11-16 future-context review](prior_work_predict_refine_2026-11-16.md) adds 17 collected papers, P34-P50, with an [English folder guide](../notes/predict-refine/README.md). The separate [LLM correction review](prior_work_llm_correction_2026-11-16.md) adds ten papers, P51-P60, with its own [folder guide](../notes/llm-correction/README.md). The catalog now has 60 entries. These are research-only extensions, not author-model reproductions or novelty certifications.
 
 ## key distinction
 
@@ -11,6 +11,9 @@ The [2026-11-16 prior-work review](prior_work_predict_refine_2026-11-16.md) adds
 | Simulate missing right context for current recognition | Yes, acoustic context | [P35 CUSIDE](../notes/predict-refine/P35-cuside.md), [P36 CUSIDE-T](../notes/predict-refine/P36-cuside-t.md) |
 | Train earlier emissions | No synthetic future required | [P37 FastEmit](../notes/predict-refine/P37-fastemit.md), [P38 TrimTail](../notes/predict-refine/P38-trimtail.md), [P41 Delay penalty](../notes/predict-refine/P41-delay-penalized.md) |
 | Decide when to wait for real future audio | Wait rather than fill | [P50 Selective Lookahead](../notes/predict-refine/P50-selective-lookahead.md) |
+| Select or correct ASR candidates with an LLM | Usually received full audio; not inherently future prediction | [P51 N-best T5](../notes/llm-correction/P51-nbest-t5.md), [P52 ChatGPT](../notes/llm-correction/P52-chatgpt-asr-correction.md), [P55 ProGRes](../notes/llm-correction/P55-progres.md) |
+| Integrate LLM scoring efficiently | Streamable scoring does not prove a causal encoder evaluation | [P57 Delayed Fusion](../notes/llm-correction/P57-delayed-fusion.md), [P58 SALSA](../notes/llm-correction/P58-salsa.md) |
+| Correct actual streaming segments | Arrived audio, candidate hypotheses and confirmed prefix | [P59 StreamCorrect](../notes/llm-correction/P59-streamcorrect.md) |
 | Precomputation during input waiting | Assume a next chunk; full-duplex SLM | [P02 Speculative Listening](../notes/anticipatory/P02-speculative-listening.md) |
 | Accelerating decoding of received audio | Not established by that fact alone | [P03 SpecASR](../notes/decoding/P03-specasr.md), [P04 ParaASR](../notes/decoding/P04-paraasr.md) |
 | Probabilistic draft verification | Usually preserves target distribution for fixed input | [P05](../notes/decoding/P05-speculative-decoding.md), [P06](../notes/decoding/P06-speculative-sampling.md) |
@@ -28,10 +31,11 @@ The [2026-11-16 prior-work review](prior_work_predict_refine_2026-11-16.md) adds
 6. **Candidate graph and abbreviation confusion:** P25 → P24 → P26; P27·P28 is a separate study of the same name.
 7. **Data source:** P31 LibriSpeech → P32 GigaSpeech → P33 Common Voice.
 8. **New direct comparisons:** P34 → P35 → P36 → P37; then P49/P43/P44 for two-pass display, P48 for temporal distillation, and P50 for recent adaptive waiting. The new folder guide covers all 17 additions.
+9. **LLM selection and correction:** P51 → P52 → P53 → P55; P54/P60 for acoustic grounding and option calibration; P57/P58 for inference cost; P59 for direct 2026 streaming evidence. P56 covers prompting precedents.
 
 ## Direct comparison data added after the experiment
 
-Additional sources reviewed after the initial 33-paper catalog are linked below with their comparison role. P43/P44 have now been promoted to collected catalog entries; the other links remain supplementary, outside the current 50-entry count.
+Additional sources reviewed after the initial 33-paper catalog are linked below with their comparison role. P43/P44 have now been promoted to collected catalog entries; the other links remain supplementary, outside the current 60-entry count.
 
 | Study | Compare Now |
 |---|---|
@@ -52,4 +56,4 @@ Inspect observed audio, future context, output unit, acceptance/fallback rules, 
 
 Do not rank unrelated speedup factors together: weather versus diffusion, LLM decoding acceleration and streaming word-commit latency have different denominators.
 
-[Full 50-paper catalog](../papers/INDEX.md) · [Research objectives and methodology](goal_and_methodology.md)
+[Full 60-paper catalog](../papers/INDEX.md) · [Research objectives and methodology](goal_and_methodology.md)
