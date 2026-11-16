@@ -4,7 +4,13 @@ Initial verification date: 2026-11-10. The 33 records cover papers explicitly me
 
 Status update: 2026-11-11. The 33 papers are the initial catalog. Later sources on bounded-context prediction, confidence, Stateful Conformer and multi-stage display are linked separately in the [literature map](literature_map.md), [review](results_review_2026-11-11.md) and [960h plan](librispeech960_benchmark_plan.md), not added to that count. Start with [current conclusions](conclusion_and_next_steps.md).
 
-The source collection has 2 anticipatory papers, 6 speculative-decoding papers, 8 alignment/encoder/streaming papers, 5 state-space papers, 4 weather-FGN papers, 3 graph-ASR papers, 2 acronym-disambiguation papers and 3 dataset papers.
+The initial source collection has 2 anticipatory papers, 6 speculative-decoding papers, 8 alignment/encoder/streaming papers, 5 state-space papers, 4 weather-FGN papers, 3 graph-ASR papers, 2 acronym-disambiguation papers and 3 dataset papers.
+
+## Targeted extension, 2026-11-16
+
+The catalog now contains **50 papers**: the initial 33 plus [17 additions on future context, prompt-and-refine, emission latency, rewriting, distillation and adaptive waiting](prior_work_predict_refine_2026-11-16.md). P43/P44 promote two previously supplementary links to collected catalog entries. Other supplementary links remain outside the count. Old note review dates are preserved; new notes carry their own verification date.
+
+The [extension manifest](../references/reviews/predict_refine_2026-11-16.json) records the bounded search, source versions, selected numerical cells and visual checks. All 17 PDFs were collected and their core methods/selected experiments inspected. Author experiments were not reproduced. Source PDFs can be proceedings versions or pinned arXiv versions, as recorded per entry. Later arXiv versions and acceptance metadata do not silently replace the collected evidence. This extension does not certify exhaustive coverage or novelty.
 
 arXiv, ISCA, PMLR, JMLR, author pages, Nature/NOAA original text, and official project repositories were used. The search was conducted focusing on SSR, speculative listening/ASR, token tree verification, ConMamba/LC-BiMamba, FGN/WeatherNext, contextual graph ASR, Zipformer, and the attached dataset name.
 

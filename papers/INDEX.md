@@ -1,6 +1,6 @@
 # Paper index
 
-Source verification date: 2026-11-10. Initial catalog: 33 papers. IDs group topics rather than publication years.
+Initial catalog: 33 papers, reviewed 2026-11-10. Current catalog: 50 papers; last extension 2026-11-16. Individual notes retain their own review dates. IDs group topics rather than publication years.
 
 Notes separate source-reported evidence from project interpretation. Original PDFs are local-only and can be obtained from the linked sources. Later related-work links appear in the research documents.
 
@@ -10,6 +10,28 @@ Notes separate source-reported evidence from project interpretation. Original PD
 |---|---|---|---|
 | P01 | [Speculative Speech Recognition by Audio-Prefixed Low-Rank Adaptation of Language Models](../notes/anticipatory/P01-ssr.md) | 2024 / Interspeech 2024 | 1 — read first |
 | P02 | [Decode Before You Hear: Speculative Listening for Chunk-Interleaved Full-Duplex Speech Language Models](../notes/anticipatory/P02-speculative-listening.md) | 2026 / arXiv preprint, 2026-11-04 | 1 — read first |
+
+## Future context, provisional output and emission latency
+
+| ID | Paper | Source year / publication | Priority |
+|---|---|---|---|
+| P34 | [ZeroPrompt: Streaming Acoustic Encoders are Zero-Shot Masked LMs](../notes/predict-refine/P34-zeroprompt.md) | 2023 / Interspeech 2023 | 1 - direct comparison |
+| P35 | [CUSIDE: Chunking, Simulating Future Context and Decoding for Streaming ASR](../notes/predict-refine/P35-cuside.md) | 2022 / Interspeech 2022 | 1 - direct comparison |
+| P36 | [CUSIDE-T: Chunking, Simulating Future and Decoding for Transducer based Streaming ASR](../notes/predict-refine/P36-cuside-t.md) | 2024 / ISCSLP 2024 (acceptance stated on arXiv) | 1 - direct comparison |
+| P37 | [FastEmit: Low-latency Streaming ASR with Sequence-level Emission Regularization](../notes/predict-refine/P37-fastemit.md) | 2020 / ICASSP 2021 | 1 - direct comparison |
+| P38 | [TrimTail: Low-Latency Streaming ASR with Simple but Effective Spectrogram-Level Length Penalty](../notes/predict-refine/P38-trimtail.md) | 2022 / ICASSP 2023 | 2 - related control or measurement |
+| P39 | [Improving Streaming Speech Recognition With Time-Shifted Contextual Attention And Dynamic Right Context Masking](../notes/predict-refine/P39-tsca.md) | 2024 / Interspeech 2024 | 2 - related control or measurement |
+| P40 | [CUSIDE-array: A Streaming Multi-Channel End-to-End Speech Recognition System with Realistic Evaluations](../notes/predict-refine/P40-cuside-array.md) | 2024 / ISCSLP 2024 (acceptance stated on arXiv) | 2 - related control or measurement |
+| P41 | [Delay-penalized transducer for low-latency streaming ASR](../notes/predict-refine/P41-delay-penalized.md) | 2022 / ICASSP 2023 | 2 - related control or measurement |
+| P42 | [Minimum latency training of sequence transducers for streaming end-to-end speech recognition](../notes/predict-refine/P42-minimum-latency.md) | 2022 / Interspeech 2022 | 2 - related control or measurement |
+| P43 | [Partial Rewriting for Multi-Stage ASR](../notes/predict-refine/P43-partial-rewriting.md) | 2023 / arXiv preprint; venue not independently confirmed in this review | 1 - direct comparison |
+| P44 | [Analyzing the Quality and Stability of a Streaming End-to-End On-Device Speech Recognizer](../notes/predict-refine/P44-streaming-stability.md) | 2020 / Interspeech 2020 | 2 - related control or measurement |
+| P45 | [Adapting Whisper for Streaming Speech Recognition via Two-Pass Decoding](../notes/predict-refine/P45-whisper-two-pass.md) | 2025 / Interspeech 2025 | 2 - related control or measurement |
+| P46 | [SENS-ASR: Semantic Embedding injection in Neural-transducer for Streaming Automatic Speech Recognition](../notes/predict-refine/P46-sens-asr.md) | 2026 / LREC 2026 | 2 - related control or measurement |
+| P47 | [Learning from Back Chunks: Acquiring More Future Knowledge for Streaming ASR Models via Self Distillation](../notes/predict-refine/P47-back-chunks.md) | 2024 / Interspeech 2024 | 2 - related control or measurement |
+| P48 | [Delayed-KD: Delayed Knowledge Distillation based CTC for Low-Latency Streaming ASR](../notes/predict-refine/P48-delayed-kd.md) | 2025 / Interspeech 2025 | 1 - direct comparison |
+| P49 | [Fast-U2++: Fast and Accurate End-to-End Speech Recognition in Joint CTC/Attention Frames](../notes/predict-refine/P49-fast-u2pp.md) | 2022 / arXiv preprint; collected v1 | 1 - direct comparison |
+| P50 | [Selective Lookahead for Attention-Based Streaming ASR](../notes/predict-refine/P50-selective-lookahead.md) | 2026 / IEEE SLT 2026 (acceptance stated on arXiv) | 1 - direct comparison |
 
 ## Speculative decoding and path reuse
 

@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CATEGORIES = {
     'anticipatory': 'Prediction before audio arrival',
+    'predict-refine': 'Future context, provisional output and emission latency',
     'decoding': 'Speculative decoding and path reuse',
     'streaming': 'ASR alignment, encoders and streaming baselines',
     'state-space': 'State-space models and ConMamba',
@@ -24,8 +25,10 @@ def bib_escape(text):
 def main():
     data = json.loads((ROOT / 'references/catalog.json').read_text())
     papers = data['papers']
+    initial_count = data.get('initial_catalog_size', len(papers))
+    extended_at = data.get('last_extended_at', data['verified_at'])
     index = ['# Paper index', '',
-             f"Source verification date: {data['verified_at']}. Initial catalog: {len(papers)} papers. IDs group topics rather than publication years.", '',
+             f"Initial catalog: {initial_count} papers, reviewed {data['verified_at']}. Current catalog: {len(papers)} papers; last extension {extended_at}. Individual notes retain their own review dates. IDs group topics rather than publication years.", '',
              'Notes separate source-reported evidence from project interpretation. Original PDFs are local-only and can be obtained from the linked sources. Later related-work links appear in the research documents.', '']
     bibs = []
     for category, label in CATEGORIES.items():
@@ -51,7 +54,7 @@ def main():
 | Reading priority | {p['priority']} |
 | Review depth | {p['reading_depth']} |
 | PDF | {p['pdf_pages']} pages; `{p['local_pdf_path']}` |
-| Source verification date | {data['verified_at']} |
+| Source verification date | {p.get('verified_at', data['verified_at'])} |
 
 {' · '.join(links)}
 

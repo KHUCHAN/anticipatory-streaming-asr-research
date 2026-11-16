@@ -1,10 +1,16 @@
 # Thesis guidance and reading order
 
+The [2026-11-16 prior-work review](prior_work_predict_refine_2026-11-16.md) adds 17 collected papers, P34-P50, with an [English folder guide](../notes/predict-refine/README.md). The catalog now has 50 entries. It distinguishes future-context simulation, provisional text, learned emission timing and actual encoder-compute reduction; it does not certify novelty or reproduce author results.
+
 ## key distinction
 
 | Problem | Do you predict speech that has not actually arrived yet? | Priority Paper |
 |---|---|---|
 | Predict future utterance text | Yes | [P01 SSR](../notes/anticipatory/P01-ssr.md) |
+| Provisional text from synthetic future features | Yes, with revision | [P34 ZeroPrompt](../notes/predict-refine/P34-zeroprompt.md) |
+| Simulate missing right context for current recognition | Yes, acoustic context | [P35 CUSIDE](../notes/predict-refine/P35-cuside.md), [P36 CUSIDE-T](../notes/predict-refine/P36-cuside-t.md) |
+| Train earlier emissions | No synthetic future required | [P37 FastEmit](../notes/predict-refine/P37-fastemit.md), [P38 TrimTail](../notes/predict-refine/P38-trimtail.md), [P41 Delay penalty](../notes/predict-refine/P41-delay-penalized.md) |
+| Decide when to wait for real future audio | Wait rather than fill | [P50 Selective Lookahead](../notes/predict-refine/P50-selective-lookahead.md) |
 | Precomputation during input waiting | Assume a next chunk; full-duplex SLM | [P02 Speculative Listening](../notes/anticipatory/P02-speculative-listening.md) |
 | Accelerating decoding of received audio | Not established by that fact alone | [P03 SpecASR](../notes/decoding/P03-specasr.md), [P04 ParaASR](../notes/decoding/P04-paraasr.md) |
 | Probabilistic draft verification | Usually preserves target distribution for fixed input | [P05](../notes/decoding/P05-speculative-decoding.md), [P06](../notes/decoding/P06-speculative-sampling.md) |
@@ -21,10 +27,11 @@
 5. **Practical role of FGN:** P21 → P22 GraphCast → P23 GenCast → P29 WeatherNext Cyclones.
 6. **Candidate graph and abbreviation confusion:** P25 → P24 → P26; P27·P28 is a separate study of the same name.
 7. **Data source:** P31 LibriSpeech → P32 GigaSpeech → P33 Common Voice.
+8. **New direct comparisons:** P34 → P35 → P36 → P37; then P49/P43/P44 for two-pass display, P48 for temporal distillation, and P50 for recent adaptive waiting. The new folder guide covers all 17 additions.
 
 ## Direct comparison data added after the experiment
 
-Additional sources reviewed after the initial 33-paper catalog are linked below with their current comparison role; they are not counted as part of the initial catalog.
+Additional sources reviewed after the initial 33-paper catalog are linked below with their comparison role. P43/P44 have now been promoted to collected catalog entries; the other links remain supplementary, outside the current 50-entry count.
 
 | Study | Compare Now |
 |---|---|
@@ -34,8 +41,8 @@ Additional sources reviewed after the initial 33-paper catalog are linked below 
 | [Tied & Reduced RNN-T Decoder](https://arxiv.org/abs/2109.07513) | Short context, simple predictor, and weight sharing. Classification of experimental conditions including EMBR |
 | [On the Prediction Network Architecture in RNN-T](https://www.isca-archive.org/interspeech_2022/albesano22_interspeech.html) | Contrast of predictor structures on the same encoder, N-Concat |
 | [Multi-Task Learning for End-to-End ASR Word and Utterance Confidence with Deletion Prediction](https://www.isca-archive.org/interspeech_2021/qiu21b_interspeech.html) | confidence estimation and multi-objective learning; Distinguish between output match and actual correctness |
-| [Analyzing the Quality and Stability of a Streaming E2E On-Device Speech Recognizer](https://arxiv.org/abs/2006.01416) | Measuring the stability and correction cost of partial output |
-| [Partial Rewriting for Multi-Stage ASR](https://arxiv.org/abs/2312.09463) | Merge of fast output/slow correction and flicker. 2-pass Comparison to avoid claiming itself as a new contribution |
+| [P44 Quality and Stability of Streaming ASR](../notes/predict-refine/P44-streaming-stability.md) | Measuring the stability and correction cost of partial output |
+| [P43 Partial Rewriting for Multi-Stage ASR](../notes/predict-refine/P43-partial-rewriting.md) | Merge of fast output/slow correction and flicker; a direct two-pass display comparison |
 
 Distinguish original weather FGN, the current ASR variant, short-context rollout and display confidence. See [current conclusions](conclusion_and_next_steps.md) for supported findings/novelty gaps and [960h plan](librispeech960_benchmark_plan.md) for training comparisons.
 
@@ -45,4 +52,4 @@ Inspect observed audio, future context, output unit, acceptance/fallback rules, 
 
 Do not rank unrelated speedup factors together: weather versus diffusion, LLM decoding acceleration and streaming word-commit latency have different denominators.
 
-[Full list of section 33](../papers/INDEX.md) · [Research objectives and methodology](goal_and_methodology.md)
+[Full 50-paper catalog](../papers/INDEX.md) · [Research objectives and methodology](goal_and_methodology.md)

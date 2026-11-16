@@ -6,6 +6,8 @@ Research on predicting acoustic representations, correcting them with newly arri
 
 Start with the [predict–correct acceleration plan](docs/predict_correct_acceleration_plan_2026-11-12.md), [current conclusions](docs/conclusion_and_next_steps.md), and [repository map](READ.MD).
 
+**Related-work review added, 2026-11-16:** [17 new papers and method comparisons](docs/prior_work_predict_refine_2026-11-16.md), including ZeroPrompt, CUSIDE/CUSIDE-T, FastEmit, Delayed-KD and 2026 Selective Lookahead. The [new paper folder](notes/predict-refine/README.md) contains English notes, evidence locations and implementation status. The catalog now has 50 entries; original PDFs remain local-only. Provisional display, future-context simulation and actual encoder-compute reduction are distinguished explicitly. This literature review does not rerun or revise the A2/A3 results.
+
 **20M reproduction corrected; A3 completed:** a [legacy decoder padding mismatch](docs/small_zipformer_reproduction_2026-11-15.md) caused the earlier small-model gap; corrected WER is **3.56/10.97%**, with all 800 independent native token/chunk checks passing. The [matched A3 results](docs/kl_weight_a3_2026-11-15.md) are A2 control **42.30/61.92%**, KL 4x **41.38/61.52%**, KL 16x **42.39/63.11%**. Both paired 95% intervals for 4x versus control include zero. Selected 4x costs **1.192/1.186ms per chunk**, or 13.18% of the same-run teacher, but fails the <10% accuracy gate. Same-run full/small costs are **9.045/9.042ms** and **4.289/4.293ms**. Only the KL coefficient changed; the initial checkpoint, seed, data/windows and 24-epoch budget are matched, and the first 100 control updates reproduce exactly. One seed, existing dev roles, no test split or 960h expansion.
 
 **A2 qualification completed — cost passes, accuracy fails:** [9.60M audio-only results](docs/predict_correct_a2_2026-11-15.md), after 12 MAE epochs and 24 calibrated-KL epochs. Selected A2 has dev-clean/other WER **42.30/61.92%**, versus full Zipformer **2.93/8.82%**. Complete CPU cost is **1.191/1.187ms per chunk**, versus **8.942/8.935ms**: 13.32% of same-run teacher cost on clean, but WER remains above the <10% gate. The original small-model operating point is superseded by the correction above. One seed, existing development roles, no test evaluation or renewed FGN/B/C training.
@@ -41,7 +43,7 @@ The median per-word display gain is zero. Final WER in the display experiments i
 - [Our method on a strong backbone](docs/zipformer_ours_2026-11-12.md)
 - [FGN hybrid and scaling limitations](docs/band_fgn_hybrid_2026-11-12.md)
 - [Experiment directories and public artifacts](experiments/README.md)
-- [Initial 33-paper catalog](papers/INDEX.md), [literature map](docs/literature_map.md), and [BibTeX](references/references.bib)
+- [50-paper catalog](papers/INDEX.md), [literature map](docs/literature_map.md), and [BibTeX](references/references.bib); initial 33 plus 17 related-work additions
 - [Dataset guide](data/README.md) and [inventory](data/reports/librispeech_inventory.md)
 
 LibriSpeech training and evaluation data has been prepared locally: 292,367 utterances / 982.308 hours in total, including a training-only union of 281,241 utterances / 961.054 hours. A new 960h acoustic model has not been trained. The approximately 114M model recipe remains a separate proposal.
@@ -53,4 +55,4 @@ python3 scripts/validate_catalog.py
 python3 scripts/check_public_repository.py
 ```
 
-See [READ.MD](READ.MD) for preparation and execution commands. Snapshot date: 2026-11-15.
+See [READ.MD](READ.MD) for preparation and execution commands. Snapshot date: 2026-11-16.

@@ -54,3 +54,20 @@ Is the weak acoustic model the reason for the small effect in | other? | There i
 | 3 tokens are sufficient. In short context structures such as |, no benefit from 32 token expansion was observed. The cause of the gap with equivalence, universal sufficiency, or AR has not been determined. |
 | is the token ID formula for the state 24 byte | `P*8` per hypothesis. It does not include separate logp·trie·voice state·temporary tensor, so it is distinguished from the actual memory of the entire system. |
 | No additional single pass calculations. | There are no additional network calls for forecasts that only use existing AR scores. There is additional computation in the learning gate that uses a separate NAR signal. |
+
+## Related-work audit, 2026-11-16
+
+The [primary-source comparison](prior_work_predict_refine_2026-11-16.md) and [17 new paper notes](../notes/predict-refine/README.md) support the following limits. This is a literature review, not an author-model reproduction or a change to our experimental results.
+
+| Claim / issue | Verified interpretation and source |
+|---|---|
+| ZeroPrompt already gives training-free future preview | Yes: zero-feature prompts and prompt-and-refine. Exact final-path preservation depends on its masking/refinement mechanism. [P34](../notes/predict-refine/P34-zeroprompt.md) |
+| ZeroPrompt reduces inference work | Not established: the cited LibriSpeech example increases greedy RTF from 0.04826 to 0.07006. TDT excludes compute time. [P34 Table 1](../notes/predict-refine/P34-zeroprompt.md) |
+| Hidden-layer preview alone is a new method | Intermediate ZeroPrompt already studies hidden-layer prompt insertion. [P34 Table 2](../notes/predict-refine/P34-zeroprompt.md) |
+| Learned future-feature filling is new | CUSIDE and CUSIDE-T jointly train future-feature simulation with ASR. They retain current-chunk encoder processing. [P35](../notes/predict-refine/P35-cuside.md), [P36](../notes/predict-refine/P36-cuside-t.md) |
+| FastEmit is just an earlier-emission decoding penalty | It is transducer sequence-level training regularization. A3 KL-weight changes do not implement it. [P37](../notes/predict-refine/P37-fastemit.md) |
+| Delayed-KD gets first-pass CER 5.42% at a total delay of 40ms | 5.42% is utterance-rescored CER; first-pass CER is 6.11%, and 40ms is chunk duration. [P48 Table 1](../notes/predict-refine/P48-delayed-kd.md) |
+| Fast-U2++'s 5.06% belongs to its cheap partial path | That is the final rescored result. Its selected lower greedy path is 7.34%; upper layers and rescoring still cost work. [P49](../notes/predict-refine/P49-fast-u2pp.md) |
+| Better median implies a full latency improvement | Selective Lookahead improves median while unbudgeted p90 worsens; its wait budget changes that trade-off. Compute is separate. [P50](../notes/predict-refine/P50-selective-lookahead.md) |
+| Agreement with the final transcript measures reference correctness | A stable final error can still count as agreement; report reference accuracy and repeated display revisions separately. [P44](../notes/predict-refine/P44-streaming-stability.md) |
+| These papers settle our encoder-skipping proposal | No: useful downstream accuracy and complete compute cost require our own controlled evaluation. New architecture labels, FGN noise or better state R-squared alone do not establish that result. |

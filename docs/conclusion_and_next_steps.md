@@ -2,6 +2,8 @@
 
 Snapshot date: 2026-11-15, America/Los_Angeles. This is the current-conclusion entry point. Initial numbers were checked against saved outputs and code; four follow-ups and [our strong-Zipformer study](zipformer_ours_2026-11-12.md) were actually executed. [History](research_plan_3stage.md) preserves detailed results; [implementation review](results_review_2026-11-11.md) explains initial corrections.
 
+**Literature-only update, 2026-11-16:** [17 additional primary-source papers](prior_work_predict_refine_2026-11-16.md) establish close precedents for synthetic-future preview, learned acoustic context, fast/slow partials and adaptive waiting. Intermediate ZeroPrompt already investigates hidden-layer prompts. These restrict broad novelty claims; they do not demonstrate our encoder-skipping goal. Original PDFs and individual English notes are prepared; author results were not reproduced and the experimental numbers below are unchanged.
+
 ## Selected direction: prediction plus acoustic correction
 
 **Latest result, 2026-11-15:** the [20M padding mismatch is resolved](small_zipformer_reproduction_2026-11-15.md), restoring dev-clean/other WER to 3.56/10.97%. The [matched A3 comparison](kl_weight_a3_2026-11-15.md) is complete: control 42.30/61.92%, 4x KL 41.38/61.52%, 16x KL 42.39/63.11%. Selected 4x passes the cost check at 13.18% of the teacher, but fails the <10% WER gate. Its clean/other paired improvements of 0.922/0.394pp both have 95% intervals including zero; a reliable gain over control is not established. The 16x arm worsens other by 1.197pp (conditional CI +0.114 to +2.272). Do not infer a general failure of 100h distillation or FGN from this fixed, single-seed coefficient study.
