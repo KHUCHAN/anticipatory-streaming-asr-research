@@ -1,6 +1,6 @@
 # Research goal and methodology
 
-Current result, 2026-11-15: the [A2 audio-only qualification](predict_correct_a2_2026-11-15.md) completed MAE before calibrated KL. Clean/other WER is 42.30/61.92%; clean complete cost is 13.32% of the same-run teacher. The cost gate passes, the <10% WER gate fails, and no renewed FGN/B/C comparison was launched. Native full/small controls were evaluated; the small model's published performance level remains unvalidated despite independent engine agreement.
+Current result, 2026-11-15: the [20M reproduction correction](small_zipformer_reproduction_2026-11-15.md) restores clean/other WER to 3.56/10.97% by repairing its legacy blank-padding contract. Full teacher and [A2](predict_correct_a2_2026-11-15.md) numbers are unchanged. The [matched A3 continuation](kl_weight_a3_2026-11-15.md) is complete: selected 4x KL gives 41.38/61.52% WER at 13.18% of teacher cost; both paired improvement intervals include zero and the accuracy gate fails. Same initialization/data/24 epochs and the first 100 control updates are verified. No FGN/B/C or 960h label expansion is included.
 
 Initial scope: 2026-11-10. Current direction updated: 2026-11-12. This document distinguishes the user's objective, completed experiments and proposed implementation.
 

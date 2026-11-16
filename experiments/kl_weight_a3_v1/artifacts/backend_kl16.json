@@ -1,0 +1,38 @@
+{
+  "checks": [
+    {
+      "utterance_id": "1272-135031-0007",
+      "tokens_match": true
+    },
+    {
+      "utterance_id": "1272-141231-0018",
+      "tokens_match": true
+    },
+    {
+      "utterance_id": "2035-147960-0008",
+      "tokens_match": true
+    },
+    {
+      "utterance_id": "2035-147960-0014",
+      "tokens_match": true
+    },
+    {
+      "utterance_id": "116-288047-0013",
+      "tokens_match": true
+    },
+    {
+      "utterance_id": "116-288048-0013",
+      "tokens_match": true
+    },
+    {
+      "utterance_id": "1255-138279-0024",
+      "tokens_match": true
+    },
+    {
+      "utterance_id": "1255-74899-0018",
+      "tokens_match": true
+    }
+  ],
+  "all_match": true,
+  "model_sha256": "fbc8956b39731a595309c74eb796489fbb5c55884a217f12709800f3ca2ee47c"
+}

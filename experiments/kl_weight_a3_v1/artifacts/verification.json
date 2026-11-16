@@ -1,0 +1,28 @@
+{
+  "status": "verified",
+  "phases": {
+    "kl4": {
+      "epochs": 24,
+      "optimizer_steps": 10704,
+      "selected_epoch": 20,
+      "coefficient": 0.10403670278792246,
+      "checkpoint_sha256": "ec0a657e36390f55f299c5b0e8c7a7a4b2a871c8c06aa2a41a642c14a45f4371"
+    },
+    "kl16": {
+      "epochs": 24,
+      "optimizer_steps": 10704,
+      "selected_epoch": 18,
+      "coefficient": 0.41614681115168983,
+      "checkpoint_sha256": "fbc8956b39731a595309c74eb796489fbb5c55884a217f12709800f3ca2ee47c"
+    }
+  },
+  "first_100_control_updates_reproduced": true,
+  "original_inputs_and_sources_unchanged": true,
+  "selected_before_final_decoding": true,
+  "all_800_role_ids_verified": true,
+  "all_repeated_transcripts_match": true,
+  "complete_runtime_sums_verified": true,
+  "fp32_exports_verified": true,
+  "original_A2_control_tokens_unchanged": true,
+  "test_used": false
+}

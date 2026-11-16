@@ -4,6 +4,8 @@ Current extension: [predict–correct encoder acceleration](predict_correct_acce
 
 The [A2 audio-only follow-up](predict_correct_a2_2026-11-15.md) is also complete: 9,597,696 parameters, initial causal stride 4, twelve low-rate width-256 blocks and a joint eight-frame chunk head. Twelve MAE epochs precede 24 calibrated-KL epochs; equivalent FP32 ONNX inference passes numerical/token checks. Complete clean cost is 13.32% of the teacher, but 42.30% clean WER fails the <10% gate. This implemented branch contains no FGN prior and does not establish prediction-based encoder acceleration.
 
+The [A3 comparison](kl_weight_a3_2026-11-15.md) preserves that architecture, initialization and 24-epoch continuation conditions, changing only KL coefficient by 4x/16x. Selected 4x reaches 41.38/61.52% WER at 13.18% of teacher cost; the accuracy gate still fails and paired improvement intervals include zero. The [separate 20M repair](small_zipformer_reproduction_2026-11-15.md) changes its legacy decoder padding contract, not any learned weights or the A2/A3 teacher convention.
+
 Written: 2026-11-10. Code: [`avs/model.py`](../avs/model.py) · Methodology: [three-stage plan](research_plan_3stage.md)
 
 This document describes historical 100h/17.28M AVS, distinct from [current conclusions](conclusion_and_next_steps.md) and the [960h/114M proposal](librispeech960_benchmark_plan.md). Bounded per-layer acoustic K/V does not automatically bound the candidate trie, token history or all predictor state.

@@ -1,0 +1,438 @@
+{
+  "status": "completed",
+  "selected_candidate": "kl4",
+  "model_selection": {
+    "control": {
+      "epoch": 21,
+      "dev_clean_wer": 46.54042243262928,
+      "checkpoint_sha256": "c7b70b4d2176ce2ee42dd832a8099ee65660f854e072771171af6704e12ac7d1"
+    },
+    "kl4": {
+      "epoch": 20,
+      "dev_clean_wer": 44.42825928623452,
+      "checkpoint_sha256": "ec0a657e36390f55f299c5b0e8c7a7a4b2a871c8c06aa2a41a642c14a45f4371"
+    },
+    "kl16": {
+      "epoch": 18,
+      "dev_clean_wer": 45.30225782957029,
+      "checkpoint_sha256": "fbc8956b39731a595309c74eb796489fbb5c55884a217f12709800f3ca2ee47c"
+    }
+  },
+  "primary": {
+    "teacher/dev-clean": {
+      "utterances": 400,
+      "wer_percent": 2.932889344262295,
+      "errors": 229,
+      "reference_words": 7808,
+      "audio_seconds": 2760.8401875,
+      "chunks": 9091,
+      "output_frames": 72728,
+      "feature_window": 45,
+      "feature_hop": 32,
+      "rtf": 0.029783411520271502,
+      "total_seconds": 82.22723944601603,
+      "total_ms_per_chunk": 9.044905890002862,
+      "rtf_with_audio_io": 0.03006691310392403,
+      "feature_ms_per_chunk": 0.20644612334995024,
+      "components_ms_per_chunk": {
+        "audio": 8.647721623580303,
+        "head": 0.0,
+        "decoder": 0.1518322044777388
+      },
+      "other_overhead_ms_per_chunk": 0.0389059385948724,
+      "state_mae": 0.00014959647429096587,
+      "compute_chunk_p50_ms": 8.8155209668912,
+      "compute_chunk_p95_ms": 9.032177011249587,
+      "timing_repeat_ms_per_chunk": [
+        9.155154708277989,
+        8.934657071727738
+      ]
+    },
+    "teacher/dev-other": {
+      "utterances": 400,
+      "wer_percent": 8.816901408450704,
+      "errors": 626,
+      "reference_words": 7100,
+      "audio_seconds": 2457.545125,
+      "chunks": 8131,
+      "output_frames": 65048,
+      "feature_window": 45,
+      "feature_hop": 32,
+      "rtf": 0.029915870425343417,
+      "total_seconds": 73.5196015239344,
+      "total_ms_per_chunk": 9.041889253958233,
+      "rtf_with_audio_io": 0.030213863113130263,
+      "feature_ms_per_chunk": 0.20799274852738983,
+      "components_ms_per_chunk": {
+        "audio": 8.641949111127627,
+        "head": 0.0,
+        "decoder": 0.1499401812427673
+      },
+      "other_overhead_ms_per_chunk": 0.04200721306045054,
+      "state_mae": 0.00015132714785062802,
+      "compute_chunk_p50_ms": 8.810625004116446,
+      "compute_chunk_p95_ms": 9.025989274960011,
+      "timing_repeat_ms_per_chunk": [
+        9.14631778591768,
+        8.937460721998788
+      ]
+    },
+    "small/dev-clean": {
+      "utterances": 400,
+      "wer_percent": 3.560450819672131,
+      "errors": 278,
+      "reference_words": 7808,
+      "audio_seconds": 2760.8401875,
+      "chunks": 9162,
+      "output_frames": 73296,
+      "feature_window": 39,
+      "feature_hop": 32,
+      "rtf": 0.014233540633754527,
+      "total_seconds": 39.29653099208372,
+      "total_ms_per_chunk": 4.289077820572333,
+      "rtf_with_audio_io": 0.014367601418789079,
+      "feature_ms_per_chunk": 0.20609666499905116,
+      "components_ms_per_chunk": {
+        "audio": 3.9281530312134496,
+        "head": 0.0,
+        "decoder": 0.13715068865240132
+      },
+      "other_overhead_ms_per_chunk": 0.017677435707431015,
+      "state_mae": null,
+      "compute_chunk_p50_ms": 4.074062453582883,
+      "compute_chunk_p95_ms": 4.1912032320396975,
+      "timing_repeat_ms_per_chunk": [
+        4.23743443336544,
+        4.340721207779227
+      ]
+    },
+    "small/dev-other": {
+      "utterances": 400,
+      "wer_percent": 10.971830985915492,
+      "errors": 779,
+      "reference_words": 7100,
+      "audio_seconds": 2457.545125,
+      "chunks": 8211,
+      "output_frames": 65688,
+      "feature_window": 39,
+      "feature_hop": 32,
+      "rtf": 0.014345019407190605,
+      "total_seconds": 35.25353251217166,
+      "total_ms_per_chunk": 4.293451773495514,
+      "rtf_with_audio_io": 0.014481260292678398,
+      "feature_ms_per_chunk": 0.20825150333714243,
+      "components_ms_per_chunk": {
+        "audio": 3.9288427781550372,
+        "head": 0.0,
+        "decoder": 0.13587134155839403
+      },
+      "other_overhead_ms_per_chunk": 0.02048615044493951,
+      "state_mae": null,
+      "compute_chunk_p50_ms": 4.07387554878369,
+      "compute_chunk_p95_ms": 4.191041516605765,
+      "timing_repeat_ms_per_chunk": [
+        4.23421911557726,
+        4.352684431413767
+      ]
+    },
+    "control/dev-clean": {
+      "utterances": 400,
+      "wer_percent": 42.302766393442624,
+      "errors": 3303,
+      "reference_words": 7808,
+      "audio_seconds": 2760.8401875,
+      "chunks": 9091,
+      "output_frames": 72728,
+      "feature_window": 45,
+      "feature_hop": 32,
+      "rtf": 0.0038549966633728595,
+      "total_seconds": 10.6430297109182,
+      "total_ms_per_chunk": 1.1707215609853923,
+      "rtf_with_audio_io": 0.0039849662228054784,
+      "feature_ms_per_chunk": 0.20586128202738746,
+      "components_ms_per_chunk": {
+        "audio": 0.8353066870944965,
+        "head": 0.0,
+        "decoder": 0.11912631789480929
+      },
+      "other_overhead_ms_per_chunk": 0.010427273968698731,
+      "state_mae": 0.5333295831815951,
+      "compute_chunk_p50_ms": 0.9598124888725579,
+      "compute_chunk_p95_ms": 1.054281514370814,
+      "timing_repeat_ms_per_chunk": [
+        1.1687708945775668,
+        1.1726722273932175
+      ]
+    },
+    "control/dev-other": {
+      "utterances": 400,
+      "wer_percent": 61.91549295774648,
+      "errors": 4396,
+      "reference_words": 7100,
+      "audio_seconds": 2457.545125,
+      "chunks": 8131,
+      "output_frames": 65048,
+      "feature_window": 45,
+      "feature_hop": 32,
+      "rtf": 0.0038555346176902244,
+      "total_seconds": 9.47515030397335,
+      "total_ms_per_chunk": 1.1653118071545137,
+      "rtf_with_audio_io": 0.003987330050699485,
+      "feature_ms_per_chunk": 0.20701799945836624,
+      "components_ms_per_chunk": {
+        "audio": 0.8356363872860358,
+        "head": 0.0,
+        "decoder": 0.1120053044458009
+      },
+      "other_overhead_ms_per_chunk": 0.010652115964310689,
+      "state_mae": 0.5960289798145503,
+      "compute_chunk_p50_ms": 0.9506664937362075,
+      "compute_chunk_p95_ms": 1.0526147380005568,
+      "timing_repeat_ms_per_chunk": [
+        1.1637004764197143,
+        1.166923137889313
+      ]
+    },
+    "kl4/dev-clean": {
+      "utterances": 400,
+      "wer_percent": 41.38063524590164,
+      "errors": 3231,
+      "reference_words": 7808,
+      "audio_seconds": 2760.8401875,
+      "chunks": 9091,
+      "output_frames": 72728,
+      "feature_window": 45,
+      "feature_hop": 32,
+      "rtf": 0.003924434081613152,
+      "total_seconds": 10.834735325712245,
+      "total_ms_per_chunk": 1.1918089677386696,
+      "rtf_with_audio_io": 0.004055183493796908,
+      "feature_ms_per_chunk": 0.20814281637701385,
+      "components_ms_per_chunk": {
+        "audio": 0.8425499673401822,
+        "head": 0.0,
+        "decoder": 0.1303294709660916
+      },
+      "other_overhead_ms_per_chunk": 0.010786713055382008,
+      "state_mae": 0.5669864934919616,
+      "compute_chunk_p50_ms": 0.9757294901646674,
+      "compute_chunk_p95_ms": 1.082145783584565,
+      "timing_repeat_ms_per_chunk": [
+        1.195551164798314,
+        1.188066770679025
+      ]
+    },
+    "kl4/dev-other": {
+      "utterances": 400,
+      "wer_percent": 61.521126760563384,
+      "errors": 4368,
+      "reference_words": 7100,
+      "audio_seconds": 2457.545125,
+      "chunks": 8131,
+      "output_frames": 65048,
+      "feature_window": 45,
+      "feature_hop": 32,
+      "rtf": 0.003923609957679514,
+      "total_seconds": 9.642448523896746,
+      "total_ms_per_chunk": 1.1858871631898593,
+      "rtf_with_audio_io": 0.004054997214255524,
+      "feature_ms_per_chunk": 0.2098495047164355,
+      "components_ms_per_chunk": {
+        "audio": 0.840625735007221,
+        "head": 0.0,
+        "decoder": 0.12449701775243141
+      },
+      "other_overhead_ms_per_chunk": 0.010914905713771472,
+      "state_mae": 0.6231978774708039,
+      "compute_chunk_p50_ms": 0.9681044612079859,
+      "compute_chunk_p95_ms": 1.0775417322292924,
+      "timing_repeat_ms_per_chunk": [
+        1.1915165611334642,
+        1.1802577652462545
+      ]
+    },
+    "kl16/dev-clean": {
+      "utterances": 400,
+      "wer_percent": 42.392418032786885,
+      "errors": 3310,
+      "reference_words": 7808,
+      "audio_seconds": 2760.8401875,
+      "chunks": 9091,
+      "output_frames": 72728,
+      "feature_window": 45,
+      "feature_hop": 32,
+      "rtf": 0.003893400757749246,
+      "total_seconds": 10.749057278037071,
+      "total_ms_per_chunk": 1.1823844767393106,
+      "rtf_with_audio_io": 0.004023501093353033,
+      "feature_ms_per_chunk": 0.20762628977681888,
+      "components_ms_per_chunk": {
+        "audio": 0.8409663339642542,
+        "head": 0.0,
+        "decoder": 0.12309502349444616
+      },
+      "other_overhead_ms_per_chunk": 0.010696829503791198,
+      "state_mae": 0.633247020821877,
+      "compute_chunk_p50_ms": 0.9688334539532661,
+      "compute_chunk_p95_ms": 1.0664477304089814,
+      "timing_repeat_ms_per_chunk": [
+        1.1865801773300495,
+        1.1781887761485714
+      ]
+    },
+    "kl16/dev-other": {
+      "utterances": 400,
+      "wer_percent": 63.11267605633803,
+      "errors": 4481,
+      "reference_words": 7100,
+      "audio_seconds": 2457.545125,
+      "chunks": 8131,
+      "output_frames": 65048,
+      "feature_window": 45,
+      "feature_hop": 32,
+      "rtf": 0.0038897335271335124,
+      "total_seconds": 9.559195667156018,
+      "total_ms_per_chunk": 1.1756482188114645,
+      "rtf_with_audio_io": 0.004020781893182328,
+      "feature_ms_per_chunk": 0.20925955143889458,
+      "components_ms_per_chunk": {
+        "audio": 0.8406599846927058,
+        "head": 0.0,
+        "decoder": 0.11514999323508843
+      },
+      "other_overhead_ms_per_chunk": 0.01057868944477579,
+      "state_mae": 0.6824787192540538,
+      "compute_chunk_p50_ms": 0.9598750039003789,
+      "compute_chunk_p95_ms": 1.0596142383292317,
+      "timing_repeat_ms_per_chunk": [
+        1.1830251644623317,
+        1.1682712731605973
+      ]
+    }
+  },
+  "paired_comparisons": {
+    "dev-clean/kl4-minus-control": {
+      "wer_difference_pp": -0.9221311475409836,
+      "ci95_pp": [
+        -1.9798484271469525,
+        0.02658499191592563
+      ],
+      "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+    },
+    "dev-clean/kl4-minus-small": {
+      "wer_difference_pp": 37.82018442622951,
+      "ci95_pp": [
+        36.08203355337907,
+        39.47689230610326
+      ],
+      "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+    },
+    "dev-clean/kl4-minus-teacher": {
+      "wer_difference_pp": 38.447745901639344,
+      "ci95_pp": [
+        36.69506649830741,
+        40.09420022521313
+      ],
+      "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+    },
+    "dev-other/kl4-minus-control": {
+      "wer_difference_pp": -0.39436619718309857,
+      "ci95_pp": [
+        -1.3572987648617825,
+        0.5685466644305893
+      ],
+      "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+    },
+    "dev-other/kl4-minus-small": {
+      "wer_difference_pp": 50.54929577464789,
+      "ci95_pp": [
+        48.75597765506889,
+        52.4440446275074
+      ],
+      "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+    },
+    "dev-other/kl4-minus-teacher": {
+      "wer_difference_pp": 52.70422535211268,
+      "ci95_pp": [
+        50.85480065583016,
+        54.54679240575209
+      ],
+      "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+    },
+    "dev-clean/kl16-minus-control": {
+      "wer_difference_pp": 0.08965163934426229,
+      "ci95_pp": [
+        -1.0945353064567014,
+        1.2638567842527795
+      ],
+      "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+    },
+    "dev-clean/kl16-minus-small": {
+      "wer_difference_pp": 38.83196721311475,
+      "ci95_pp": [
+        37.24177930796653,
+        40.367695050716684
+      ],
+      "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+    },
+    "dev-clean/kl16-minus-teacher": {
+      "wer_difference_pp": 39.45952868852459,
+      "ci95_pp": [
+        37.84826922779728,
+        40.962203975307226
+      ],
+      "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+    },
+    "dev-other/kl16-minus-control": {
+      "wer_difference_pp": 1.1971830985915493,
+      "ci95_pp": [
+        0.11393356479148034,
+        2.2724891960292837
+      ],
+      "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+    },
+    "dev-other/kl16-minus-small": {
+      "wer_difference_pp": 52.140845070422536,
+      "ci95_pp": [
+        50.37130438551294,
+        53.884910199690495
+      ],
+      "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+    },
+    "dev-other/kl16-minus-teacher": {
+      "wer_difference_pp": 54.29577464788732,
+      "ci95_pp": [
+        52.51503089684351,
+        56.060836545872505
+      ],
+      "unit": "paired utterance, conditional on the selected single-seed checkpoints"
+    }
+  },
+  "qualification": {
+    "control": {
+      "wer_below_10": false,
+      "same_run_cost_fraction": 0.1294343551190914,
+      "A2_teacher_cost_fraction": 0.1309309115791683,
+      "passes_both": false
+    },
+    "kl4": {
+      "wer_below_10": false,
+      "same_run_cost_fraction": 0.13176576763014747,
+      "A2_teacher_cost_fraction": 0.1332892805381575,
+      "passes_both": false
+    },
+    "kl16": {
+      "wer_below_10": false,
+      "same_run_cost_fraction": 0.13072380090169583,
+      "A2_teacher_cost_fraction": 0.132235266296994,
+      "passes_both": false
+    }
+  },
+  "all_repeated_transcripts_match": true,
+  "original_A2_control_tokens_unchanged": true,
+  "test_used": false,
+  "seed": 237,
+  "final_role_utterances": 800,
+  "limitation": "Single seed, reused project development roles. Small has 39-frame native window versus teacher/student 45. No matched teacher/student lifetime-data budget. No FGN or 960h expansion.",
+  "timing_scope": "CPU one thread/batch one, full resident-waveform pipeline including fbank/cache/head/native decoder. Startup, reference scoring and file IO excluded from primary; IO-inclusive RTF separate. Two reversed-order repetitions."
+}

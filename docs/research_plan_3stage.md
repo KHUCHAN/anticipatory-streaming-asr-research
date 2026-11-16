@@ -817,3 +817,35 @@ Timing uses FP32 ONNX for all neural paths on Apple M5 Pro 24GiB, CPU batch 1 / 
 The main runner completed in 2.09 hours, excluding preceding engineering/preparation and the later small-model audit. Maximum sampled MPS driver allocation was 3.255GiB, not total system RAM or a continuous peak. Phase/checkpoint selection, frozen source/input hashes, raw scores, timing sums, full epoch counts, ONNX exports and repeated outputs passed verification. Local best/last checkpoints, epoch logs and per-utterance records remain in `runs/predict_correct_a2_v1/`; public artifacts contain aggregate evidence only.
 
 [Final results and curves](predict_correct_a2_2026-11-15.md) · [Executed protocol and code](../experiments/predict_correct_a2_v1/README.md) · [Aggregate results](../experiments/predict_correct_a2_v1/artifacts/results.json) · [Independent small-model audit](../experiments/predict_correct_a2_v1/artifacts/small_reproduction_audit.json).
+
+
+## Legacy 20M reproduction correction — 2026-11-15 completed
+
+Following the user's request to resolve the small baseline before A3, identify a prediction-network initialization contract mismatch. The original icefall ONNX example starts with two blank tokens, `[0,0]`. The A2 adapter and current native sherpa-onnx use `[-1,0]`; this legacy decoder export interprets `-1` as vocabulary ID 499. The two resulting prediction-network outputs are exactly equal, whereas the blank-filled context differs by a maximum absolute 5.0068. Encoder-cache initialization and waveform/tail settings were preserved.
+
+Changing only this model's initial token context reduces WER from 23.706/32.352% to **3.560/10.972%** on the same 400 dev-clean + 400 dev-other utterances. Empty transcripts decrease from 41 to zero. All 800 full-teacher token sequences remain identical. A separate negative-padding-to-blank ONNX wrapper preserves every learned initializer and lets unmodified native sherpa-onnx independently reproduce all 800 corrected token/chunk sequences. Original A2 source, inputs, weights and raw outputs remain preserved. The earlier native-engine agreement missed the bug because both engines shared the incompatible convention.
+
+Two reversed-order repetitions measure full/small complete costs of **9.262/4.390ms** per chunk on clean and **9.261/4.387ms** on other. Different native input windows (45 versus 39 frames) remain explicitly recorded. The source card's 3.94/9.79% is on full test splits; this development-subset correction resolves the large extra error without claiming exact full-test reproduction. No new test decode was used to select the fix. [Correction and evidence](small_zipformer_reproduction_2026-11-15.md).
+
+The subsequent [A3 protocol](../experiments/kl_weight_a3_v1/README.md) starts from the unchanged A2 MAE-best checkpoint and varies only the calibrated KL coefficient by 4x/16x. All data/windows, seed, optimizer schedule, frame weights, ramp, architecture and 24-epoch budget remain fixed. A disposable 100-update replay exactly reproduces the original A2 MAE/KL/coefficient log values. The completed A2 continuation is the control; the new final results follow below.
+
+
+## A3 matched KL-weight comparison — 2026-11-15 completed
+
+Complete both new 24-epoch continuations, 10,704 optimizer steps each, then evaluate all five paths on the original 400 dev-clean + 400 dev-other role. The first 100 control updates reproduce exactly; six implementation files are byte-identical to A2. Actual KL coefficients are 0.02600918 (control), 0.10403670 (4x) and 0.41614681 (16x). Best checkpoints are epoch 21/20/18 under the same clean-WER selection rule. The selection role chooses 4x before final-role decoding. No new test data, FGN or 960h teacher labels are used.
+
+| Path | Dev-clean WER | Dev-other WER | Complete ms/chunk, clean / other |
+|---|---:|---:|---:|
+| Full teacher | 2.933% | 8.817% | 9.045 / 9.042 |
+| Repaired public 20M | 3.560% | 10.972% | 4.289 / 4.293 |
+| Original A2 control | 42.303% | 61.915% | 1.171 / 1.165 |
+| A3 KL 4x | 41.381% | 61.521% | 1.192 / 1.186 |
+| A3 KL 16x | 42.392% | 63.113% | 1.182 / 1.176 |
+
+The selected 4x arm has estimated clean/other improvements of 0.922/0.394pp. Paired 95% intervals are [-1.980,+0.027] and [-1.357,+0.569] for new-minus-control, both including zero. A reliable improvement over the control is not established. The 16x arm changes clean by +0.090pp and worsens other by +1.197pp, with conditional interval [+0.114,+2.272] on other. One seed and previously used development roles limit the interpretation; absence of established improvement is not proof of equivalence.
+
+The selected 4x path passes cost at 13.18% of same-run teacher but fails the <10% clean-WER gate. The repaired public 20M already meets that entry gate at 47.79% of teacher cost, with a different upstream training budget. Larger KL coefficients reduce KL while worsening state MAE, and do not resolve the student accuracy bottleneck. Validation loss aggregates clean/other selection windows while training uses clean-100, so the loss gap alone does not identify data shortage.
+
+Both arms use approximately 77.09 minutes of summed epoch wall time, including validation/CPU selection, with maximum sampled MPS driver allocation 3.247GiB. The control replay, new training, complete final evaluation and verification took 2.75 runner hours, excluding the prior 20M diagnosis. CPU batch 1 / one thread, FP32 ONNX, two reversed-order repetitions include full fbank/cache/head/native-decoder processing; startup, file IO and reference scoring are excluded from the primary timer. Original A2 control transcripts and repaired public-baseline token sequences reproduce on all 800 utterances. All repeated outputs, timing sums, source/input hashes, exports and checkpoint selection pass verification.
+
+No extra epochs, B/C/FGN continuation or 960h expansion followed the failed gate. This is a bounded test of two coefficient changes within this recipe, not a general verdict on all 100h distillation or prediction-correction methods. [Full results, intervals, interpretation and curves](kl_weight_a3_2026-11-15.md) · [Protocol](../experiments/kl_weight_a3_v1/README.md) · [Verified aggregate results](../experiments/kl_weight_a3_v1/artifacts/results.json).
