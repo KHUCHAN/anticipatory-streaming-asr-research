@@ -73,6 +73,12 @@ Findings:
 - **The gate limits the stronger penalty.** At R1, penalty 0.01 is only 16-28/11-21ms faster than 0.005, although its oracle is 47-48ms faster.
 - **The 400-utterance subset is too small for WER.** A train-clean-100 model that looked WER-neutral on it (3.64/10.90 against 3.66/10.62%) loses 0.25/1.14 points on the full sets.
 
+## Conclusion
+
+- Showing text earlier is mostly a display problem. Gated zero-fill previews with `hold` cut the delay of the unchanged public model to about a third (458/464 to 147/168ms).
+- A delay penalty moves emission earlier and stacks with previews, but it is never free. The setting with the smallest loss (0.005 with lr decay) gives 90/123ms for 0.13/0.22 WER points.
+- Penalties above 0.005 buy little extra delay at the same rewrite rate and cost more WER.
+
 ## Limits
 
 - Delay, rewrites and lag come from 200 + 200 utterances and have no intervals. The R1 operating point moves by about 10ms between repeated gate runs, because the threshold is chosen on 300 utterances.

@@ -4,6 +4,26 @@ Snapshot date: 2026-11-15, America/Los_Angeles. This is the current-conclusion e
 
 **Literature-only update, 2026-11-16:** [17 additional primary-source papers](prior_work_predict_refine_2026-11-16.md) establish close precedents for synthetic-future preview, learned acoustic context, fast/slow partials and adaptive waiting. Intermediate ZeroPrompt already investigates hidden-layer prompts. These restrict broad novelty claims; they do not demonstrate our encoder-skipping goal. Original PDFs and individual English notes are prepared; author results were not reproduced and the experimental numbers below are unchanged.
 
+## Display latency: conclusion, 2026-11-22
+
+This line asks a different question from the encoder-acceleration plan below: how early can correct text be shown while audio streams in. Compute saving is not its target. Three experiments are complete: [preview_filler_v1](../experiments/preview_filler_v1/README.md), [preview_finetune_v1](../experiments/preview_finetune_v1/README.md) and [emit_early_v1](../experiments/emit_early_v1/README.md). Values are dev-clean/dev-other on the public 20M streaming Zipformer at 320ms chunks.
+
+Supported:
+
+1. **The display policy gives most of the gain, without training.** Zero-fill previews, a display gate and a hold-until-contradicted display lower the mean stable word delay from 458/464ms to 147/168ms at 0.8/1.6 rewrites per 100 words. Final WER is unchanged (3.63/9.81% on the full dev sets).
+2. **Delay-penalized fine-tuning adds less and always costs WER.** Penalty 0.005 on 960h reaches 80-90/117-123ms, a further 57-67/45-51ms, for 0.13-0.20/0.22-0.40 WER points. No penalized model keeps the public WER. Doubling the training time does not remove the cost; lr decay lowers the dev-other loss to 0.22 points.
+3. **Stronger penalties are a poor trade.** Penalty 0.01 costs 0.39-0.62/0.68-1.19 WER points and is only 16-28/11-21ms faster at one rewrite per 100 words. Its ungated previews are rewritten about twice as often, and the gate gives back most of the difference.
+4. **Generating the missing future does not help.** Learned future-feature fillers, deterministic or FGN-style, do not beat gated zero fill, and a preview-only encoder fine-tuned on zero-filled chunks does not either.
+5. **Recommended settings.** To keep accuracy: the public model with gated previews and the hold display (147/168ms). For lower delay: penalty 0.005 with lr decay (90/123ms for 0.13/0.22 WER points).
+
+Not established:
+
+- Device cost. The clock charges an assumed 5.0ms per encoder pass. The headline setting runs nine passes per 320ms chunk; five passes give 149/168ms on the public model.
+- Test-set results, intervals for the delays, and behaviour outside LibriSpeech read speech.
+- How long a wrong word stays on screen under the hold display.
+- Why penalty-0 fine-tuning emits later than the public model (lag 275-296 against 238ms).
+- Correcting words that do not fit the context was not addressed in this line.
+
 ## Selected direction: prediction plus acoustic correction
 
 **Latest result, 2026-11-15:** the [20M padding mismatch is resolved](small_zipformer_reproduction_2026-11-15.md), restoring dev-clean/other WER to 3.56/10.97%. The [matched A3 comparison](kl_weight_a3_2026-11-15.md) is complete: control 42.30/61.92%, 4x KL 41.38/61.52%, 16x KL 42.39/63.11%. Selected 4x passes the cost check at 13.18% of the teacher, but fails the <10% WER gate. Its clean/other paired improvements of 0.922/0.394pp both have 95% intervals including zero; a reliable gain over control is not established. The 16x arm worsens other by 1.197pp (conditional CI +0.114 to +2.272). Do not infer a general failure of 100h distillation or FGN from this fixed, single-seed coefficient study.

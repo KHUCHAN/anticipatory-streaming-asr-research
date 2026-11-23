@@ -6,6 +6,8 @@ Research on predicting acoustic representations, correcting them with newly arri
 
 Start with the [predict–correct acceleration plan](docs/predict_correct_acceleration_plan_2026-11-12.md), [current conclusions](docs/conclusion_and_next_steps.md), and [repository map](READ.MD).
 
+**Display-latency line completed, 2026-11-22:** three experiments on showing text earlier while audio streams in ([preview fillers](experiments/preview_filler_v1/README.md), [preview-only fine-tuning](experiments/preview_finetune_v1/README.md), [earlier emission](experiments/emit_early_v1/README.md)). On the public 20M model at 320ms chunks, zero-fill previews with a display gate and a hold-until-contradicted display lower the mean stable word delay from **458/464ms to 147/168ms** at 0.8/1.6 rewrites per 100 words, with no training and unchanged WER. Fine-tuning on 960h with a delay penalty of 0.005 reaches **80-90/117-123ms** but costs 0.13-0.20/0.22-0.40 WER points on the full dev sets; no penalized model keeps the public WER. Learned future-feature fillers, including an FGN-style one, do not beat gated zero fill. This line targets display latency, not compute: previews add encoder passes, charged at an assumed 5.0ms each. No test split was used. See the [conclusion](docs/conclusion_and_next_steps.md#display-latency-conclusion-2026-11-22).
+
 **Research-only LLM review added, 2026-11-16:** [ten papers on candidate selection, correction and fusion](docs/prior_work_llm_correction_2026-11-16.md), with an [English paper folder](notes/llm-correction/README.md). The catalog now has 60 entries. The review separates offline WER, streamable algorithms, actual streaming measurements and extra inference cost; it also checks the teacher's public training provenance. No new experiment or architecture change was executed.
 
 **Future-context review added, 2026-11-16:** [17 papers and method comparisons](docs/prior_work_predict_refine_2026-11-16.md), including ZeroPrompt, CUSIDE/CUSIDE-T, FastEmit, Delayed-KD and 2026 Selective Lookahead. The [paper folder](notes/predict-refine/README.md) contains English notes, evidence locations and implementation status. This extension brought the initial 33-paper catalog to 50; original PDFs remain local-only. Provisional display, future-context simulation and actual encoder-compute reduction are distinguished explicitly. This literature review does not rerun or revise the A2/A3 results.
@@ -48,7 +50,7 @@ The median per-word display gain is zero. Final WER in the display experiments i
 - [60-paper catalog](papers/INDEX.md), [literature map](docs/literature_map.md), and [BibTeX](references/references.bib); initial 33 plus 17 future-context and 10 LLM-related additions
 - [Dataset guide](data/README.md) and [inventory](data/reports/librispeech_inventory.md)
 
-LibriSpeech training and evaluation data has been prepared locally: 292,367 utterances / 982.308 hours in total, including a training-only union of 281,241 utterances / 961.054 hours. A new 960h acoustic model has not been trained. The approximately 114M model recipe remains a separate proposal.
+LibriSpeech training and evaluation data has been prepared locally: 292,367 utterances / 982.308 hours in total, including a training-only union of 281,241 utterances / 961.054 hours. No acoustic model has been trained from scratch on 960h; the public 20M model was fine-tuned on it in [emit_early_v1](experiments/emit_early_v1/README.md). The approximately 114M model recipe remains a separate proposal.
 
 Public documentation, paper notes, catalog text and report generators are in English. Original PDFs, speech, transcripts, feature caches, downloaded weights and per-utterance run outputs are local-only; source code and aggregate experimental evidence are versioned.
 
@@ -57,4 +59,4 @@ python3 scripts/validate_catalog.py
 python3 scripts/check_public_repository.py
 ```
 
-See [READ.MD](READ.MD) for preparation and execution commands. Snapshot date: 2026-11-16.
+See [READ.MD](READ.MD) for preparation and execution commands. Snapshot date: 2026-11-22.

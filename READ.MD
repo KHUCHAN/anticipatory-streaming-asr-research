@@ -1,6 +1,6 @@
 # Repository guide and file map
 
-Snapshot date: 2026-11-16. All public prose is maintained in English.
+Snapshot date: 2026-11-22. All public prose is maintained in English.
 
 The selected goal is to predict an acoustic representation, correct it using newly arrived audio, and avoid sufficiently expensive encoder work at controlled recognition error. Existing display studies are completed; the residual-correction and encoder-skipping architecture is still a proposal.
 
@@ -25,6 +25,9 @@ The selected goal is to predict an acoustic representation, correct it using new
 | [A2 audio-only results](docs/predict_correct_a2_2026-11-15.md) | Completed: 36 epochs, 800 dev utterances; cost passes at 13.32% of teacher, WER 42.30% fails; original small result superseded by the correction below |
 | [20M reproduction correction](docs/small_zipformer_reproduction_2026-11-15.md) | Resolved legacy decoder padding mismatch; corrected WER 3.56/10.97%, native verification on all 800 utterances |
 | [A3 matched KL-weight results](docs/kl_weight_a3_2026-11-15.md) | Completed: 4x gives 41.38/61.52% WER, 16x 42.39/63.11%; accuracy gate fails and 4x improvement is not established by paired 95% intervals |
+| [Preview fillers and display gates](experiments/preview_filler_v1/README.md) | Completed: training-free preview passes on the 66M teacher; 542/551ms -> 251-329/264-337ms with one extra pass; learned and FGN-style fillers do not beat gated zero fill |
+| [Preview-only encoder fine-tuning](experiments/preview_finetune_v1/README.md) | Completed, negative: no gain over the original 20M encoder with zero fill |
+| [Earlier emission and gated previews](experiments/emit_early_v1/README.md) | Completed: delay penalty on 960h, display gate with hold; 458/464ms -> 147/168ms without training, 80-90/117-123ms with penalty 0.005 at +0.13-0.20/+0.22-0.40 WER points |
 | [Implementation review](docs/results_review_2026-11-11.md) | Metric definitions, missing costs and corrected claims |
 | [Four follow-up experiments](docs/followup_experiments_2026-11-11.md) | Real cache release, long streams, seed repetitions and display stabilization |
 | [Public baseline reproduction](docs/baseline_zipformer_2026-11-11.md) | Frozen public 66.11M checkpoint, inference conditions and WER |
