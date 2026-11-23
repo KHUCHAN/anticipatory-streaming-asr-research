@@ -1,0 +1,43 @@
+{
+  "experiment": "Fine-tuned preview encoder for partly filled chunks on the public 20M streaming Zipformer",
+  "seed": 6137,
+  "a2_config": "experiments/predict_correct_a2_v1/config.json",
+  "protocol": "runs/predict_correct_v1/protocol.json",
+  "alignments": "runs/preview_filler_v1/alignments.json",
+  "utterances_per_split": 200,
+  "splits": ["dev-clean", "dev-other"],
+  "feature_window": 39,
+  "feature_hop": 32,
+  "frame_shift_ms": 10.0,
+  "frame_audio_end_offset_ms": 17.5,
+  "bootstrap_replicates": 2000,
+  "test_used": false,
+  "finetune": {
+    "source": "desh2608/icefall-asr-librispeech-pruned-transducer-stateless7-streaming-small exp/pretrained.pt",
+    "trainable": "copy of the encoder and encoder projection; decoder, joiner and the native encoder stay frozen",
+    "loss": "KL(frozen full-chunk joiner distribution || preview joiner distribution) on the frozen greedy path, 8 frames per chunk",
+    "filler": "zero",
+    "k_min": 7,
+    "k_max": 38,
+    "minutes": 150,
+    "batch_utterances": 20,
+    "max_chunks": 48,
+    "examples_per_step": 256,
+    "lr": 1e-4,
+    "warmup_steps": 200,
+    "grad_clip": 5.0,
+    "validation_utterances": 48
+  },
+  "stage2": {
+    "train_split": "train-clean-100",
+    "train_utterances": 800,
+    "train_seed": 7137,
+    "note": "the 800 gate-training utterances are excluded from fine-tuning",
+    "free_fillers": ["zero", "repeat"],
+    "learned_fillers": ["ft"],
+    "ks": [7, 15, 23],
+    "schedules": {"k7": [7], "k15": [15], "k23": [23], "k7_23": [7, 23]},
+    "rewrite_targets_per_100": [2.0, 5.0]
+  },
+  "scope": "Declared before the run. The native pass and the final output are those of the unmodified 20M model. Preview passes read native state and never write it. `ft` previews run in PyTorch and are charged the measured ONNX time of the zero-fill preview of the same chunk, because the graph and input shape are identical. Preview points: k=7 is the moment the previous chunk's native pass becomes possible (39-frame window, 32-frame hop)."
+}
