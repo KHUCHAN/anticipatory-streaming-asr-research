@@ -1,0 +1,106 @@
+{
+  "experiment": "Training-free preview fillers on the frozen streaming Zipformer teacher",
+  "seed": 6137,
+  "a2_config": "experiments/predict_correct_a2_v1/config.json",
+  "protocol": "runs/predict_correct_v1/protocol.json",
+  "role": "gate_calibration (dev, 800 utterances); fixed-seed subset below",
+  "utterances_per_split": 200,
+  "splits": [
+    "dev-clean",
+    "dev-other"
+  ],
+  "fillers": [
+    "zero",
+    "repeat",
+    "mean"
+  ],
+  "preview_real_frames": [
+    13,
+    21,
+    29,
+    37
+  ],
+  "int8_preview_filler": "repeat",
+  "schedules": {
+    "none": [],
+    "k29": [
+      29
+    ],
+    "k13": [
+      13
+    ],
+    "k21_29_37": [
+      21,
+      29,
+      37
+    ],
+    "k13_21_29_37": [
+      13,
+      21,
+      29,
+      37
+    ]
+  },
+  "feature_window": 45,
+  "feature_hop": 32,
+  "frame_shift_ms": 10.0,
+  "frame_audio_end_offset_ms": 17.5,
+  "aligner": "facebook/wav2vec2-base-960h",
+  "aligner_frame_ms": 20.0,
+  "bootstrap_replicates": 2000,
+  "timing_threads": 1,
+  "test_used": false,
+  "scope": "Inference-only comparison declared before the run. Preview passes never update the native encoder/decoder state. Reference word times come from our own CTC forced alignment, not from an independent phonetic alignment. One timing repetition on one Apple CPU thread. No learned filler in this stage.",
+  "stage2": {
+    "train_split": "train-clean-100",
+    "train_utterances": 800,
+    "train_seed": 7137,
+    "context_frames": 64,
+    "future_frames": 32,
+    "predictor": {
+      "width": 256,
+      "layers": 4,
+      "heads": 4,
+      "ff": 1024,
+      "noise_dim": 32,
+      "batch": 256,
+      "learning_rate": 0.0003,
+      "minutes": 75,
+      "crps_samples": 2
+    },
+    "free_fillers": [
+      "zero",
+      "repeat",
+      "mean",
+      "fade"
+    ],
+    "learned_fillers": [
+      "det",
+      "fgn1",
+      "fgnm"
+    ],
+    "fgn_mean_samples": 8,
+    "ks": [
+      13,
+      29
+    ],
+    "schedules": {
+      "k13": [
+        13
+      ],
+      "k29": [
+        29
+      ],
+      "k13_29": [
+        13,
+        29
+      ]
+    },
+    "rewrite_targets_per_100": [
+      2.0,
+      5.0
+    ],
+    "selection": "model_selection role (128 dev utterances, speaker-disjoint from the evaluation role); thresholds chosen there only",
+    "scope": "Declared before the run. Future-feature predictors are trained on train-clean-100 fbank only, with the ASR model frozen and not differentiated through. One seed."
+  }
+}
