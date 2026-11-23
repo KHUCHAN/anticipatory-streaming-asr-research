@@ -1,0 +1,19 @@
+{
+  "experiment": "Earlier emission by delay-penalized fine-tuning of the 20M streaming Zipformer, with and without zero-fill previews",
+  "declared": "2026-11-22, before any GPU run",
+  "motivation": "On the public 20M model the native display delay (458/463ms) splits into an emission lag of 238/236ms after the aligned word end and 220/228ms of chunk wait plus lookahead. Zero-fill previews at k=7 emit tokens correctly (0.89-0.98) in encoder frames that contain no real audio, so most of the lag is a learned habit, not missing evidence.",
+  "hypotheses": {
+    "H1": "Fine-tuning with a k2 delay penalty lowers the emission lag by at least 100ms at a WER cost of at most 0.5 points absolute on the 400-utterance dev subset.",
+    "H2": "Zero-fill previews and the delay penalty consume the same lag: the preview gain (none minus k7) shrinks as the penalty grows.",
+    "H0_control": "Fine-tuning with penalty 0 leaves lag and WER unchanged."
+  },
+  "model": "desh2608/icefall-asr-librispeech-pruned-transducer-stateless7-streaming-small exp/pretrained.pt",
+  "train_data": "LibriSpeech train-clean-100, features as in predict_correct_v1/prepare.py",
+  "loss": "0.5 * smoothed simple RNN-T + pruned RNN-T (prune range 5, lm scale 0.25), delay_penalty passed to both",
+  "optimizer": "ScaledAdam lr 0.002 constant, clipping scale 2.0, no SpecAugment, fp32, at most 50000 feature frames per batch",
+  "pilot": {"delay_penalty": 0.01, "minutes": 20},
+  "arms_delay_penalty": [0.0, 0.002, 0.005, 0.01, 0.02],
+  "arm_minutes": 60,
+  "evaluation": "Fixed 200 dev-clean + 200 dev-other subset and alignments of preview_filler_v1; streaming replay in PyTorch; every encoder pass charged 5.0ms; previews zero-filled at k=7,15,23; test unused",
+  "compute": "USC CARC Discovery, one GPU per arm"
+}
