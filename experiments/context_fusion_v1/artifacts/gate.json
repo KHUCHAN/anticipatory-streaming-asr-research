@@ -1,0 +1,4890 @@
+{
+ "cf_pub_l0n0": {
+  "lam": 0.0,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 458.315,
+      "delay_p50": 462.5,
+      "delay_p90": 602.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 463.56,
+      "delay_p50": 462.5,
+      "delay_p90": 622.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 130.25,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 6.071
+     },
+     "dev-other": {
+      "delay_mean": 140.025,
+      "delay_p50": 142.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 21.911
+     }
+    },
+    "R1": {
+     "threshold": 0.973,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 146.729,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.782
+     },
+     "dev-other": {
+      "delay_mean": 167.628,
+      "delay_p50": 167.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 1.602
+     }
+    },
+    "R2": {
+     "threshold": 0.934,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 137.518,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.329
+     },
+     "dev-other": {
+      "delay_mean": 155.341,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 2.946
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 129.326,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 136.494,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.973,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 146.19,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.703
+     },
+     "dev-other": {
+      "delay_mean": 165.386,
+      "delay_p50": 162.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 1.602
+     }
+    },
+    "R2": {
+     "threshold": 0.933,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 136.812,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.199
+     },
+     "dev-other": {
+      "delay_mean": 154.295,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 3.061
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 129.326,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 136.494,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.973,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 146.19,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.703
+     },
+     "dev-other": {
+      "delay_mean": 165.386,
+      "delay_p50": 162.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 1.602
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.952,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 124.879,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.094
+     },
+     "dev-other": {
+      "delay_mean": 144.925,
+      "delay_p50": 142.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 2.86
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 129.326,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 136.494,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_pub_l25n0": {
+  "lam": 0.25,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 458.315,
+      "delay_p50": 462.5,
+      "delay_p90": 602.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 463.56,
+      "delay_p50": 462.5,
+      "delay_p90": 622.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 130.586,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 6.983
+     },
+     "dev-other": {
+      "delay_mean": 140.276,
+      "delay_p50": 142.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 21.854
+     }
+    },
+    "R1": {
+     "threshold": 0.973,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 146.539,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.73
+     },
+     "dev-other": {
+      "delay_mean": 167.323,
+      "delay_p50": 162.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 1.716
+     }
+    },
+    "R2": {
+     "threshold": 0.922,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 136.389,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.537
+     },
+     "dev-other": {
+      "delay_mean": 154.155,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 3.118
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 129.629,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 137.649,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.973,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 145.527,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.782
+     },
+     "dev-other": {
+      "delay_mean": 165.833,
+      "delay_p50": 162.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 1.659
+     }
+    },
+    "R2": {
+     "threshold": 0.919,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 135.96,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.433
+     },
+     "dev-other": {
+      "delay_mean": 153.267,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 3.261
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 129.629,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 137.649,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.973,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 145.527,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.782
+     },
+     "dev-other": {
+      "delay_mean": 165.833,
+      "delay_p50": 162.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 1.659
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.948,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 124.066,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.172
+     },
+     "dev-other": {
+      "delay_mean": 144.697,
+      "delay_p50": 142.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 2.946
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 129.629,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 137.649,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_pub_l5n0": {
+  "lam": 0.5,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 458.315,
+      "delay_p50": 462.5,
+      "delay_p90": 602.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 463.56,
+      "delay_p50": 462.5,
+      "delay_p90": 622.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 131.262,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 7.764
+     },
+     "dev-other": {
+      "delay_mean": 141.256,
+      "delay_p50": 142.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 24.027
+     }
+    },
+    "R1": {
+     "threshold": 0.98,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 149.85,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.808
+     },
+     "dev-other": {
+      "delay_mean": 169.863,
+      "delay_p50": 167.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 1.402
+     }
+    },
+    "R2": {
+     "threshold": 0.904,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 135.679,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.668
+     },
+     "dev-other": {
+      "delay_mean": 152.288,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 3.633
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 130.187,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 138.744,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.974,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 145.004,
+      "delay_p50": 147.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 0.808
+     },
+     "dev-other": {
+      "delay_mean": 164.727,
+      "delay_p50": 162.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 1.545
+     }
+    },
+    "R2": {
+     "threshold": 0.906,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 135.825,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.381
+     },
+     "dev-other": {
+      "delay_mean": 151.635,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 3.604
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 130.187,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 138.744,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.974,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 145.004,
+      "delay_p50": 147.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 0.808
+     },
+     "dev-other": {
+      "delay_mean": 164.727,
+      "delay_p50": 162.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 1.545
+     }
+    },
+    "R2@0.9": {
+     "threshold": 0.946,
+     "tau": 0.9,
+     "dev-clean": {
+      "delay_mean": 118.554,
+      "delay_p50": 107.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.511
+     },
+     "dev-other": {
+      "delay_mean": 138.938,
+      "delay_p50": 127.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 3.604
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 130.187,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 138.744,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_pub_l25n25": {
+  "lam": 0.25,
+  "lamn": 0.25,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 458.352,
+      "delay_p50": 462.5,
+      "delay_p90": 602.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 463.765,
+      "delay_p50": 462.5,
+      "delay_p90": 622.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 130.259,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 6.302
+     },
+     "dev-other": {
+      "delay_mean": 138.859,
+      "delay_p50": 135.0,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 20.686
+     }
+    },
+    "R1": {
+     "threshold": 0.977,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 150.168,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.677
+     },
+     "dev-other": {
+      "delay_mean": 171.394,
+      "delay_p50": 167.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 1.571
+     }
+    },
+    "R2": {
+     "threshold": 0.927,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 137.113,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.432
+     },
+     "dev-other": {
+      "delay_mean": 154.703,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 3.171
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 129.27,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 136.132,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.973,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 145.395,
+      "delay_p50": 147.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 0.755
+     },
+     "dev-other": {
+      "delay_mean": 164.858,
+      "delay_p50": 162.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 1.8
+     }
+    },
+    "R2": {
+     "threshold": 0.931,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 136.71,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.328
+     },
+     "dev-other": {
+      "delay_mean": 153.065,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 3.171
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 129.27,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 136.132,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.973,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 145.395,
+      "delay_p50": 147.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 0.755
+     },
+     "dev-other": {
+      "delay_mean": 164.858,
+      "delay_p50": 162.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 1.8
+     }
+    },
+    "R2@0.9": {
+     "threshold": 0.95,
+     "tau": 0.9,
+     "dev-clean": {
+      "delay_mean": 119.573,
+      "delay_p50": 122.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.589
+     },
+     "dev-other": {
+      "delay_mean": 139.821,
+      "delay_p50": 142.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 3.486
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 129.27,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 136.132,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_pub_l5n5": {
+  "lam": 0.5,
+  "lamn": 0.5,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 458.509,
+      "delay_p50": 462.5,
+      "delay_p90": 602.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 464.097,
+      "delay_p50": 462.5,
+      "delay_p90": 622.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 130.472,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 6.854
+     },
+     "dev-other": {
+      "delay_mean": 139.147,
+      "delay_p50": 142.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 20.32
+     }
+    },
+    "R1": {
+     "threshold": 0.98,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 153.638,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.625
+     },
+     "dev-other": {
+      "delay_mean": 175.129,
+      "delay_p50": 167.5,
+      "delay_p90": 322.5,
+      "rewrites_per_100": 1.17
+     }
+    },
+    "R2": {
+     "threshold": 0.948,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 138.95,
+      "delay_p50": 142.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.069
+     },
+     "dev-other": {
+      "delay_mean": 158.431,
+      "delay_p50": 147.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 2.112
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 129.236,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 136.317,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.982,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 151.602,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.547
+     },
+     "dev-other": {
+      "delay_mean": 172.257,
+      "delay_p50": 167.5,
+      "delay_p90": 322.5,
+      "rewrites_per_100": 1.142
+     }
+    },
+    "R2": {
+     "threshold": 0.951,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 138.991,
+      "delay_p50": 142.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.199
+     },
+     "dev-other": {
+      "delay_mean": 156.493,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 2.226
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 129.236,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 136.317,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1@0.95": {
+     "threshold": 0.987,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 145.272,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.547
+     },
+     "dev-other": {
+      "delay_mean": 166.573,
+      "delay_p50": 162.5,
+      "delay_p90": 322.5,
+      "rewrites_per_100": 1.513
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.951,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 124.464,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.329
+     },
+     "dev-other": {
+      "delay_mean": 142.888,
+      "delay_p50": 142.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 2.825
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 129.236,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 136.317,
+      "delay_p50": 127.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_dp005_l0n0": {
+  "lam": 0.0,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 345.949,
+      "delay_p50": 342.5,
+      "delay_p90": 502.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 376.366,
+      "delay_p50": 382.5,
+      "delay_p90": 542.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 59.962,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 10.422
+     },
+     "dev-other": {
+      "delay_mean": 82.498,
+      "delay_p50": 67.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 26.231
+     }
+    },
+    "R1": {
+     "threshold": 0.982,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 87.266,
+      "delay_p50": 82.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 1.094
+     },
+     "dev-other": {
+      "delay_mean": 119.912,
+      "delay_p50": 107.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.325
+     }
+    },
+    "R2": {
+     "threshold": 0.954,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 73.195,
+      "delay_p50": 62.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.72
+     },
+     "dev-other": {
+      "delay_mean": 103.451,
+      "delay_p50": 87.5,
+      "delay_p90": 247.5,
+      "rewrites_per_100": 2.419
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.495,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 78.338,
+      "delay_p50": 67.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.984,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 86.104,
+      "delay_p50": 67.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.834
+     },
+     "dev-other": {
+      "delay_mean": 118.422,
+      "delay_p50": 102.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.209
+     }
+    },
+    "R2": {
+     "threshold": 0.956,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 73.572,
+      "delay_p50": 62.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.72
+     },
+     "dev-other": {
+      "delay_mean": 102.317,
+      "delay_p50": 87.5,
+      "delay_p90": 247.5,
+      "rewrites_per_100": 2.505
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.495,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 78.338,
+      "delay_p50": 67.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.986,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 89.175,
+      "delay_p50": 82.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.625
+     },
+     "dev-other": {
+      "delay_mean": 122.092,
+      "delay_p50": 107.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 1.094
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.972,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 67.633,
+      "delay_p50": 62.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.563
+     },
+     "dev-other": {
+      "delay_mean": 97.775,
+      "delay_p50": 87.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 2.447
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.495,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 78.338,
+      "delay_p50": 67.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_dp005_l25n0": {
+  "lam": 0.25,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 345.949,
+      "delay_p50": 342.5,
+      "delay_p90": 502.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 376.366,
+      "delay_p50": 382.5,
+      "delay_p90": 542.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 60.174,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 11.152
+     },
+     "dev-other": {
+      "delay_mean": 82.811,
+      "delay_p50": 67.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 26.951
+     }
+    },
+    "R1": {
+     "threshold": 0.985,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 89.966,
+      "delay_p50": 82.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.73
+     },
+     "dev-other": {
+      "delay_mean": 122.719,
+      "delay_p50": 107.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 1.008
+     }
+    },
+    "R2": {
+     "threshold": 0.953,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 73.33,
+      "delay_p50": 62.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.928
+     },
+     "dev-other": {
+      "delay_mean": 102.535,
+      "delay_p50": 87.5,
+      "delay_p90": 247.5,
+      "rewrites_per_100": 2.447
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.918,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 79.002,
+      "delay_p50": 67.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.986,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 89.077,
+      "delay_p50": 82.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.73
+     },
+     "dev-other": {
+      "delay_mean": 120.884,
+      "delay_p50": 107.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 0.979
+     }
+    },
+    "R2": {
+     "threshold": 0.954,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 72.576,
+      "delay_p50": 62.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.694
+     },
+     "dev-other": {
+      "delay_mean": 101.625,
+      "delay_p50": 87.5,
+      "delay_p90": 247.5,
+      "rewrites_per_100": 2.246
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.918,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 79.002,
+      "delay_p50": 67.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1@0.95": {
+     "threshold": 0.989,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 85.342,
+      "delay_p50": 82.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.703
+     },
+     "dev-other": {
+      "delay_mean": 117.277,
+      "delay_p50": 102.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 1.44
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.972,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 67.275,
+      "delay_p50": 62.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.433
+     },
+     "dev-other": {
+      "delay_mean": 97.016,
+      "delay_p50": 87.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 2.217
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.918,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 79.002,
+      "delay_p50": 67.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_dp005_l5n0": {
+  "lam": 0.5,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 345.949,
+      "delay_p50": 342.5,
+      "delay_p90": 502.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 376.366,
+      "delay_p50": 382.5,
+      "delay_p90": 542.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 60.895,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 12.142
+     },
+     "dev-other": {
+      "delay_mean": 82.948,
+      "delay_p50": 67.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 27.815
+     }
+    },
+    "R1": {
+     "threshold": 0.982,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 86.382,
+      "delay_p50": 67.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.912
+     },
+     "dev-other": {
+      "delay_mean": 118.777,
+      "delay_p50": 102.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 1.353
+     }
+    },
+    "R2": {
+     "threshold": 0.949,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 72.584,
+      "delay_p50": 62.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 2.032
+     },
+     "dev-other": {
+      "delay_mean": 101.128,
+      "delay_p50": 87.5,
+      "delay_p90": 247.5,
+      "rewrites_per_100": 2.534
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 59.711,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 79.748,
+      "delay_p50": 67.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.984,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 85.032,
+      "delay_p50": 67.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.912
+     },
+     "dev-other": {
+      "delay_mean": 116.323,
+      "delay_p50": 102.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.181
+     }
+    },
+    "R2": {
+     "threshold": 0.949,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 71.991,
+      "delay_p50": 62.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.98
+     },
+     "dev-other": {
+      "delay_mean": 100.163,
+      "delay_p50": 87.5,
+      "delay_p90": 247.5,
+      "rewrites_per_100": 2.303
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 59.711,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 79.748,
+      "delay_p50": 67.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.986,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 88.005,
+      "delay_p50": 82.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.86
+     },
+     "dev-other": {
+      "delay_mean": 119.956,
+      "delay_p50": 107.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 1.065
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.971,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 66.417,
+      "delay_p50": 62.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.589
+     },
+     "dev-other": {
+      "delay_mean": 95.975,
+      "delay_p50": 82.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 2.188
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 59.711,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 79.748,
+      "delay_p50": 67.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_dp005_l25n25": {
+  "lam": 0.25,
+  "lamn": 0.25,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 346.239,
+      "delay_p50": 342.5,
+      "delay_p90": 502.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 376.378,
+      "delay_p50": 382.5,
+      "delay_p90": 542.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 60.1,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 10.807
+     },
+     "dev-other": {
+      "delay_mean": 81.827,
+      "delay_p50": 67.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 25.389
+     }
+    },
+    "R1": {
+     "threshold": 0.98,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 86.97,
+      "delay_p50": 67.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 1.016
+     },
+     "dev-other": {
+      "delay_mean": 120.91,
+      "delay_p50": 107.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 1.47
+     }
+    },
+    "R2": {
+     "threshold": 0.95,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 73.019,
+      "delay_p50": 62.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.719
+     },
+     "dev-other": {
+      "delay_mean": 102.946,
+      "delay_p50": 87.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 2.565
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.622,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 77.281,
+      "delay_p50": 67.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.986,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 88.671,
+      "delay_p50": 82.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.807
+     },
+     "dev-other": {
+      "delay_mean": 120.632,
+      "delay_p50": 107.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 0.922
+     }
+    },
+    "R2": {
+     "threshold": 0.956,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 72.33,
+      "delay_p50": 62.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.771
+     },
+     "dev-other": {
+      "delay_mean": 101.056,
+      "delay_p50": 87.5,
+      "delay_p90": 247.5,
+      "rewrites_per_100": 2.594
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.622,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 77.281,
+      "delay_p50": 67.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.986,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 88.671,
+      "delay_p50": 82.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.807
+     },
+     "dev-other": {
+      "delay_mean": 120.632,
+      "delay_p50": 107.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 0.922
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.973,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 66.802,
+      "delay_p50": 62.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.302
+     },
+     "dev-other": {
+      "delay_mean": 96.22,
+      "delay_p50": 87.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 2.305
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.622,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 77.281,
+      "delay_p50": 67.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_dp005_l5n5": {
+  "lam": 0.5,
+  "lamn": 0.5,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 345.85,
+      "delay_p50": 342.5,
+      "delay_p90": 502.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 376.872,
+      "delay_p50": 382.5,
+      "delay_p90": 542.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 60.284,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 11.166
+     },
+     "dev-other": {
+      "delay_mean": 81.832,
+      "delay_p50": 67.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 25.022
+     }
+    },
+    "R1": {
+     "threshold": 0.988,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 96.725,
+      "delay_p50": 87.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 0.859
+     },
+     "dev-other": {
+      "delay_mean": 134.074,
+      "delay_p50": 122.5,
+      "delay_p90": 302.5,
+      "rewrites_per_100": 1.15
+     }
+    },
+    "R2": {
+     "threshold": 0.959,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 74.721,
+      "delay_p50": 62.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.926
+     },
+     "dev-other": {
+      "delay_mean": 106.162,
+      "delay_p50": 87.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 2.761
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.346,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 77.3,
+      "delay_p50": 67.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.99,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 94.211,
+      "delay_p50": 82.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 0.729
+     },
+     "dev-other": {
+      "delay_mean": 126.819,
+      "delay_p50": 107.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.949
+     }
+    },
+    "R2": {
+     "threshold": 0.963,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 74.767,
+      "delay_p50": 62.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.822
+     },
+     "dev-other": {
+      "delay_mean": 103.79,
+      "delay_p50": 87.5,
+      "delay_p90": 247.5,
+      "rewrites_per_100": 2.502
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.346,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 77.3,
+      "delay_p50": 67.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.99,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 94.211,
+      "delay_p50": 82.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 0.729
+     },
+     "dev-other": {
+      "delay_mean": 126.819,
+      "delay_p50": 107.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.949
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.97,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 66.785,
+      "delay_p50": 62.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.796
+     },
+     "dev-other": {
+      "delay_mean": 96.452,
+      "delay_p50": 82.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 2.646
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.346,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 77.3,
+      "delay_p50": 67.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_dp010_l0n0": {
+  "lam": 0.0,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 274.343,
+      "delay_p50": 282.5,
+      "delay_p90": 422.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 308.085,
+      "delay_p50": 302.5,
+      "delay_p90": 482.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 13.795,
+      "delay_p50": 7.5,
+      "delay_p90": 127.5,
+      "rewrites_per_100": 19.932
+     },
+     "dev-other": {
+      "delay_mean": 36.066,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 38.754
+     }
+    },
+    "R1": {
+     "threshold": 0.984,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.536,
+      "delay_p50": 42.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 0.964
+     },
+     "dev-other": {
+      "delay_mean": 97.765,
+      "delay_p50": 82.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 1.269
+     }
+    },
+    "R2": {
+     "threshold": 0.969,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 42.561,
+      "delay_p50": 27.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 1.537
+     },
+     "dev-other": {
+      "delay_mean": 78.845,
+      "delay_p50": 62.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 2.278
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 10.294,
+      "delay_p50": 7.5,
+      "delay_p90": 122.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 29.639,
+      "delay_p50": 22.5,
+      "delay_p90": 164.0,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.985,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.334,
+      "delay_p50": 42.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 0.834
+     },
+     "dev-other": {
+      "delay_mean": 96.356,
+      "delay_p50": 82.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 0.98
+     }
+    },
+    "R2": {
+     "threshold": 0.967,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 39.28,
+      "delay_p50": 22.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 1.746
+     },
+     "dev-other": {
+      "delay_mean": 73.644,
+      "delay_p50": 62.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 2.307
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 10.294,
+      "delay_p50": 7.5,
+      "delay_p90": 122.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 29.639,
+      "delay_p50": 22.5,
+      "delay_p90": 164.0,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.985,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.334,
+      "delay_p50": 42.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 0.834
+     },
+     "dev-other": {
+      "delay_mean": 96.356,
+      "delay_p50": 82.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 0.98
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.978,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 39.625,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 1.459
+     },
+     "dev-other": {
+      "delay_mean": 75.084,
+      "delay_p50": 62.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 2.105
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 10.294,
+      "delay_p50": 7.5,
+      "delay_p90": 122.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 29.639,
+      "delay_p50": 22.5,
+      "delay_p90": 164.0,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_dp010_l25n0": {
+  "lam": 0.25,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 274.343,
+      "delay_p50": 282.5,
+      "delay_p90": 422.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 308.085,
+      "delay_p50": 302.5,
+      "delay_p90": 482.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 13.857,
+      "delay_p50": 7.5,
+      "delay_p90": 127.5,
+      "rewrites_per_100": 20.245
+     },
+     "dev-other": {
+      "delay_mean": 35.65,
+      "delay_p50": 25.0,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 37.572
+     }
+    },
+    "R1": {
+     "threshold": 0.987,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 63.561,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.886
+     },
+     "dev-other": {
+      "delay_mean": 103.818,
+      "delay_p50": 82.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.009
+     }
+    },
+    "R2": {
+     "threshold": 0.968,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 41.977,
+      "delay_p50": 27.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 1.615
+     },
+     "dev-other": {
+      "delay_mean": 77.498,
+      "delay_p50": 62.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 2.566
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 10.751,
+      "delay_p50": 7.5,
+      "delay_p90": 122.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 30.122,
+      "delay_p50": 22.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.989,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 61.393,
+      "delay_p50": 47.5,
+      "delay_p90": 186.5,
+      "rewrites_per_100": 0.703
+     },
+     "dev-other": {
+      "delay_mean": 99.481,
+      "delay_p50": 82.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 1.096
+     }
+    },
+    "R2": {
+     "threshold": 0.969,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 38.762,
+      "delay_p50": 27.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 1.876
+     },
+     "dev-other": {
+      "delay_mean": 72.552,
+      "delay_p50": 47.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 2.537
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 10.751,
+      "delay_p50": 7.5,
+      "delay_p90": 122.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 30.122,
+      "delay_p50": 22.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.99,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 64.186,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.625
+     },
+     "dev-other": {
+      "delay_mean": 103.116,
+      "delay_p50": 82.5,
+      "delay_p90": 264.0,
+      "rewrites_per_100": 0.894
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.98,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 39.634,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 1.563
+     },
+     "dev-other": {
+      "delay_mean": 74.924,
+      "delay_p50": 62.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 2.249
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 10.751,
+      "delay_p50": 7.5,
+      "delay_p90": 122.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 30.122,
+      "delay_p50": 22.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_dp010_l5n0": {
+  "lam": 0.5,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 274.343,
+      "delay_p50": 282.5,
+      "delay_p90": 422.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 308.085,
+      "delay_p50": 302.5,
+      "delay_p90": 482.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 14.693,
+      "delay_p50": 7.5,
+      "delay_p90": 127.5,
+      "rewrites_per_100": 19.958
+     },
+     "dev-other": {
+      "delay_mean": 36.807,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 37.918
+     }
+    },
+    "R1": {
+     "threshold": 0.986,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 63.266,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.73
+     },
+     "dev-other": {
+      "delay_mean": 103.625,
+      "delay_p50": 82.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.894
+     }
+    },
+    "R2": {
+     "threshold": 0.968,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 40.763,
+      "delay_p50": 27.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 1.772
+     },
+     "dev-other": {
+      "delay_mean": 77.452,
+      "delay_p50": 62.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 2.393
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 11.621,
+      "delay_p50": 7.5,
+      "delay_p90": 122.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 31.676,
+      "delay_p50": 22.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.986,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 59.881,
+      "delay_p50": 42.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 0.703
+     },
+     "dev-other": {
+      "delay_mean": 98.589,
+      "delay_p50": 82.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 0.923
+     }
+    },
+    "R2": {
+     "threshold": 0.966,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 37.393,
+      "delay_p50": 22.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 1.772
+     },
+     "dev-other": {
+      "delay_mean": 73.365,
+      "delay_p50": 55.0,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 2.537
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 11.621,
+      "delay_p50": 7.5,
+      "delay_p90": 122.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 31.676,
+      "delay_p50": 22.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.987,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 62.905,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.651
+     },
+     "dev-other": {
+      "delay_mean": 102.066,
+      "delay_p50": 82.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 0.836
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.978,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 37.805,
+      "delay_p50": 22.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 1.485
+     },
+     "dev-other": {
+      "delay_mean": 74.758,
+      "delay_p50": 62.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 1.932
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 11.621,
+      "delay_p50": 7.5,
+      "delay_p90": 122.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 31.676,
+      "delay_p50": 22.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_dp010_l25n25": {
+  "lam": 0.25,
+  "lamn": 0.25,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 274.52,
+      "delay_p50": 282.5,
+      "delay_p90": 422.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 308.007,
+      "delay_p50": 302.5,
+      "delay_p90": 482.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 13.756,
+      "delay_p50": 7.5,
+      "delay_p90": 127.5,
+      "rewrites_per_100": 19.75
+     },
+     "dev-other": {
+      "delay_mean": 34.902,
+      "delay_p50": 22.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 36.189
+     }
+    },
+    "R1": {
+     "threshold": 0.986,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 64.533,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.703
+     },
+     "dev-other": {
+      "delay_mean": 105.728,
+      "delay_p50": 82.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 1.064
+     }
+    },
+    "R2": {
+     "threshold": 0.964,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 39.985,
+      "delay_p50": 22.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 1.746
+     },
+     "dev-other": {
+      "delay_mean": 76.119,
+      "delay_p50": 62.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 2.328
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 10.843,
+      "delay_p50": 7.5,
+      "delay_p90": 122.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 28.892,
+      "delay_p50": 22.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.984,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 55.947,
+      "delay_p50": 42.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 0.834
+     },
+     "dev-other": {
+      "delay_mean": 93.412,
+      "delay_p50": 82.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 1.064
+     }
+    },
+    "R2": {
+     "threshold": 0.968,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 39.425,
+      "delay_p50": 27.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 1.563
+     },
+     "dev-other": {
+      "delay_mean": 74.535,
+      "delay_p50": 62.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 2.213
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 10.843,
+      "delay_p50": 7.5,
+      "delay_p90": 122.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 28.892,
+      "delay_p50": 22.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.986,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.635,
+      "delay_p50": 42.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 0.756
+     },
+     "dev-other": {
+      "delay_mean": 97.092,
+      "delay_p50": 82.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 1.006
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.979,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 39.761,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 1.459
+     },
+     "dev-other": {
+      "delay_mean": 76.582,
+      "delay_p50": 62.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 1.868
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 10.843,
+      "delay_p50": 7.5,
+      "delay_p90": 122.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 28.892,
+      "delay_p50": 22.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_dp010_l5n5": {
+  "lam": 0.5,
+  "lamn": 0.5,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 274.297,
+      "delay_p50": 282.5,
+      "delay_p90": 422.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 308.166,
+      "delay_p50": 302.5,
+      "delay_p90": 482.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 14.1,
+      "delay_p50": 7.5,
+      "delay_p90": 127.5,
+      "rewrites_per_100": 18.734
+     },
+     "dev-other": {
+      "delay_mean": 33.591,
+      "delay_p50": 22.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 34.32
+     }
+    },
+    "R1": {
+     "threshold": 0.986,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 59.153,
+      "delay_p50": 42.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.834
+     },
+     "dev-other": {
+      "delay_mean": 99.565,
+      "delay_p50": 82.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.207
+     }
+    },
+    "R2": {
+     "threshold": 0.97,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 41.72,
+      "delay_p50": 27.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 1.615
+     },
+     "dev-other": {
+      "delay_mean": 79.226,
+      "delay_p50": 62.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 2.127
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 10.726,
+      "delay_p50": 7.5,
+      "delay_p90": 122.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 28.087,
+      "delay_p50": 22.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.986,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.188,
+      "delay_p50": 42.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 0.782
+     },
+     "dev-other": {
+      "delay_mean": 96.188,
+      "delay_p50": 82.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 0.977
+     }
+    },
+    "R2": {
+     "threshold": 0.966,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 38.027,
+      "delay_p50": 22.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 1.746
+     },
+     "dev-other": {
+      "delay_mean": 72.477,
+      "delay_p50": 47.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 2.213
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 10.726,
+      "delay_p50": 7.5,
+      "delay_p90": 122.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 28.087,
+      "delay_p50": 22.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.986,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 58.188,
+      "delay_p50": 42.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 0.782
+     },
+     "dev-other": {
+      "delay_mean": 96.188,
+      "delay_p50": 82.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 0.977
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.971,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 32.966,
+      "delay_p50": 22.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 1.772
+     },
+     "dev-other": {
+      "delay_mean": 68.089,
+      "delay_p50": 47.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 2.472
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 10.726,
+      "delay_p50": 7.5,
+      "delay_p90": 122.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 28.087,
+      "delay_p50": 22.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_dp0075_l0n0": {
+  "lam": 0.0,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 303.717,
+      "delay_p50": 302.5,
+      "delay_p90": 462.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 334.612,
+      "delay_p50": 342.5,
+      "delay_p90": 502.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 32.182,
+      "delay_p50": 22.5,
+      "delay_p90": 147.5,
+      "rewrites_per_100": 15.344
+     },
+     "dev-other": {
+      "delay_mean": 54.896,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 31.816
+     }
+    },
+    "R1": {
+     "threshold": 0.983,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 71.606,
+      "delay_p50": 62.5,
+      "delay_p90": 202.5,
+      "rewrites_per_100": 0.939
+     },
+     "dev-other": {
+      "delay_mean": 108.714,
+      "delay_p50": 87.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 1.21
+     }
+    },
+    "R2": {
+     "threshold": 0.952,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 49.855,
+      "delay_p50": 42.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 2.088
+     },
+     "dev-other": {
+      "delay_mean": 82.29,
+      "delay_p50": 67.5,
+      "delay_p90": 235.0,
+      "rewrites_per_100": 2.594
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 29.415,
+      "delay_p50": 22.5,
+      "delay_p90": 147.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 49.584,
+      "delay_p50": 42.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.987,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 70.266,
+      "delay_p50": 62.5,
+      "delay_p90": 202.5,
+      "rewrites_per_100": 0.757
+     },
+     "dev-other": {
+      "delay_mean": 107.251,
+      "delay_p50": 87.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 1.009
+     }
+    },
+    "R2": {
+     "threshold": 0.957,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 49.916,
+      "delay_p50": 42.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 1.853
+     },
+     "dev-other": {
+      "delay_mean": 80.928,
+      "delay_p50": 67.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 2.536
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 29.415,
+      "delay_p50": 22.5,
+      "delay_p90": 147.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 49.584,
+      "delay_p50": 42.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.988,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 73.613,
+      "delay_p50": 62.5,
+      "delay_p90": 202.5,
+      "rewrites_per_100": 0.731
+     },
+     "dev-other": {
+      "delay_mean": 110.599,
+      "delay_p50": 87.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 0.865
+     }
+    },
+    "R2@0.9": {
+     "threshold": 0.974,
+     "tau": 0.9,
+     "dev-clean": {
+      "delay_mean": 43.972,
+      "delay_p50": 27.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 1.957
+     },
+     "dev-other": {
+      "delay_mean": 78.008,
+      "delay_p50": 62.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 2.738
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 29.415,
+      "delay_p50": 22.5,
+      "delay_p90": 147.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 49.584,
+      "delay_p50": 42.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_base_dp0_ema": {
+  "lam": 0.0,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 504.009,
+      "delay_p50": 502.5,
+      "delay_p90": 662.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 504.188,
+      "delay_p50": 502.5,
+      "delay_p90": 662.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 173.821,
+      "delay_p50": 167.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 4.732
+     },
+     "dev-other": {
+      "delay_mean": 179.5,
+      "delay_p50": 167.5,
+      "delay_p90": 327.5,
+      "rewrites_per_100": 18.56
+     }
+    },
+    "R1": {
+     "threshold": 0.972,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 183.567,
+      "delay_p50": 182.5,
+      "delay_p90": 327.5,
+      "rewrites_per_100": 1.092
+     },
+     "dev-other": {
+      "delay_mean": 196.462,
+      "delay_p50": 187.5,
+      "delay_p90": 342.5,
+      "rewrites_per_100": 1.664
+     }
+    },
+    "R2": {
+     "threshold": 0.935,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 178.901,
+      "delay_p50": 167.5,
+      "delay_p90": 327.5,
+      "rewrites_per_100": 1.482
+     },
+     "dev-other": {
+      "delay_mean": 189.356,
+      "delay_p50": 187.5,
+      "delay_p90": 327.5,
+      "rewrites_per_100": 2.725
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 173.241,
+      "delay_p50": 167.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 176.433,
+      "delay_p50": 167.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.978,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 183.77,
+      "delay_p50": 182.5,
+      "delay_p90": 327.5,
+      "rewrites_per_100": 0.884
+     },
+     "dev-other": {
+      "delay_mean": 196.398,
+      "delay_p50": 187.5,
+      "delay_p90": 342.5,
+      "rewrites_per_100": 1.893
+     }
+    },
+    "R2": {
+     "threshold": 0.946,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 179.015,
+      "delay_p50": 167.5,
+      "delay_p90": 327.5,
+      "rewrites_per_100": 1.326
+     },
+     "dev-other": {
+      "delay_mean": 189.463,
+      "delay_p50": 187.5,
+      "delay_p90": 327.5,
+      "rewrites_per_100": 2.983
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 173.241,
+      "delay_p50": 167.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 176.433,
+      "delay_p50": 167.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1@0.95": {
+     "threshold": 0.992,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 179.393,
+      "delay_p50": 167.5,
+      "delay_p90": 327.5,
+      "rewrites_per_100": 0.598
+     },
+     "dev-other": {
+      "delay_mean": 195.926,
+      "delay_p50": 187.5,
+      "delay_p90": 347.5,
+      "rewrites_per_100": 1.807
+     }
+    },
+    "R2@0.9": {
+     "threshold": 0.978,
+     "tau": 0.9,
+     "dev-clean": {
+      "delay_mean": 160.787,
+      "delay_p50": 162.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 1.326
+     },
+     "dev-other": {
+      "delay_mean": 176.695,
+      "delay_p50": 167.5,
+      "delay_p90": 327.5,
+      "rewrites_per_100": 3.041
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 173.241,
+      "delay_p50": 167.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 176.433,
+      "delay_p50": 167.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_base_dp005_ema": {
+  "lam": 0.0,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 359.5,
+      "delay_p50": 362.5,
+      "delay_p90": 522.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 385.71,
+      "delay_p50": 382.5,
+      "delay_p90": 542.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 65.938,
+      "delay_p50": 62.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 10.677
+     },
+     "dev-other": {
+      "delay_mean": 87.725,
+      "delay_p50": 82.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 24.993
+     }
+    },
+    "R1": {
+     "threshold": 0.975,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 86.196,
+      "delay_p50": 82.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.12
+     },
+     "dev-other": {
+      "delay_mean": 119.467,
+      "delay_p50": 107.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.637
+     }
+    },
+    "R2": {
+     "threshold": 0.941,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 76.328,
+      "delay_p50": 67.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.953
+     },
+     "dev-other": {
+      "delay_mean": 105.613,
+      "delay_p50": 102.5,
+      "delay_p90": 247.5,
+      "rewrites_per_100": 3.103
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 64.453,
+      "delay_p50": 62.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 83.708,
+      "delay_p50": 82.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.982,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 89.098,
+      "delay_p50": 82.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.938
+     },
+     "dev-other": {
+      "delay_mean": 122.236,
+      "delay_p50": 107.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 1.494
+     }
+    },
+    "R2": {
+     "threshold": 0.945,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 75.873,
+      "delay_p50": 67.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.823
+     },
+     "dev-other": {
+      "delay_mean": 104.972,
+      "delay_p50": 87.5,
+      "delay_p90": 247.5,
+      "rewrites_per_100": 3.045
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 64.453,
+      "delay_p50": 62.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 83.708,
+      "delay_p50": 82.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.982,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 89.098,
+      "delay_p50": 82.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.938
+     },
+     "dev-other": {
+      "delay_mean": 122.236,
+      "delay_p50": 107.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 1.494
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.959,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 67.278,
+      "delay_p50": 62.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.797
+     },
+     "dev-other": {
+      "delay_mean": 96.751,
+      "delay_p50": 87.5,
+      "delay_p90": 247.5,
+      "rewrites_per_100": 3.103
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 64.453,
+      "delay_p50": 62.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 83.708,
+      "delay_p50": 82.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_base_dp010_ema": {
+  "lam": 0.0,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 291.786,
+      "delay_p50": 282.5,
+      "delay_p90": 442.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 323.47,
+      "delay_p50": 322.5,
+      "delay_p90": 488.75,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 21.705,
+      "delay_p50": 22.5,
+      "delay_p90": 127.5,
+      "rewrites_per_100": 18.042
+     },
+     "dev-other": {
+      "delay_mean": 44.002,
+      "delay_p50": 27.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 35.121
+     }
+    },
+    "R1": {
+     "threshold": 0.985,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 65.932,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.989
+     },
+     "dev-other": {
+      "delay_mean": 104.345,
+      "delay_p50": 82.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.24
+     }
+    },
+    "R2": {
+     "threshold": 0.959,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 44.739,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 2.135
+     },
+     "dev-other": {
+      "delay_mean": 77.893,
+      "delay_p50": 62.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 2.797
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 18.569,
+      "delay_p50": 7.5,
+      "delay_p90": 127.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 38.166,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.98,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 56.788,
+      "delay_p50": 42.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 1.172
+     },
+     "dev-other": {
+      "delay_mean": 93.069,
+      "delay_p50": 82.5,
+      "delay_p90": 247.5,
+      "rewrites_per_100": 1.615
+     }
+    },
+    "R2": {
+     "threshold": 0.952,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 40.7,
+      "delay_p50": 27.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 2.291
+     },
+     "dev-other": {
+      "delay_mean": 72.386,
+      "delay_p50": 62.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 2.71
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 18.569,
+      "delay_p50": 7.5,
+      "delay_p90": 127.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 38.166,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.98,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 56.788,
+      "delay_p50": 42.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 1.172
+     },
+     "dev-other": {
+      "delay_mean": 93.069,
+      "delay_p50": 82.5,
+      "delay_p90": 247.5,
+      "rewrites_per_100": 1.615
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.965,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 37.644,
+      "delay_p50": 27.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 1.822
+     },
+     "dev-other": {
+      "delay_mean": 71.44,
+      "delay_p50": 62.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 2.739
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 18.569,
+      "delay_p50": 7.5,
+      "delay_p90": 127.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 38.166,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_ctx_dp0_ema": {
+  "lam": 0.0,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 486.76,
+      "delay_p50": 482.5,
+      "delay_p90": 642.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 490.142,
+      "delay_p50": 482.5,
+      "delay_p90": 642.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 148.353,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 6.925
+     },
+     "dev-other": {
+      "delay_mean": 156.904,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 18.845
+     }
+    },
+    "R1": {
+     "threshold": 0.972,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 162.02,
+      "delay_p50": 147.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 0.755
+     },
+     "dev-other": {
+      "delay_mean": 181.34,
+      "delay_p50": 182.5,
+      "delay_p90": 327.5,
+      "rewrites_per_100": 1.551
+     }
+    },
+    "R2": {
+     "threshold": 0.923,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 153.705,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 1.588
+     },
+     "dev-other": {
+      "delay_mean": 168.733,
+      "delay_p50": 167.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 3.275
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 147.44,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 154.412,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.974,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 162.097,
+      "delay_p50": 162.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 0.573
+     },
+     "dev-other": {
+      "delay_mean": 180.839,
+      "delay_p50": 182.5,
+      "delay_p90": 327.5,
+      "rewrites_per_100": 1.666
+     }
+    },
+    "R2": {
+     "threshold": 0.927,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 153.914,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 1.302
+     },
+     "dev-other": {
+      "delay_mean": 168.628,
+      "delay_p50": 167.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 3.419
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 147.44,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 154.412,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1@0.95": {
+     "threshold": 0.986,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 156.653,
+      "delay_p50": 147.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 0.573
+     },
+     "dev-other": {
+      "delay_mean": 176.923,
+      "delay_p50": 167.5,
+      "delay_p90": 327.5,
+      "rewrites_per_100": 1.494
+     }
+    },
+    "R2@0.9": {
+     "threshold": 0.965,
+     "tau": 0.9,
+     "dev-clean": {
+      "delay_mean": 138.586,
+      "delay_p50": 142.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 1.276
+     },
+     "dev-other": {
+      "delay_mean": 158.381,
+      "delay_p50": 147.5,
+      "delay_p90": 307.5,
+      "rewrites_per_100": 2.729
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 147.44,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 154.412,
+      "delay_p50": 147.5,
+      "delay_p90": 287.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_ctx_dp005_ema": {
+  "lam": 0.0,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 342.969,
+      "delay_p50": 342.5,
+      "delay_p90": 502.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 365.844,
+      "delay_p50": 362.5,
+      "delay_p90": 536.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 47.947,
+      "delay_p50": 42.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 14.672
+     },
+     "dev-other": {
+      "delay_mean": 65.938,
+      "delay_p50": 62.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 31.074
+     }
+    },
+    "R1": {
+     "threshold": 0.982,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 84.5,
+      "delay_p50": 67.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 0.858
+     },
+     "dev-other": {
+      "delay_mean": 114.128,
+      "delay_p50": 102.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.465
+     }
+    },
+    "R2": {
+     "threshold": 0.954,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 65.845,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 1.717
+     },
+     "dev-other": {
+      "delay_mean": 91.004,
+      "delay_p50": 82.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 2.757
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 45.772,
+      "delay_p50": 42.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 60.22,
+      "delay_p50": 47.5,
+      "delay_p90": 202.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.982,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 80.32,
+      "delay_p50": 67.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 1.041
+     },
+     "dev-other": {
+      "delay_mean": 107.549,
+      "delay_p50": 102.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 1.551
+     }
+    },
+    "R2": {
+     "threshold": 0.957,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 65.794,
+      "delay_p50": 62.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 1.717
+     },
+     "dev-other": {
+      "delay_mean": 90.797,
+      "delay_p50": 82.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 2.814
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 45.772,
+      "delay_p50": 42.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 60.22,
+      "delay_p50": 47.5,
+      "delay_p90": 202.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.984,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 83.928,
+      "delay_p50": 67.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 0.937
+     },
+     "dev-other": {
+      "delay_mean": 111.718,
+      "delay_p50": 102.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.407
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.971,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 61.792,
+      "delay_p50": 47.5,
+      "delay_p90": 202.5,
+      "rewrites_per_100": 1.483
+     },
+     "dev-other": {
+      "delay_mean": 88.409,
+      "delay_p50": 82.5,
+      "delay_p90": 247.5,
+      "rewrites_per_100": 2.7
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 45.772,
+      "delay_p50": 42.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 60.22,
+      "delay_p50": 47.5,
+      "delay_p90": 202.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_ctx_dp010_ema": {
+  "lam": 0.0,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 275.627,
+      "delay_p50": 282.5,
+      "delay_p90": 422.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 305.811,
+      "delay_p50": 302.5,
+      "delay_p90": 482.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 3.344,
+      "delay_p50": 2.5,
+      "delay_p90": 122.5,
+      "rewrites_per_100": 27.09
+     },
+     "dev-other": {
+      "delay_mean": 24.379,
+      "delay_p50": 22.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 46.373
+     }
+    },
+    "R1": {
+     "threshold": 0.982,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 56.519,
+      "delay_p50": 42.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 0.886
+     },
+     "dev-other": {
+      "delay_mean": 92.126,
+      "delay_p50": 67.5,
+      "delay_p90": 247.5,
+      "rewrites_per_100": 1.439
+     }
+    },
+    "R2": {
+     "threshold": 0.961,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 35.679,
+      "delay_p50": 22.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 1.954
+     },
+     "dev-other": {
+      "delay_mean": 67.588,
+      "delay_p50": 47.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 2.763
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": -0.254,
+      "delay_p50": 2.5,
+      "delay_p90": 107.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 16.483,
+      "delay_p50": 7.5,
+      "delay_p90": 147.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.986,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 59.911,
+      "delay_p50": 45.0,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 0.651
+     },
+     "dev-other": {
+      "delay_mean": 93.501,
+      "delay_p50": 82.5,
+      "delay_p90": 247.5,
+      "rewrites_per_100": 1.209
+     }
+    },
+    "R2": {
+     "threshold": 0.959,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 32.231,
+      "delay_p50": 22.5,
+      "delay_p90": 147.5,
+      "rewrites_per_100": 2.162
+     },
+     "dev-other": {
+      "delay_mean": 62.548,
+      "delay_p50": 47.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 3.339
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": -0.254,
+      "delay_p50": 2.5,
+      "delay_p90": 107.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 16.483,
+      "delay_p50": 7.5,
+      "delay_p90": 147.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.987,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 63.267,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.625
+     },
+     "dev-other": {
+      "delay_mean": 97.132,
+      "delay_p50": 82.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 1.151
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.969,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 31.81,
+      "delay_p50": 22.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 1.928
+     },
+     "dev-other": {
+      "delay_mean": 62.736,
+      "delay_p50": 47.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 2.85
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": -0.254,
+      "delay_p50": 2.5,
+      "delay_p90": 107.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 16.483,
+      "delay_p50": 7.5,
+      "delay_p90": 147.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_ctxfz_dp005_ema": {
+  "lam": 0.0,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 333.368,
+      "delay_p50": 342.5,
+      "delay_p90": 482.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 354.782,
+      "delay_p50": 362.5,
+      "delay_p90": 522.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 27.347,
+      "delay_p50": 27.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 22.665
+     },
+     "dev-other": {
+      "delay_mean": 42.977,
+      "delay_p50": 42.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 40.788
+     }
+    },
+    "R1": {
+     "threshold": 0.984,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 80.031,
+      "delay_p50": 67.5,
+      "delay_p90": 202.5,
+      "rewrites_per_100": 0.807
+     },
+     "dev-other": {
+      "delay_mean": 111.425,
+      "delay_p50": 102.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.38
+     }
+    },
+    "R2": {
+     "threshold": 0.959,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 56.493,
+      "delay_p50": 47.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 1.874
+     },
+     "dev-other": {
+      "delay_mean": 81.934,
+      "delay_p50": 67.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 2.529
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 23.748,
+      "delay_p50": 22.5,
+      "delay_p90": 147.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 36.117,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.986,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 85.874,
+      "delay_p50": 82.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 0.572
+     },
+     "dev-other": {
+      "delay_mean": 116.994,
+      "delay_p50": 102.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 1.092
+     }
+    },
+    "R2": {
+     "threshold": 0.959,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 56.072,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 2.082
+     },
+     "dev-other": {
+      "delay_mean": 81.382,
+      "delay_p50": 67.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 2.731
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 23.748,
+      "delay_p50": 22.5,
+      "delay_p90": 147.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 36.117,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.988,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 89.527,
+      "delay_p50": 82.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.494
+     },
+     "dev-other": {
+      "delay_mean": 120.767,
+      "delay_p50": 107.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 1.035
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.969,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 53.973,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 1.874
+     },
+     "dev-other": {
+      "delay_mean": 80.386,
+      "delay_p50": 67.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 2.702
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 23.748,
+      "delay_p50": 22.5,
+      "delay_p90": 147.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 36.117,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_ctx480_dp005_ema": {
+  "lam": 0.0,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 335.326,
+      "delay_p50": 342.5,
+      "delay_p90": 482.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 360.378,
+      "delay_p50": 362.5,
+      "delay_p90": 522.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 43.385,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 15.807
+     },
+     "dev-other": {
+      "delay_mean": 61.801,
+      "delay_p50": 47.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 31.618
+     }
+    },
+    "R1": {
+     "threshold": 0.985,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 86.397,
+      "delay_p50": 67.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.443
+     },
+     "dev-other": {
+      "delay_mean": 118.849,
+      "delay_p50": 102.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 1.064
+     }
+    },
+    "R2": {
+     "threshold": 0.953,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 60.742,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 1.745
+     },
+     "dev-other": {
+      "delay_mean": 87.51,
+      "delay_p50": 67.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 2.616
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 40.759,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 55.977,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.984,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 82.062,
+      "delay_p50": 67.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 0.547
+     },
+     "dev-other": {
+      "delay_mean": 112.739,
+      "delay_p50": 102.5,
+      "delay_p90": 267.5,
+      "rewrites_per_100": 1.15
+     }
+    },
+    "R2": {
+     "threshold": 0.954,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 60.502,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 1.797
+     },
+     "dev-other": {
+      "delay_mean": 87.154,
+      "delay_p50": 67.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 3.018
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 40.759,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 55.977,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1@0.95": {
+     "threshold": 0.989,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 81.566,
+      "delay_p50": 67.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 0.651
+     },
+     "dev-other": {
+      "delay_mean": 114.706,
+      "delay_p50": 102.5,
+      "delay_p90": 282.5,
+      "rewrites_per_100": 1.265
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.968,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 56.355,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 1.354
+     },
+     "dev-other": {
+      "delay_mean": 84.592,
+      "delay_p50": 67.5,
+      "delay_p90": 247.5,
+      "rewrites_per_100": 2.558
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 40.759,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 55.977,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_ctx480_dp0075_ema": {
+  "lam": 0.0,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 292.938,
+      "delay_p50": 282.5,
+      "delay_p90": 462.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 323.204,
+      "delay_p50": 322.5,
+      "delay_p90": 482.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 16.87,
+      "delay_p50": 7.5,
+      "delay_p90": 142.5,
+      "rewrites_per_100": 21.166
+     },
+     "dev-other": {
+      "delay_mean": 38.05,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 38.619
+     }
+    },
+    "R1": {
+     "threshold": 0.986,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 66.623,
+      "delay_p50": 62.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.703
+     },
+     "dev-other": {
+      "delay_mean": 101.844,
+      "delay_p50": 82.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 1.295
+     }
+    },
+    "R2": {
+     "threshold": 0.962,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 42.364,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 1.562
+     },
+     "dev-other": {
+      "delay_mean": 74.986,
+      "delay_p50": 62.5,
+      "delay_p90": 227.5,
+      "rewrites_per_100": 2.676
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 13.321,
+      "delay_p50": 7.5,
+      "delay_p90": 127.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 31.784,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.984,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 65.018,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.469
+     },
+     "dev-other": {
+      "delay_mean": 99.773,
+      "delay_p50": 82.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 1.094
+     }
+    },
+    "R2": {
+     "threshold": 0.96,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 41.565,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 1.562
+     },
+     "dev-other": {
+      "delay_mean": 73.383,
+      "delay_p50": 62.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 2.331
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 13.321,
+      "delay_p50": 7.5,
+      "delay_p90": 127.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 31.784,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.984,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 65.018,
+      "delay_p50": 47.5,
+      "delay_p90": 187.5,
+      "rewrites_per_100": 0.469
+     },
+     "dev-other": {
+      "delay_mean": 99.773,
+      "delay_p50": 82.5,
+      "delay_p90": 262.5,
+      "rewrites_per_100": 1.094
+     }
+    },
+    "R2": {
+     "threshold": 0.96,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 41.565,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 1.562
+     },
+     "dev-other": {
+      "delay_mean": 73.383,
+      "delay_p50": 62.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 2.331
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 13.321,
+      "delay_p50": 7.5,
+      "delay_p90": 127.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 31.784,
+      "delay_p50": 27.5,
+      "delay_p90": 167.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ },
+ "cf_ctx480_dp010_ema": {
+  "lam": 0.0,
+  "lamn": 0.0,
+  "studies": {
+   "every40+free/hold": {
+    "none": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 266.952,
+      "delay_p50": 262.5,
+      "delay_p90": 422.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 298.43,
+      "delay_p50": 302.5,
+      "delay_p90": 462.5,
+      "rewrites_per_100": 0.0
+     }
+    },
+    "raw": {
+     "threshold": null,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": -0.844,
+      "delay_p50": 2.5,
+      "delay_p90": 107.5,
+      "rewrites_per_100": 28.17
+     },
+     "dev-other": {
+      "delay_mean": 19.873,
+      "delay_p50": 7.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 47.05
+     }
+    },
+    "R1": {
+     "threshold": 0.982,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 53.852,
+      "delay_p50": 42.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 1.093
+     },
+     "dev-other": {
+      "delay_mean": 92.095,
+      "delay_p50": 82.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 1.468
+     }
+    },
+    "R2": {
+     "threshold": 0.957,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 31.384,
+      "delay_p50": 22.5,
+      "delay_p90": 147.5,
+      "rewrites_per_100": 2.005
+     },
+     "dev-other": {
+      "delay_mean": 64.74,
+      "delay_p50": 47.5,
+      "delay_p90": 207.5,
+      "rewrites_per_100": 2.849
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": -4.693,
+      "delay_p50": 2.5,
+      "delay_p90": 107.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 11.608,
+      "delay_p50": 7.5,
+      "delay_p90": 147.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm/hold": {
+    "R1": {
+     "threshold": 0.984,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 53.855,
+      "delay_p50": 42.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 0.911
+     },
+     "dev-other": {
+      "delay_mean": 89.629,
+      "delay_p50": 82.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 1.381
+     }
+    },
+    "R2": {
+     "threshold": 0.966,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 33.373,
+      "delay_p50": 22.5,
+      "delay_p90": 147.5,
+      "rewrites_per_100": 1.953
+     },
+     "dev-other": {
+      "delay_mean": 66.479,
+      "delay_p50": 47.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 2.676
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": -4.693,
+      "delay_p50": 2.5,
+      "delay_p90": 107.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 11.608,
+      "delay_p50": 7.5,
+      "delay_p90": 147.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   },
+   "every40+lm+wc/hold": {
+    "R1": {
+     "threshold": 0.985,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": 57.237,
+      "delay_p50": 42.5,
+      "delay_p90": 182.5,
+      "rewrites_per_100": 0.911
+     },
+     "dev-other": {
+      "delay_mean": 92.824,
+      "delay_p50": 82.5,
+      "delay_p90": 242.5,
+      "rewrites_per_100": 1.237
+     }
+    },
+    "R2@0.95": {
+     "threshold": 0.973,
+     "tau": 0.95,
+     "dev-clean": {
+      "delay_mean": 32.326,
+      "delay_p50": 22.5,
+      "delay_p90": 162.5,
+      "rewrites_per_100": 1.875
+     },
+     "dev-other": {
+      "delay_mean": 66.106,
+      "delay_p50": 47.5,
+      "delay_p90": 222.5,
+      "rewrites_per_100": 2.504
+     }
+    },
+    "oracle": {
+     "threshold": 0.5,
+     "tau": null,
+     "dev-clean": {
+      "delay_mean": -4.693,
+      "delay_p50": 2.5,
+      "delay_p90": 107.5,
+      "rewrites_per_100": 0.0
+     },
+     "dev-other": {
+      "delay_mean": 11.608,
+      "delay_p50": 7.5,
+      "delay_p90": 147.5,
+      "rewrites_per_100": 0.0
+     }
+    }
+   }
+  }
+ }
+}

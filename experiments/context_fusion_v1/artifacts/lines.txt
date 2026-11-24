@@ -1,0 +1,145 @@
+EVAL cf_smoke_ema lamn=0 WER 3.59/10.76 lag 235/234 | none 454/0.0 461/0.0 | k7 166/11.1 177/16.6
+GATE cf_smoke_ema lam=0/0 every40+free/hold | none 454/0.0 461/0.0 | raw 126/6.8 137/22.6 | R1 174/0.5 193/1.3 | R2 151/0.9 172/2.3 | oracle 125/0.0 134/0.0
+LM cf_lm | steps 49599 tokens 554M held ppl 15.1 || dev-clean ppl 14.5 acc 0.409 word-start acc 0.187 | p>=0.9 share 0.161 acc 0.970 | p>=0.99 share 0.076 acc 0.997 || dev-other ppl 15.3 acc 0.402 word-start acc 0.181 | p>=0.9 share 0.161 acc 0.969 | p>=0.99 share 0.078 acc 0.997
+EVAL cf_base_dp005_ema lamn=0 WER 3.85/10.73 lag 140/159 | none 359/0.0 386/0.0 | k7 120/6.9 139/13.1
+EVAL cf_base_dp010_ema lamn=0 WER 4.08/11.05 lag 59/86 | none 292/0.0 323/0.0 | k7 88/9.9 109/16.8
+EVAL cf_base_dp0_ema lamn=0 WER 3.51/10.59 lag 285/283 | none 504/0.0 504/0.0 | k7 218/15.5 221/19.9
+GATE cf_pub_l0n0 lam=0/0 every40+free/hold | none 458/0.0 464/0.0 | raw 130/6.1 140/21.9 | R1 147/0.8 168/1.6 | R2 138/1.3 155/2.9 | oracle 129/0.0 136/0.0
+GATE cf_pub_l0n0 lam=0/0 every40+lm/hold | R1 146/0.7 165/1.6 | R2 137/1.2 154/3.1 | oracle 129/0.0 136/0.0
+GATE cf_pub_l0n0 lam=0/0 every40+lm+wc/hold | R1 146/0.7 165/1.6 | R2@0.95 125/1.1 145/2.9 | oracle 129/0.0 136/0.0
+GATE cf_pub_l25n0 lam=0.25/0 every40+free/hold | none 458/0.0 464/0.0 | raw 131/7.0 140/21.9 | R1 147/0.7 167/1.7 | R2 136/1.5 154/3.1 | oracle 130/0.0 138/0.0
+GATE cf_pub_l25n0 lam=0.25/0 every40+lm/hold | R1 146/0.8 166/1.7 | R2 136/1.4 153/3.3 | oracle 130/0.0 138/0.0
+GATE cf_pub_l25n0 lam=0.25/0 every40+lm+wc/hold | R1 146/0.8 166/1.7 | R2@0.95 124/1.2 145/2.9 | oracle 130/0.0 138/0.0
+GATE cf_pub_l5n0 lam=0.5/0 every40+free/hold | none 458/0.0 464/0.0 | raw 131/7.8 141/24.0 | R1 150/0.8 170/1.4 | R2 136/1.7 152/3.6 | oracle 130/0.0 139/0.0
+GATE cf_pub_l5n0 lam=0.5/0 every40+lm/hold | R1 145/0.8 165/1.5 | R2 136/1.4 152/3.6 | oracle 130/0.0 139/0.0
+GATE cf_pub_l5n0 lam=0.5/0 every40+lm+wc/hold | R1 145/0.8 165/1.5 | R2@0.9 119/1.5 139/3.6 | oracle 130/0.0 139/0.0
+GATE cf_pub_l25n25 lam=0.25/0.25 every40+free/hold | none 458/0.0 464/0.0 | raw 130/6.3 139/20.7 | R1 150/0.7 171/1.6 | R2 137/1.4 155/3.2 | oracle 129/0.0 136/0.0
+GATE cf_pub_l25n25 lam=0.25/0.25 every40+lm/hold | R1 145/0.8 165/1.8 | R2 137/1.3 153/3.2 | oracle 129/0.0 136/0.0
+GATE cf_pub_l25n25 lam=0.25/0.25 every40+lm+wc/hold | R1 145/0.8 165/1.8 | R2@0.9 120/1.6 140/3.5 | oracle 129/0.0 136/0.0
+WERDEV cf_pub_l25n25 lamn=0.25 | dev-clean 3.64 (2703 utterances) vs public +0.01 [-0.05, +0.08] | dev-other 9.73 (2864 utterances) vs public -0.08 [-0.18, +0.03]
+GATE cf_pub_l5n5 lam=0.5/0.5 every40+free/hold | none 459/0.0 464/0.0 | raw 130/6.9 139/20.3 | R1 154/0.6 175/1.2 | R2 139/1.1 158/2.1 | oracle 129/0.0 136/0.0
+GATE cf_pub_l5n5 lam=0.5/0.5 every40+lm/hold | R1 152/0.5 172/1.1 | R2 139/1.2 156/2.2 | oracle 129/0.0 136/0.0
+GATE cf_pub_l5n5 lam=0.5/0.5 every40+lm+wc/hold | R1@0.95 145/0.5 167/1.5 | R2@0.95 124/1.3 143/2.8 | oracle 129/0.0 136/0.0
+WERDEV cf_pub_l5n5 lamn=0.5 | dev-clean 3.77 (2703 utterances) vs public +0.14 [+0.06, +0.23] | dev-other 9.81 (2864 utterances) vs public -0.00 [-0.16, +0.15]
+GATE cf_dp005_l0n0 lam=0/0 every40+free/hold | none 346/0.0 376/0.0 | raw 60/10.4 82/26.2 | R1 87/1.1 120/1.3 | R2 73/1.7 103/2.4 | oracle 58/0.0 78/0.0
+GATE cf_dp005_l0n0 lam=0/0 every40+lm/hold | R1 86/0.8 118/1.2 | R2 74/1.7 102/2.5 | oracle 58/0.0 78/0.0
+GATE cf_dp005_l0n0 lam=0/0 every40+lm+wc/hold | R1 89/0.6 122/1.1 | R2@0.95 68/1.6 98/2.4 | oracle 58/0.0 78/0.0
+GATE cf_dp005_l25n0 lam=0.25/0 every40+free/hold | none 346/0.0 376/0.0 | raw 60/11.2 83/27.0 | R1 90/0.7 123/1.0 | R2 73/1.9 103/2.4 | oracle 59/0.0 79/0.0
+GATE cf_dp005_l25n0 lam=0.25/0 every40+lm/hold | R1 89/0.7 121/1.0 | R2 73/1.7 102/2.2 | oracle 59/0.0 79/0.0
+GATE cf_dp005_l25n0 lam=0.25/0 every40+lm+wc/hold | R1@0.95 85/0.7 117/1.4 | R2@0.95 67/1.4 97/2.2 | oracle 59/0.0 79/0.0
+GATE cf_dp005_l5n0 lam=0.5/0 every40+free/hold | none 346/0.0 376/0.0 | raw 61/12.1 83/27.8 | R1 86/0.9 119/1.4 | R2 73/2.0 101/2.5 | oracle 60/0.0 80/0.0
+GATE cf_dp005_l5n0 lam=0.5/0 every40+lm/hold | R1 85/0.9 116/1.2 | R2 72/2.0 100/2.3 | oracle 60/0.0 80/0.0
+GATE cf_dp005_l5n0 lam=0.5/0 every40+lm+wc/hold | R1 88/0.9 120/1.1 | R2@0.95 66/1.6 96/2.2 | oracle 60/0.0 80/0.0
+GATE cf_dp005_l25n25 lam=0.25/0.25 every40+free/hold | none 346/0.0 376/0.0 | raw 60/10.8 82/25.4 | R1 87/1.0 121/1.5 | R2 73/1.7 103/2.6 | oracle 59/0.0 77/0.0
+GATE cf_dp005_l25n25 lam=0.25/0.25 every40+lm/hold | R1 89/0.8 121/0.9 | R2 72/1.8 101/2.6 | oracle 59/0.0 77/0.0
+GATE cf_dp005_l25n25 lam=0.25/0.25 every40+lm+wc/hold | R1 89/0.8 121/0.9 | R2@0.95 67/1.3 96/2.3 | oracle 59/0.0 77/0.0
+WERDEV cf_dp005_l25n25 lamn=0.25 | dev-clean 3.69 (2703 utterances) vs public +0.06 [-0.05, +0.17] | dev-other 9.89 (2864 utterances) vs public +0.08 [-0.10, +0.27]
+GATE cf_dp005_l5n5 lam=0.5/0.5 every40+free/hold | none 346/0.0 377/0.0 | raw 60/11.2 82/25.0 | R1 97/0.9 134/1.2 | R2 75/1.9 106/2.8 | oracle 58/0.0 77/0.0
+GATE cf_dp005_l5n5 lam=0.5/0.5 every40+lm/hold | R1 94/0.7 127/0.9 | R2 75/1.8 104/2.5 | oracle 58/0.0 77/0.0
+GATE cf_dp005_l5n5 lam=0.5/0.5 every40+lm+wc/hold | R1 94/0.7 127/0.9 | R2@0.95 67/1.8 96/2.6 | oracle 58/0.0 77/0.0
+WERDEV cf_dp005_l5n5 lamn=0.5 | dev-clean 3.79 (2703 utterances) vs public +0.16 [+0.04, +0.27] | dev-other 10.01 (2864 utterances) vs public +0.19 [+0.00, +0.40]
+GATE cf_dp010_l0n0 lam=0/0 every40+free/hold | none 274/0.0 308/0.0 | raw 14/19.9 36/38.8 | R1 59/1.0 98/1.3 | R2 43/1.5 79/2.3 | oracle 10/0.0 30/0.0
+GATE cf_dp010_l0n0 lam=0/0 every40+lm/hold | R1 58/0.8 96/1.0 | R2 39/1.7 74/2.3 | oracle 10/0.0 30/0.0
+GATE cf_dp010_l0n0 lam=0/0 every40+lm+wc/hold | R1 58/0.8 96/1.0 | R2@0.95 40/1.5 75/2.1 | oracle 10/0.0 30/0.0
+GATE cf_dp010_l25n0 lam=0.25/0 every40+free/hold | none 274/0.0 308/0.0 | raw 14/20.2 36/37.6 | R1 64/0.9 104/1.0 | R2 42/1.6 77/2.6 | oracle 11/0.0 30/0.0
+GATE cf_dp010_l25n0 lam=0.25/0 every40+lm/hold | R1 61/0.7 99/1.1 | R2 39/1.9 73/2.5 | oracle 11/0.0 30/0.0
+GATE cf_dp010_l25n0 lam=0.25/0 every40+lm+wc/hold | R1 64/0.6 103/0.9 | R2@0.95 40/1.6 75/2.2 | oracle 11/0.0 30/0.0
+GATE cf_dp010_l5n0 lam=0.5/0 every40+free/hold | none 274/0.0 308/0.0 | raw 15/20.0 37/37.9 | R1 63/0.7 104/0.9 | R2 41/1.8 77/2.4 | oracle 12/0.0 32/0.0
+GATE cf_dp010_l5n0 lam=0.5/0 every40+lm/hold | R1 60/0.7 99/0.9 | R2 37/1.8 73/2.5 | oracle 12/0.0 32/0.0
+GATE cf_dp010_l5n0 lam=0.5/0 every40+lm+wc/hold | R1 63/0.7 102/0.8 | R2@0.95 38/1.5 75/1.9 | oracle 12/0.0 32/0.0
+GATE cf_dp010_l25n25 lam=0.25/0.25 every40+free/hold | none 275/0.0 308/0.0 | raw 14/19.7 35/36.2 | R1 65/0.7 106/1.1 | R2 40/1.7 76/2.3 | oracle 11/0.0 29/0.0
+GATE cf_dp010_l25n25 lam=0.25/0.25 every40+lm/hold | R1 56/0.8 93/1.1 | R2 39/1.6 75/2.2 | oracle 11/0.0 29/0.0
+GATE cf_dp010_l25n25 lam=0.25/0.25 every40+lm+wc/hold | R1 59/0.8 97/1.0 | R2@0.95 40/1.5 77/1.9 | oracle 11/0.0 29/0.0
+WERDEV cf_dp010_l25n25 lamn=0.25 | dev-clean 4.04 (2703 utterances) vs public +0.41 [+0.28, +0.54] | dev-other 10.46 (2864 utterances) vs public +0.65 [+0.44, +0.86]
+GATE cf_dp010_l5n5 lam=0.5/0.5 every40+free/hold | none 274/0.0 308/0.0 | raw 14/18.7 34/34.3 | R1 59/0.8 100/1.2 | R2 42/1.6 79/2.1 | oracle 11/0.0 28/0.0
+GATE cf_dp010_l5n5 lam=0.5/0.5 every40+lm/hold | R1 58/0.8 96/1.0 | R2 38/1.7 72/2.2 | oracle 11/0.0 28/0.0
+GATE cf_dp010_l5n5 lam=0.5/0.5 every40+lm+wc/hold | R1 58/0.8 96/1.0 | R2@0.95 33/1.8 68/2.5 | oracle 11/0.0 28/0.0
+WERDEV cf_dp010_l5n5 lamn=0.5 | dev-clean 4.12 (2703 utterances) vs public +0.49 [+0.36, +0.63] | dev-other 10.58 (2864 utterances) vs public +0.76 [+0.54, +0.99]
+EVAL cf_ctx_dp005_ema lamn=0 WER 3.59/10.93 lag 121/139 | none 343/0.0 366/0.0 | k7 102/9.5 121/17.1
+GATE cf_ctx_dp005_ema lam=0/0 every40+free/hold | none 343/0.0 366/0.0 | raw 48/14.7 66/31.1 | R1 84/0.9 114/1.5 | R2 66/1.7 91/2.8 | oracle 46/0.0 60/0.0
+GATE cf_ctx_dp005_ema lam=0/0 every40+lm/hold | R1 80/1.0 108/1.6 | R2 66/1.7 91/2.8 | oracle 46/0.0 60/0.0
+GATE cf_ctx_dp005_ema lam=0/0 every40+lm+wc/hold | R1 84/0.9 112/1.4 | R2@0.95 62/1.5 88/2.7 | oracle 46/0.0 60/0.0
+WERDEV cf_ctx_dp005_ema lamn=0 | dev-clean 3.68 (2703 utterances) vs public +0.05 [-0.07, +0.17] | dev-other 10.05 (2864 utterances) vs public +0.24 [+0.05, +0.42]
+EVAL cf_ctxfz_dp005_ema lamn=0 WER 3.87/10.53 lag 107/126 | none 333/0.0 355/0.0 | k7 84/15.3 105/22.5
+GATE cf_ctxfz_dp005_ema lam=0/0 every40+free/hold | none 333/0.0 355/0.0 | raw 27/22.7 43/40.8 | R1 80/0.8 111/1.4 | R2 56/1.9 82/2.5 | oracle 24/0.0 36/0.0
+GATE cf_ctxfz_dp005_ema lam=0/0 every40+lm/hold | R1 86/0.6 117/1.1 | R2 56/2.1 81/2.7 | oracle 24/0.0 36/0.0
+GATE cf_ctxfz_dp005_ema lam=0/0 every40+lm+wc/hold | R1 90/0.5 121/1.0 | R2@0.95 54/1.9 80/2.7 | oracle 24/0.0 36/0.0
+WERDEV cf_ctxfz_dp005_ema lamn=0 | dev-clean 3.87 (2703 utterances) vs public +0.24 [+0.11, +0.38] | dev-other 10.18 (2864 utterances) vs public +0.36 [+0.15, +0.57]
+EVAL cf_ctx_dp010_ema lamn=0 WER 4.31/10.96 lag 38/64 | none 276/0.0 306/0.0 | k7 70/15.3 88/22.0
+GATE cf_ctx_dp010_ema lam=0/0 every40+free/hold | none 276/0.0 306/0.0 | raw 3/27.1 24/46.4 | R1 57/0.9 92/1.4 | R2 36/2.0 68/2.8 | oracle -0/0.0 16/0.0
+GATE cf_ctx_dp010_ema lam=0/0 every40+lm/hold | R1 60/0.7 94/1.2 | R2 32/2.2 63/3.3 | oracle -0/0.0 16/0.0
+GATE cf_ctx_dp010_ema lam=0/0 every40+lm+wc/hold | R1 63/0.6 97/1.2 | R2@0.95 32/1.9 63/2.8 | oracle -0/0.0 16/0.0
+WERDEV cf_ctx_dp010_ema lamn=0 | dev-clean 4.08 (2703 utterances) vs public +0.45 [+0.31, +0.60] | dev-other 10.58 (2864 utterances) vs public +0.76 [+0.54, +1.00]
+EVAL cf_ctx_dp0_ema lamn=0 WER 3.43/9.99 lag 268/267 | none 487/0.0 490/0.0 | k7 197/18.3 203/22.9
+GATE cf_ctx_dp0_ema lam=0/0 every40+free/hold | none 487/0.0 490/0.0 | raw 148/6.9 157/18.8 | R1 162/0.8 181/1.6 | R2 154/1.6 169/3.3 | oracle 147/0.0 154/0.0
+GATE cf_ctx_dp0_ema lam=0/0 every40+lm/hold | R1 162/0.6 181/1.7 | R2 154/1.3 169/3.4 | oracle 147/0.0 154/0.0
+GATE cf_ctx_dp0_ema lam=0/0 every40+lm+wc/hold | R1@0.95 157/0.6 177/1.5 | R2@0.9 139/1.3 158/2.7 | oracle 147/0.0 154/0.0
+WERDEV cf_ctx_dp0_ema lamn=0 | dev-clean 3.55 (2703 utterances) vs public -0.08 [-0.19, +0.03] | dev-other 9.82 (2864 utterances) vs public +0.00 [-0.18, +0.17]
+GATE cf_base_dp005_ema lam=0/0 every40+free/hold | none 359/0.0 386/0.0 | raw 66/10.7 88/25.0 | R1 86/1.1 119/1.6 | R2 76/2.0 106/3.1 | oracle 64/0.0 84/0.0
+GATE cf_base_dp005_ema lam=0/0 every40+lm/hold | R1 89/0.9 122/1.5 | R2 76/1.8 105/3.0 | oracle 64/0.0 84/0.0
+GATE cf_base_dp005_ema lam=0/0 every40+lm+wc/hold | R1 89/0.9 122/1.5 | R2@0.95 67/1.8 97/3.1 | oracle 64/0.0 84/0.0
+WERDEV cf_base_dp005_ema lamn=0 | dev-clean 3.75 (2703 utterances) vs public +0.12 [+0.01, +0.22] | dev-other 10.00 (2864 utterances) vs public +0.19 [+0.02, +0.36]
+GATE cf_base_dp010_ema lam=0/0 every40+free/hold | none 292/0.0 323/0.0 | raw 22/18.0 44/35.1 | R1 66/1.0 104/1.2 | R2 45/2.1 78/2.8 | oracle 19/0.0 38/0.0
+GATE cf_base_dp010_ema lam=0/0 every40+lm/hold | R1 57/1.2 93/1.6 | R2 41/2.3 72/2.7 | oracle 19/0.0 38/0.0
+GATE cf_base_dp010_ema lam=0/0 every40+lm+wc/hold | R1 57/1.2 93/1.6 | R2@0.95 38/1.8 71/2.7 | oracle 19/0.0 38/0.0
+WERDEV cf_base_dp010_ema lamn=0 | dev-clean 4.01 (2703 utterances) vs public +0.38 [+0.27, +0.51] | dev-other 10.47 (2864 utterances) vs public +0.65 [+0.46, +0.84]
+GATE cf_base_dp0_ema lam=0/0 every40+free/hold | none 504/0.0 504/0.0 | raw 174/4.7 180/18.6 | R1 184/1.1 196/1.7 | R2 179/1.5 189/2.7 | oracle 173/0.0 176/0.0
+GATE cf_base_dp0_ema lam=0/0 every40+lm/hold | R1 184/0.9 196/1.9 | R2 179/1.3 189/3.0 | oracle 173/0.0 176/0.0
+GATE cf_base_dp0_ema lam=0/0 every40+lm+wc/hold | R1@0.95 179/0.6 196/1.8 | R2@0.9 161/1.3 177/3.0 | oracle 173/0.0 176/0.0
+WERDEV cf_base_dp0_ema lamn=0 | dev-clean 3.70 (2703 utterances) vs public +0.07 [-0.03, +0.18] | dev-other 9.95 (2864 utterances) vs public +0.14 [-0.02, +0.31]
+COMPARE cf_dp005_l25n25/wer_dev_n0.25.json minus r4_dp005_sc_decay_ema/wer_dev.json | dev-clean 3.69 vs 3.76: -0.06 [-0.13, -0.00] | dev-other 9.89 vs 10.04: -0.15 [-0.25, -0.04]
+COMPARE cf_dp005_l5n5/wer_dev_n0.5.json minus r4_dp005_sc_decay_ema/wer_dev.json | dev-clean 3.79 vs 3.76: +0.03 [-0.06, +0.12] | dev-other 10.01 vs 10.04: -0.03 [-0.18, +0.12]
+COMPARE cf_dp010_l25n25/wer_dev_n0.25.json minus r4_dp010_sc_decay_ema/wer_dev.json | dev-clean 4.04 vs 4.05: -0.01 [-0.08, +0.06] | dev-other 10.46 vs 10.50: -0.04 [-0.14, +0.07]
+COMPARE cf_dp010_l5n5/wer_dev_n0.5.json minus r4_dp010_sc_decay_ema/wer_dev.json | dev-clean 4.12 vs 4.05: +0.07 [-0.02, +0.17] | dev-other 10.58 vs 10.50: +0.08 [-0.07, +0.23]
+WERDEV cf_dp005_n1 lamn=0.1 | dev-clean 3.69 (2703 utterances) vs public +0.06 [-0.04, +0.16] | dev-other 9.93 (2864 utterances) vs public +0.12 [-0.06, +0.31]
+COMPARE cf_dp005_n1/wer_dev_n0.1.json minus r4_dp005_sc_decay_ema/wer_dev.json | dev-clean 3.69 vs 3.76: -0.07 [-0.11, -0.03] | dev-other 9.93 vs 10.04: -0.10 [-0.17, -0.04]
+WERDEV cf_dp005_n15 lamn=0.15 | dev-clean 3.66 (2703 utterances) vs public +0.03 [-0.08, +0.13] | dev-other 9.93 (2864 utterances) vs public +0.12 [-0.06, +0.30]
+COMPARE cf_dp005_n15/wer_dev_n0.15.json minus r4_dp005_sc_decay_ema/wer_dev.json | dev-clean 3.66 vs 3.76: -0.10 [-0.15, -0.05] | dev-other 9.93 vs 10.04: -0.11 [-0.19, -0.02]
+WERDEV cf_dp005_n35 lamn=0.35 | dev-clean 3.70 (2703 utterances) vs public +0.07 [-0.05, +0.18] | dev-other 9.91 (2864 utterances) vs public +0.10 [-0.08, +0.29]
+COMPARE cf_dp005_n35/wer_dev_n0.35.json minus r4_dp005_sc_decay_ema/wer_dev.json | dev-clean 3.70 vs 3.76: -0.06 [-0.14, +0.01] | dev-other 9.91 vs 10.04: -0.13 [-0.26, +0.00]
+WERDEV cf_dp010_n1 lamn=0.1 | dev-clean 4.03 (2703 utterances) vs public +0.40 [+0.27, +0.52] | dev-other 10.46 (2864 utterances) vs public +0.64 [+0.44, +0.84]
+COMPARE cf_dp010_n1/wer_dev_n0.1.json minus r4_dp010_sc_decay_ema/wer_dev.json | dev-clean 4.03 vs 4.05: -0.02 [-0.06, +0.02] | dev-other 10.46 vs 10.50: -0.04 [-0.11, +0.03]
+WERDEV cf_dp010_n15 lamn=0.15 | dev-clean 4.03 (2703 utterances) vs public +0.40 [+0.27, +0.52] | dev-other 10.42 (2864 utterances) vs public +0.61 [+0.41, +0.81]
+COMPARE cf_dp010_n15/wer_dev_n0.15.json minus r4_dp010_sc_decay_ema/wer_dev.json | dev-clean 4.03 vs 4.05: -0.02 [-0.07, +0.03] | dev-other 10.42 vs 10.50: -0.07 [-0.16, +0.01]
+WERDEV cf_dp010_n35 lamn=0.35 | dev-clean 4.04 (2703 utterances) vs public +0.41 [+0.27, +0.53] | dev-other 10.45 (2864 utterances) vs public +0.63 [+0.42, +0.86]
+COMPARE cf_dp010_n35/wer_dev_n0.35.json minus r4_dp010_sc_decay_ema/wer_dev.json | dev-clean 4.04 vs 4.05: -0.01 [-0.09, +0.07] | dev-other 10.45 vs 10.50: -0.05 [-0.18, +0.08]
+COMPARE cf_ctx_dp005_ema/wer_dev_n0.json minus cf_base_dp005_ema/wer_dev_n0.json | dev-clean 3.68 vs 3.75: -0.07 [-0.17, +0.04] | dev-other 10.05 vs 10.00: +0.05 [-0.11, +0.20]
+COMPARE cf_ctxfz_dp005_ema/wer_dev_n0.json minus cf_base_dp005_ema/wer_dev_n0.json | dev-clean 3.87 vs 3.75: +0.13 [+0.01, +0.25] | dev-other 10.18 vs 10.00: +0.18 [-0.02, +0.37]
+COMPARE cf_ctxfz_dp005_ema/wer_dev_n0.json minus cf_ctx_dp005_ema/wer_dev_n0.json | dev-clean 3.87 vs 3.68: +0.20 [+0.09, +0.31] | dev-other 10.18 vs 10.05: +0.13 [-0.04, +0.29]
+COMPARE cf_ctx_dp010_ema/wer_dev_n0.json minus cf_base_dp010_ema/wer_dev_n0.json | dev-clean 4.08 vs 4.01: +0.07 [-0.05, +0.18] | dev-other 10.58 vs 10.47: +0.11 [-0.07, +0.28]
+COMPARE cf_ctx_dp0_ema/wer_dev_n0.json minus cf_base_dp0_ema/wer_dev_n0.json | dev-clean 3.55 vs 3.70: -0.15 [-0.24, -0.05] | dev-other 9.82 vs 9.95: -0.14 [-0.30, +0.02]
+WERDEV cf_base_dp0_ema lamn=0.15 | dev-clean 3.64 (2703 utterances) vs public +0.01 [-0.10, +0.12] | dev-other 9.82 (2864 utterances) vs public +0.01 [-0.15, +0.18]
+COMPARE cf_base_dp0_ema/wer_dev_n0.15.json minus cf_base_dp0_ema/wer_dev_n0.json | dev-clean 3.64 vs 3.70: -0.06 [-0.11, -0.01] | dev-other 9.82 vs 9.95: -0.13 [-0.21, -0.04]
+WERDEV cf_base_dp005_ema lamn=0.15 | dev-clean 3.68 (2703 utterances) vs public +0.05 [-0.06, +0.15] | dev-other 9.89 (2864 utterances) vs public +0.07 [-0.08, +0.25]
+COMPARE cf_base_dp005_ema/wer_dev_n0.15.json minus cf_base_dp005_ema/wer_dev_n0.json | dev-clean 3.68 vs 3.75: -0.07 [-0.12, -0.02] | dev-other 9.89 vs 10.00: -0.11 [-0.20, -0.02]
+WERDEV cf_base_dp010_ema lamn=0.15 | dev-clean 3.94 (2703 utterances) vs public +0.31 [+0.19, +0.44] | dev-other 10.38 (2864 utterances) vs public +0.56 [+0.37, +0.76]
+COMPARE cf_base_dp010_ema/wer_dev_n0.15.json minus cf_base_dp010_ema/wer_dev_n0.json | dev-clean 3.94 vs 4.01: -0.07 [-0.12, -0.02] | dev-other 10.38 vs 10.47: -0.09 [-0.17, -0.02]
+WERDEV cf_ctx_dp0_ema lamn=0.15 | dev-clean 3.53 (2703 utterances) vs public -0.10 [-0.20, +0.01] | dev-other 9.81 (2864 utterances) vs public -0.00 [-0.19, +0.18]
+COMPARE cf_ctx_dp0_ema/wer_dev_n0.15.json minus cf_ctx_dp0_ema/wer_dev_n0.json | dev-clean 3.53 vs 3.55: -0.02 [-0.07, +0.03] | dev-other 9.81 vs 9.82: -0.01 [-0.10, +0.08]
+WERDEV cf_ctx_dp005_ema lamn=0.15 | dev-clean 3.69 (2703 utterances) vs public +0.06 [-0.06, +0.17] | dev-other 10.05 (2864 utterances) vs public +0.24 [+0.05, +0.44]
+COMPARE cf_ctx_dp005_ema/wer_dev_n0.15.json minus cf_ctx_dp005_ema/wer_dev_n0.json | dev-clean 3.69 vs 3.68: +0.01 [-0.04, +0.06] | dev-other 10.05 vs 10.05: +0.00 [-0.09, +0.09]
+WERDEV cf_ctx_dp010_ema lamn=0.15 | dev-clean 4.09 (2703 utterances) vs public +0.46 [+0.32, +0.60] | dev-other 10.53 (2864 utterances) vs public +0.72 [+0.50, +0.95]
+COMPARE cf_ctx_dp010_ema/wer_dev_n0.15.json minus cf_ctx_dp010_ema/wer_dev_n0.json | dev-clean 4.09 vs 4.08: +0.00 [-0.07, +0.08] | dev-other 10.53 vs 10.58: -0.04 [-0.13, +0.05]
+WERDEV cf_ctxfz_dp005_ema lamn=0.15 | dev-clean 3.94 (2703 utterances) vs public +0.31 [+0.16, +0.46] | dev-other 10.22 (2864 utterances) vs public +0.41 [+0.18, +0.63]
+COMPARE cf_ctxfz_dp005_ema/wer_dev_n0.15.json minus cf_ctxfz_dp005_ema/wer_dev_n0.json | dev-clean 3.94 vs 3.87: +0.07 [+0.01, +0.13] | dev-other 10.22 vs 10.18: +0.05 [-0.04, +0.14]
+EVAL cf_ctx480_dp005_ema lamn=0 WER 3.87/10.68 lag 110/131 | none 335/0.0 360/0.0 | k7 99/9.4 119/17.2
+GATE cf_ctx480_dp005_ema lam=0/0 every40+free/hold | none 335/0.0 360/0.0 | raw 43/15.8 62/31.6 | R1 86/0.4 119/1.1 | R2 61/1.7 88/2.6 | oracle 41/0.0 56/0.0
+GATE cf_ctx480_dp005_ema lam=0/0 every40+lm/hold | R1 82/0.5 113/1.1 | R2 61/1.8 87/3.0 | oracle 41/0.0 56/0.0
+GATE cf_ctx480_dp005_ema lam=0/0 every40+lm+wc/hold | R1@0.95 82/0.7 115/1.3 | R2@0.95 56/1.4 85/2.6 | oracle 41/0.0 56/0.0
+WERDEV cf_ctx480_dp005_ema lamn=0 | dev-clean 3.72 (2703 utterances) vs public +0.09 [-0.03, +0.21] | dev-other 9.95 (2864 utterances) vs public +0.14 [-0.04, +0.33]
+COMPARE cf_ctx480_dp005_ema/wer_dev_n0.json minus r4_dp005_sc_decay_ema/wer_dev.json | dev-clean 3.72 vs 3.76: -0.04 [-0.14, +0.07] | dev-other 9.95 vs 10.04: -0.09 [-0.25, +0.08]
+EVAL cf_ctx480_dp0075_ema lamn=0 WER 4.00/10.96 lag 61/86 | none 293/0.0 323/0.0 | k7 82/12.1 100/18.5
+GATE cf_ctx480_dp0075_ema lam=0/0 every40+free/hold | none 293/0.0 323/0.0 | raw 17/21.2 38/38.6 | R1 67/0.7 102/1.3 | R2 42/1.6 75/2.7 | oracle 13/0.0 32/0.0
+GATE cf_ctx480_dp0075_ema lam=0/0 every40+lm/hold | R1 65/0.5 100/1.1 | R2 42/1.6 73/2.3 | oracle 13/0.0 32/0.0
+GATE cf_ctx480_dp0075_ema lam=0/0 every40+lm+wc/hold | R1 65/0.5 100/1.1 | R2 42/1.6 73/2.3 | oracle 13/0.0 32/0.0
+WERDEV cf_ctx480_dp0075_ema lamn=0 | dev-clean 3.83 (2703 utterances) vs public +0.20 [+0.07, +0.34] | dev-other 10.28 (2864 utterances) vs public +0.46 [+0.25, +0.66]
+COMPARE cf_ctx480_dp0075_ema/wer_dev_n0.json minus r4_dp0075_sc_decay_ema/wer_dev.json | dev-clean 3.83 vs 3.94: -0.11 [-0.22, -0.00] | dev-other 10.28 vs 10.18: +0.10 [-0.07, +0.26]
+EVAL cf_ctx480_dp010_ema lamn=0 WER 4.18/11.39 lag 25/53 | none 267/0.0 298/0.0 | k7 68/15.4 83/21.2
+GATE cf_ctx480_dp010_ema lam=0/0 every40+free/hold | none 267/0.0 298/0.0 | raw -1/28.2 20/47.1 | R1 54/1.1 92/1.5 | R2 31/2.0 65/2.8 | oracle -5/0.0 12/0.0
+GATE cf_ctx480_dp010_ema lam=0/0 every40+lm/hold | R1 54/0.9 90/1.4 | R2 33/2.0 66/2.7 | oracle -5/0.0 12/0.0
+GATE cf_ctx480_dp010_ema lam=0/0 every40+lm+wc/hold | R1 57/0.9 93/1.2 | R2@0.95 32/1.9 66/2.5 | oracle -5/0.0 12/0.0
+WERDEV cf_ctx480_dp010_ema lamn=0 | dev-clean 4.05 (2703 utterances) vs public +0.42 [+0.28, +0.56] | dev-other 10.50 (2864 utterances) vs public +0.69 [+0.48, +0.92]
+COMPARE cf_ctx480_dp010_ema/wer_dev_n0.json minus r4_dp010_sc_decay_ema/wer_dev.json | dev-clean 4.05 vs 4.05: -0.00 [-0.13, +0.12] | dev-other 10.50 vs 10.50: +0.01 [-0.17, +0.18]
+GATE cf_dp0075_l0n0 lam=0/0 every40+free/hold | none 304/0.0 335/0.0 | raw 32/15.3 55/31.8 | R1 72/0.9 109/1.2 | R2 50/2.1 82/2.6 | oracle 29/0.0 50/0.0
+GATE cf_dp0075_l0n0 lam=0/0 every40+lm/hold | R1 70/0.8 107/1.0 | R2 50/1.9 81/2.5 | oracle 29/0.0 50/0.0
+GATE cf_dp0075_l0n0 lam=0/0 every40+lm+wc/hold | R1 74/0.7 111/0.9 | R2@0.9 44/2.0 78/2.7 | oracle 29/0.0 50/0.0

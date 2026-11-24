@@ -1,0 +1,54 @@
+{
+ "experiment": "Token context for early display: an LSTM token LM combined with partial audio in the gate, in token choice, on the display, and as a long-context decoder branch",
+ "declared": "2026-11-23, before any GPU run",
+ "motivation": "The 20M transducer picks tokens from the encoder frame and the last two BPE pieces only. In emit_early_v1 the display gate stays 32-66ms (dev-clean) behind its oracle and every delay-penalized model loses WER. The question is whether token context, combined with the audio that has already arrived, closes either gap.",
+ "lm": "LSTM over the 500 BPE pieces (embedding 512, 2 x 768), trained on the 960h transcripts plus the LibriSpeech LM corpus; dev and test text unused",
+ "designs": {
+  "A_gate": "LM features of each preview token (log-probability, LM top probability, first-choice flag) added to the display gate; recognizer unchanged",
+  "B_choice": "When the transducer emits in a preview pass, the token is the best non-blank one under log p + lam * LM log p; the transducer alone decides when to emit. lamn applies the same rule to the native pass, which changes the final output",
+  "C_completion": "The display also shows the LM's greedy continuation (whole words) of what a pass displays while its joint probability is at least tau",
+  "D_branch": "Architecture change: an LSTM over the whole token history, initialised from the LM, is added to the 2-token decoder output through a zero-initialised projection; fine-tuned with the delay penalty",
+  "E_branch_frozen": "D with the LSTM frozen; only the projection and the original model train"
+ },
+ "hypotheses": {
+  "H1": "A lowers the R1 delay of the gated display against the same gate without LM features, by at least a third of the gap to the oracle, on the penalty-0.005 model",
+  "H2": "B lowers the rewrites of ungated previews by at least 20% relative and lowers the R1 delay",
+  "H3": "B on the native pass lowers the full-dev WER of the penalty-0.005 model (paired interval excludes zero)",
+  "H4": "C lowers the R1 delay by at least 10ms at the same rewrite target",
+  "H5": "D loses less WER than the matched baseline without the branch at the same penalty (paired interval on dev-other excludes zero) at no more lag",
+  "H6": "E does not beat D; if E matches D, the gain comes from LM knowledge rather than from added trainable capacity"
+ },
+ "checkpoints_for_A_B_C": [
+  "public 20M model",
+  "emit_early_v1 r4_dp005_sc_decay (ema)",
+  "emit_early_v1 r4_dp010_sc_decay (ema)"
+ ],
+ "fusion_weights": [
+  [
+   0,
+   0
+  ],
+  [
+   0.25,
+   0
+  ],
+  [
+   0.5,
+   0
+  ],
+  [
+   0.25,
+   0.25
+  ],
+  [
+   0.5,
+   0.5
+  ]
+ ],
+ "training_arms": "960h, SpecAugment, lr 0.0005 with linear decay to 10%, 160/320ms training chunks, averaged weights, 240 minutes on a V100: baseline and D at penalties 0.005 and 0.01, E at 0.005. Branch parameters use AdamW (projection lr 0.001, LSTM lr 0.0001)",
+ "evaluation": "As in emit_early_v1: eight zero-fill previews per 320ms chunk, hold display, gate fitted on 800 dev utterances and thresholds (gate and tau) chosen on 300 others, delay and rewrites on the fixed 200 + 200 subset, WER on all of dev-clean and dev-other with a paired utterance bootstrap; every encoder pass charged 5.0ms, LM steps not charged; test unused",
+ "compute": "USC CARC Discovery, one GPU per job",
+ "added_before_any_result": "2026-11-23, after the 4-minute smoke run and before any result: a baseline and a D arm without delay penalty (same recipe, 240 minutes). H7: without a penalty D has a lower full-dev WER than its matched baseline. This separates what the long context does for accuracy from what it does under a penalty.",
+ "added_after_A_B_C_results": "2026-11-23, exploratory, after the A/B/C results were seen: native-pass fusion weights 0.1, 0.15 and 0.35 on the two delay-penalized checkpoints (full-dev WER only), and paired bootstraps of every fused result against the same checkpoint without fusion. The weight is not selected on held-out data; the whole sweep is reported. Also: native-pass fusion at weight 0.15 on every arm trained here (baselines and D/E), with paired bootstraps against the same arm without fusion, to see whether the trained branch and the external LM give the same gain or add up; and paired bootstraps of each D/E arm against its matched baseline.",
+ "added_after_D_E_results": "2026-11-23, exploratory, after the D/E results were seen. D after 240 minutes has the lag and WER of the 480-minute baselines of emit_early_v1 (same recipe, twice the training time), so its advantage over the 240-minute baselines may be faster convergence rather than a better trade-off. Three D arms at 480 minutes (penalties 0.005, 0.0075, 0.01) are compared with r4_dp005_sc_decay, r4_dp0075_sc_decay and r4_dp010_sc_decay (paired bootstrap on full dev, same gate code). H8: at 480 minutes D still has at least 10ms less word delay without previews than its matched baseline, at a full-dev WER that is not higher (the paired interval does not lie above zero), at every penalty. If not, the 240-minute advantage is convergence speed."
+}

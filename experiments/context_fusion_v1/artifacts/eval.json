@@ -1,0 +1,462 @@
+{
+ "cf_base_dp0_ema": {
+  "dev-clean": {
+   "none": {
+    "delay_mean": 504.009,
+    "delay_p50": 502.5,
+    "delay_p90": 662.5,
+    "rewrites_per_100": 0.0,
+    "wer": 3.507
+   },
+   "k7": {
+    "delay_mean": 217.769,
+    "delay_p50": 207.5,
+    "delay_p90": 367.5,
+    "rewrites_per_100": 15.471,
+    "wer": 3.507
+   },
+   "lag": {
+    "mean": 285.363,
+    "p10": 187.5,
+    "p50": 267.5,
+    "p90": 407.5
+   }
+  },
+  "dev-other": {
+   "none": {
+    "delay_mean": 504.188,
+    "delay_p50": 502.5,
+    "delay_p90": 662.5,
+    "rewrites_per_100": 0.0,
+    "wer": 10.591
+   },
+   "k7": {
+    "delay_mean": 220.858,
+    "delay_p50": 220.0,
+    "delay_p90": 367.5,
+    "rewrites_per_100": 19.937,
+    "wer": 10.591
+   },
+   "lag": {
+    "mean": 282.63,
+    "p10": 187.5,
+    "p50": 267.5,
+    "p90": 387.5
+   }
+  }
+ },
+ "cf_base_dp005_ema": {
+  "dev-clean": {
+   "none": {
+    "delay_mean": 359.5,
+    "delay_p50": 362.5,
+    "delay_p90": 522.5,
+    "rewrites_per_100": 0.0,
+    "wer": 3.845
+   },
+   "k7": {
+    "delay_mean": 120.478,
+    "delay_p50": 122.5,
+    "delay_p90": 262.5,
+    "rewrites_per_100": 6.901,
+    "wer": 3.845
+   },
+   "lag": {
+    "mean": 140.237,
+    "p10": 27.5,
+    "p50": 147.5,
+    "p90": 227.5
+   }
+  },
+  "dev-other": {
+   "none": {
+    "delay_mean": 385.71,
+    "delay_p50": 382.5,
+    "delay_p90": 542.5,
+    "rewrites_per_100": 0.0,
+    "wer": 10.734
+   },
+   "k7": {
+    "delay_mean": 138.969,
+    "delay_p50": 142.5,
+    "delay_p90": 287.5,
+    "rewrites_per_100": 13.1,
+    "wer": 10.734
+   },
+   "lag": {
+    "mean": 159.09,
+    "p10": 47.5,
+    "p50": 167.5,
+    "p90": 247.5
+   }
+  }
+ },
+ "cf_base_dp010_ema": {
+  "dev-clean": {
+   "none": {
+    "delay_mean": 291.786,
+    "delay_p50": 282.5,
+    "delay_p90": 442.5,
+    "rewrites_per_100": 0.0,
+    "wer": 4.079
+   },
+   "k7": {
+    "delay_mean": 88.346,
+    "delay_p50": 87.5,
+    "delay_p90": 242.5,
+    "rewrites_per_100": 9.919,
+    "wer": 4.079
+   },
+   "lag": {
+    "mean": 58.661,
+    "p10": -32.5,
+    "p50": 67.5,
+    "p90": 147.5
+   }
+  },
+  "dev-other": {
+   "none": {
+    "delay_mean": 323.47,
+    "delay_p50": 322.5,
+    "delay_p90": 488.75,
+    "rewrites_per_100": 0.0,
+    "wer": 11.048
+   },
+   "k7": {
+    "delay_mean": 109.018,
+    "delay_p50": 107.5,
+    "delay_p90": 262.5,
+    "rewrites_per_100": 16.753,
+    "wer": 11.048
+   },
+   "lag": {
+    "mean": 85.828,
+    "p10": -32.5,
+    "p50": 87.5,
+    "p90": 187.5
+   }
+  }
+ },
+ "cf_ctx_dp0_ema": {
+  "dev-clean": {
+   "none": {
+    "delay_mean": 486.76,
+    "delay_p50": 482.5,
+    "delay_p90": 642.5,
+    "rewrites_per_100": 0.0,
+    "wer": 3.429
+   },
+   "k7": {
+    "delay_mean": 196.946,
+    "delay_p50": 187.5,
+    "delay_p90": 347.5,
+    "rewrites_per_100": 18.25,
+    "wer": 3.429
+   },
+   "lag": {
+    "mean": 268.257,
+    "p10": 167.5,
+    "p50": 247.5,
+    "p90": 387.5
+   }
+  },
+  "dev-other": {
+   "none": {
+    "delay_mean": 490.142,
+    "delay_p50": 482.5,
+    "delay_p90": 642.5,
+    "rewrites_per_100": 0.0,
+    "wer": 9.991
+   },
+   "k7": {
+    "delay_mean": 203.365,
+    "delay_p50": 207.5,
+    "delay_p90": 347.5,
+    "rewrites_per_100": 22.896,
+    "wer": 9.991
+   },
+   "lag": {
+    "mean": 267.324,
+    "p10": 167.5,
+    "p50": 267.5,
+    "p90": 367.5
+   }
+  }
+ },
+ "cf_ctx_dp005_ema": {
+  "dev-clean": {
+   "none": {
+    "delay_mean": 342.969,
+    "delay_p50": 342.5,
+    "delay_p90": 502.5,
+    "rewrites_per_100": 0.0,
+    "wer": 3.585
+   },
+   "k7": {
+    "delay_mean": 101.887,
+    "delay_p50": 107.5,
+    "delay_p90": 260.0,
+    "rewrites_per_100": 9.469,
+    "wer": 3.585
+   },
+   "lag": {
+    "mean": 120.559,
+    "p10": 27.5,
+    "p50": 127.5,
+    "p90": 207.5
+   }
+  },
+  "dev-other": {
+   "none": {
+    "delay_mean": 365.844,
+    "delay_p50": 362.5,
+    "delay_p90": 536.5,
+    "rewrites_per_100": 0.0,
+    "wer": 10.933
+   },
+   "k7": {
+    "delay_mean": 120.852,
+    "delay_p50": 127.5,
+    "delay_p90": 282.5,
+    "rewrites_per_100": 17.117,
+    "wer": 10.933
+   },
+   "lag": {
+    "mean": 139.098,
+    "p10": 27.5,
+    "p50": 147.5,
+    "p90": 227.5
+   }
+  }
+ },
+ "cf_ctx_dp010_ema": {
+  "dev-clean": {
+   "none": {
+    "delay_mean": 275.627,
+    "delay_p50": 282.5,
+    "delay_p90": 422.5,
+    "rewrites_per_100": 0.0,
+    "wer": 4.313
+   },
+   "k7": {
+    "delay_mean": 69.878,
+    "delay_p50": 67.5,
+    "delay_p90": 227.5,
+    "rewrites_per_100": 15.343,
+    "wer": 4.313
+   },
+   "lag": {
+    "mean": 37.884,
+    "p10": -72.5,
+    "p50": 47.5,
+    "p90": 127.5
+   }
+  },
+  "dev-other": {
+   "none": {
+    "delay_mean": 305.811,
+    "delay_p50": 302.5,
+    "delay_p90": 482.5,
+    "rewrites_per_100": 0.0,
+    "wer": 10.962
+   },
+   "k7": {
+    "delay_mean": 87.976,
+    "delay_p50": 87.5,
+    "delay_p90": 262.5,
+    "rewrites_per_100": 22.05,
+    "wer": 10.962
+   },
+   "lag": {
+    "mean": 64.298,
+    "p10": -52.5,
+    "p50": 67.5,
+    "p90": 167.5
+   }
+  }
+ },
+ "cf_ctxfz_dp005_ema": {
+  "dev-clean": {
+   "none": {
+    "delay_mean": 333.368,
+    "delay_p50": 342.5,
+    "delay_p90": 482.5,
+    "rewrites_per_100": 0.0,
+    "wer": 3.871
+   },
+   "k7": {
+    "delay_mean": 84.305,
+    "delay_p50": 87.5,
+    "delay_p90": 242.5,
+    "rewrites_per_100": 15.275,
+    "wer": 3.871
+   },
+   "lag": {
+    "mean": 107.371,
+    "p10": 7.5,
+    "p50": 107.5,
+    "p90": 187.5
+   }
+  },
+  "dev-other": {
+   "none": {
+    "delay_mean": 354.782,
+    "delay_p50": 362.5,
+    "delay_p90": 522.5,
+    "rewrites_per_100": 0.0,
+    "wer": 10.534
+   },
+   "k7": {
+    "delay_mean": 104.539,
+    "delay_p50": 107.5,
+    "delay_p90": 262.5,
+    "rewrites_per_100": 22.535,
+    "wer": 10.534
+   },
+   "lag": {
+    "mean": 125.68,
+    "p10": 27.5,
+    "p50": 127.5,
+    "p90": 227.5
+   }
+  }
+ },
+ "cf_ctx480_dp005_ema": {
+  "dev-clean": {
+   "none": {
+    "delay_mean": 335.326,
+    "delay_p50": 342.5,
+    "delay_p90": 482.5,
+    "rewrites_per_100": 0.0,
+    "wer": 3.871
+   },
+   "k7": {
+    "delay_mean": 98.6,
+    "delay_p50": 102.5,
+    "delay_p90": 247.5,
+    "rewrites_per_100": 9.401,
+    "wer": 3.871
+   },
+   "lag": {
+    "mean": 110.441,
+    "p10": 7.5,
+    "p50": 107.5,
+    "p90": 207.5
+   }
+  },
+  "dev-other": {
+   "none": {
+    "delay_mean": 360.378,
+    "delay_p50": 362.5,
+    "delay_p90": 522.5,
+    "rewrites_per_100": 0.0,
+    "wer": 10.677
+   },
+   "k7": {
+    "delay_mean": 118.888,
+    "delay_p50": 107.5,
+    "delay_p90": 282.5,
+    "rewrites_per_100": 17.218,
+    "wer": 10.677
+   },
+   "lag": {
+    "mean": 131.284,
+    "p10": 27.5,
+    "p50": 127.5,
+    "p90": 227.5
+   }
+  }
+ },
+ "cf_ctx480_dp0075_ema": {
+  "dev-clean": {
+   "none": {
+    "delay_mean": 292.938,
+    "delay_p50": 282.5,
+    "delay_p90": 462.5,
+    "rewrites_per_100": 0.0,
+    "wer": 4.001
+   },
+   "k7": {
+    "delay_mean": 81.899,
+    "delay_p50": 82.5,
+    "delay_p90": 242.5,
+    "rewrites_per_100": 12.054,
+    "wer": 4.001
+   },
+   "lag": {
+    "mean": 60.876,
+    "p10": -32.5,
+    "p50": 67.5,
+    "p90": 147.5
+   }
+  },
+  "dev-other": {
+   "none": {
+    "delay_mean": 323.204,
+    "delay_p50": 322.5,
+    "delay_p90": 482.5,
+    "rewrites_per_100": 0.0,
+    "wer": 10.962
+   },
+   "k7": {
+    "delay_mean": 100.166,
+    "delay_p50": 102.5,
+    "delay_p90": 262.5,
+    "rewrites_per_100": 18.532,
+    "wer": 10.962
+   },
+   "lag": {
+    "mean": 85.677,
+    "p10": -12.5,
+    "p50": 87.5,
+    "p90": 187.5
+   }
+  }
+ },
+ "cf_ctx480_dp010_ema": {
+  "dev-clean": {
+   "none": {
+    "delay_mean": 266.952,
+    "delay_p50": 262.5,
+    "delay_p90": 422.5,
+    "rewrites_per_100": 0.0,
+    "wer": 4.183
+   },
+   "k7": {
+    "delay_mean": 67.967,
+    "delay_p50": 67.5,
+    "delay_p90": 222.5,
+    "rewrites_per_100": 15.361,
+    "wer": 4.183
+   },
+   "lag": {
+    "mean": 25.069,
+    "p10": -72.5,
+    "p50": 27.5,
+    "p90": 127.5
+   }
+  },
+  "dev-other": {
+   "none": {
+    "delay_mean": 298.43,
+    "delay_p50": 302.5,
+    "delay_p90": 462.5,
+    "rewrites_per_100": 0.0,
+    "wer": 11.39
+   },
+   "k7": {
+    "delay_mean": 83.375,
+    "delay_p50": 82.5,
+    "delay_p90": 247.5,
+    "rewrites_per_100": 21.151,
+    "wer": 11.39
+   },
+   "lag": {
+    "mean": 53.325,
+    "p10": -52.5,
+    "p50": 47.5,
+    "p90": 167.5
+   }
+  }
+ }
+}
