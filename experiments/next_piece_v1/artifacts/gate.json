@@ -1,0 +1,1706 @@
+{
+ "np_w02_dp010_ema": {
+  "next_piece": {
+   "preview": {
+    "k07": {
+     "n": 23703,
+     "head": 0.178,
+     "transducer": 0.078,
+     "lm": 0.202
+    },
+    "k11": {
+     "n": 25049,
+     "head": 0.222,
+     "transducer": 0.104,
+     "lm": 0.21
+    },
+    "k15": {
+     "n": 26003,
+     "head": 0.281,
+     "transducer": 0.139,
+     "lm": 0.212
+    },
+    "k19": {
+     "n": 26705,
+     "head": 0.344,
+     "transducer": 0.202,
+     "lm": 0.21
+    },
+    "k23": {
+     "n": 27193,
+     "head": 0.415,
+     "transducer": 0.256,
+     "lm": 0.21
+    },
+    "k27": {
+     "n": 27564,
+     "head": 0.474,
+     "transducer": 0.344,
+     "lm": 0.207
+    },
+    "k31": {
+     "n": 27794,
+     "head": 0.521,
+     "transducer": 0.417,
+     "lm": 0.208
+    },
+    "k35": {
+     "n": 27965,
+     "head": 0.571,
+     "transducer": 0.509,
+     "lm": 0.21
+    }
+   },
+   "native": {
+    "all": {
+     "n": 28276,
+     "head": 0.587,
+     "transducer": 0.516,
+     "lm": 0.213
+    },
+    "inside word": {
+     "n": 4850,
+     "head": 0.883,
+     "transducer": 0.864,
+     "lm": 0.613
+    },
+    "lead 1-2": {
+     "n": 18123,
+     "head": 0.789,
+     "transducer": 0.744,
+     "lm": 0.244
+    },
+    "lead 3-4": {
+     "n": 4115,
+     "head": 0.393,
+     "transducer": 0.199,
+     "lm": 0.242
+    },
+    "lead 5-8": {
+     "n": 1868,
+     "head": 0.158,
+     "transducer": 0.065,
+     "lm": 0.14
+    },
+    "lead 9+": {
+     "n": 4170,
+     "head": 0.09,
+     "transducer": 0.039,
+     "lm": 0.083
+    },
+    "word start": {
+     "n": 23426,
+     "head": 0.525,
+     "transducer": 0.444,
+     "lm": 0.13
+    }
+   }
+  },
+  "every40+free/hold": {
+   "none": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": 238.341,
+     "delay_p50": 242.5,
+     "delay_p90": 402.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": 268.883,
+     "delay_p50": 262.5,
+     "delay_p90": 442.5,
+     "rewrites_per_100": 0.0
+    }
+   },
+   "raw": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": -6.157,
+     "delay_p50": -12.5,
+     "delay_p90": 102.5,
+     "rewrites_per_100": 32.334
+    },
+    "dev-other": {
+     "delay_mean": 14.038,
+     "delay_p50": 7.5,
+     "delay_p90": 147.5,
+     "rewrites_per_100": 52.021
+    }
+   },
+   "R1": {
+    "threshold": 0.985,
+    "dev-clean": {
+     "delay_mean": 62.99,
+     "delay_p50": 47.5,
+     "delay_p90": 182.5,
+     "rewrites_per_100": 0.939
+    },
+    "dev-other": {
+     "delay_mean": 98.403,
+     "delay_p50": 82.5,
+     "delay_p90": 242.5,
+     "rewrites_per_100": 0.866
+    }
+   },
+   "R2": {
+    "threshold": 0.968,
+    "dev-clean": {
+     "delay_mean": 36.338,
+     "delay_p50": 22.5,
+     "delay_p90": 142.5,
+     "rewrites_per_100": 2.243
+    },
+    "dev-other": {
+     "delay_mean": 68.661,
+     "delay_p50": 47.5,
+     "delay_p90": 222.5,
+     "rewrites_per_100": 2.598
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": -11.32,
+     "delay_p50": -12.5,
+     "delay_p90": 87.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": 5.762,
+     "delay_p50": 2.5,
+     "delay_p90": 127.5,
+     "rewrites_per_100": 0.0
+    }
+   }
+  },
+  "every40+hq/hold": {
+   "R1": {
+    "threshold": 0.987,
+    "dev-clean": {
+     "delay_mean": 58.014,
+     "delay_p50": 42.5,
+     "delay_p90": 182.5,
+     "rewrites_per_100": 0.965
+    },
+    "dev-other": {
+     "delay_mean": 97.069,
+     "delay_p50": 82.5,
+     "delay_p90": 262.5,
+     "rewrites_per_100": 0.751
+    }
+   },
+   "R2": {
+    "threshold": 0.965,
+    "dev-clean": {
+     "delay_mean": 32.798,
+     "delay_p50": 22.5,
+     "delay_p90": 142.5,
+     "rewrites_per_100": 2.086
+    },
+    "dev-other": {
+     "delay_mean": 66.214,
+     "delay_p50": 47.5,
+     "delay_p90": 222.5,
+     "rewrites_per_100": 2.483
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": -11.32,
+     "delay_p50": -12.5,
+     "delay_p90": 87.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": 5.762,
+     "delay_p50": 2.5,
+     "delay_p90": 127.5,
+     "rewrites_per_100": 0.0
+    }
+   }
+  },
+  "every40+ant/hold": {
+   "raw": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": -54.284,
+     "delay_p50": -57.5,
+     "delay_p90": 82.5,
+     "rewrites_per_100": 678.175
+    },
+    "dev-other": {
+     "delay_mean": -32.792,
+     "delay_p50": -37.5,
+     "delay_p90": 122.5,
+     "rewrites_per_100": 694.428
+    }
+   },
+   "R1": {
+    "threshold": 0.983,
+    "dev-clean": {
+     "delay_mean": 56.473,
+     "delay_p50": 42.5,
+     "delay_p90": 182.5,
+     "rewrites_per_100": 0.887
+    },
+    "dev-other": {
+     "delay_mean": 95.62,
+     "delay_p50": 82.5,
+     "delay_p90": 262.5,
+     "rewrites_per_100": 0.953
+    }
+   },
+   "R2": {
+    "threshold": 0.965,
+    "dev-clean": {
+     "delay_mean": 28.127,
+     "delay_p50": 22.5,
+     "delay_p90": 142.5,
+     "rewrites_per_100": 1.982
+    },
+    "dev-other": {
+     "delay_mean": 63.613,
+     "delay_p50": 42.5,
+     "delay_p90": 222.5,
+     "rewrites_per_100": 2.54
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": -111.31,
+     "delay_p50": -97.5,
+     "delay_p90": 2.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": -91.088,
+     "delay_p50": -77.5,
+     "delay_p90": 27.5,
+     "rewrites_per_100": 0.0
+    }
+   }
+  }
+ },
+ "np_w10_dp010_ema": {
+  "next_piece": {
+   "preview": {
+    "k07": {
+     "n": 21543,
+     "head": 0.167,
+     "transducer": 0.088,
+     "lm": 0.191
+    },
+    "k11": {
+     "n": 22826,
+     "head": 0.199,
+     "transducer": 0.111,
+     "lm": 0.196
+    },
+    "k15": {
+     "n": 24149,
+     "head": 0.245,
+     "transducer": 0.139,
+     "lm": 0.201
+    },
+    "k19": {
+     "n": 25285,
+     "head": 0.3,
+     "transducer": 0.205,
+     "lm": 0.204
+    },
+    "k23": {
+     "n": 26181,
+     "head": 0.363,
+     "transducer": 0.251,
+     "lm": 0.206
+    },
+    "k27": {
+     "n": 26870,
+     "head": 0.43,
+     "transducer": 0.344,
+     "lm": 0.205
+    },
+    "k31": {
+     "n": 27258,
+     "head": 0.489,
+     "transducer": 0.426,
+     "lm": 0.204
+    },
+    "k35": {
+     "n": 27554,
+     "head": 0.533,
+     "transducer": 0.5,
+     "lm": 0.204
+    }
+   },
+   "native": {
+    "all": {
+     "n": 28098,
+     "head": 0.576,
+     "transducer": 0.531,
+     "lm": 0.208
+    },
+    "inside word": {
+     "n": 4732,
+     "head": 0.863,
+     "transducer": 0.873,
+     "lm": 0.606
+    },
+    "lead 1-2": {
+     "n": 19515,
+     "head": 0.745,
+     "transducer": 0.717,
+     "lm": 0.24
+    },
+    "lead 3-4": {
+     "n": 3111,
+     "head": 0.324,
+     "transducer": 0.204,
+     "lm": 0.202
+    },
+    "lead 5-8": {
+     "n": 1405,
+     "head": 0.167,
+     "transducer": 0.085,
+     "lm": 0.115
+    },
+    "lead 9+": {
+     "n": 4067,
+     "head": 0.101,
+     "transducer": 0.04,
+     "lm": 0.09
+    },
+    "word start": {
+     "n": 23366,
+     "head": 0.518,
+     "transducer": 0.461,
+     "lm": 0.127
+    }
+   }
+  },
+  "every40+free/hold": {
+   "none": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": 202.71,
+     "delay_p50": 202.5,
+     "delay_p90": 362.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": 226.784,
+     "delay_p50": 222.5,
+     "delay_p90": 382.5,
+     "rewrites_per_100": 0.0
+    }
+   },
+   "raw": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": -30.966,
+     "delay_p50": -32.5,
+     "delay_p90": 67.5,
+     "rewrites_per_100": 54.911
+    },
+    "dev-other": {
+     "delay_mean": -12.464,
+     "delay_p50": -12.5,
+     "delay_p90": 107.5,
+     "rewrites_per_100": 80.457
+    }
+   },
+   "R1": {
+    "threshold": 0.985,
+    "dev-clean": {
+     "delay_mean": 54.64,
+     "delay_p50": 42.5,
+     "delay_p90": 162.5,
+     "rewrites_per_100": 0.758
+    },
+    "dev-other": {
+     "delay_mean": 85.59,
+     "delay_p50": 82.5,
+     "delay_p90": 238.5,
+     "rewrites_per_100": 1.216
+    }
+   },
+   "R2": {
+    "threshold": 0.971,
+    "dev-clean": {
+     "delay_mean": 28.64,
+     "delay_p50": 22.5,
+     "delay_p90": 142.5,
+     "rewrites_per_100": 1.594
+    },
+    "dev-other": {
+     "delay_mean": 59.98,
+     "delay_p50": 42.5,
+     "delay_p90": 202.5,
+     "rewrites_per_100": 2.113
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": -38.662,
+     "delay_p50": -32.5,
+     "delay_p90": 62.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": -24.048,
+     "delay_p50": -17.5,
+     "delay_p90": 87.5,
+     "rewrites_per_100": 0.0
+    }
+   }
+  },
+  "every40+hq/hold": {
+   "R1": {
+    "threshold": 0.984,
+    "dev-clean": {
+     "delay_mean": 46.757,
+     "delay_p50": 22.5,
+     "delay_p90": 162.5,
+     "rewrites_per_100": 0.993
+    },
+    "dev-other": {
+     "delay_mean": 80.874,
+     "delay_p50": 62.5,
+     "delay_p90": 242.5,
+     "rewrites_per_100": 1.158
+    }
+   },
+   "R2": {
+    "threshold": 0.964,
+    "dev-clean": {
+     "delay_mean": 23.354,
+     "delay_p50": 22.5,
+     "delay_p90": 142.5,
+     "rewrites_per_100": 1.646
+    },
+    "dev-other": {
+     "delay_mean": 53.708,
+     "delay_p50": 42.5,
+     "delay_p90": 202.5,
+     "rewrites_per_100": 2.085
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": -38.662,
+     "delay_p50": -32.5,
+     "delay_p90": 62.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": -24.048,
+     "delay_p50": -17.5,
+     "delay_p90": 87.5,
+     "rewrites_per_100": 0.0
+    }
+   }
+  },
+  "every40+ant/hold": {
+   "raw": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": -73.269,
+     "delay_p50": -57.5,
+     "delay_p90": 62.5,
+     "rewrites_per_100": 723.642
+    },
+    "dev-other": {
+     "delay_mean": -52.05,
+     "delay_p50": -57.5,
+     "delay_p90": 102.5,
+     "rewrites_per_100": 742.733
+    }
+   },
+   "R1": {
+    "threshold": 0.981,
+    "dev-clean": {
+     "delay_mean": 46.045,
+     "delay_p50": 22.5,
+     "delay_p90": 162.5,
+     "rewrites_per_100": 0.967
+    },
+    "dev-other": {
+     "delay_mean": 78.944,
+     "delay_p50": 62.5,
+     "delay_p90": 222.5,
+     "rewrites_per_100": 0.984
+    }
+   },
+   "R2": {
+    "threshold": 0.966,
+    "dev-clean": {
+     "delay_mean": 23.995,
+     "delay_p50": 22.5,
+     "delay_p90": 142.5,
+     "rewrites_per_100": 1.855
+    },
+    "dev-other": {
+     "delay_mean": 55.172,
+     "delay_p50": 42.5,
+     "delay_p90": 202.5,
+     "rewrites_per_100": 2.142
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": -135.454,
+     "delay_p50": -117.5,
+     "delay_p90": 2.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": -115.127,
+     "delay_p50": -97.5,
+     "delay_p90": 22.5,
+     "rewrites_per_100": 0.0
+    }
+   }
+  }
+ },
+ "np_w02_dp005_ema": {
+  "next_piece": {
+   "preview": {
+    "k07": {
+     "n": 25434,
+     "head": 0.209,
+     "transducer": 0.079,
+     "lm": 0.212
+    },
+    "k11": {
+     "n": 26309,
+     "head": 0.268,
+     "transducer": 0.106,
+     "lm": 0.218
+    },
+    "k15": {
+     "n": 26950,
+     "head": 0.334,
+     "transducer": 0.139,
+     "lm": 0.22
+    },
+    "k19": {
+     "n": 27388,
+     "head": 0.404,
+     "transducer": 0.208,
+     "lm": 0.218
+    },
+    "k23": {
+     "n": 27725,
+     "head": 0.475,
+     "transducer": 0.264,
+     "lm": 0.216
+    },
+    "k27": {
+     "n": 27987,
+     "head": 0.539,
+     "transducer": 0.36,
+     "lm": 0.22
+    },
+    "k31": {
+     "n": 28146,
+     "head": 0.59,
+     "transducer": 0.457,
+     "lm": 0.222
+    },
+    "k35": {
+     "n": 28239,
+     "head": 0.638,
+     "transducer": 0.572,
+     "lm": 0.224
+    }
+   },
+   "native": {
+    "all": {
+     "n": 28546,
+     "head": 0.657,
+     "transducer": 0.583,
+     "lm": 0.23
+    },
+    "inside word": {
+     "n": 5325,
+     "head": 0.918,
+     "transducer": 0.894,
+     "lm": 0.641
+    },
+    "lead 1-2": {
+     "n": 16655,
+     "head": 0.871,
+     "transducer": 0.851,
+     "lm": 0.257
+    },
+    "lead 3-4": {
+     "n": 5231,
+     "head": 0.605,
+     "transducer": 0.379,
+     "lm": 0.29
+    },
+    "lead 5-8": {
+     "n": 2510,
+     "head": 0.255,
+     "transducer": 0.124,
+     "lm": 0.156
+    },
+    "lead 9+": {
+     "n": 4150,
+     "head": 0.108,
+     "transducer": 0.043,
+     "lm": 0.09
+    },
+    "word start": {
+     "n": 23221,
+     "head": 0.597,
+     "transducer": 0.512,
+     "lm": 0.136
+    }
+   }
+  },
+  "every40+free/hold": {
+   "none": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": 283.64,
+     "delay_p50": 282.5,
+     "delay_p90": 442.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": 314.524,
+     "delay_p50": 322.5,
+     "delay_p90": 482.5,
+     "rewrites_per_100": 0.0
+    }
+   },
+   "raw": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": 21.637,
+     "delay_p50": 22.5,
+     "delay_p90": 127.5,
+     "rewrites_per_100": 21.032
+    },
+    "dev-other": {
+     "delay_mean": 42.751,
+     "delay_p50": 27.5,
+     "delay_p90": 167.5,
+     "rewrites_per_100": 38.539
+    }
+   },
+   "R1": {
+    "threshold": 0.983,
+    "dev-clean": {
+     "delay_mean": 66.472,
+     "delay_p50": 62.5,
+     "delay_p90": 182.5,
+     "rewrites_per_100": 1.095
+    },
+    "dev-other": {
+     "delay_mean": 103.227,
+     "delay_p50": 82.5,
+     "delay_p90": 262.5,
+     "rewrites_per_100": 1.726
+    }
+   },
+   "R2": {
+    "threshold": 0.956,
+    "dev-clean": {
+     "delay_mean": 44.628,
+     "delay_p50": 42.5,
+     "delay_p90": 162.5,
+     "rewrites_per_100": 2.189
+    },
+    "dev-other": {
+     "delay_mean": 77.21,
+     "delay_p50": 62.5,
+     "delay_p90": 222.5,
+     "rewrites_per_100": 3.451
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": 18.553,
+     "delay_p50": 7.5,
+     "delay_p90": 127.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": 36.687,
+     "delay_p50": 27.5,
+     "delay_p90": 167.5,
+     "rewrites_per_100": 0.0
+    }
+   }
+  },
+  "every40+hq/hold": {
+   "R1": {
+    "threshold": 0.983,
+    "dev-clean": {
+     "delay_mean": 63.839,
+     "delay_p50": 47.5,
+     "delay_p90": 182.5,
+     "rewrites_per_100": 0.99
+    },
+    "dev-other": {
+     "delay_mean": 101.136,
+     "delay_p50": 82.5,
+     "delay_p90": 262.5,
+     "rewrites_per_100": 1.381
+    }
+   },
+   "R2": {
+    "threshold": 0.946,
+    "dev-clean": {
+     "delay_mean": 41.85,
+     "delay_p50": 27.5,
+     "delay_p90": 162.5,
+     "rewrites_per_100": 2.215
+    },
+    "dev-other": {
+     "delay_mean": 73.568,
+     "delay_p50": 62.5,
+     "delay_p90": 207.5,
+     "rewrites_per_100": 3.394
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": 18.553,
+     "delay_p50": 7.5,
+     "delay_p90": 127.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": 36.687,
+     "delay_p50": 27.5,
+     "delay_p90": 167.5,
+     "rewrites_per_100": 0.0
+    }
+   }
+  },
+  "every40+ant/hold": {
+   "raw": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": -41.335,
+     "delay_p50": -37.5,
+     "delay_p90": 102.5,
+     "rewrites_per_100": 615.715
+    },
+    "dev-other": {
+     "delay_mean": -19.188,
+     "delay_p50": -32.5,
+     "delay_p90": 142.5,
+     "rewrites_per_100": 619.269
+    }
+   },
+   "R1": {
+    "threshold": 0.981,
+    "dev-clean": {
+     "delay_mean": 55.835,
+     "delay_p50": 42.5,
+     "delay_p90": 182.5,
+     "rewrites_per_100": 1.199
+    },
+    "dev-other": {
+     "delay_mean": 95.636,
+     "delay_p50": 82.5,
+     "delay_p90": 262.5,
+     "rewrites_per_100": 1.611
+    }
+   },
+   "R2": {
+    "threshold": 0.968,
+    "dev-clean": {
+     "delay_mean": 33.811,
+     "delay_p50": 22.5,
+     "delay_p90": 162.5,
+     "rewrites_per_100": 2.111
+    },
+    "dev-other": {
+     "delay_mean": 71.439,
+     "delay_p50": 42.5,
+     "delay_p90": 227.5,
+     "rewrites_per_100": 2.703
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": -94.74,
+     "delay_p50": -77.5,
+     "delay_p90": 22.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": -73.232,
+     "delay_p50": -57.5,
+     "delay_p90": 42.5,
+     "rewrites_per_100": 0.0
+    }
+   }
+  }
+ },
+ "np_ctx_w02_dp010_ema": {
+  "next_piece": {
+   "preview": {
+    "k07": {
+     "n": 22125,
+     "head": 0.179,
+     "transducer": 0.085,
+     "lm": 0.183
+    },
+    "k11": {
+     "n": 23546,
+     "head": 0.214,
+     "transducer": 0.109,
+     "lm": 0.19
+    },
+    "k15": {
+     "n": 24852,
+     "head": 0.264,
+     "transducer": 0.136,
+     "lm": 0.196
+    },
+    "k19": {
+     "n": 25847,
+     "head": 0.324,
+     "transducer": 0.198,
+     "lm": 0.198
+    },
+    "k23": {
+     "n": 26585,
+     "head": 0.392,
+     "transducer": 0.245,
+     "lm": 0.202
+    },
+    "k27": {
+     "n": 27241,
+     "head": 0.459,
+     "transducer": 0.336,
+     "lm": 0.201
+    },
+    "k31": {
+     "n": 27571,
+     "head": 0.511,
+     "transducer": 0.411,
+     "lm": 0.199
+    },
+    "k35": {
+     "n": 27818,
+     "head": 0.562,
+     "transducer": 0.502,
+     "lm": 0.201
+    }
+   },
+   "native": {
+    "all": {
+     "n": 28178,
+     "head": 0.583,
+     "transducer": 0.51,
+     "lm": 0.203
+    },
+    "inside word": {
+     "n": 4549,
+     "head": 0.878,
+     "transducer": 0.863,
+     "lm": 0.594
+    },
+    "lead 1-2": {
+     "n": 18298,
+     "head": 0.775,
+     "transducer": 0.731,
+     "lm": 0.237
+    },
+    "lead 3-4": {
+     "n": 3827,
+     "head": 0.388,
+     "transducer": 0.19,
+     "lm": 0.21
+    },
+    "lead 5-8": {
+     "n": 1692,
+     "head": 0.168,
+     "transducer": 0.064,
+     "lm": 0.116
+    },
+    "lead 9+": {
+     "n": 4361,
+     "head": 0.11,
+     "transducer": 0.039,
+     "lm": 0.087
+    },
+    "word start": {
+     "n": 23629,
+     "head": 0.526,
+     "transducer": 0.443,
+     "lm": 0.128
+    }
+   }
+  },
+  "every40+free/hold": {
+   "none": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": 227.384,
+     "delay_p50": 222.5,
+     "delay_p90": 382.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": 254.551,
+     "delay_p50": 262.5,
+     "delay_p90": 422.5,
+     "rewrites_per_100": 0.0
+    }
+   },
+   "raw": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": -26.223,
+     "delay_p50": -17.5,
+     "delay_p90": 87.5,
+     "rewrites_per_100": 44.144
+    },
+    "dev-other": {
+     "delay_mean": -6.945,
+     "delay_p50": -12.5,
+     "delay_p90": 127.5,
+     "rewrites_per_100": 66.109
+    }
+   },
+   "R1": {
+    "threshold": 0.984,
+    "dev-clean": {
+     "delay_mean": 49.963,
+     "delay_p50": 42.5,
+     "delay_p90": 162.5,
+     "rewrites_per_100": 1.041
+    },
+    "dev-other": {
+     "delay_mean": 84.641,
+     "delay_p50": 62.5,
+     "delay_p90": 242.5,
+     "rewrites_per_100": 1.673
+    }
+   },
+   "R2": {
+    "threshold": 0.966,
+    "dev-clean": {
+     "delay_mean": 24.978,
+     "delay_p50": 22.5,
+     "delay_p90": 142.5,
+     "rewrites_per_100": 2.03
+    },
+    "dev-other": {
+     "delay_mean": 58.14,
+     "delay_p50": 42.5,
+     "delay_p90": 207.5,
+     "rewrites_per_100": 2.913
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": -31.837,
+     "delay_p50": -17.5,
+     "delay_p90": 67.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": -16.162,
+     "delay_p50": -12.5,
+     "delay_p90": 107.5,
+     "rewrites_per_100": 0.0
+    }
+   }
+  },
+  "every40+hq/hold": {
+   "R1": {
+    "threshold": 0.987,
+    "dev-clean": {
+     "delay_mean": 52.363,
+     "delay_p50": 42.5,
+     "delay_p90": 182.5,
+     "rewrites_per_100": 0.703
+    },
+    "dev-other": {
+     "delay_mean": 90.048,
+     "delay_p50": 67.5,
+     "delay_p90": 262.5,
+     "rewrites_per_100": 0.779
+    }
+   },
+   "R2": {
+    "threshold": 0.962,
+    "dev-clean": {
+     "delay_mean": 21.697,
+     "delay_p50": 7.5,
+     "delay_p90": 142.5,
+     "rewrites_per_100": 1.952
+    },
+    "dev-other": {
+     "delay_mean": 54.663,
+     "delay_p50": 42.5,
+     "delay_p90": 207.5,
+     "rewrites_per_100": 2.711
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": -31.837,
+     "delay_p50": -17.5,
+     "delay_p90": 67.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": -16.162,
+     "delay_p50": -12.5,
+     "delay_p90": 107.5,
+     "rewrites_per_100": 0.0
+    }
+   }
+  },
+  "every40+ant/hold": {
+   "raw": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": -81.634,
+     "delay_p50": -77.5,
+     "delay_p90": 62.5,
+     "rewrites_per_100": 685.632
+    },
+    "dev-other": {
+     "delay_mean": -58.594,
+     "delay_p50": -57.5,
+     "delay_p90": 102.5,
+     "rewrites_per_100": 705.105
+    }
+   },
+   "R1": {
+    "threshold": 0.985,
+    "dev-clean": {
+     "delay_mean": 54.504,
+     "delay_p50": 42.5,
+     "delay_p90": 182.5,
+     "rewrites_per_100": 0.521
+    },
+    "dev-other": {
+     "delay_mean": 92.711,
+     "delay_p50": 82.5,
+     "delay_p90": 262.5,
+     "rewrites_per_100": 0.894
+    }
+   },
+   "R2": {
+    "threshold": 0.969,
+    "dev-clean": {
+     "delay_mean": 23.897,
+     "delay_p50": 7.5,
+     "delay_p90": 147.5,
+     "rewrites_per_100": 1.51
+    },
+    "dev-other": {
+     "delay_mean": 58.742,
+     "delay_p50": 42.5,
+     "delay_p90": 222.5,
+     "rewrites_per_100": 2.25
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": -136.911,
+     "delay_p50": -117.5,
+     "delay_p90": 2.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": -114.181,
+     "delay_p50": -97.5,
+     "delay_p90": 22.5,
+     "rewrites_per_100": 0.0
+    }
+   }
+  }
+ },
+ "np_probe_dp010_ema": {
+  "next_piece": {
+   "preview": {
+    "k07": {
+     "n": 25356,
+     "head": 0.132,
+     "transducer": 0.053,
+     "lm": 0.211
+    },
+    "k11": {
+     "n": 26268,
+     "head": 0.175,
+     "transducer": 0.076,
+     "lm": 0.216
+    },
+    "k15": {
+     "n": 26991,
+     "head": 0.226,
+     "transducer": 0.104,
+     "lm": 0.217
+    },
+    "k19": {
+     "n": 27430,
+     "head": 0.283,
+     "transducer": 0.15,
+     "lm": 0.214
+    },
+    "k23": {
+     "n": 27744,
+     "head": 0.358,
+     "transducer": 0.203,
+     "lm": 0.212
+    },
+    "k27": {
+     "n": 28015,
+     "head": 0.419,
+     "transducer": 0.279,
+     "lm": 0.213
+    },
+    "k31": {
+     "n": 28174,
+     "head": 0.481,
+     "transducer": 0.368,
+     "lm": 0.217
+    },
+    "k35": {
+     "n": 28314,
+     "head": 0.539,
+     "transducer": 0.463,
+     "lm": 0.22
+    }
+   },
+   "native": {
+    "all": {
+     "n": 28495,
+     "head": 0.544,
+     "transducer": 0.465,
+     "lm": 0.223
+    },
+    "inside word": {
+     "n": 5139,
+     "head": 0.887,
+     "transducer": 0.851,
+     "lm": 0.63
+    },
+    "lead 1-2": {
+     "n": 16994,
+     "head": 0.77,
+     "transducer": 0.711,
+     "lm": 0.256
+    },
+    "lead 3-4": {
+     "n": 4858,
+     "head": 0.379,
+     "transducer": 0.184,
+     "lm": 0.262
+    },
+    "lead 5-8": {
+     "n": 2338,
+     "head": 0.129,
+     "transducer": 0.054,
+     "lm": 0.151
+    },
+    "lead 9+": {
+     "n": 4305,
+     "head": 0.064,
+     "transducer": 0.033,
+     "lm": 0.089
+    },
+    "word start": {
+     "n": 23356,
+     "head": 0.468,
+     "transducer": 0.38,
+     "lm": 0.134
+    }
+   }
+  },
+  "every40+free/hold": {
+   "none": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": 274.343,
+     "delay_p50": 282.5,
+     "delay_p90": 422.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": 308.085,
+     "delay_p50": 302.5,
+     "delay_p90": 482.5,
+     "rewrites_per_100": 0.0
+    }
+   },
+   "raw": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": 13.795,
+     "delay_p50": 7.5,
+     "delay_p90": 127.5,
+     "rewrites_per_100": 19.932
+    },
+    "dev-other": {
+     "delay_mean": 36.066,
+     "delay_p50": 27.5,
+     "delay_p90": 167.5,
+     "rewrites_per_100": 38.754
+    }
+   },
+   "R1": {
+    "threshold": 0.986,
+    "dev-clean": {
+     "delay_mean": 62.062,
+     "delay_p50": 42.5,
+     "delay_p90": 182.5,
+     "rewrites_per_100": 0.808
+    },
+    "dev-other": {
+     "delay_mean": 101.851,
+     "delay_p50": 82.5,
+     "delay_p90": 262.5,
+     "rewrites_per_100": 1.24
+    }
+   },
+   "R2": {
+    "threshold": 0.965,
+    "dev-clean": {
+     "delay_mean": 40.452,
+     "delay_p50": 27.5,
+     "delay_p90": 162.5,
+     "rewrites_per_100": 1.746
+    },
+    "dev-other": {
+     "delay_mean": 75.932,
+     "delay_p50": 62.5,
+     "delay_p90": 227.5,
+     "rewrites_per_100": 2.537
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": 10.294,
+     "delay_p50": 7.5,
+     "delay_p90": 122.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": 29.639,
+     "delay_p50": 22.5,
+     "delay_p90": 164.0,
+     "rewrites_per_100": 0.0
+    }
+   }
+  },
+  "every40+hq/hold": {
+   "R1": {
+    "threshold": 0.983,
+    "dev-clean": {
+     "delay_mean": 55.373,
+     "delay_p50": 42.5,
+     "delay_p90": 182.5,
+     "rewrites_per_100": 0.677
+    },
+    "dev-other": {
+     "delay_mean": 96.745,
+     "delay_p50": 82.5,
+     "delay_p90": 267.5,
+     "rewrites_per_100": 0.98
+    }
+   },
+   "R2": {
+    "threshold": 0.957,
+    "dev-clean": {
+     "delay_mean": 36.112,
+     "delay_p50": 22.5,
+     "delay_p90": 147.5,
+     "rewrites_per_100": 1.928
+    },
+    "dev-other": {
+     "delay_mean": 71.2,
+     "delay_p50": 47.5,
+     "delay_p90": 227.5,
+     "rewrites_per_100": 2.537
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": 10.294,
+     "delay_p50": 7.5,
+     "delay_p90": 122.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": 29.639,
+     "delay_p50": 22.5,
+     "delay_p90": 164.0,
+     "rewrites_per_100": 0.0
+    }
+   }
+  },
+  "every40+ant/hold": {
+   "raw": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": -20.618,
+     "delay_p50": -32.5,
+     "delay_p90": 122.5,
+     "rewrites_per_100": 595.545
+    },
+    "dev-other": {
+     "delay_mean": 7.872,
+     "delay_p50": -12.5,
+     "delay_p90": 162.5,
+     "rewrites_per_100": 629.469
+    }
+   },
+   "R1": {
+    "threshold": 0.985,
+    "dev-clean": {
+     "delay_mean": 58.928,
+     "delay_p50": 42.5,
+     "delay_p90": 182.5,
+     "rewrites_per_100": 0.782
+    },
+    "dev-other": {
+     "delay_mean": 100.928,
+     "delay_p50": 82.5,
+     "delay_p90": 267.5,
+     "rewrites_per_100": 0.894
+    }
+   },
+   "R2": {
+    "threshold": 0.971,
+    "dev-clean": {
+     "delay_mean": 38.335,
+     "delay_p50": 22.5,
+     "delay_p90": 162.5,
+     "rewrites_per_100": 1.485
+    },
+    "dev-other": {
+     "delay_mean": 76.979,
+     "delay_p50": 62.5,
+     "delay_p90": 242.5,
+     "rewrites_per_100": 1.961
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": -72.37,
+     "delay_p50": -57.5,
+     "delay_p90": 27.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": -50.16,
+     "delay_p50": -37.5,
+     "delay_p90": 62.5,
+     "rewrites_per_100": 0.0
+    }
+   }
+  }
+ },
+ "np_probe_ctx_dp010_ema": {
+  "next_piece": {
+   "preview": {
+    "k07": {
+     "n": 24146,
+     "head": 0.152,
+     "transducer": 0.067,
+     "lm": 0.193
+    },
+    "k11": {
+     "n": 25345,
+     "head": 0.19,
+     "transducer": 0.087,
+     "lm": 0.2
+    },
+    "k15": {
+     "n": 26279,
+     "head": 0.238,
+     "transducer": 0.11,
+     "lm": 0.203
+    },
+    "k19": {
+     "n": 26902,
+     "head": 0.294,
+     "transducer": 0.154,
+     "lm": 0.203
+    },
+    "k23": {
+     "n": 27425,
+     "head": 0.37,
+     "transducer": 0.209,
+     "lm": 0.205
+    },
+    "k27": {
+     "n": 27835,
+     "head": 0.432,
+     "transducer": 0.288,
+     "lm": 0.204
+    },
+    "k31": {
+     "n": 28072,
+     "head": 0.49,
+     "transducer": 0.373,
+     "lm": 0.208
+    },
+    "k35": {
+     "n": 28194,
+     "head": 0.551,
+     "transducer": 0.468,
+     "lm": 0.211
+    }
+   },
+   "native": {
+    "all": {
+     "n": 28392,
+     "head": 0.553,
+     "transducer": 0.469,
+     "lm": 0.213
+    },
+    "inside word": {
+     "n": 4803,
+     "head": 0.89,
+     "transducer": 0.874,
+     "lm": 0.609
+    },
+    "lead 1-2": {
+     "n": 16690,
+     "head": 0.779,
+     "transducer": 0.723,
+     "lm": 0.246
+    },
+    "lead 3-4": {
+     "n": 4863,
+     "head": 0.407,
+     "transducer": 0.197,
+     "lm": 0.245
+    },
+    "lead 5-8": {
+     "n": 2382,
+     "head": 0.159,
+     "transducer": 0.06,
+     "lm": 0.144
+    },
+    "lead 9+": {
+     "n": 4457,
+     "head": 0.079,
+     "transducer": 0.037,
+     "lm": 0.088
+    },
+    "word start": {
+     "n": 23589,
+     "head": 0.485,
+     "transducer": 0.387,
+     "lm": 0.132
+    }
+   }
+  },
+  "every40+free/hold": {
+   "none": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": 266.952,
+     "delay_p50": 262.5,
+     "delay_p90": 422.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": 298.43,
+     "delay_p50": 302.5,
+     "delay_p90": 462.5,
+     "rewrites_per_100": 0.0
+    }
+   },
+   "raw": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": -0.844,
+     "delay_p50": 2.5,
+     "delay_p90": 107.5,
+     "rewrites_per_100": 28.17
+    },
+    "dev-other": {
+     "delay_mean": 19.873,
+     "delay_p50": 7.5,
+     "delay_p90": 162.5,
+     "rewrites_per_100": 47.05
+    }
+   },
+   "R1": {
+    "threshold": 0.983,
+    "dev-clean": {
+     "delay_mean": 54.66,
+     "delay_p50": 42.5,
+     "delay_p90": 182.5,
+     "rewrites_per_100": 1.015
+    },
+    "dev-other": {
+     "delay_mean": 92.197,
+     "delay_p50": 82.5,
+     "delay_p90": 247.5,
+     "rewrites_per_100": 1.496
+    }
+   },
+   "R2": {
+    "threshold": 0.958,
+    "dev-clean": {
+     "delay_mean": 31.087,
+     "delay_p50": 22.5,
+     "delay_p90": 147.5,
+     "rewrites_per_100": 2.083
+    },
+    "dev-other": {
+     "delay_mean": 64.679,
+     "delay_p50": 47.5,
+     "delay_p90": 222.5,
+     "rewrites_per_100": 2.878
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": -4.693,
+     "delay_p50": 2.5,
+     "delay_p90": 107.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": 11.608,
+     "delay_p50": 7.5,
+     "delay_p90": 147.5,
+     "rewrites_per_100": 0.0
+    }
+   }
+  },
+  "every40+hq/hold": {
+   "R1": {
+    "threshold": 0.982,
+    "dev-clean": {
+     "delay_mean": 50.767,
+     "delay_p50": 42.5,
+     "delay_p90": 182.5,
+     "rewrites_per_100": 1.093
+    },
+    "dev-other": {
+     "delay_mean": 89.272,
+     "delay_p50": 67.5,
+     "delay_p90": 262.5,
+     "rewrites_per_100": 1.439
+    }
+   },
+   "R2": {
+    "threshold": 0.957,
+    "dev-clean": {
+     "delay_mean": 30.482,
+     "delay_p50": 22.5,
+     "delay_p90": 147.5,
+     "rewrites_per_100": 1.875
+    },
+    "dev-other": {
+     "delay_mean": 64.278,
+     "delay_p50": 47.5,
+     "delay_p90": 222.5,
+     "rewrites_per_100": 2.647
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": -4.693,
+     "delay_p50": 2.5,
+     "delay_p90": 107.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": 11.608,
+     "delay_p50": 7.5,
+     "delay_p90": 147.5,
+     "rewrites_per_100": 0.0
+    }
+   }
+  },
+  "every40+ant/hold": {
+   "raw": {
+    "threshold": null,
+    "dev-clean": {
+     "delay_mean": -52.587,
+     "delay_p50": -52.5,
+     "delay_p90": 82.5,
+     "rewrites_per_100": 589.326
+    },
+    "dev-other": {
+     "delay_mean": -20.86,
+     "delay_p50": -32.5,
+     "delay_p90": 142.5,
+     "rewrites_per_100": 619.971
+    }
+   },
+   "R1": {
+    "threshold": 0.984,
+    "dev-clean": {
+     "delay_mean": 55.184,
+     "delay_p50": 42.5,
+     "delay_p90": 187.5,
+     "rewrites_per_100": 0.755
+    },
+    "dev-other": {
+     "delay_mean": 94.553,
+     "delay_p50": 67.5,
+     "delay_p90": 262.5,
+     "rewrites_per_100": 1.209
+    }
+   },
+   "R2": {
+    "threshold": 0.971,
+    "dev-clean": {
+     "delay_mean": 33.776,
+     "delay_p50": 22.5,
+     "delay_p90": 162.5,
+     "rewrites_per_100": 1.562
+    },
+    "dev-other": {
+     "delay_mean": 70.762,
+     "delay_p50": 47.5,
+     "delay_p90": 242.5,
+     "rewrites_per_100": 1.928
+    }
+   },
+   "oracle": {
+    "threshold": 0.5,
+    "dev-clean": {
+     "delay_mean": -99.183,
+     "delay_p50": -77.5,
+     "delay_p90": 22.5,
+     "rewrites_per_100": 0.0
+    },
+    "dev-other": {
+     "delay_mean": -76.478,
+     "delay_p50": -57.5,
+     "delay_p90": 42.5,
+     "rewrites_per_100": 0.0
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,278 @@
+{
+ "np_w02_dp010_ema": {
+  "dev-clean": {
+   "none": {
+    "delay_mean": 238.341,
+    "delay_p50": 242.5,
+    "delay_p90": 402.5,
+    "rewrites_per_100": 0.0,
+    "wer": 4.209
+   },
+   "k7": {
+    "delay_mean": 66.807,
+    "delay_p50": 67.5,
+    "delay_p90": 222.5,
+    "rewrites_per_100": 16.271,
+    "wer": 4.209
+   },
+   "lag": {
+    "mean": -12.576,
+    "p10": -112.5,
+    "p50": -12.5,
+    "p90": 87.5
+   }
+  },
+  "dev-other": {
+   "none": {
+    "delay_mean": 268.883,
+    "delay_p50": 262.5,
+    "delay_p90": 442.5,
+    "rewrites_per_100": 0.0,
+    "wer": 11.876
+   },
+   "k7": {
+    "delay_mean": 83.377,
+    "delay_p50": 82.5,
+    "delay_p90": 242.5,
+    "rewrites_per_100": 22.055,
+    "wer": 11.876
+   },
+   "lag": {
+    "mean": 15.623,
+    "p10": -92.5,
+    "p50": 27.5,
+    "p90": 127.5
+   }
+  }
+ },
+ "np_w10_dp010_ema": {
+  "dev-clean": {
+   "none": {
+    "delay_mean": 202.71,
+    "delay_p50": 202.5,
+    "delay_p90": 362.5,
+    "rewrites_per_100": 0.0,
+    "wer": 4.988
+   },
+   "k7": {
+    "delay_mean": 48.018,
+    "delay_p50": 47.5,
+    "delay_p90": 222.5,
+    "rewrites_per_100": 23.119,
+    "wer": 4.988
+   },
+   "lag": {
+    "mean": -60.375,
+    "p10": -152.5,
+    "p50": -52.5,
+    "p90": 27.5
+   }
+  },
+  "dev-other": {
+   "none": {
+    "delay_mean": 226.784,
+    "delay_p50": 222.5,
+    "delay_p90": 382.5,
+    "rewrites_per_100": 0.0,
+    "wer": 13.845
+   },
+   "k7": {
+    "delay_mean": 66.411,
+    "delay_p50": 67.5,
+    "delay_p90": 242.5,
+    "rewrites_per_100": 29.386,
+    "wer": 13.845
+   },
+   "lag": {
+    "mean": -37.688,
+    "p10": -132.5,
+    "p50": -32.5,
+    "p90": 67.5
+   }
+  }
+ },
+ "np_w02_dp005_ema": {
+  "dev-clean": {
+   "none": {
+    "delay_mean": 283.64,
+    "delay_p50": 282.5,
+    "delay_p90": 442.5,
+    "rewrites_per_100": 0.0,
+    "wer": 4.235
+   },
+   "k7": {
+    "delay_mean": 87.42,
+    "delay_p50": 87.5,
+    "delay_p90": 242.5,
+    "rewrites_per_100": 10.555,
+    "wer": 4.235
+   },
+   "lag": {
+    "mean": 47.084,
+    "p10": -52.5,
+    "p50": 47.5,
+    "p90": 127.5
+   }
+  },
+  "dev-other": {
+   "none": {
+    "delay_mean": 314.524,
+    "delay_p50": 322.5,
+    "delay_p90": 482.5,
+    "rewrites_per_100": 0.0,
+    "wer": 11.133
+   },
+   "k7": {
+    "delay_mean": 104.257,
+    "delay_p50": 107.5,
+    "delay_p90": 262.5,
+    "rewrites_per_100": 15.818,
+    "wer": 11.133
+   },
+   "lag": {
+    "mean": 73.424,
+    "p10": -32.5,
+    "p50": 67.5,
+    "p90": 167.5
+   }
+  }
+ },
+ "np_ctx_w02_dp010_ema": {
+  "dev-clean": {
+   "none": {
+    "delay_mean": 227.384,
+    "delay_p50": 222.5,
+    "delay_p90": 382.5,
+    "rewrites_per_100": 0.0,
+    "wer": 4.391
+   },
+   "k7": {
+    "delay_mean": 48.55,
+    "delay_p50": 47.5,
+    "delay_p90": 222.5,
+    "rewrites_per_100": 21.577,
+    "wer": 4.391
+   },
+   "lag": {
+    "mean": -28.998,
+    "p10": -132.5,
+    "p50": -32.5,
+    "p90": 67.5
+   }
+  },
+  "dev-other": {
+   "none": {
+    "delay_mean": 254.551,
+    "delay_p50": 262.5,
+    "delay_p90": 422.5,
+    "rewrites_per_100": 0.0,
+    "wer": 12.047
+   },
+   "k7": {
+    "delay_mean": 64.19,
+    "delay_p50": 67.5,
+    "delay_p90": 242.5,
+    "rewrites_per_100": 27.574,
+    "wer": 12.047
+   },
+   "lag": {
+    "mean": -2.632,
+    "p10": -112.5,
+    "p50": 7.5,
+    "p90": 107.5
+   }
+  }
+ },
+ "np_probe_dp010_ema": {
+  "dev-clean": {
+   "none": {
+    "delay_mean": 274.343,
+    "delay_p50": 282.5,
+    "delay_p90": 422.5,
+    "rewrites_per_100": 0.0,
+    "wer": 4.079
+   },
+   "k7": {
+    "delay_mean": 85.616,
+    "delay_p50": 87.5,
+    "delay_p90": 242.5,
+    "rewrites_per_100": 10.995,
+    "wer": 4.079
+   },
+   "lag": {
+    "mean": 31.778,
+    "p10": -72.5,
+    "p50": 27.5,
+    "p90": 127.5
+   }
+  },
+  "dev-other": {
+   "none": {
+    "delay_mean": 308.085,
+    "delay_p50": 302.5,
+    "delay_p90": 482.5,
+    "rewrites_per_100": 0.0,
+    "wer": 10.991
+   },
+   "k7": {
+    "delay_mean": 104.16,
+    "delay_p50": 102.5,
+    "delay_p90": 262.5,
+    "rewrites_per_100": 17.82,
+    "wer": 10.991
+   },
+   "lag": {
+    "mean": 63.027,
+    "p10": -52.5,
+    "p50": 67.5,
+    "p90": 167.5
+   }
+  }
+ },
+ "np_probe_ctx_dp010_ema": {
+  "dev-clean": {
+   "none": {
+    "delay_mean": 266.952,
+    "delay_p50": 262.5,
+    "delay_p90": 422.5,
+    "rewrites_per_100": 0.0,
+    "wer": 4.183
+   },
+   "k7": {
+    "delay_mean": 67.967,
+    "delay_p50": 67.5,
+    "delay_p90": 222.5,
+    "rewrites_per_100": 15.361,
+    "wer": 4.183
+   },
+   "lag": {
+    "mean": 25.069,
+    "p10": -72.5,
+    "p50": 27.5,
+    "p90": 127.5
+   }
+  },
+  "dev-other": {
+   "none": {
+    "delay_mean": 298.43,
+    "delay_p50": 302.5,
+    "delay_p90": 462.5,
+    "rewrites_per_100": 0.0,
+    "wer": 11.39
+   },
+   "k7": {
+    "delay_mean": 83.375,
+    "delay_p50": 82.5,
+    "delay_p90": 247.5,
+    "rewrites_per_100": 21.151,
+    "wer": 11.39
+   },
+   "lag": {
+    "mean": 53.325,
+    "p10": -52.5,
+    "p50": 47.5,
+    "p90": 167.5
+   }
+  }
+ }
+}

@@ -1,0 +1,166 @@
+{
+ "np_w02_dp010": {
+  "header": null,
+  "rows": 345,
+  "last": {
+   "step": 35100,
+   "epoch": 4,
+   "minutes": 479.1,
+   "simple": 0.302,
+   "pruned": 0.097,
+   "ctx_proj": null,
+   "next_loss": 1.823,
+   "next_acc": 0.607
+  },
+  "mean_last_10": {
+   "simple": 0.304,
+   "pruned": 0.099,
+   "next_loss": 1.823,
+   "next_acc": 0.606
+  }
+ },
+ "np_w10_dp010": {
+  "header": null,
+  "rows": 346,
+  "last": {
+   "step": 34700,
+   "epoch": 4,
+   "minutes": 479.9,
+   "simple": 0.313,
+   "pruned": 0.105,
+   "ctx_proj": null,
+   "next_loss": 1.897,
+   "next_acc": 0.583
+  },
+  "mean_last_10": {
+   "simple": 0.312,
+   "pruned": 0.104,
+   "next_loss": 1.905,
+   "next_acc": 0.582
+  }
+ },
+ "np_w02_dp005": {
+  "header": null,
+  "rows": 345,
+  "last": {
+   "step": 35200,
+   "epoch": 4,
+   "minutes": 479.2,
+   "simple": 0.307,
+   "pruned": 0.102,
+   "ctx_proj": null,
+   "next_loss": 1.659,
+   "next_acc": 0.64
+  },
+  "mean_last_10": {
+   "simple": 0.307,
+   "pruned": 0.103,
+   "next_loss": 1.669,
+   "next_acc": 0.639
+  }
+ },
+ "np_ctx_w02_dp010": {
+  "header": null,
+  "rows": 322,
+  "last": {
+   "step": 35600,
+   "epoch": 4,
+   "minutes": 479.6,
+   "simple": 0.267,
+   "pruned": 0.091,
+   "ctx_proj": 21.928,
+   "next_loss": 1.927,
+   "next_acc": 0.582
+  },
+  "mean_last_10": {
+   "simple": 0.266,
+   "pruned": 0.091,
+   "next_loss": 1.934,
+   "next_acc": 0.58
+  }
+ },
+ "np_probe_dp010": {
+  "header": {
+   "next_weight": 1.0,
+   "freeze": true,
+   "init": "ckpt/r4_dp010_sc_decay/last.pt",
+   "ctx": 0,
+   "ctx_lm": null,
+   "specaug": true,
+   "streaming_chunks_only": true,
+   "lr_decay": true,
+   "ema": 0.999,
+   "splits": [
+    "train-clean-100",
+    "train-clean-360",
+    "train-other-500"
+   ],
+   "tag": "np_probe_dp010",
+   "delay_penalty": 0.0,
+   "minutes": 90.0,
+   "lr": 0.001,
+   "utterances": 281241,
+   "batches": 7399,
+   "gpu": "Tesla P100-PCIE-16GB"
+  },
+  "rows": 88,
+  "last": {
+   "step": 8800,
+   "epoch": 1,
+   "minutes": 89.3,
+   "simple": 0.225,
+   "pruned": 0.008,
+   "ctx_proj": null,
+   "next_loss": 1.503,
+   "next_acc": 0.701
+  },
+  "mean_last_10": {
+   "simple": 0.225,
+   "pruned": 0.007,
+   "next_loss": 1.496,
+   "next_acc": 0.702
+  }
+ },
+ "np_probe_ctx_dp010": {
+  "header": {
+   "next_weight": 1.0,
+   "freeze": true,
+   "init": "ckpt/cf_ctx480_dp010/last.pt",
+   "ctx": 0,
+   "ctx_lm": null,
+   "specaug": true,
+   "streaming_chunks_only": true,
+   "lr_decay": true,
+   "ema": 0.999,
+   "splits": [
+    "train-clean-100",
+    "train-clean-360",
+    "train-other-500"
+   ],
+   "tag": "np_probe_ctx_dp010",
+   "delay_penalty": 0.0,
+   "minutes": 90.0,
+   "lr": 0.001,
+   "utterances": 281241,
+   "batches": 7399,
+   "gpu": "Tesla P100-PCIE-16GB"
+  },
+  "rows": 99,
+  "last": {
+   "step": 9900,
+   "epoch": 1,
+   "minutes": 90.0,
+   "simple": 0.198,
+   "pruned": 0.008,
+   "ctx_proj": null,
+   "next_loss": 1.681,
+   "next_acc": 0.66
+  },
+  "mean_last_10": {
+   "simple": 0.197,
+   "pruned": 0.008,
+   "next_loss": 1.687,
+   "next_acc": 0.658
+  }
+ }
+}

@@ -1,0 +1,51 @@
+EVAL np_w02_dp010_ema lamn=0 WER 4.21/11.88 lag -13/16 | none 238/0.0 269/0.0 | k7 67/16.3 83/22.1
+NEXT np_w02_dp010_ema preview (head/transducer/lm, n) | k07 0.178/0.078/0.202 23703 | k11 0.222/0.104/0.210 25049 | k15 0.281/0.139/0.212 26003 | k19 0.344/0.202/0.210 26705 | k23 0.415/0.256/0.210 27193 | k27 0.474/0.344/0.207 27564 | k31 0.521/0.417/0.208 27794 | k35 0.571/0.509/0.210 27965
+NEXT np_w02_dp010_ema native (head/transducer/lm, n) | all 0.587/0.516/0.213 28276 | inside word 0.883/0.864/0.613 4850 | lead 1-2 0.789/0.744/0.244 18123 | lead 3-4 0.393/0.199/0.242 4115 | lead 5-8 0.158/0.065/0.140 1868 | lead 9+ 0.090/0.039/0.083 4170 | word start 0.525/0.444/0.130 23426
+GATE np_w02_dp010_ema every40+free/hold | none 238/0.0 269/0.0 | raw -6/32.3 14/52.0 | R1 63/0.9 98/0.9 | R2 36/2.2 69/2.6 | oracle -11/0.0 6/0.0
+GATE np_w02_dp010_ema every40+hq/hold | R1 58/1.0 97/0.8 | R2 33/2.1 66/2.5 | oracle -11/0.0 6/0.0
+GATE np_w02_dp010_ema every40+ant/hold | raw -54/678.2 -33/694.4 | R1 56/0.9 96/1.0 | R2 28/2.0 64/2.5 | oracle -111/0.0 -91/0.0
+WERDEV np_w02_dp010_ema lamn=0 | dev-clean 4.42 (2703 utterances) vs public +0.79 [+0.64, +0.94] | dev-other 11.35 (2864 utterances) vs public +1.53 [+1.30, +1.77]
+COMPARE np_w02_dp010_ema/wer_dev_n0.json minus r4_dp010_sc_decay_ema/wer_dev.json | dev-clean 4.42 vs 4.05: +0.37 [+0.24, +0.50] | dev-other 11.35 vs 10.50: +0.85 [+0.65, +1.05]
+JOB_DONE rc=0 22:34:37
+EVAL np_w10_dp010_ema lamn=0 WER 4.99/13.85 lag -60/-38 | none 203/0.0 227/0.0 | k7 48/23.1 66/29.4
+NEXT np_w10_dp010_ema preview (head/transducer/lm, n) | k07 0.167/0.088/0.191 21543 | k11 0.199/0.111/0.196 22826 | k15 0.245/0.139/0.201 24149 | k19 0.300/0.205/0.204 25285 | k23 0.363/0.251/0.206 26181 | k27 0.430/0.344/0.205 26870 | k31 0.489/0.426/0.204 27258 | k35 0.533/0.500/0.204 27554
+NEXT np_w10_dp010_ema native (head/transducer/lm, n) | all 0.576/0.531/0.208 28098 | inside word 0.863/0.873/0.606 4732 | lead 1-2 0.745/0.717/0.240 19515 | lead 3-4 0.324/0.204/0.202 3111 | lead 5-8 0.167/0.085/0.115 1405 | lead 9+ 0.101/0.040/0.090 4067 | word start 0.518/0.461/0.127 23366
+GATE np_w10_dp010_ema every40+free/hold | none 203/0.0 227/0.0 | raw -31/54.9 -12/80.5 | R1 55/0.8 86/1.2 | R2 29/1.6 60/2.1 | oracle -39/0.0 -24/0.0
+GATE np_w10_dp010_ema every40+hq/hold | R1 47/1.0 81/1.2 | R2 23/1.6 54/2.1 | oracle -39/0.0 -24/0.0
+GATE np_w10_dp010_ema every40+ant/hold | raw -73/723.6 -52/742.7 | R1 46/1.0 79/1.0 | R2 24/1.9 55/2.1 | oracle -135/0.0 -115/0.0
+WERDEV np_w10_dp010_ema lamn=0 | dev-clean 5.46 (2703 utterances) vs public +1.83 [+1.65, +1.99] | dev-other 12.82 (2864 utterances) vs public +3.00 [+2.72, +3.29]
+COMPARE np_w10_dp010_ema/wer_dev_n0.json minus r4_dp010_sc_decay_ema/wer_dev.json | dev-clean 5.46 vs 4.05: +1.41 [+1.24, +1.57] | dev-other 12.82 vs 10.50: +2.32 [+2.06, +2.56]
+JOB_DONE rc=0 22:49:42
+EVAL np_w02_dp005_ema lamn=0 WER 4.23/11.13 lag 47/73 | none 284/0.0 315/0.0 | k7 87/10.6 104/15.8
+NEXT np_w02_dp005_ema preview (head/transducer/lm, n) | k07 0.209/0.079/0.212 25434 | k11 0.268/0.106/0.218 26309 | k15 0.334/0.139/0.220 26950 | k19 0.404/0.208/0.218 27388 | k23 0.475/0.264/0.216 27725 | k27 0.539/0.360/0.220 27987 | k31 0.590/0.457/0.222 28146 | k35 0.638/0.572/0.224 28239
+NEXT np_w02_dp005_ema native (head/transducer/lm, n) | all 0.657/0.583/0.230 28546 | inside word 0.918/0.894/0.641 5325 | lead 1-2 0.871/0.851/0.257 16655 | lead 3-4 0.605/0.379/0.290 5231 | lead 5-8 0.255/0.124/0.156 2510 | lead 9+ 0.108/0.043/0.090 4150 | word start 0.597/0.512/0.136 23221
+GATE np_w02_dp005_ema every40+free/hold | none 284/0.0 315/0.0 | raw 22/21.0 43/38.5 | R1 66/1.1 103/1.7 | R2 45/2.2 77/3.5 | oracle 19/0.0 37/0.0
+GATE np_w02_dp005_ema every40+hq/hold | R1 64/1.0 101/1.4 | R2 42/2.2 74/3.4 | oracle 19/0.0 37/0.0
+GATE np_w02_dp005_ema every40+ant/hold | raw -41/615.7 -19/619.3 | R1 56/1.2 96/1.6 | R2 34/2.1 71/2.7 | oracle -95/0.0 -73/0.0
+WERDEV np_w02_dp005_ema lamn=0 | dev-clean 4.06 (2703 utterances) vs public +0.43 [+0.30, +0.56] | dev-other 10.84 (2864 utterances) vs public +1.02 [+0.82, +1.24]
+COMPARE np_w02_dp005_ema/wer_dev_n0.json minus r4_dp005_sc_decay_ema/wer_dev.json | dev-clean 4.06 vs 3.76: +0.30 [+0.18, +0.43] | dev-other 10.84 vs 10.04: +0.80 [+0.61, +0.99]
+JOB_DONE rc=0 22:50:31
+EVAL np_ctx_w02_dp010_ema lamn=0 WER 4.39/12.05 lag -29/-3 | none 227/0.0 255/0.0 | k7 49/21.6 64/27.6
+NEXT np_ctx_w02_dp010_ema preview (head/transducer/lm, n) | k07 0.179/0.085/0.183 22125 | k11 0.214/0.109/0.190 23546 | k15 0.264/0.136/0.196 24852 | k19 0.324/0.198/0.198 25847 | k23 0.392/0.245/0.202 26585 | k27 0.459/0.336/0.201 27241 | k31 0.511/0.411/0.199 27571 | k35 0.562/0.502/0.201 27818
+NEXT np_ctx_w02_dp010_ema native (head/transducer/lm, n) | all 0.583/0.510/0.203 28178 | inside word 0.878/0.863/0.594 4549 | lead 1-2 0.775/0.731/0.237 18298 | lead 3-4 0.388/0.190/0.210 3827 | lead 5-8 0.168/0.064/0.116 1692 | lead 9+ 0.110/0.039/0.087 4361 | word start 0.526/0.443/0.128 23629
+GATE np_ctx_w02_dp010_ema every40+free/hold | none 227/0.0 255/0.0 | raw -26/44.1 -7/66.1 | R1 50/1.0 85/1.7 | R2 25/2.0 58/2.9 | oracle -32/0.0 -16/0.0
+GATE np_ctx_w02_dp010_ema every40+hq/hold | R1 52/0.7 90/0.8 | R2 22/2.0 55/2.7 | oracle -32/0.0 -16/0.0
+GATE np_ctx_w02_dp010_ema every40+ant/hold | raw -82/685.6 -59/705.1 | R1 55/0.5 93/0.9 | R2 24/1.5 59/2.2 | oracle -137/0.0 -114/0.0
+WERDEV np_ctx_w02_dp010_ema lamn=0 | dev-clean 4.65 (2703 utterances) vs public +1.02 [+0.85, +1.18] | dev-other 11.39 (2864 utterances) vs public +1.57 [+1.32, +1.83]
+COMPARE np_ctx_w02_dp010_ema/wer_dev_n0.json minus r4_dp010_sc_decay_ema/wer_dev.json | dev-clean 4.65 vs 4.05: +0.60 [+0.44, +0.75] | dev-other 11.39 vs 10.50: +0.89 [+0.66, +1.12]
+COMPARE np_ctx_w02_dp010_ema/wer_dev_n0.json minus cf_ctx480_dp010_ema/wer_dev_n0.json | dev-clean 4.65 vs 4.05: +0.60 [+0.45, +0.75] | dev-other 11.39 vs 10.50: +0.88 [+0.67, +1.09]
+JOB_DONE rc=0 22:34:42
+EVAL np_probe_dp010_ema lamn=0 WER 4.08/10.99 lag 32/63 | none 274/0.0 308/0.0 | k7 86/11.0 104/17.8
+NEXT np_probe_dp010_ema preview (head/transducer/lm, n) | k07 0.132/0.053/0.211 25356 | k11 0.175/0.076/0.216 26268 | k15 0.226/0.104/0.217 26991 | k19 0.283/0.150/0.214 27430 | k23 0.358/0.203/0.212 27744 | k27 0.419/0.279/0.213 28015 | k31 0.481/0.368/0.217 28174 | k35 0.539/0.463/0.220 28314
+NEXT np_probe_dp010_ema native (head/transducer/lm, n) | all 0.544/0.465/0.223 28495 | inside word 0.887/0.851/0.630 5139 | lead 1-2 0.770/0.711/0.256 16994 | lead 3-4 0.379/0.184/0.262 4858 | lead 5-8 0.129/0.054/0.151 2338 | lead 9+ 0.064/0.033/0.089 4305 | word start 0.468/0.380/0.134 23356
+GATE np_probe_dp010_ema every40+free/hold | none 274/0.0 308/0.0 | raw 14/19.9 36/38.8 | R1 62/0.8 102/1.2 | R2 40/1.7 76/2.5 | oracle 10/0.0 30/0.0
+GATE np_probe_dp010_ema every40+hq/hold | R1 55/0.7 97/1.0 | R2 36/1.9 71/2.5 | oracle 10/0.0 30/0.0
+GATE np_probe_dp010_ema every40+ant/hold | raw -21/595.5 8/629.5 | R1 59/0.8 101/0.9 | R2 38/1.5 77/2.0 | oracle -72/0.0 -50/0.0
+JOB_DONE rc=0 14:45:12
+EVAL np_probe_ctx_dp010_ema lamn=0 WER 4.18/11.39 lag 25/53 | none 267/0.0 298/0.0 | k7 68/15.4 83/21.2
+NEXT np_probe_ctx_dp010_ema preview (head/transducer/lm, n) | k07 0.152/0.067/0.193 24146 | k11 0.190/0.087/0.200 25345 | k15 0.238/0.110/0.203 26279 | k19 0.294/0.154/0.203 26902 | k23 0.370/0.209/0.205 27425 | k27 0.432/0.288/0.204 27835 | k31 0.490/0.373/0.208 28072 | k35 0.551/0.468/0.211 28194
+NEXT np_probe_ctx_dp010_ema native (head/transducer/lm, n) | all 0.553/0.469/0.213 28392 | inside word 0.890/0.874/0.609 4803 | lead 1-2 0.779/0.723/0.246 16690 | lead 3-4 0.407/0.197/0.245 4863 | lead 5-8 0.159/0.060/0.144 2382 | lead 9+ 0.079/0.037/0.088 4457 | word start 0.485/0.387/0.132 23589
+GATE np_probe_ctx_dp010_ema every40+free/hold | none 267/0.0 298/0.0 | raw -1/28.2 20/47.1 | R1 55/1.0 92/1.5 | R2 31/2.1 65/2.9 | oracle -5/0.0 12/0.0
+GATE np_probe_ctx_dp010_ema every40+hq/hold | R1 51/1.1 89/1.4 | R2 30/1.9 64/2.6 | oracle -5/0.0 12/0.0
+GATE np_probe_ctx_dp010_ema every40+ant/hold | raw -53/589.3 -21/620.0 | R1 55/0.8 95/1.2 | R2 34/1.6 71/1.9 | oracle -99/0.0 -76/0.0
+JOB_DONE rc=0 15:00:31
